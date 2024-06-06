@@ -1,13 +1,6 @@
-//
-//  ContentView.swift
-//  GreekWordsA2
-//
-//  Created by Админ on 06/06/2024.
-//
-
 import SwiftUI
 
-struct ContentView: View {
+struct ChoseTypeView: View {
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -20,5 +13,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    ChoseTypeView()
 }
