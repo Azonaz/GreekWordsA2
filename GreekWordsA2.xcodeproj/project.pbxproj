@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		842489462C1733F40060FE60 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842489452C1733F40060FE60 /* NetworkService.swift */; };
+		842489482C17346D0060FE60 /* WordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842489472C17346D0060FE60 /* WordService.swift */; };
+		8424894B2C1734A10060FE60 /* WordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424894A2C1734A10060FE60 /* WordModel.swift */; };
 		8488B11D2C11BB9F0044D455 /* GreekWordsA2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488B11C2C11BB9F0044D455 /* GreekWordsA2App.swift */; };
 		8488B11F2C11BB9F0044D455 /* ChooseTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488B11E2C11BB9F0044D455 /* ChooseTypeView.swift */; };
 		8488B1212C11BBA00044D455 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8488B1202C11BBA00044D455 /* Assets.xcassets */; };
@@ -14,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		842489452C1733F40060FE60 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		842489472C17346D0060FE60 /* WordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordService.swift; sourceTree = "<group>"; };
+		8424894A2C1734A10060FE60 /* WordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordModel.swift; sourceTree = "<group>"; };
 		8488B1192C11BB9F0044D455 /* GreekWordsA2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreekWordsA2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8488B11C2C11BB9F0044D455 /* GreekWordsA2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreekWordsA2App.swift; sourceTree = "<group>"; };
 		8488B11E2C11BB9F0044D455 /* ChooseTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseTypeView.swift; sourceTree = "<group>"; };
@@ -32,6 +38,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		842489442C1733DC0060FE60 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				842489452C1733F40060FE60 /* NetworkService.swift */,
+				842489472C17346D0060FE60 /* WordService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		842489492C1734840060FE60 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8424894A2C1734A10060FE60 /* WordModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8424894C2C1736320060FE60 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8488B11E2C11BB9F0044D455 /* ChooseTypeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		8488B1102C11BB9F0044D455 = {
 			isa = PBXGroup;
 			children = (
@@ -52,7 +83,9 @@
 			isa = PBXGroup;
 			children = (
 				8488B11C2C11BB9F0044D455 /* GreekWordsA2App.swift */,
-				8488B11E2C11BB9F0044D455 /* ChooseTypeView.swift */,
+				8424894C2C1736320060FE60 /* Views */,
+				842489492C1734840060FE60 /* Models */,
+				842489442C1733DC0060FE60 /* Services */,
 				8488B1202C11BBA00044D455 /* Assets.xcassets */,
 				8488B1222C11BBA00044D455 /* Preview Content */,
 			);
@@ -159,7 +192,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8488B11F2C11BB9F0044D455 /* ChooseTypeView.swift in Sources */,
+				842489482C17346D0060FE60 /* WordService.swift in Sources */,
 				8488B11D2C11BB9F0044D455 /* GreekWordsA2App.swift in Sources */,
+				842489462C1733F40060FE60 /* NetworkService.swift in Sources */,
+				8424894B2C1734A10060FE60 /* WordModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
