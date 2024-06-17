@@ -11,7 +11,7 @@ final class WordService {
     private var vocabulary: Vocabulary?
     private (set) var dictionaryUrl = "https://find-friends-team.ru/words-gr-a1.json"
     private (set) var wordsDayUrl = "https://find-friends-team.ru/words-gr-day.json"
-    
+
     init(service: NetworkService = NetworkService()) {
         self.service = service
     }
