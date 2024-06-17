@@ -1,12 +1,22 @@
 import Foundation
 
+enum WordServiceError: Error {
+    case invalidURL
+    case decodingError(Error)
+    case networkError(Error)
+}
+
 final class WordService {
-    private let service = NetworkService()
+    private let service: NetworkService
     private var vocabulary: Vocabulary?
     private (set) var dictionaryUrl = "https://find-friends-team.ru/words-gr-a1.json"
     private (set) var wordsDayUrl = "https://find-friends-team.ru/words-gr-day.json"
+    
+    init(service: NetworkService = NetworkService()) {
+        self.service = service
+    }
 
-    func loadVocabulary(url: URL, handler: @escaping (Result<Vocabulary, Error>) -> Void) {
+    func loadVocabulary(url: URL, handler: @escaping (Result<Vocabulary, WordServiceError>) -> Void) {
         service.fetch(url: url) { result in
             switch result {
             case .success(let data):
@@ -14,19 +24,19 @@ final class WordService {
                     let vocabulary = try JSONDecoder().decode(Vocabulary.self, from: data)
                     handler(.success(vocabulary))
                 } catch {
-                    handler(.failure(error))
+                    handler(.failure(.decodingError(error)))
                 }
             case .failure(let error):
-                handler(.failure(error))
+                handler(.failure(.networkError(error)))
             }
         }
     }
 
-    func loadWordDay(handler: @escaping (Result<VocabularyWordDay, Error>) -> Void) {
+    func loadWordDay(handler: @escaping (Result<VocabularyWordDay, WordServiceError>) -> Void) {
         guard let url = URL(string: wordsDayUrl) else {
-                handler(.failure(NSError(domain: "Invalid URL", code: 0, userInfo: nil)))
-                return
-            }
+            handler(.failure(.invalidURL))
+            return
+        }
         service.fetch(url: url) { result in
             switch result {
             case .success(let data):
@@ -34,16 +44,20 @@ final class WordService {
                     let vocabularyWordDay = try JSONDecoder().decode(VocabularyWordDay.self, from: data)
                     handler(.success(vocabularyWordDay))
                 } catch {
-                    handler(.failure(error))
+                    handler(.failure(.decodingError(error)))
                 }
             case .failure(let error):
-                handler(.failure(error))
+                handler(.failure(.networkError(error)))
             }
         }
     }
 
-    func getGroups(handler: @escaping (Result<[VocabularyGroup], Error>) -> Void) {
-        loadVocabulary(url: URL(string: dictionaryUrl)!) { result in
+    func getGroups(handler: @escaping (Result<[VocabularyGroup], WordServiceError>) -> Void) {
+        guard let url = URL(string: dictionaryUrl) else {
+            handler(.failure(.invalidURL))
+            return
+        }
+        loadVocabulary(url: url) { result in
             switch result {
             case .success(let vocabulary):
                 handler(.success(vocabulary.vocabulary.groups))
@@ -54,7 +68,11 @@ final class WordService {
     }
 
     func getRandomWordsForAll(count: Int, completion: @escaping ([Word]) -> Void) {
-        loadVocabulary(url: URL(string: dictionaryUrl)!) { result in
+        guard let url = URL(string: dictionaryUrl) else {
+            completion([])
+            return
+        }
+        loadVocabulary(url: url) { result in
             switch result {
             case .success(let vocabulary):
                 let allWords = vocabulary.vocabulary.groups.flatMap { $0.words }
