@@ -2,6 +2,7 @@ import SwiftUI
 
 struct GroupsView: View {
     @StateObject var groupsViewModel = GroupsViewModel()
+    @State private var selectedGroup: VocabularyGroup?
 
     var body: some View {
         NavigationStack {
@@ -9,13 +10,14 @@ struct GroupsView: View {
                 Color.grayDN
                     .edgesIgnoringSafeArea(.all)
                 List(groupsViewModel.groups) { group in
-                    NavigationLink(destination: Text("Detail View for \(group.name)")) {
+                    NavigationLink(destination: QuizView(group: group), tag: group, selection: $selectedGroup) {
                         HStack {
                             Text(group.name)
                             Spacer()
                         }
                     }
                     .listRowInsets(EdgeInsets(top: 10, leading: 8, bottom: 10, trailing: 16))
+                    .listRowBackground(Color.whiteDN)
                 }
                 .listStyle(PlainListStyle())
                 .scrollIndicators(.hidden)

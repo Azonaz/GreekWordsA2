@@ -26,7 +26,7 @@ struct ChooseTypeView: View {
 
                     NavigationLink(destination: GroupsView()) {
                         Text("Words by groups")
-                            .foregroundColor(.black)
+                            .foregroundColor(.blackDN)
                             .frame(height: 60)
                             .padding(.horizontal, 60)
                             .background(Color.whiteDN)

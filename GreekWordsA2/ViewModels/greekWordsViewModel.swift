@@ -3,6 +3,11 @@ import Foundation
 final class GroupsViewModel: ObservableObject {
     @Published var groups = [VocabularyGroup]()
     @Published var selectedIndexPath: IndexPath?
+    @Published var selectedGroup: VocabularyGroup?
+    @Published var words: [Word] = []
+    @Published var currentRoundWords: [Word] = []
+    @Published var vocabulary: Vocabulary?
+    @Published var correctWord: Word?
     private let wordService = WordService()
 
     func load() {

@@ -15,8 +15,11 @@
 		8488B1212C11BBA00044D455 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8488B1202C11BBA00044D455 /* Assets.xcassets */; };
 		8488B1242C11BBA00044D455 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8488B1232C11BBA00044D455 /* Preview Assets.xcassets */; };
 		849217B32C2028DE00C84401 /* GroupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849217B22C2028DE00C84401 /* GroupsView.swift */; };
-		849217B62C202C2C00C84401 /* GroupsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849217B52C202C2C00C84401 /* GroupsViewModel.swift */; };
+		849217B62C202C2C00C84401 /* greekWordsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849217B52C202C2C00C84401 /* greekWordsViewModel.swift */; };
 		849217BA2C20318B00C84401 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849217B92C20318B00C84401 /* BackButton.swift */; };
+		84D675352C2191C5003DBC2A /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D675342C2191C5003DBC2A /* QuizView.swift */; };
+		84D675392C21DD22003DBC2A /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D675382C21DD22003DBC2A /* AlertPresenter.swift */; };
+		84D6753B2C21DD43003DBC2A /* AlertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D6753A2C21DD43003DBC2A /* AlertModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,8 +32,11 @@
 		8488B1202C11BBA00044D455 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8488B1232C11BBA00044D455 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		849217B22C2028DE00C84401 /* GroupsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsView.swift; sourceTree = "<group>"; };
-		849217B52C202C2C00C84401 /* GroupsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewModel.swift; sourceTree = "<group>"; };
+		849217B52C202C2C00C84401 /* greekWordsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = greekWordsViewModel.swift; sourceTree = "<group>"; };
 		849217B92C20318B00C84401 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
+		84D675342C2191C5003DBC2A /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		84D675382C21DD22003DBC2A /* AlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
+		84D6753A2C21DD43003DBC2A /* AlertModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +55,7 @@
 			children = (
 				842489452C1733F40060FE60 /* NetworkService.swift */,
 				842489472C17346D0060FE60 /* WordService.swift */,
+				84D675382C21DD22003DBC2A /* AlertPresenter.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -57,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				8424894A2C1734A10060FE60 /* WordModel.swift */,
+				84D6753A2C21DD43003DBC2A /* AlertModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -67,6 +75,7 @@
 				849217B92C20318B00C84401 /* BackButton.swift */,
 				8488B11E2C11BB9F0044D455 /* ChooseTypeView.swift */,
 				849217B22C2028DE00C84401 /* GroupsView.swift */,
+				84D675342C2191C5003DBC2A /* QuizView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -112,7 +121,7 @@
 		849217B42C202C0800C84401 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				849217B52C202C2C00C84401 /* GroupsViewModel.swift */,
+				849217B52C202C2C00C84401 /* greekWordsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -209,8 +218,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				849217BA2C20318B00C84401 /* BackButton.swift in Sources */,
+				84D675392C21DD22003DBC2A /* AlertPresenter.swift in Sources */,
 				849217B32C2028DE00C84401 /* GroupsView.swift in Sources */,
-				849217B62C202C2C00C84401 /* GroupsViewModel.swift in Sources */,
+				84D675352C2191C5003DBC2A /* QuizView.swift in Sources */,
+				84D6753B2C21DD43003DBC2A /* AlertModel.swift in Sources */,
+				849217B62C202C2C00C84401 /* greekWordsViewModel.swift in Sources */,
 				8488B11F2C11BB9F0044D455 /* ChooseTypeView.swift in Sources */,
 				842489482C17346D0060FE60 /* WordService.swift in Sources */,
 				8488B11D2C11BB9F0044D455 /* GreekWordsA2App.swift in Sources */,
