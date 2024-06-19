@@ -8,7 +8,7 @@ struct AlertModel {
     let completion1: () -> Void
     let completion2: (() -> Void)?
 
-    init(title: String?, message: String, button1Text: String, completion1: @escaping () -> Void, 
+    init(title: String?, message: String, button1Text: String, completion1: @escaping () -> Void,
          button2Text: String? = nil, completion2: (() -> Void)? = nil) {
         self.title = title
         self.message = message

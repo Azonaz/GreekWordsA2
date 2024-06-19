@@ -10,7 +10,8 @@ struct GroupsView: View {
                 Color.grayDN
                     .edgesIgnoringSafeArea(.all)
                 List(groupsViewModel.groups) { group in
-                    NavigationLink(destination: QuizView(group: group), tag: group, selection: $selectedGroup) {
+                    NavigationLink(destination: QuizView(viewModel: groupsViewModel, group: group),
+                                   tag: group, selection: $selectedGroup) {
                         HStack {
                             Text(group.name)
                             Spacer()
@@ -32,6 +33,9 @@ struct GroupsView: View {
             .navigationTitle("Choose a group of words")
             .navigationBarBackButtonHidden(true)
             .navigationBarItems(leading: BackButton())
+            .onChange(of: selectedGroup) { newGroup in
+                groupsViewModel.selectedGroup = newGroup
+            }
             .onAppear {
                 groupsViewModel.load()
             }
