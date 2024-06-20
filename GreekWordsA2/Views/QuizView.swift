@@ -2,8 +2,16 @@ import SwiftUI
 
 struct QuizView: View {
     @ObservedObject var viewModel: GroupsViewModel
-    @State var greekWord: String = ""
-    @State var enWords: [String] = []
+    @State private var greekWord: String = ""
+    @State private var enWords: [String] = []
+    @State private var selectedAnswer: String?
+    @State private var isCorrect: Bool?
+    @State private var isButtonDisabled: Bool = false
+    @State private var currentQuestionIndex: Int = 0
+    @State private var totalQuestions: Int = 10
+    @State private var correctAnswersCount: Int = 0
+    @State private var showAlert: Bool = false
+    @Environment(\.presentationMode) var presentationMode
     let group: VocabularyGroup
     let width = UIScreen.main.bounds.width - 120
 
@@ -13,7 +21,7 @@ struct QuizView: View {
                 Color.grayDN
                     .edgesIgnoringSafeArea(.all)
                 VStack {
-                    Text("1/10")
+                    Text("\(currentQuestionIndex + 1)/\(totalQuestions)")
                         .frame(maxWidth: .infinity, alignment: .trailing)
                         .padding(.trailing, 20)
                     Spacer()
@@ -30,15 +38,25 @@ struct QuizView: View {
                     if enWords.count == 3 {
                         ForEach(0..<enWords.count, id: \.self) { index in
                             Button(action: {
-                                // Handle button action
+                                handleAnswerSelection(answer: enWords[index])
                             }, label: {
                                 Text(enWords[index])
                                     .foregroundColor(.blackDN)
                                     .frame(width: width, height: 60)
-                                    .background(Color.whiteDN)
+                                    .background(
+                                        RoundedRectangle(cornerRadius: 16)
+                                            .fill(Color.whiteDN)
+                                            .overlay(
+                                                RoundedRectangle(cornerRadius: 16)
+                                                    .stroke(selectedAnswer == enWords[index] ?
+                                                            (isCorrect == true ? Color.green : Color.red) :
+                                                                Color.clear, lineWidth: 3)
+                                            )
+                                    )
                                     .cornerRadius(16)
                                     .font(.title3)
                             })
+                            .disabled(isButtonDisabled)
                         }
                     } else {
                         Text("Loading options...")
@@ -52,9 +70,56 @@ struct QuizView: View {
         }
         .onAppear {
             viewModel.getWords {
-                greekWord = viewModel.setRandomWord()
-                enWords = viewModel.setRandomValuesForWord()
+                updateQuizContent()
             }
         }
+        .alert(isPresented: $showAlert) {
+            Alert(
+                title: Text("Quiz сompleted"),
+                message: Text("Your result: \(correctAnswersCount)/\(totalQuestions)"),
+                primaryButton: .default(Text("Play again")) {
+                    resetQuiz()
+                },
+                secondaryButton: .default(Text("Select group")) {
+                    presentationMode.wrappedValue.dismiss()
+                }
+            )
+        }
+    }
+
+    private func handleAnswerSelection(answer: String) {
+        selectedAnswer = answer
+        isCorrect = (viewModel.correctWord?.en == selectedAnswer)
+        if isCorrect == true {
+            correctAnswersCount += 1
+        }
+        isButtonDisabled = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            if currentQuestionIndex < totalQuestions - 1 {
+                currentQuestionIndex += 1
+                updateQuizContent()
+                selectedAnswer = nil
+                isCorrect = nil
+                isButtonDisabled = false
+            } else {
+                showAlert = true
+            }
+        }
+    }
+
+    private func updateQuizContent() {
+        greekWord = viewModel.setRandomWord()
+        enWords = viewModel.setRandomValuesForWord()
+    }
+
+    private func resetQuiz() {
+        correctAnswersCount = 0
+        currentQuestionIndex = 0
+        viewModel.getWords {
+            updateQuizContent()
+        }
+        selectedAnswer = nil
+        isCorrect = nil
+        isButtonDisabled = false
     }
 }

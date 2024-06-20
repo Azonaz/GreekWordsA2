@@ -18,8 +18,6 @@
 		849217B62C202C2C00C84401 /* GroupsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849217B52C202C2C00C84401 /* GroupsViewModel.swift */; };
 		849217BA2C20318B00C84401 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849217B92C20318B00C84401 /* BackButton.swift */; };
 		84D675352C2191C5003DBC2A /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D675342C2191C5003DBC2A /* QuizView.swift */; };
-		84D675392C21DD22003DBC2A /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D675382C21DD22003DBC2A /* AlertPresenter.swift */; };
-		84D6753B2C21DD43003DBC2A /* AlertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D6753A2C21DD43003DBC2A /* AlertModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,8 +33,6 @@
 		849217B52C202C2C00C84401 /* GroupsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewModel.swift; sourceTree = "<group>"; };
 		849217B92C20318B00C84401 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		84D675342C2191C5003DBC2A /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
-		84D675382C21DD22003DBC2A /* AlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
-		84D6753A2C21DD43003DBC2A /* AlertModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +51,6 @@
 			children = (
 				842489452C1733F40060FE60 /* NetworkService.swift */,
 				842489472C17346D0060FE60 /* WordService.swift */,
-				84D675382C21DD22003DBC2A /* AlertPresenter.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -64,7 +59,6 @@
 			isa = PBXGroup;
 			children = (
 				8424894A2C1734A10060FE60 /* WordModel.swift */,
-				84D6753A2C21DD43003DBC2A /* AlertModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -218,10 +212,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				849217BA2C20318B00C84401 /* BackButton.swift in Sources */,
-				84D675392C21DD22003DBC2A /* AlertPresenter.swift in Sources */,
 				849217B32C2028DE00C84401 /* GroupsView.swift in Sources */,
 				84D675352C2191C5003DBC2A /* QuizView.swift in Sources */,
-				84D6753B2C21DD43003DBC2A /* AlertModel.swift in Sources */,
 				849217B62C202C2C00C84401 /* GroupsViewModel.swift in Sources */,
 				8488B11F2C11BB9F0044D455 /* ChooseTypeView.swift in Sources */,
 				842489482C17346D0060FE60 /* WordService.swift in Sources */,
