@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct ChooseTypeView: View {
+    @StateObject var groupsViewModel = GroupsViewModel()
+
     var body: some View {
         NavigationStack {
             ZStack {
@@ -12,9 +14,7 @@ struct ChooseTypeView: View {
                         .font(.title2)
                         .padding(.bottom, 16)
 
-                    Button(action: {
-
-                    }, label: {
+                    NavigationLink(destination: QuizView(viewModel: groupsViewModel, group: nil)) {
                         Text("Random selection")
                             .foregroundColor(.blackDN)
                             .frame(height: 60)
@@ -22,9 +22,9 @@ struct ChooseTypeView: View {
                             .background(Color.whiteDN)
                             .cornerRadius(16)
                             .font(.title3)
-                    })
+                    }
 
-                    NavigationLink(destination: GroupsView()) {
+                    NavigationLink(destination: GroupsView(viewModel: groupsViewModel)) {
                         Text("Words by groups")
                             .foregroundColor(.blackDN)
                             .frame(height: 60)

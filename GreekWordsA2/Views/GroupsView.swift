@@ -1,16 +1,16 @@
 import SwiftUI
 
 struct GroupsView: View {
-    @StateObject var groupsViewModel = GroupsViewModel()
     @State private var selectedGroup: VocabularyGroup?
+    @ObservedObject var viewModel: GroupsViewModel
 
     var body: some View {
         NavigationStack {
             ZStack {
                 Color.grayDN
                     .edgesIgnoringSafeArea(.all)
-                List(groupsViewModel.groups) { group in
-                    NavigationLink(destination: QuizView(viewModel: groupsViewModel, group: group),
+                List(viewModel.groups) { group in
+                    NavigationLink(destination: QuizView(viewModel: viewModel, group: group),
                                    tag: group, selection: $selectedGroup) {
                         HStack {
                             Text(group.name)
@@ -34,15 +34,15 @@ struct GroupsView: View {
             .navigationBarBackButtonHidden(true)
             .navigationBarItems(leading: BackButton())
             .onChange(of: selectedGroup) { newGroup in
-                groupsViewModel.selectedGroup = newGroup
+                viewModel.selectedGroup = newGroup
             }
             .onAppear {
-                groupsViewModel.load()
+                viewModel.load()
             }
         }
     }
 }
 
 #Preview {
-    GroupsView()
+    GroupsView(viewModel: GroupsViewModel())
 }

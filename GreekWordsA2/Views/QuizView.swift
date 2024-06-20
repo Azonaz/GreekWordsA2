@@ -12,7 +12,7 @@ struct QuizView: View {
     @State private var correctAnswersCount: Int = 0
     @State private var showAlert: Bool = false
     @Environment(\.presentationMode) var presentationMode
-    let group: VocabularyGroup
+    let group: VocabularyGroup?
     let width = UIScreen.main.bounds.width - 120
 
     var body: some View {
@@ -63,7 +63,7 @@ struct QuizView: View {
                     }
                     Spacer()
                 }
-                .navigationTitle(group.name)
+                .navigationTitle(group?.name ?? "Random words")
                 .navigationBarBackButtonHidden(true)
                 .navigationBarItems(leading: BackButton())
             }
@@ -122,4 +122,8 @@ struct QuizView: View {
         isCorrect = nil
         isButtonDisabled = false
     }
+}
+
+#Preview {
+    QuizView(viewModel: GroupsViewModel(), group: nil)
 }
