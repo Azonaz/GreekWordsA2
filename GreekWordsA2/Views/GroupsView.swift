@@ -9,16 +9,27 @@ struct GroupsView: View {
             ZStack {
                 Color.grayDN
                     .edgesIgnoringSafeArea(.all)
-                List(viewModel.groups) { group in
-                    NavigationLink(destination: QuizView(viewModel: viewModel, group: group),
-                                   tag: group, selection: $selectedGroup) {
-                        HStack {
-                            Text(group.name)
-                            Spacer()
+                List {
+                    ForEach(viewModel.groups.indices, id: \.self) { index in
+                        let group = viewModel.groups[index]
+                        NavigationLink(destination: QuizView(viewModel: viewModel, group: group),
+                                       tag: group, selection: $selectedGroup) {
+                            HStack {
+                                Text(group.name)
+                                Spacer()
+                            }
                         }
+                                       .listRowInsets(EdgeInsets(top: 10, leading: 8, bottom: 10, trailing: 16))
+                                       .listRowBackground(Color.whiteDN)
+                                       .listRowSeparator(.hidden)
+                                       .overlay(
+                                        Rectangle()
+                                            .frame(height: 1)
+                                            .foregroundColor(index == viewModel.groups.indices.last ?
+                                                             Color.whiteDN : Color.greenUniversal.opacity(0.3))
+                                            .offset(y: 21)
+                                       )
                     }
-                    .listRowInsets(EdgeInsets(top: 10, leading: 8, bottom: 10, trailing: 16))
-                    .listRowBackground(Color.whiteDN)
                 }
                 .listStyle(PlainListStyle())
                 .scrollIndicators(.hidden)

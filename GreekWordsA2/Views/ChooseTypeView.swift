@@ -12,6 +12,7 @@ struct ChooseTypeView: View {
                 VStack(spacing: 20) {
                     Text("Greek Words A2")
                         .font(.title2)
+                        .foregroundColor(.greenUniversal)
                         .padding(.bottom, 16)
 
                     NavigationLink(destination: QuizView(viewModel: groupsViewModel, group: nil)) {

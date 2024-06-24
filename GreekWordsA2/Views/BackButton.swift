@@ -8,7 +8,7 @@ struct BackButton: View {
             presentationMode.wrappedValue.dismiss()
         }, label: {
             Image(systemName: "chevron.left")
-                .foregroundColor(Color(.label))
+                .foregroundColor(Color(.greenUniversal))
         })
     }
 }

@@ -23,6 +23,8 @@ struct QuizView: View {
                 VStack {
                     Text("\(currentQuestionIndex + 1)/\(totalQuestions)")
                         .frame(maxWidth: .infinity, alignment: .trailing)
+                        .font(.system(size: 18, weight: .semibold))
+                        .padding(.top, -10)
                         .padding(.trailing, 20)
                     Spacer()
                     Text(greekWord)
