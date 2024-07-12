@@ -37,6 +37,19 @@ struct ChooseTypeView: View {
                     Spacer()
                 }
                 .padding()
+
+                HStack (spacing: 10) {
+                    Image(systemName: "pencil.and.scribble")
+                        .foregroundColor(.blackDN.opacity(0.4))
+                        .font(.title)
+
+                    Text("Word of the day")
+                        .font(.title2)
+                        .foregroundColor(.green)
+                }
+                .padding(.bottom, 40)
+
+                WordDayView()
             }
         }
     }
