@@ -38,7 +38,7 @@ struct ChooseTypeView: View {
                 }
                 .padding()
 
-                HStack (spacing: 10) {
+                HStack(spacing: 10) {
                     Image(systemName: "pencil.and.scribble")
                         .foregroundColor(.blackDN.opacity(0.4))
                         .font(.title)
