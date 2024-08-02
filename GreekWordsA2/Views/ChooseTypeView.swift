@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ChooseTypeView: View {
     @StateObject var groupsViewModel = GroupsViewModel()
+    @StateObject var wordDayViewModel = WordsDayViewModel()
 
     var body: some View {
         NavigationStack {
@@ -49,7 +50,10 @@ struct ChooseTypeView: View {
                 }
                 .padding(.bottom, 40)
 
-                WordDayView()
+                WordDayView(viewModel: wordDayViewModel)
+                    .onAppear {
+                        wordDayViewModel.setWordForCurrentDate()
+                    }
             }
         }
     }

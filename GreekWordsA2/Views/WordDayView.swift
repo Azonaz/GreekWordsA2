@@ -2,20 +2,17 @@ import SwiftUI
 
 // swiftlint:disable identifier_name
 struct WordDayView: View {
-    @State private var wordDay: String = "custom"
-    @State private var word: [Character] = Array("custom").shuffled()
+    @ObservedObject var viewModel: WordsDayViewModel
+    @State private var word: [Character] = ["e", "x", "a", "m", "p", "l", "e"]
     @State private var selectedPoints: [CGPoint] = []
     @State private var currentPoint: CGPoint?
     @State private var allCirclesSelected = false
     @State private var selectedLetters: String = ""
     @State private var pathColor: Color = .greenUniversal
-    var numberOfPoints = 0
-    let radius: CGFloat = 100
-    let center: CGPoint
-
-    init() {
-        center = CGPoint(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 1.6)
-        numberOfPoints = word.count
+    @State var numberOfPoints: Int = 7
+    private let radius: CGFloat = 100
+    private var center: CGPoint {
+        CGPoint(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 1.6)
     }
 
     var body: some View {
@@ -31,9 +28,10 @@ struct WordDayView: View {
                 let yyy = center.y + radius * CGFloat(sin(angle))
                 let point = CGPoint(x: xxx, y: yyy)
 
-                CharViewForGame(letter: word[word.index(word.startIndex, offsetBy: index)])
+                CharViewForGame(letter: word[index])
                     .position(point)
             }
+
             if !selectedPoints.isEmpty {
                 Path { path in
                     path.addLines(selectedPoints)
@@ -72,7 +70,9 @@ struct WordDayView: View {
                     selectedLetters.removeAll()
                     pathColor = .greenUniversal
                 } else {
-                    if selectedLetters != wordDay {
+                    let words = viewModel.grWord.split(separator: " ")
+                    let targetWord = words.last ?? words.first ?? ""
+                    if selectedLetters != targetWord {
                         pathColor = .red
                         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                             selectedPoints.removeAll()
@@ -85,6 +85,13 @@ struct WordDayView: View {
                 }
             }
         )
+        .onChange(of: viewModel.grWord) { newValue in
+            let words = newValue.split(separator: " ")
+            let targetWord = words.last ?? words.first ?? ""
+            word = Array(targetWord)
+            word.shuffle()
+            numberOfPoints = word.count
+        }
     }
 
     func distance(from: CGPoint, to: CGPoint) -> CGFloat {
@@ -97,6 +104,6 @@ struct WordDayView: View {
     Color.grayDN
         .ignoresSafeArea()
         .overlay {
-            WordDayView()
+            WordDayView(viewModel: WordsDayViewModel())
         }
 }
