@@ -23,6 +23,7 @@ struct ChooseTypeView: View {
                             .padding(.horizontal, 60)
                             .background(Color.whiteDN)
                             .cornerRadius(16)
+                            .shadow(color: .black.opacity(0.2), radius: 5, x: 2, y: 2)
                             .font(.title3)
                     }
 
@@ -33,6 +34,7 @@ struct ChooseTypeView: View {
                             .padding(.horizontal, 60)
                             .background(Color.whiteDN)
                             .cornerRadius(16)
+                            .shadow(color: .black.opacity(0.2), radius: 5, x: 2, y: 2)
                             .font(.title3)
                     }
                     Spacer()
