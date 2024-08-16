@@ -8,16 +8,16 @@ struct CharViewForGame: View {
         ZStack {
             Circle()
                 .stroke(Color.clear, lineWidth: 0)
-                .background(isSelected ? Circle().foregroundColor(.grayDN) : Circle().foregroundColor(.white))
-                .shadow(color: isSelected ? .black.opacity(0.2) : .clear,
+                .background(isSelected ? Circle().foregroundColor(.grayDN) : Circle().foregroundColor(.whiteDN))
+                .shadow(color: isSelected ? .grayUniversal.opacity(0.5) : .clear,
                         radius: isSelected ? 5 : 0,
                         x: isSelected ? 2 : 0,
                         y: isSelected ? 2 : 0)
                 .frame(width: 50, height: 50)
                 .overlay(
                     Text(String(letter))
-                        .font(.headline)
-                        .foregroundColor(.black)
+                        .font(.largeTitle)
+                        .foregroundColor(.blackDN)
                 )
         }
     }

@@ -3,6 +3,10 @@ import SwiftUI
 struct ChooseTypeView: View {
     @StateObject var groupsViewModel = GroupsViewModel()
     @StateObject var wordDayViewModel = WordsDayViewModel()
+    @State private var showWord = false
+    @State private var rotation: Double = 0
+    @State private var isLabelVisible = true
+    private let circleDiameter: CGFloat = 100 * 2.7
 
     var body: some View {
         NavigationStack {
@@ -23,7 +27,7 @@ struct ChooseTypeView: View {
                             .padding(.horizontal, 60)
                             .background(Color.whiteDN)
                             .cornerRadius(16)
-                            .shadow(color: .black.opacity(0.2), radius: 5, x: 2, y: 2)
+                            .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
                             .font(.title3)
                     }
 
@@ -31,10 +35,10 @@ struct ChooseTypeView: View {
                         Text("Words by groups")
                             .foregroundColor(.blackDN)
                             .frame(height: 60)
-                            .padding(.horizontal, 60)
+                            .padding(.horizontal, 61)
                             .background(Color.whiteDN)
                             .cornerRadius(16)
-                            .shadow(color: .black.opacity(0.2), radius: 5, x: 2, y: 2)
+                            .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
                             .font(.title3)
                     }
                     Spacer()
@@ -52,10 +56,67 @@ struct ChooseTypeView: View {
                 }
                 .padding(.bottom, 40)
 
+                ZStack {
+                    if showWord {
+                        Circle()
+                            .frame(width: circleDiameter, height: circleDiameter)
+                            .foregroundColor(.whiteDN)
+                            .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
+                            .overlay(
+                                Text(wordDayViewModel.enWord)
+                                    .font(.largeTitle)
+                                    .tracking(3)
+                                    .foregroundColor(.blackDN)
+                            )
+                            .transition(.opacity)
+                            .rotation3DEffect(
+                                .degrees(rotation + 180),
+                                axis: (x: 0, y: 1, z: 0)
+                            )
+                            .animation(.spring(response: 0.6, dampingFraction: 0.8,
+                                               blendDuration: 0.5), value: rotation)
+                    }
+                }
+                .padding(.top, 350)
+
                 WordDayView(viewModel: wordDayViewModel)
                     .onAppear {
                         wordDayViewModel.setWordForCurrentDate()
                     }
+                    .opacity(showWord ? 0 : 1)
+                    .rotation3DEffect(
+                        .degrees(rotation),
+                        axis: (x: 0, y: 1, z: 0)
+                    )
+                    .animation(.spring(response: 0.6, dampingFraction: 0.8, blendDuration: 0.5), value: rotation)
+
+                if isLabelVisible {
+                    VStack {
+                        Spacer()
+                        HStack {
+                            Spacer()
+                            Label("", systemImage: "questionmark.circle")
+                                .foregroundColor(.blackDN.opacity(0.5))
+                                .font(.largeTitle)
+                                .padding(.bottom, 50)
+                                .padding(.trailing, 10)
+                                .onTapGesture {
+                                    withAnimation {
+                                        rotation += 180
+                                        showWord.toggle()
+                                        isLabelVisible = false
+                                    }
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                                        isLabelVisible = true
+                                        withAnimation {
+                                            rotation += 180
+                                            showWord.toggle()
+                                        }
+                                    }
+                                }
+                        }
+                    }
+                }
             }
         }
     }

@@ -18,14 +18,14 @@ struct WordDayView: View {
         if isTextVisible {
             Text(selectedLetters)
                 .foregroundColor(.blackDN)
-                .frame(height: 40)
+                .frame(height: 35)
                 .padding(.horizontal, 15)
                 .background(Color.whiteDN)
                 .cornerRadius(16)
-                .shadow(color: .black.opacity(0.2), radius: 5, x: 2, y: 2)
+                .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
                 .font(.title3)
                 .tracking(3)
-                .padding(.top, 40)
+                .padding(.top, 35)
         }
 
         GeometryReader { geometry in
@@ -37,7 +37,7 @@ struct WordDayView: View {
             ZStack {
                 Circle()
                     .fill(Color.whiteDN)
-                    .shadow(color: .black.opacity(0.2), radius: 5, x: 2, y: 2)
+                    .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
                     .frame(width: circleDiameter, height: circleDiameter)
                     .position(x: screenWidth / 2, y: screenHeight - (circleDiameter / 2) - verticalPadding)
 
