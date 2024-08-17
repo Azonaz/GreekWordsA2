@@ -40,27 +40,27 @@ struct QuizView: View {
                     Spacer()
                     if enWords.count == 3 {
                         ForEach(0..<enWords.count, id: \.self) { index in
-                            Button(action: {
-                                handleAnswerSelection(answer: enWords[index])
-                            }, label: {
-                                Text(enWords[index])
-                                    .foregroundColor(.blackDN)
-                                    .frame(width: width, height: 60)
-                                    .background(
-                                        RoundedRectangle(cornerRadius: 16)
-                                            .fill(Color.whiteDN)
-                                            .overlay(
-                                                RoundedRectangle(cornerRadius: 16)
-                                                    .stroke(selectedAnswer == enWords[index] ?
-                                                            (isCorrect == true ? Color.green : Color.red) :
-                                                                Color.clear, lineWidth: 3)
-                                            )
-                                    )
-                                    .cornerRadius(16)
-                                    .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
-                                    .font(.title3)
-                            })
-                            .disabled(isButtonDisabled)
+                            Text(enWords[index])
+                                .foregroundColor(.blackDN)
+                                .frame(width: width, height: 60)
+                                .background(
+                                    RoundedRectangle(cornerRadius: 16)
+                                        .fill(Color.whiteDN)
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 16)
+                                                .stroke(selectedAnswer == enWords[index] ?
+                                                        (isCorrect == true ? Color.green : Color.red) :
+                                                            Color.clear, lineWidth: 3)
+                                        )
+                                )
+                                .cornerRadius(16)
+                                .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
+                                .font(.title3)
+                                .onTapGesture {
+                                    if !isButtonDisabled {
+                                        handleAnswerSelection(answer: enWords[index])
+                                    }
+                                }
                         }
                     } else {
                         Text("Loading options...")
@@ -98,7 +98,7 @@ struct QuizView: View {
             correctAnswersCount += 1
         }
         isButtonDisabled = true
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
             if currentQuestionIndex < totalQuestions - 1 {
                 currentQuestionIndex += 1
                 updateQuizContent()

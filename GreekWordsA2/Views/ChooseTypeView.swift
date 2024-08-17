@@ -6,6 +6,7 @@ struct ChooseTypeView: View {
     @State private var showWord = false
     @State private var rotation: Double = 0
     @State private var isLabelVisible = true
+    @State private var isNewWord = true
     private let circleDiameter: CGFloat = 100 * 2.7
 
     var body: some View {
@@ -63,10 +64,23 @@ struct ChooseTypeView: View {
                             .foregroundColor(.whiteDN)
                             .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
                             .overlay(
-                                Text(wordDayViewModel.enWord)
-                                    .font(.largeTitle)
-                                    .tracking(3)
-                                    .foregroundColor(.blackDN)
+                                VStack(spacing: 10) {
+                                    if isNewWord {
+                                        Text(wordDayViewModel.enWord)
+                                            .font(.largeTitle)
+                                            .tracking(3)
+                                            .foregroundColor(.blackDN)
+                                    } else {
+                                        Text(wordDayViewModel.grWord)
+                                            .font(.largeTitle)
+                                            .tracking(3)
+                                            .foregroundColor(.blackDN)
+                                        Text(wordDayViewModel.enWord)
+                                            .font(.largeTitle)
+                                            .tracking(3)
+                                            .foregroundColor(.blackDN)
+                                    }
+                                }
                             )
                             .transition(.opacity)
                             .rotation3DEffect(
@@ -106,7 +120,7 @@ struct ChooseTypeView: View {
                                         showWord.toggle()
                                         isLabelVisible = false
                                     }
-                                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
                                         isLabelVisible = true
                                         withAnimation {
                                             rotation += 180
