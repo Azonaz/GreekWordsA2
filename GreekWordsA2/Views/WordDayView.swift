@@ -109,7 +109,21 @@ struct WordDayView: View {
                     }
                 }
             } else {
-                // Show words for today
+                VStack {
+                    Text(viewModel.grWord)
+                        .foregroundColor(.blackDN)
+                        .font(.title)
+                        .padding(.bottom, 10)
+
+                    Text(viewModel.enWord)
+                        .foregroundColor(.blackDN)
+                        .font(.title3)
+                }
+                .frame(width: screenWidth - 80, height: 150)
+                .background(Color.whiteDN)
+                .cornerRadius(16)
+                .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
+                .position(x: screenWidth / 2, y: screenHeight / 1.5)
             }
         }
     }
@@ -149,7 +163,10 @@ struct WordDayView: View {
     private func saveSolvedDate() {
         let today = getCurrentDate()
         userDefaults.set(today, forKey: solvedDateKey)
-        isWordAlreadySolvedForToday = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
+            isWordAlreadySolvedForToday = true
+            isTextVisible = false
+        }
     }
 
     private func checkIfWordSolvedToday() {
