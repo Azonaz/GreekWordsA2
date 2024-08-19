@@ -16,6 +16,7 @@ struct WordDayView: View {
     private let radius: CGFloat = 100
     private let userDefaults = UserDefaults.standard
     private let solvedDateKey = "solvedDate"
+    private let feedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
 
     var body: some View {
         if isTextVisible {
@@ -83,6 +84,7 @@ struct WordDayView: View {
                                         selectedLetters.append(word[index])
                                         selectedLettersStates[index] = true
                                         isTextVisible = true
+                                        feedbackGenerator.impactOccurred()
                                     }
                                 }
                             }
