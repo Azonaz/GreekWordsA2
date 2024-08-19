@@ -12,7 +12,7 @@ struct WordDayView: View {
     @State var numberOfPoints: Int = 7
     @State private var selectedLettersStates: [Bool] = Array(repeating: false, count: 7)
     @State private var isTextVisible = false
-    @State private var isWordAlreadySolvedForToday = false
+    @Binding var isWordAlreadySolvedForToday: Bool
     private let radius: CGFloat = 100
     private let userDefaults = UserDefaults.standard
     private let solvedDateKey = "solvedDate"
@@ -194,6 +194,6 @@ struct WordDayView: View {
     Color.grayDN
         .ignoresSafeArea()
         .overlay {
-            WordDayView(viewModel: WordsDayViewModel())
+            WordDayView(viewModel: WordsDayViewModel(), isWordAlreadySolvedForToday: .constant(false))
         }
 }

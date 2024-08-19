@@ -6,7 +6,7 @@ struct ChooseTypeView: View {
     @State private var showWord = false
     @State private var rotation: Double = 0
     @State private var isLabelVisible = true
-    @State private var isNewWord = true
+    @State private var isWordAlreadySolvedForToday = false
     private let circleDiameter: CGFloat = 100 * 2.7
 
     var body: some View {
@@ -64,23 +64,10 @@ struct ChooseTypeView: View {
                             .foregroundColor(.whiteDN)
                             .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
                             .overlay(
-                                VStack(spacing: 10) {
-                                    if isNewWord {
-                                        Text(wordDayViewModel.enWord)
-                                            .font(.largeTitle)
-                                            .tracking(3)
-                                            .foregroundColor(.blackDN)
-                                    } else {
-                                        Text(wordDayViewModel.grWord)
-                                            .font(.largeTitle)
-                                            .tracking(3)
-                                            .foregroundColor(.blackDN)
-                                        Text(wordDayViewModel.enWord)
-                                            .font(.largeTitle)
-                                            .tracking(3)
-                                            .foregroundColor(.blackDN)
-                                    }
-                                }
+                                Text(wordDayViewModel.enWord)
+                                    .font(.largeTitle)
+                                    .tracking(3)
+                                    .foregroundColor(.blackDN)
                             )
                             .transition(.opacity)
                             .rotation3DEffect(
@@ -93,7 +80,7 @@ struct ChooseTypeView: View {
                 }
                 .padding(.top, 350)
 
-                WordDayView(viewModel: wordDayViewModel)
+                WordDayView(viewModel: wordDayViewModel, isWordAlreadySolvedForToday: $isWordAlreadySolvedForToday)
                     .onAppear {
                         wordDayViewModel.setWordForCurrentDate()
                     }
@@ -104,7 +91,7 @@ struct ChooseTypeView: View {
                     )
                     .animation(.spring(response: 0.6, dampingFraction: 0.8, blendDuration: 0.5), value: rotation)
 
-                if isLabelVisible {
+                if !isWordAlreadySolvedForToday && isLabelVisible {
                     VStack {
                         Spacer()
                         HStack {
