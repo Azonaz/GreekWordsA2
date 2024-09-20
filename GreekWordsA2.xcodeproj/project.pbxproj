@@ -21,6 +21,7 @@
 		849217BA2C20318B00C84401 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849217B92C20318B00C84401 /* BackButton.swift */; };
 		84A7920D2C5D132300848517 /* WordsDayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A7920C2C5D132300848517 /* WordsDayViewModel.swift */; };
 		84D675352C2191C5003DBC2A /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D675342C2191C5003DBC2A /* QuizView.swift */; };
+		84F2B03B2C9DC6F5008A9774 /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F2B03A2C9DC6F5008A9774 /* LaunchScreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		849217B92C20318B00C84401 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		84A7920C2C5D132300848517 /* WordsDayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsDayViewModel.swift; sourceTree = "<group>"; };
 		84D675342C2191C5003DBC2A /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		84F2B03A2C9DC6F5008A9774 /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		8424894C2C1736320060FE60 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				84F2B03A2C9DC6F5008A9774 /* LaunchScreenView.swift */,
 				849217B92C20318B00C84401 /* BackButton.swift */,
 				8488B11E2C11BB9F0044D455 /* ChooseTypeView.swift */,
 				849217B22C2028DE00C84401 /* GroupsView.swift */,
@@ -221,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				849217BA2C20318B00C84401 /* BackButton.swift in Sources */,
+				84F2B03B2C9DC6F5008A9774 /* LaunchScreenView.swift in Sources */,
 				849217B32C2028DE00C84401 /* GroupsView.swift in Sources */,
 				84420A922C415FEB008A6F79 /* CharViewForGame.swift in Sources */,
 				84D675352C2191C5003DBC2A /* QuizView.swift in Sources */,
