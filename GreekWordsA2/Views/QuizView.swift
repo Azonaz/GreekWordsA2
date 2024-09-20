@@ -61,6 +61,7 @@ struct QuizView: View {
                                         handleAnswerSelection(answer: enWords[index])
                                     }
                                 }
+                                .padding(.top, 5)
                         }
                     } else {
                         Text("Loading options...")

@@ -18,6 +18,7 @@ struct GroupsView: View {
                                 Text(group.name)
                                 Spacer()
                             }
+                            .padding(.top, 4)
                         }
                                        .listRowInsets(EdgeInsets(top: 10, leading: 8, bottom: 10, trailing: 16))
                                        .listRowBackground(Color.whiteDN)
