@@ -8,6 +8,7 @@ struct ChooseTypeView: View {
     @State private var isLabelVisible = true
     @State private var isWordAlreadySolvedForToday = false
     private let circleDiameter: CGFloat = 100 * 2.7
+    @Environment(\.scenePhase) var scenePhase
 
     var body: some View {
         NavigationStack {
@@ -83,6 +84,16 @@ struct ChooseTypeView: View {
                 WordDayView(viewModel: wordDayViewModel, isWordAlreadySolvedForToday: $isWordAlreadySolvedForToday)
                     .onAppear {
                         wordDayViewModel.setWordForCurrentDate()
+                    }
+                    .onChange(of: scenePhase) { newPhase in
+                        if newPhase == .active {
+                            wordDayViewModel.setWordForCurrentDate()
+                            let today = wordDayViewModel.getCurrentDate()
+                            if today != UserDefaults.standard.string(forKey: "lastPlayedDate") {
+                                wordDayViewModel.setWordForCurrentDate()
+                                isWordAlreadySolvedForToday = false
+                            }
+                        }
                     }
                     .opacity(showWord ? 0 : 1)
                     .rotation3DEffect(

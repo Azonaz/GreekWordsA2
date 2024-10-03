@@ -20,19 +20,24 @@ class WordsDayViewModel: ObservableObject {
                 DispatchQueue.main.async { [self] in
                     let validIndex = max(0, min(self.dayOfMonth - 1, vocabularyWordDay.vocabulary.words.count - 1))
                     self.grWord = vocabularyWordDay.vocabulary.words[validIndex].gr
-                    print(grWord)
                     self.enWord = vocabularyWordDay.vocabulary.words[validIndex].en
-                    if let lastPlayedDateString = UserDefaults.standard.string(forKey: "lastPlayedDate"),
-                       let lastPlayedDate = self.dateFormatter.date(from: lastPlayedDateString),
-                       calendar.isDateInToday(lastPlayedDate) {
-                    } else {
-
-                    }
+                    updateLastPlayedDate()
                 }
             case .failure(let error):
                 print(error)
             }
         }
+    }
+
+    private func updateLastPlayedDate() {
+        let today = getCurrentDate()
+        UserDefaults.standard.set(today, forKey: "lastPlayedDate")
+    }
+
+   func getCurrentDate() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        return formatter.string(from: Date())
     }
 }
 
