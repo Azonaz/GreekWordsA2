@@ -2,14 +2,9 @@ import Foundation
 
 class WordsDayViewModel: ObservableObject {
     @Published private(set) var dayOfMonth: Int = 0
-    @Published var grWord: String = "example"
+    @Published var grWord: String = ""
     @Published var enWord: String = ""
     private let wordService = WordService()
-    private let dateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        return formatter
-    }()
 
     func setWordForCurrentDate() {
         let calendar = Calendar.current

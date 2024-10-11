@@ -52,9 +52,6 @@ struct WordDayView: View {
 
                             CharViewForGame(letter: word[index].character, isSelected: $selectedLettersStates[index])
                                 .position(point)
-                                .onTapGesture {
-                                    handleLetterTap(at: index, point: point)
-                                }
                         }
                     }
                 }
@@ -246,7 +243,7 @@ struct WordDayView: View {
     }
 
     private func saveSolvedDate() {
-        let today = getCurrentDate()
+        let today = viewModel.getCurrentDate()
         userDefaults.set(today, forKey: solvedDateKey)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
             isWordAlreadySolvedForToday = true
@@ -255,18 +252,12 @@ struct WordDayView: View {
     }
 
     private func checkIfWordSolvedToday() {
-        let today = getCurrentDate()
+        let today = viewModel.getCurrentDate()
         if let savedDate = userDefaults.string(forKey: solvedDateKey) {
             isWordAlreadySolvedForToday = (savedDate == today)
         } else {
             isWordAlreadySolvedForToday = false
         }
-    }
-
-    private func getCurrentDate() -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"
-        return formatter.string(from: Date())
     }
 }
 // swiftlint:enable identifier_name
