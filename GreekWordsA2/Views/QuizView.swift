@@ -12,8 +12,11 @@ struct QuizView: View {
     @State private var correctAnswersCount: Int = 0
     @State private var showAlert: Bool = false
     @Environment(\.presentationMode) var presentationMode
+    @Environment(\.horizontalSizeClass) var sizeClass
     let group: VocabularyGroup?
-    let width = UIScreen.main.bounds.width - 120
+    var width: CGFloat {
+        sizeClass == .regular ? UIScreen.main.bounds.width - 280 : UIScreen.main.bounds.width - 120
+    }
 
     var body: some View {
         NavigationStack {
@@ -23,17 +26,17 @@ struct QuizView: View {
                 VStack {
                     Text("\(currentQuestionIndex + 1)/\(totalQuestions)")
                         .frame(maxWidth: .infinity, alignment: .trailing)
-                        .font(.system(size: 18, weight: .semibold))
+                        .font(sizeClass == .regular ? .system(size: 28, weight: .semibold) : .system(size: 18, weight: .semibold))
                         .padding(.top, -10)
-                        .padding(.trailing, 20)
+                        .padding(.trailing, sizeClass == .regular ? 40 : 20)
                     Spacer()
                     Text(greekWord)
                         .foregroundColor(.blackDN)
-                        .font(.title2)
+                        .font(sizeClass == .regular ? .largeTitle : .title2)
                         .background(
                             RoundedRectangle(cornerRadius: 16)
                                 .fill(Color.whiteDN)
-                                .frame(width: width, height: 150)
+                                .frame(width: width, height: sizeClass == .regular ? 180 : 150)
                                 .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
                                 .padding(.horizontal, 20)
                         )
@@ -42,7 +45,7 @@ struct QuizView: View {
                         ForEach(0..<enWords.count, id: \.self) { index in
                             Text(enWords[index])
                                 .foregroundColor(.blackDN)
-                                .frame(width: width, height: 60)
+                                .frame(width: width, height: sizeClass == .regular ? 80 : 60)
                                 .background(
                                     RoundedRectangle(cornerRadius: 16)
                                         .fill(Color.whiteDN)
@@ -55,7 +58,7 @@ struct QuizView: View {
                                 )
                                 .cornerRadius(16)
                                 .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
-                                .font(.title3)
+                                .font(sizeClass == .regular ? .title : .title3)
                                 .onTapGesture {
                                     if !isButtonDisabled {
                                         handleAnswerSelection(answer: enWords[index])

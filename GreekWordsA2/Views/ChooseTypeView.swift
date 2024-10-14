@@ -7,8 +7,24 @@ struct ChooseTypeView: View {
     @State private var rotation: Double = 0
     @State private var isLabelVisible = true
     @State private var isWordAlreadySolvedForToday = false
-    private let circleDiameter: CGFloat = 100 * 2.7
     @Environment(\.scenePhase) var scenePhase
+    @Environment(\.horizontalSizeClass) var sizeClass
+
+    private var circleDiameter: CGFloat {
+        sizeClass == .regular ? 150 * 2.7 : 100 * 2.7
+    }
+
+    private var buttonHeight: CGFloat {
+        sizeClass == .regular ? 80 : 60
+    }
+
+    private var buttonPaddingHorizontal: CGFloat {
+        sizeClass == .regular ? 100 : 60
+    }
+
+    private var topPadding: CGFloat {
+        sizeClass == .regular ? 100 : 20
+    }
 
     var body: some View {
         NavigationStack {
@@ -18,30 +34,31 @@ struct ChooseTypeView: View {
 
                 VStack(spacing: 20) {
                     Text("Greek Words A2")
-                        .font(.title2)
+                        .font(sizeClass == .regular ? .largeTitle : .title2)
                         .foregroundColor(.greenUniversal)
                         .padding(.bottom, 16)
+                        .padding(.top, topPadding)
 
                     NavigationLink(destination: QuizView(viewModel: groupsViewModel, group: nil)) {
                         Text("Random selection")
                             .foregroundColor(.blackDN)
-                            .frame(height: 60)
-                            .padding(.horizontal, 60)
+                            .frame(height: buttonHeight)
+                            .padding(.horizontal, buttonPaddingHorizontal)
                             .background(Color.whiteDN)
                             .cornerRadius(16)
                             .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
-                            .font(.title3)
+                            .font(sizeClass == .regular ? .title : .title3)
                     }
 
                     NavigationLink(destination: GroupsView(viewModel: groupsViewModel)) {
                         Text("Words by groups")
                             .foregroundColor(.blackDN)
-                            .frame(height: 60)
-                            .padding(.horizontal, 61)
+                            .frame(height: buttonHeight)
+                            .padding(.horizontal, buttonPaddingHorizontal + 2)
                             .background(Color.whiteDN)
                             .cornerRadius(16)
                             .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
-                            .font(.title3)
+                            .font(sizeClass == .regular ? .title : .title3)
                     }
                     Spacer()
                 }
@@ -53,10 +70,10 @@ struct ChooseTypeView: View {
                         .font(.title)
 
                     Text("Word of the day")
-                        .font(.title2)
+                        .font(sizeClass == .regular ? .title : .title2)
                         .foregroundColor(.green)
                 }
-                .padding(.bottom, 40)
+                .padding(.bottom, sizeClass == .regular ? 80 : 40)
 
                 ZStack {
                     if showWord {
@@ -79,7 +96,7 @@ struct ChooseTypeView: View {
                                                blendDuration: 0.5), value: rotation)
                     }
                 }
-                .padding(.top, 350)
+                .padding(.top, sizeClass == .regular ? 470 : 370)
 
                 WordDayView(viewModel: wordDayViewModel, isWordAlreadySolvedForToday: $isWordAlreadySolvedForToday)
                     .onAppear {
@@ -87,10 +104,9 @@ struct ChooseTypeView: View {
                     }
                     .onChange(of: scenePhase) { newPhase in
                         if newPhase == .active {
-                            wordDayViewModel.setWordForCurrentDate()
                             let today = wordDayViewModel.getCurrentDate()
+                            wordDayViewModel.setWordForCurrentDate()
                             if today != UserDefaults.standard.string(forKey: "lastPlayedDate") {
-                                wordDayViewModel.setWordForCurrentDate()
                                 isWordAlreadySolvedForToday = false
                             }
                         }
@@ -109,9 +125,9 @@ struct ChooseTypeView: View {
                             Spacer()
                             Label("", systemImage: "questionmark.circle")
                                 .foregroundColor(.blackDN.opacity(0.5))
-                                .font(.largeTitle)
-                                .padding(.bottom, 50)
-                                .padding(.trailing, 10)
+                                .font(sizeClass == .regular ? .system(size: 36) : .largeTitle)
+                                .padding(.bottom, sizeClass == .regular ? 100 : 50)
+                                .padding(.trailing, sizeClass == .regular ? 60 : 10)
                                 .onTapGesture {
                                     withAnimation {
                                         rotation += 180

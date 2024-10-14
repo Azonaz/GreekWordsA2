@@ -3,6 +3,7 @@ import SwiftUI
 struct GroupsView: View {
     @State private var selectedGroup: VocabularyGroup?
     @ObservedObject var viewModel: GroupsViewModel
+    @Environment(\.horizontalSizeClass) var sizeClass
 
     var body: some View {
         NavigationStack {
@@ -16,6 +17,7 @@ struct GroupsView: View {
                                        tag: group, selection: $selectedGroup) {
                             HStack {
                                 Text(group.name)
+                                    .font(sizeClass == .regular ? .title : .title3)
                                 Spacer()
                             }
                             .padding(.top, 4)
@@ -42,7 +44,7 @@ struct GroupsView: View {
                 .padding()
                 .foregroundColor(.blackDN)
             }
-            .navigationTitle("Choose a group of words")
+            .navigationTitle("Choose a group")
             .navigationBarBackButtonHidden(true)
             .navigationBarItems(leading: BackButton())
             .onChange(of: selectedGroup) { newGroup in

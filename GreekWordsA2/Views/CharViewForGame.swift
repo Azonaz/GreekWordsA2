@@ -3,6 +3,7 @@ import SwiftUI
 struct CharViewForGame: View {
     let letter: Character
     @Binding var isSelected: Bool
+    @Environment(\.horizontalSizeClass) var sizeClass
 
     var body: some View {
         ZStack {
@@ -13,12 +14,20 @@ struct CharViewForGame: View {
                         radius: isSelected ? 5 : 0,
                         x: isSelected ? 2 : 0,
                         y: isSelected ? 2 : 0)
-                .frame(width: 50, height: 50)
+                .frame(width: circleSize, height: circleSize)
                 .overlay(
                     Text(String(letter))
                         .font(.largeTitle)
                         .foregroundColor(.blackDN)
                 )
+        }
+    }
+
+    var circleSize: CGFloat {
+        if sizeClass == .regular {
+            return 80
+        } else {
+            return 50
         }
     }
 }

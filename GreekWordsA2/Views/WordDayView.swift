@@ -18,10 +18,13 @@ struct WordDayView: View {
     @State private var selectedLettersStates: [Bool] = Array(repeating: false, count: 7)
     @State private var isTextVisible = false
     @Binding var isWordAlreadySolvedForToday: Bool
-    private let radius: CGFloat = 100
+    @Environment(\.horizontalSizeClass) var sizeClass
     private let userDefaults = UserDefaults.standard
     private let solvedDateKey = "solvedDate"
     private let feedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
+    private var radius: CGFloat {
+            return sizeClass == .regular ? 150 : 100
+        }
 
     var body: some View {
         if isTextVisible {
@@ -32,7 +35,7 @@ struct WordDayView: View {
             let screenWidth = geometry.size.width
             let screenHeight = geometry.size.height
             let diameter = radius * 2.7
-            let verticalPadding: CGFloat = 50
+            let verticalPadding: CGFloat = sizeClass == .regular ? 100 : 60
 
             if !isWordAlreadySolvedForToday {
                 ZStack {
