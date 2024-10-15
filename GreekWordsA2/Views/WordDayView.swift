@@ -23,8 +23,11 @@ struct WordDayView: View {
     private let solvedDateKey = "solvedDate"
     private let feedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
     private var radius: CGFloat {
-            return sizeClass == .regular ? 150 : 100
-        }
+        return sizeClass == .regular ? 150 : 100
+    }
+    private var paddingHorizontal: CGFloat {
+        sizeClass == .regular ? 160 : 80
+    }
 
     var body: some View {
         if isTextVisible {
@@ -101,14 +104,15 @@ struct WordDayView: View {
         VStack {
             Text(viewModel.grWord)
                 .foregroundColor(.blackDN)
-                .font(.title)
-                .padding(.bottom, 10)
+                .font(sizeClass == .regular ? .largeTitle : .title)
+                .padding(.bottom, sizeClass == .regular ? 20 : 10)
 
             Text(viewModel.enWord)
                 .foregroundColor(.blackDN)
-                .font(.title3)
+                .font(sizeClass == .regular ? .title2 : .title3)
         }
-        .frame(width: screenWidth - 80, height: 150)
+        .frame(height: 150)
+        .padding(.horizontal, paddingHorizontal)
         .background(Color.whiteDN)
         .cornerRadius(16)
         .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
