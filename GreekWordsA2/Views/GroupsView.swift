@@ -44,9 +44,13 @@ struct GroupsView: View {
                 .padding()
                 .foregroundColor(.blackDN)
             }
-            .navigationTitle("Choose a group")
             .navigationBarBackButtonHidden(true)
-            .navigationBarItems(leading: BackButton())
+            .navigationBarItems(leading: HStack {
+                BackButton()
+                Text("Choose a group")
+                    .font(sizeClass == .regular ? .largeTitle : .title)
+                    .fontWeight(.semibold)
+            })
             .onChange(of: selectedGroup) { newGroup in
                 viewModel.selectedGroup = newGroup
             }

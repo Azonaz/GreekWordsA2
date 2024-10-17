@@ -35,6 +35,7 @@ struct ChooseTypeView: View {
                 VStack(spacing: 20) {
                     Text("Greek Words A2")
                         .font(sizeClass == .regular ? .largeTitle : .title2)
+                        .fontWeight(.semibold)
                         .foregroundColor(.greenUniversal)
                         .padding(.bottom, 16)
                         .padding(.top, topPadding)

@@ -26,20 +26,28 @@ struct QuizView: View {
                 VStack {
                     Text("\(currentQuestionIndex + 1)/\(totalQuestions)")
                         .frame(maxWidth: .infinity, alignment: .trailing)
-                        .font(sizeClass == .regular ? .system(size: 28, weight: .semibold) : .system(size: 18, weight: .semibold))
+                        .font(sizeClass == .regular
+                              ? .system(size: 28, weight: .semibold) : .system(size: 18, weight: .semibold))
                         .padding(.top, -10)
                         .padding(.trailing, sizeClass == .regular ? 40 : 20)
                     Spacer()
-                    Text(greekWord)
-                        .foregroundColor(.blackDN)
-                        .font(sizeClass == .regular ? .largeTitle : .title2)
-                        .background(
-                            RoundedRectangle(cornerRadius: 16)
-                                .fill(Color.whiteDN)
-                                .frame(width: width, height: sizeClass == .regular ? 180 : 150)
-                                .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
-                                .padding(.horizontal, 20)
-                        )
+                    let words = greekWord.components(separatedBy: ",")
+                    VStack {
+                        ForEach(words, id: \.self) { word in
+                            Text(word)
+                                .foregroundColor(.blackDN)
+                                .font(sizeClass == .regular ? .largeTitle : .title2)
+                                .multilineTextAlignment(.center)
+                                .padding(.bottom, 1)
+                        }
+                    }
+                    .frame(width: width, height: sizeClass == .regular ? 180 : 150)
+                    .background(
+                        RoundedRectangle(cornerRadius: 16)
+                            .fill(Color.whiteDN)
+                            .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
+                            .padding(.horizontal, 20)
+                    )
                     Spacer()
                     if enWords.count == 3 {
                         ForEach(0..<enWords.count, id: \.self) { index in
@@ -71,9 +79,13 @@ struct QuizView: View {
                     }
                     Spacer()
                 }
-                .navigationTitle(group?.name ?? "Random words")
                 .navigationBarBackButtonHidden(true)
-                .navigationBarItems(leading: BackButton())
+                .navigationBarItems(leading: HStack {
+                    BackButton()
+                    Text(group?.name ?? "Random words")
+                        .font(sizeClass == .regular ? .largeTitle : .title)
+                        .fontWeight(.semibold)
+                })
             }
         }
         .onAppear {
