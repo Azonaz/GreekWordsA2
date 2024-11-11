@@ -2,8 +2,10 @@ import SwiftUI
 
 struct GroupsView: View {
     @State private var selectedGroup: VocabularyGroup?
+    @State private var dragOffset = CGSize.zero
     @ObservedObject var viewModel: GroupsViewModel
     @Environment(\.horizontalSizeClass) var sizeClass
+    @Environment(\.dismiss) private var dismiss
 
     var body: some View {
         NavigationStack {
@@ -57,6 +59,17 @@ struct GroupsView: View {
             .onAppear {
                 viewModel.load()
             }
+            .gesture(
+                DragGesture().onChanged { gesture in
+                    dragOffset = gesture.translation
+                }
+                    .onEnded { _ in
+                        if dragOffset.width > 100 {
+                            dismiss()
+                        }
+                        dragOffset = .zero
+                    }
+            )
         }
     }
 }

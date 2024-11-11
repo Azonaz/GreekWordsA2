@@ -11,8 +11,10 @@ struct QuizView: View {
     @State private var totalQuestions: Int = 10
     @State private var correctAnswersCount: Int = 0
     @State private var showAlert: Bool = false
+    @State private var dragOffset = CGSize.zero
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.horizontalSizeClass) var sizeClass
+    @Environment(\.dismiss) private var dismiss
     let group: VocabularyGroup?
     var width: CGFloat {
         sizeClass == .regular ? UIScreen.main.bounds.width - 280 : UIScreen.main.bounds.width - 120
@@ -93,6 +95,17 @@ struct QuizView: View {
                 updateQuizContent()
             }
         }
+        .gesture(
+            DragGesture().onChanged { gesture in
+                dragOffset = gesture.translation
+            }
+                .onEnded { _ in
+                    if dragOffset.width > 100 {
+                        dismiss()
+                    }
+                    dragOffset = .zero
+                }
+        )
         .alert(isPresented: $showAlert) {
             Alert(
                 title: Text("Quiz сompleted"),
