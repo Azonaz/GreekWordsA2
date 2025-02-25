@@ -19,6 +19,28 @@ struct QuizView: View {
     var width: CGFloat {
         sizeClass == .regular ? UIScreen.main.bounds.width - 280 : UIScreen.main.bounds.width - 120
     }
+    var parsedWords: [String] {
+        let splitWords = greekWord.components(separatedBy: ",")
+        if splitWords.count == 1 {
+            let separatedWords = greekWord.split(separator: " ")
+            if separatedWords.count > 2 {
+                if separatedWords[0].count > 2 {
+                    let firstPart = String(separatedWords[0])
+                    let secondPart = String(separatedWords[1])
+                    let thirdPart = separatedWords.dropFirst(2).joined(separator: " ")
+                    return [firstPart, secondPart, thirdPart]
+                } else {
+                    let firstPart = separatedWords.prefix(2).joined(separator: " ")
+                    let secondPart = separatedWords.dropFirst(2).joined(separator: " ")
+                    return [firstPart, secondPart]
+                }
+            } else {
+                return [greekWord]
+            }
+        } else {
+            return splitWords
+        }
+    }
 
     var body: some View {
         NavigationStack {
@@ -33,9 +55,8 @@ struct QuizView: View {
                         .padding(.top, -10)
                         .padding(.trailing, sizeClass == .regular ? 40 : 20)
                     Spacer()
-                    let words = greekWord.components(separatedBy: ",")
                     VStack {
-                        ForEach(words, id: \.self) { word in
+                        ForEach(parsedWords, id: \.self) { word in
                             Text(word)
                                 .foregroundColor(.blackDN)
                                 .font(sizeClass == .regular ? .largeTitle : .title2)
