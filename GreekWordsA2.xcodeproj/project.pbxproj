@@ -10,6 +10,7 @@
 		842489462C1733F40060FE60 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842489452C1733F40060FE60 /* NetworkService.swift */; };
 		842489482C17346D0060FE60 /* WordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842489472C17346D0060FE60 /* WordService.swift */; };
 		8424894B2C1734A10060FE60 /* WordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424894A2C1734A10060FE60 /* WordModel.swift */; };
+		844032CB2DB14AB800A52B39 /* VerbModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844032CA2DB14AB100A52B39 /* VerbModel.swift */; };
 		84420A922C415FEB008A6F79 /* CharViewForGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420A912C415FEB008A6F79 /* CharViewForGame.swift */; };
 		84420A942C416154008A6F79 /* WordDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420A932C416154008A6F79 /* WordDayView.swift */; };
 		8488B11D2C11BB9F0044D455 /* GreekWordsA2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488B11C2C11BB9F0044D455 /* GreekWordsA2App.swift */; };
@@ -28,6 +29,7 @@
 		842489452C1733F40060FE60 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		842489472C17346D0060FE60 /* WordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordService.swift; sourceTree = "<group>"; };
 		8424894A2C1734A10060FE60 /* WordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordModel.swift; sourceTree = "<group>"; };
+		844032CA2DB14AB100A52B39 /* VerbModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbModel.swift; sourceTree = "<group>"; };
 		84420A912C415FEB008A6F79 /* CharViewForGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharViewForGame.swift; sourceTree = "<group>"; };
 		84420A932C416154008A6F79 /* WordDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDayView.swift; sourceTree = "<group>"; };
 		8488B1192C11BB9F0044D455 /* GreekWordsA2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreekWordsA2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				8424894A2C1734A10060FE60 /* WordModel.swift */,
+				844032CA2DB14AB100A52B39 /* VerbModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 				84420A922C415FEB008A6F79 /* CharViewForGame.swift in Sources */,
 				84D675352C2191C5003DBC2A /* QuizView.swift in Sources */,
 				849217B62C202C2C00C84401 /* GroupsViewModel.swift in Sources */,
+				844032CB2DB14AB800A52B39 /* VerbModel.swift in Sources */,
 				84420A942C416154008A6F79 /* WordDayView.swift in Sources */,
 				8488B11F2C11BB9F0044D455 /* ChooseTypeView.swift in Sources */,
 				842489482C17346D0060FE60 /* WordService.swift in Sources */,
