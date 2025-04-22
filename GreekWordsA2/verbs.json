@@ -1,0 +1,20 @@
+[
+  {
+    "verb": "γράφω",
+    "translation": "write",
+    "future": "θα γράψω",
+    "past": "έγραψα"
+  },
+  {
+    "verb": "τρώω",
+    "translation": "eat",
+    "future": "θα φάω",
+    "past": "έφαγα"
+  },
+  {
+    "verb": "πηγαίνω",
+    "translation": "go",
+    "future": "θα πάω",
+    "past": "πήγα"
+  }
+]
