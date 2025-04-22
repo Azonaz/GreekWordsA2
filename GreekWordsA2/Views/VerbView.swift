@@ -3,16 +3,12 @@ import SwiftUI
 struct VerbView: View {
     @Environment(\.horizontalSizeClass) var sizeClass
     @Environment(\.dismiss) private var dismiss
-    // mok data
-    let verbs: [Verb] = [
-        Verb(verb: "γράφω", translation: "write", future: "θα γράψω", past: "έγραψα"),
-        Verb(verb: "διαβάζω", translation: "read", future: "θα διαβάσω", past: "διάβασα"),
-        Verb(verb: "πηγαίνω", translation: "go", future: "θα πάω", past: "πήγα")
-    ]
+    @State private var verbs: [Verb] = []
     @State private var currentIndex: Int = 0
     @State private var resetTrigger = false
-    var currentVerb: Verb {
-        verbs[currentIndex]
+    var currentVerb: Verb? {
+        guard !verbs.isEmpty else { return nil }
+        return verbs[currentIndex]
     }
 
     var body: some View {
@@ -20,50 +16,58 @@ struct VerbView: View {
             Color.grayDN
                 .edgesIgnoringSafeArea(.all)
 
-            VStack(spacing: 20) {
-                HStack(spacing: 8) {
-                    Text(currentVerb.translation)
-                    Image(systemName: "book.pages")
-                }
-                .font(sizeClass == .regular ? .largeTitle : .title)
-                .foregroundColor(.greenUniversal)
-                .tracking(2)
-                .shadow(color: .grayUniversal.opacity(0.3), radius: 1, x: 1, y: 1)
-                .multilineTextAlignment(.center)
-                .padding(.top, sizeClass == .regular ? 90 : 50)
-
-                Spacer()
-
-                FlipCardView(title: "Ενεστώτας", content: currentVerb.verb, resetTrigger: resetTrigger)
-                FlipCardView(title: "Στιγμιαίος Μέλλοντας", content: currentVerb.future, resetTrigger: resetTrigger)
-                FlipCardView(title: "Αόριστος", content: currentVerb.past, resetTrigger: resetTrigger)
-
-                Spacer()
-
-                Button(action: {
-                    if currentIndex < verbs.count - 1 {
-                        currentIndex += 1
-                    } else {
-                        currentIndex = 0
+            if let currentVerb = currentVerb {
+                VStack(spacing: 20) {
+                    HStack(spacing: 8) {
+                        Text(currentVerb.translation)
+                        Image(systemName: "book.pages")
                     }
-                    resetTrigger.toggle()
-                }, label: {
-                    HStack(spacing: 20) {
-                        Text("Next verb")
-                        Image(systemName: "arrowshape.bounce.forward")
-                    }
+                    .font(sizeClass == .regular ? .largeTitle : .title)
                     .foregroundColor(.greenUniversal)
-                    .font(sizeClass == .regular ? .title2 : .title3)
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .background(Color.white)
-                    .cornerRadius(16)
-                    .shadow(color: .grayUniversal.opacity(0.3), radius: 5, x: 2, y: 2)
-                })
-                .padding(.horizontal)
+                    .tracking(2)
+                    .shadow(color: .grayUniversal.opacity(0.3), radius: 1, x: 1, y: 1)
+                    .multilineTextAlignment(.center)
+                    .padding(.top, sizeClass == .regular ? 90 : 50)
+
+                    Spacer()
+
+                    FlipCardView(title: "Ενεστώτας", content: currentVerb.verb, resetTrigger: resetTrigger)
+                    FlipCardView(title: "Στιγμιαίος Μέλλοντας", content: currentVerb.future, resetTrigger: resetTrigger)
+                    FlipCardView(title: "Αόριστος", content: currentVerb.past, resetTrigger: resetTrigger)
+
+                    Spacer()
+
+                    Button(action: {
+                        withAnimation(.easeInOut(duration: 0.4)) {
+                            if currentIndex < verbs.count - 1 {
+                                currentIndex += 1
+                            } else {
+                                verbs.shuffle()
+                                currentIndex = 0
+                            }
+                            resetTrigger.toggle()
+                        }
+                    }, label: {
+                        HStack(spacing: 20) {
+                            Text("Next verb")
+                            Image(systemName: "arrowshape.bounce.forward")
+                        }
+                        .foregroundColor(.greenUniversal)
+                        .font(sizeClass == .regular ? .title2 : .title3)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.white)
+                        .cornerRadius(16)
+                        .shadow(color: .grayUniversal.opacity(0.3), radius: 5, x: 2, y: 2)
+                    })
+                    .padding(.horizontal)
+                }
+                .padding(.bottom, sizeClass == .regular ? 150 : 100)
+                .padding(.horizontal, sizeClass == .regular ? 60 : 30)
+            } else {
+                ProgressView("Loading...")
+                    .foregroundColor(.white)
             }
-           .padding(.bottom, sizeClass == .regular ? 150 : 100)
-           .padding(.horizontal, sizeClass == .regular ? 60 : 30)
         }
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: HStack {
@@ -72,6 +76,19 @@ struct VerbView: View {
                 .font(sizeClass == .regular ? .largeTitle : .title)
                 .fontWeight(.semibold)
         })
+        .onAppear {
+            verbs = loadVerbs()
+            verbs.shuffle()
+        }
+    }
+
+    func loadVerbs() -> [Verb] {
+        guard let url = Bundle.main.url(forResource: "verbs", withExtension: "json"),
+              let data = try? Data(contentsOf: url),
+              let decoded = try? JSONDecoder().decode([Verb].self, from: data) else {
+            return []
+        }
+        return decoded
     }
 }
 
@@ -103,7 +120,7 @@ struct FlipCardView: View {
         }
         .rotation3DEffect(.degrees(isFlipped ? 180 : 0), axis: (x: 0, y: 1, z: 0))
         .onTapGesture {
-            withAnimation(.spring(response: 0.6, dampingFraction: 0.7)) {
+            withAnimation(.spring(response: 0.7, dampingFraction: 0.5)) {
                 isFlipped.toggle()
             }
         }
