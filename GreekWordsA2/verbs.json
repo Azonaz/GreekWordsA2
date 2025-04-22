@@ -105,7 +105,7 @@
         "verb": "αδειάζω",
         "translation": "to empty",
         "future": "θα αδειάσω",
-        "past": "άδειαξα"
+        "past": "άδειασα"
     },
     {
         "verb": "αδυνατίζω",
@@ -129,19 +129,13 @@
         "verb": "αναπνέω",
         "translation": "to breathe",
         "future": "θα αναπνεύσω",
-        "past": "αναπνευσα"
+        "past": "ανέπνευσα"
     },
     {
         "verb": "αναφέρω",
         "translation": "to mention, to refer",
         "future": "θα αναφέρω",
-        "past": "ανάφερα"
-    },
-    {
-        "verb": "αντικαθιστώ",
-        "translation": "to replace",
-        "future": "θα αντικαταστήσω",
-        "past": "αντικατέστησα"
+        "past": "ανέφερα"
     },
     {
         "verb": "αντιστοιχίζω",
@@ -160,12 +154,6 @@
         "translation": "to avoid",
         "future": "θα αποφύγω",
         "past": "απέφυγα"
-    },
-    {
-        "verb": "αρνούμαι",
-        "translation": "to refuse",
-        "future": "θα αρνηθώ",
-        "past": "άρνησα"
     },
     {
         "verb": "αρρωσταίνω",
