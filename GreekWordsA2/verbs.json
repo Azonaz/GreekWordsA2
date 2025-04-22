@@ -1,20 +1,176 @@
 [
-  {
-    "verb": "γράφω",
-    "translation": "write",
-    "future": "θα γράψω",
-    "past": "έγραψα"
-  },
-  {
-    "verb": "τρώω",
-    "translation": "eat",
-    "future": "θα φάω",
-    "past": "έφαγα"
-  },
-  {
-    "verb": "πηγαίνω",
-    "translation": "go",
-    "future": "θα πάω",
-    "past": "πήγα"
-  }
+    {
+        "verb": "αγαπώ",
+        "translation": "to love",
+        "future": "θα αγαπήσω",
+        "past": "αγάπησα"
+    },
+    {
+        "verb": "αγοράζω",
+        "translation": "to buy",
+        "future": "θα αγοράσω",
+        "past": "αγόρασα"
+    },
+    {
+        "verb": "αισθάνομαι",
+        "translation": "to feel",
+        "future": "θα αισθανθώ",
+        "past": "αισθάνθηκα"
+    },
+    {
+        "verb": "ακολουθώ",
+        "translation": "to follow",
+        "future": "θα ακολουθήσω",
+        "past": "ακολούθησα"
+    },
+    {
+        "verb": "ακούω",
+        "translation": "to hear, to listen",
+        "future": "θα ακούσω",
+        "past": "άκουσα"
+    },
+    {
+        "verb": "αλλάζω",
+        "translation": "to change",
+        "future": "θα αλλάξω",
+        "past": "άλλαξα"
+    },
+    {
+        "verb": "ανακατεύω",
+        "translation": "to mix, to blend" ,
+        "future": "θα ανακατέψω",
+        "past": "ανακάτεψα"
+    },
+    {
+        "verb": "ανεβαίνω",
+        "translation": "to get on, to climb",
+        "future": "θα ανέβω",
+        "past": "ανέβηκα"
+    },
+    {
+        "verb": "ανοίγω",
+        "translation": "to open",
+        "future": "θα ανοίξω",
+        "past": "άνοιξα"
+    },
+    {
+        "verb": "απαντάω",
+        "translation": "to answer",
+        "future": "θα απαντήσω",
+        "past": "απάντησα"
+    },
+    {
+        "verb": "απλώνω",
+        "translation": "to spread",
+        "future": "θα απλώσω",
+        "past": "άπλωσα"
+    },
+    {
+        "verb": "αποκτώ",
+        "translation": "to obtain, to have",
+        "future": "θα αποκτήσω",
+        "past": "απέκτησα"
+    },
+    {
+        "verb": "αποφασίζω",
+        "translation": "to decide",
+        "future": "θα αποφασίσω",
+        "past": "αποφάσισα"
+    },
+    {
+        "verb": "αργώ",
+        "translation": "to be late",
+        "future": "θα αργήσω",
+        "past": "άργησα"
+    },
+    {
+        "verb": "(μου) αρέσει",
+        "translation": "to like",
+        "future": "θα (μου) αρέσει",
+        "past": "(μου) άρεσε"
+    },
+    {
+        "verb": "αρχίζω",
+        "translation": "to begin, to start",
+        "future": "θα αρχίσω",
+        "past": "άρχισα"
+    },
+    {
+        "verb": "αφήνω",
+        "translation": "to leave, to let go",
+        "future": "θα αφήσω",
+        "past": "άφησα"
+    },
+    {
+        "verb": "αδειάζω",
+        "translation": "to empty",
+        "future": "θα αδειάσω",
+        "past": "άδειαξα"
+    },
+    {
+        "verb": "αδυνατίζω",
+        "translation": "to lose weight, to get slim",
+        "future": "θα αδυνατίσω",
+        "past": "αδυνάτισα"
+    },
+    {
+        "verb": "ανάβω",
+        "translation": "to light, to turn on",
+        "future": "θα ανάψω",
+        "past": "άναψα"
+    },
+    {
+        "verb": "αναγνωρίζω",
+        "translation": "to recognize",
+        "future": "θα αναγνωρίσω",
+        "past": "αναγνώρισα"
+    },
+    {
+        "verb": "αναπνέω",
+        "translation": "to breathe",
+        "future": "θα αναπνεύσω",
+        "past": "αναπνευσα"
+    },
+    {
+        "verb": "αναφέρω",
+        "translation": "to mention, to refer",
+        "future": "θα αναφέρω",
+        "past": "ανάφερα"
+    },
+    {
+        "verb": "αντικαθιστώ",
+        "translation": "to replace",
+        "future": "θα αντικαταστήσω",
+        "past": "αντικατέστησα"
+    },
+    {
+        "verb": "αντιστοιχίζω",
+        "translation": "to match",
+        "future": "θα αντιστοιχίσω",
+        "past": "αντιστοίχισα"
+    },
+    {
+        "verb": "απευθύνομαι",
+        "translation": "to address (to)",
+        "future": "θα απευθυνθώ",
+        "past": "απευθύνθηκα"
+    },
+    {
+        "verb": "αποφεύγω",
+        "translation": "to avoid",
+        "future": "θα αποφύγω",
+        "past": "απέφυγα"
+    },
+    {
+        "verb": "αρνούμαι",
+        "translation": "to refuse",
+        "future": "θα αρνηθώ",
+        "past": "άρνησα"
+    },
+    {
+        "verb": "αρρωσταίνω",
+        "translation": "to get sick",
+        "future": "θα αρρωστήσω",
+        "past": "αρρώστησα"
+    }
 ]
