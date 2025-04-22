@@ -18,22 +18,19 @@ struct VerbView: View {
 
             if let currentVerb = currentVerb {
                 VStack(spacing: 20) {
-                    HStack(spacing: 8) {
-                        Text(currentVerb.translation)
-                        Image(systemName: "book.pages")
-                    }
-                    .font(sizeClass == .regular ? .largeTitle : .title)
-                    .foregroundColor(.greenUniversal)
-                    .tracking(2)
-                    .shadow(color: .grayUniversal.opacity(0.3), radius: 1, x: 1, y: 1)
-                    .multilineTextAlignment(.center)
-                    .padding(.top, sizeClass == .regular ? 90 : 50)
+                    Text(currentVerb.translation)
+                        .font(sizeClass == .regular ? .largeTitle : .title)
+                        .foregroundColor(.greenUniversal)
+                        .tracking(3)
+                        .shadow(color: .grayUniversal.opacity(0.3), radius: 1, x: 1, y: 1)
+                        .multilineTextAlignment(.center)
+                        .padding(.top, sizeClass == .regular ? 90 : 50)
 
                     Spacer()
 
-                    FlipCardView(title: "Ενεστώτας", content: currentVerb.verb, resetTrigger: resetTrigger)
-                    FlipCardView(title: "Στιγμιαίος Μέλλοντας", content: currentVerb.future, resetTrigger: resetTrigger)
-                    FlipCardView(title: "Αόριστος", content: currentVerb.past, resetTrigger: resetTrigger)
+                    VerbCardView(title: "Ενεστώτας", content: currentVerb.verb, resetTrigger: resetTrigger)
+                    VerbCardView(title: "Στιγμιαίος Μέλλοντας", content: currentVerb.future, resetTrigger: resetTrigger)
+                    VerbCardView(title: "Αόριστος", content: currentVerb.past, resetTrigger: resetTrigger)
 
                     Spacer()
 
@@ -50,7 +47,7 @@ struct VerbView: View {
                     }, label: {
                         HStack(spacing: 20) {
                             Text("Next verb")
-                            Image(systemName: "arrowshape.bounce.forward")
+                            Image(systemName: "arrow.uturn.right")
                         }
                         .foregroundColor(.greenUniversal)
                         .font(sizeClass == .regular ? .title2 : .title3)
@@ -89,45 +86,6 @@ struct VerbView: View {
             return []
         }
         return decoded
-    }
-}
-
-struct FlipCardView: View {
-    let title: String
-    let content: String
-    var resetTrigger: Bool
-
-    @State private var isFlipped = false
-    @Environment(\.horizontalSizeClass) var sizeClass
-
-    var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 20)
-                .fill(Color.whiteDN)
-                .frame(height: sizeClass == .regular ? 150 : 100)
-                .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
-                .overlay(
-                    Text(isFlipped ? content : title)
-                        .font(sizeClass == .regular ? .title : .title2)
-                        .foregroundColor(.blackDN)
-                        .multilineTextAlignment(.center)
-                        .padding()
-                        .rotation3DEffect(
-                            .degrees(isFlipped ? 180 : 0),
-                            axis: (x: 0, y: 1, z: 0)
-                        )
-                )
-        }
-        .rotation3DEffect(.degrees(isFlipped ? 180 : 0), axis: (x: 0, y: 1, z: 0))
-        .onTapGesture {
-            withAnimation(.spring(response: 0.7, dampingFraction: 0.5)) {
-                isFlipped.toggle()
-            }
-        }
-        .onChange(of: resetTrigger) { _ in
-            isFlipped = false
-        }
-        .padding(.horizontal)
     }
 }
 

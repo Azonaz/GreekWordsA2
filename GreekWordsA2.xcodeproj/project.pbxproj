@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		841E13E12DB7AB6500DFD07C /* verbs.json in Resources */ = {isa = PBXBuildFile; fileRef = 841E13E02DB7AB6500DFD07C /* verbs.json */; };
+		841E13E32DB7CDA500DFD07C /* VerbCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841E13E22DB7CDA500DFD07C /* VerbCardView.swift */; };
 		842489462C1733F40060FE60 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842489452C1733F40060FE60 /* NetworkService.swift */; };
 		842489482C17346D0060FE60 /* WordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842489472C17346D0060FE60 /* WordService.swift */; };
 		8424894B2C1734A10060FE60 /* WordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8424894A2C1734A10060FE60 /* WordModel.swift */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		841E13E02DB7AB6500DFD07C /* verbs.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = verbs.json; sourceTree = "<group>"; };
+		841E13E22DB7CDA500DFD07C /* VerbCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbCardView.swift; sourceTree = "<group>"; };
 		842489452C1733F40060FE60 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		842489472C17346D0060FE60 /* WordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordService.swift; sourceTree = "<group>"; };
 		8424894A2C1734A10060FE60 /* WordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordModel.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				849217B22C2028DE00C84401 /* GroupsView.swift */,
 				84D675342C2191C5003DBC2A /* QuizView.swift */,
 				844032CE2DB14E9100A52B39 /* VerbView.swift */,
+				841E13E22DB7CDA500DFD07C /* VerbCardView.swift */,
 				84420A932C416154008A6F79 /* WordDayView.swift */,
 				84420A912C415FEB008A6F79 /* CharViewForGame.swift */,
 			);
@@ -234,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				849217BA2C20318B00C84401 /* BackButton.swift in Sources */,
+				841E13E32DB7CDA500DFD07C /* VerbCardView.swift in Sources */,
 				84F2B03B2C9DC6F5008A9774 /* LaunchScreenView.swift in Sources */,
 				849217B32C2028DE00C84401 /* GroupsView.swift in Sources */,
 				84420A922C415FEB008A6F79 /* CharViewForGame.swift in Sources */,
