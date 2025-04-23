@@ -160,5 +160,71 @@
         "translation": "to get sick",
         "future": "θα αρρωστήσω",
         "past": "αρρώστησα"
+    },
+    {
+        "verb": "βάζω",
+        "translation": "to put",
+        "future": "θα βάλω",
+        "past": "έβαλα"
+    },
+    {
+        "verb": "βάφω",
+        "translation": "to paint, to dye",
+        "future": "θα βάψω",
+        "past": "έβαψα"
+    },
+    {
+        "verb": "βγάζω",
+        "translation": "to take out, to take off",
+        "future": "θα βγάλω",
+        "past": "έβγαλα"
+    },
+    {
+        "verb": "βγαίνω",
+        "translation": "to go out, to exit",
+        "future": "θα βγω",
+        "past": "βγήκα"
+    },
+    {
+        "verb": "βεβαιώνω",
+        "translation": "to confirm, to affirm",
+        "future": "θα βεβαιώσω",
+        "past": "βεβαίωσα"
+    },
+    {
+        "verb": "βλέπω",
+        "translation": "to see",
+        "future": "θα δω",
+        "past": "είδα"
+    },
+    {
+        "verb": "βοηθάω",
+        "translation": "to help",
+        "future": "θα βοηθήσω",
+        "past": "βοήθησα"
+    },
+    {
+        "verb": "βράζω",
+        "translation": "to boil",
+        "future": "θα βράσω",
+        "past": "έβρασα"
+    },
+    {
+        "verb": "βρίσκω",
+        "translation": "to find",
+        "future": "θα βρω",
+        "past": "βρήκα"
+    },
+    {
+        "verb": "βήχω",
+        "translation": "to cough",
+        "future": "θα βήξω",
+        "past": "έβηξα"
+    },
+    {
+        "verb": "βρέχω",
+        "translation": "to wet",
+        "future": "θα βρέξω",
+        "past": "έβρεξα"
     }
 ]
