@@ -490,5 +490,17 @@
         "translation": "to weigh",
         "future": "θα ζυγίσω",
         "past": "ζύγισα"
+    },
+    {
+        "verb": "θέλω",
+        "translation": "to want",
+        "future": "θα θέλω",
+        "past": "ήθελα"
+    },
+    {
+        "verb": "θυμάμαι",
+        "translation": "to remember",
+        "future": "θα θυμηθώ",
+        "past": "θυμήθηκα"
     }
 ]
