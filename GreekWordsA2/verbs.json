@@ -228,51 +228,141 @@
         "past": "έβρεξα"
     },
     {
-      "verb": "γεμίζω",
-      "translation": "to fill",
-      "future": "θα γεμίσω",
-      "past": "γέμισα"
+        "verb": "γεμίζω",
+        "translation": "to fill",
+        "future": "θα γεμίσω",
+        "past": "γέμισα"
     },
     {
-      "verb": "γεννάω",
-      "translation": "to give birth",
-      "future": "θα γεννήσω",
-      "past": "γέννησα"
+        "verb": "γεννάω",
+        "translation": "to give birth",
+        "future": "θα γεννήσω",
+        "past": "γέννησα"
     },
     {
-      "verb": "γίνομαι",
-      "translation": "to become",
-      "future": "θα γίνω",
-      "past": "έγινα"
+        "verb": "γίνομαι",
+        "translation": "to become",
+        "future": "θα γίνω",
+        "past": "έγινα"
     },
     {
-      "verb": "γιορτάζω",
-      "translation": "to celebrate",
-      "future": "θα γιορτάσω",
-      "past": "γιόρτασα"
+        "verb": "γιορτάζω",
+        "translation": "to celebrate",
+        "future": "θα γιορτάσω",
+        "past": "γιόρτασα"
     },
     {
-      "verb": "γνωρίζω",
-      "translation": "to know",
-      "future": "θα γνωρίσω",
-      "past": "γνώρισα"
+        "verb": "γνωρίζω",
+        "translation": "to know",
+        "future": "θα γνωρίσω",
+        "past": "γνώρισα"
     },
     {
-      "verb": "γράφω",
-      "translation": "to write",
-      "future": "θα γράψω",
-      "past": "έγραψα"
+        "verb": "γράφω",
+        "translation": "to write",
+        "future": "θα γράψω",
+        "past": "έγραψα"
     },
     {
-      "verb": "γυρίζω",
-      "translation": "to turn, to return",
-      "future": "θα γυρίσω",
-      "past": "γύρισα"
+        "verb": "γυρίζω",
+        "translation": "to turn, to return",
+        "future": "θα γυρίσω",
+        "past": "γύρισα"
     },
     {
-      "verb": "γελάω",
-      "translation": "to laugh",
-      "future": "θα γελάσω",
-      "past": "γέλασα"
+        "verb": "γελάω",
+        "translation": "to laugh",
+        "future": "θα γελάσω",
+        "past": "γέλασα"
+    },
+    {
+        "verb": "δείχνω",
+        "translation": "to show",
+        "future": "θα δείξω",
+        "past": "έδειξα"
+    },
+    {
+        "verb": "δηλητηριάζω",
+        "translation": "to poison",
+        "future": "θα δηλητηριάσω",
+        "past": "δηλητηρίασα"
+    },
+    {
+        "verb": "δηλώνω",
+        "translation": "to state, to declare",
+        "future": "θα δηλώσω",
+        "past": "δήλωσα"
+    },
+    {
+        "verb": "διαβάζω",
+        "translation": "to read",
+        "future": "θα διαβάσω",
+        "past": "διάβασα"
+    },
+    {
+        "verb": "διαγράφω",
+        "translation": "to delete, to erase",
+        "future": "θα διαγράψω",
+        "past": "διέγραψα"
+    },
+    {
+        "verb": "διαλέγω",
+        "translation": "to choose",
+        "future": "θα διαλέξω",
+        "past": "διάλεξα"
+    },
+    {
+        "verb": "διασκεδάζω",
+        "translation": "to have fun, to enjoy",
+        "future": "θα διασκεδάσω",
+        "past": "διασκέδασα"
+    },
+    {
+        "verb": "διαφημίζω",
+        "translation": "to advertise",
+        "future": "θα διαφημίσω",
+        "past": "διαφήμισα"
+    },
+    {
+        "verb": "διαφωνώ",
+        "translation": "to disagree",
+        "future": "θα διαφωνήσω",
+        "past": "διαφώνησα"
+    },
+    {
+        "verb": "δίνω",
+        "translation": "to give",
+        "future": "θα δώσω",
+        "past": "έδωσα"
+    },
+    {
+        "verb": "δοκιμάζω",
+        "translation": "to try, to taste",
+        "future": "θα δοκιμάσω",
+        "past": "δοκίμασα"
+    },
+    {
+        "verb": "δουλεύω",
+        "translation": "to work",
+        "future": "θα δουλέψω",
+        "past": "δούλεψα"
+    },
+    {
+        "verb": "δημιουργώ",
+        "translation": "to create",
+        "future": "θα δημιουργήσω",
+        "past": "δημιούργησα"
+    },
+    {
+        "verb": "διδάσκω",
+        "translation": "to teach",
+        "future": "θα διδάξω",
+        "past": "δίδαξα"
+    },
+    {
+        "verb": "διψάω",
+        "translation": "to be thirsty",
+        "future": "θα διψάσω",
+        "past": "δίψασα"
     }
 ]
