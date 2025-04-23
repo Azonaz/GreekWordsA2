@@ -364,5 +364,107 @@
         "translation": "to be thirsty",
         "future": "θα διψάσω",
         "past": "δίψασα"
+    },
+    {
+        "verb": "ελπίζω",
+        "translation": "to hope",
+        "future": "θα ελπίσω",
+        "past": "ήλπισα"
+    },
+    {
+        "verb": "ενδιαφέρομαι",
+        "translation": "to be interested",
+        "future": "θα ενδιαφερθώ",
+        "past": "ενδιαφέρθηκα"
+    },
+    {
+        "verb": "ενημερώνω",
+        "translation": "to inform, to notify",
+        "future": "θα ενημερώσω",
+        "past": "ενημέρωσα"
+    },
+    {
+        "verb": "ενθουσιάζω",
+        "translation": "to excite",
+        "future": "θα ενθουσιάσω",
+        "past": "ενθουσίασα"
+    },
+    {
+        "verb": "εξηγώ",
+        "translation": "to explain",
+        "future": "θα εξηγήσω",
+        "past": "εξήγησα"
+    },
+    {
+        "verb": "εξυπηρετώ",
+        "translation": "to serve",
+        "future": "θα εξυπηρετήσω",
+        "past": "εξυπηρέτησα"
+    },
+    {
+        "verb": "επαναλαμβάνω",
+        "translation": "to repeat",
+        "future": "θα επαναλάβω",
+        "past": "επανέλαβα"
+    },
+    {
+        "verb": "επιθυμώ",
+        "translation": "to wish, to desire",
+        "future": "θα επιθυμήσω",
+        "past": "επιθύμησα"
+    },
+    {
+        "verb": "επικοινωνώ",
+        "translation": "to communicate, to contact",
+        "future": "θα επικοινωνήσω",
+        "past": "επικοινώνησα"
+    },
+    {
+        "verb": "επιλέγω",
+        "translation": "to choose",
+        "future": "θα επιλέξω",
+        "past": "επέλεξα"
+    },
+    {
+        "verb": "επισκέπτομαι",
+        "translation": "to visit",
+        "future": "θα επισκεφτώ",
+        "past": "επισκέφτηκα"
+    },
+    {
+        "verb": "επιστρέφω",
+        "translation": "to return",
+        "future": "θα επιστρέψω",
+        "past": "επέστρεψα"
+    },
+    {
+        "verb": "έρχομαι",
+        "translation": "to come",
+        "future": "θα έρθω",
+        "past": "ήρθα"
+    },
+    {
+        "verb": "ετοιμάζω",
+        "translation": "to prepare",
+        "future": "θα ετοιμάσω",
+        "past": "ετοίμασα"
+    },
+    {
+        "verb": "ευχαριστώ",
+        "translation": "to thank",
+        "future": "θα ευχαριστήσω",
+        "past": "ευχαρίστησα"
+    }
+    {
+        "verb": "έχω",
+        "translation": "to have",
+        "future": "θα έχω",
+        "past": "είχα"
+    },
+    {
+        "verb": "επιτρέπω",
+        "translation": "to allow",
+        "future": "θα επιτρέψω",
+        "past": "επέτρεψα"
     }
 ]
