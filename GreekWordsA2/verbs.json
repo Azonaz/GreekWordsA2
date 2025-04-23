@@ -454,7 +454,7 @@
         "translation": "to thank",
         "future": "θα ευχαριστήσω",
         "past": "ευχαρίστησα"
-    }
+    },
     {
         "verb": "έχω",
         "translation": "to have",
@@ -466,5 +466,29 @@
         "translation": "to allow",
         "future": "θα επιτρέψω",
         "past": "επέτρεψα"
+    },
+    {
+        "verb": "ζητάω",
+        "translation": "to ask, to request",
+        "future": "θα ζητήσω",
+        "past": "ζήτησα"
+    },
+    {
+        "verb": "ζω",
+        "translation": "to live",
+        "future": "θα ζήσω",
+        "past": "έζησα"
+    },
+    {
+        "verb": "ζωγραφίζω",
+        "translation": "to paint, to draw",
+        "future": "θα ζωγραφίσω",
+        "past": "ζωγράφισα"
+    },
+    {
+        "verb": "ζυγίζω",
+        "translation": "to weigh",
+        "future": "θα ζυγίσω",
+        "past": "ζύγισα"
     }
 ]
