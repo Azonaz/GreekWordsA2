@@ -502,5 +502,173 @@
         "translation": "to remember",
         "future": "θα θυμηθώ",
         "past": "θυμήθηκα"
+    },
+    {
+        "verb": "καθαρίζω",
+        "translation": "to clean",
+        "future": "θα καθαρίσω",
+        "past": "καθάρισα"
+    },
+    {
+        "verb": "κάθομαι",
+        "translation": "to sit",
+        "future": "θα καθίσω",
+        "past": "κάθισα"
+    },
+    {
+        "verb": "καίω",
+        "translation": "to burn",
+        "future": "θα κάψω",
+        "past": "έκαψα"
+    },
+    {
+        "verb": "καλύπτω",
+        "translation": "to cover",
+        "future": "θα καλύψω",
+        "past": "κάλυψα"
+    },
+    {
+        "verb": "καλώ",
+        "translation": "to call, to invite",
+        "future": "θα καλέσω",
+        "past": "κάλεσα"
+    },
+    {
+        "verb": "κάνω",
+        "translation": "to do, to make",
+        "future": "θα κάνω",
+        "past": "έκανα"
+    },
+    {
+        "verb": "καταλαβαίνω",
+        "translation": "to understand",
+        "future": "θα καταλάβω",
+        "past": "κατάλαβα"
+    },
+    {
+        "verb": "καταφέρνω",
+        "translation": "to manage, to achieve",
+        "future": "θα καταφέρω",
+        "past": "κατάφερα"
+    },
+    {
+        "verb": "κατεβαίνω",
+        "translation": "to go down",
+        "future": "θα κατέβω",
+        "past": "κατέβηκα"
+    },
+    {
+        "verb": "κατεβάζω",
+        "translation": "to download",
+        "future": "θα κατεβάσω",
+        "past": "κατέβασα"
+    },
+    {
+        "verb": "κερδίζω",
+        "translation": "to win",
+        "future": "θα κερδίσω",
+        "past": "κέρδισα"
+    },
+    {
+        "verb": "κλειδώνω",
+        "translation": "to lock",
+        "future": "θα κλειδώσω",
+        "past": "κλείδωσα"
+    },
+    {
+        "verb": "κλείνω",
+        "translation": "to close",
+        "future": "θα κλείσω",
+        "past": "έκλεισα"
+    },
+    {
+        "verb": "κόβω",
+        "translation": "to cut",
+        "future": "θα κόψω",
+        "past": "έκοψα"
+    },
+    {
+        "verb": "κοιμάμαι",
+        "translation": "to sleep",
+        "future": "θα κοιμηθώ",
+        "past": "κοιμήθηκα"
+    },
+    {
+        "verb": "κοιτάζω",
+        "translation": "to look at",
+        "future": "θα κοιτάξω",
+        "past": "κοίταξα"
+    },
+    {
+        "verb": "κολλάω",
+        "translation": "to stick, to glue",
+        "future": "θα κολλήσω",
+        "past": "κόλλησα"
+    },
+    {
+        "verb": "κοστίζω",
+        "translation": "to cost",
+        "future": "θα κοστίσω",
+        "past": "κόστισα"
+    },
+    {
+        "verb": "κουράζω",
+        "translation": "to tire, to exhaust",
+        "future": "θα κουράσω",
+        "past": "κούρασα"
+    },
+    {
+      "verb": "κουράζομαι",
+      "translation": "to get tired",
+      "future": "θα κουραστώ",
+      "past": "κουράστηκα"
+    },
+    {
+        "verb": "κρατάω",
+        "translation": "to hold",
+        "future": "θα κρατήσω",
+        "past": "κράτησα"
+    },
+    {
+        "verb": "κρύβω",
+        "translation": "to hide",
+        "future": "θα κρύψω",
+        "past": "έκρυψα"
+    },
+    {
+        "verb": "κρυώνω",
+        "translation": "to feel cold",
+        "future": "θα κρυώσω",
+        "past": "κρύωσα"
+    },
+    {
+        "verb": "κολυμπάω",
+        "translation": "to swim",
+        "future": "θα κολυμπήσω",
+        "past": "κολύμπησα"
+    },
+    {
+        "verb": "κυκλώνω",
+        "translation": "to circle, to encircle",
+        "future": "θα κυκλώσω",
+        "past": "κυκλωσα"
+    },
+    {
+        "verb": "καπνίζω",
+        "translation": "to smoke",
+        "future": "θα καπνίσω",
+        "past": "κάπνισα"
+    },
+    {
+        "verb": "κλαίω",
+        "translation": "to cry",
+        "future": "θα κλάψω",
+        "past": "έκλαψα"
+    },
+    {
+        "verb": "κλέβω",
+        "translation": "to steal",
+        "future": "θα κλέψω",
+        "past": "έκλεψα"
     }
 ]
