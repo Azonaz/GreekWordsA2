@@ -226,5 +226,53 @@
         "translation": "to wet",
         "future": "θα βρέξω",
         "past": "έβρεξα"
+    },
+    {
+      "verb": "γεμίζω",
+      "translation": "to fill",
+      "future": "θα γεμίσω",
+      "past": "γέμισα"
+    },
+    {
+      "verb": "γεννάω",
+      "translation": "to give birth",
+      "future": "θα γεννήσω",
+      "past": "γέννησα"
+    },
+    {
+      "verb": "γίνομαι",
+      "translation": "to become",
+      "future": "θα γίνω",
+      "past": "έγινα"
+    },
+    {
+      "verb": "γιορτάζω",
+      "translation": "to celebrate",
+      "future": "θα γιορτάσω",
+      "past": "γιόρτασα"
+    },
+    {
+      "verb": "γνωρίζω",
+      "translation": "to know",
+      "future": "θα γνωρίσω",
+      "past": "γνώρισα"
+    },
+    {
+      "verb": "γράφω",
+      "translation": "to write",
+      "future": "θα γράψω",
+      "past": "έγραψα"
+    },
+    {
+      "verb": "γυρίζω",
+      "translation": "to turn, to return",
+      "future": "θα γυρίσω",
+      "past": "γύρισα"
+    },
+    {
+      "verb": "γελάω",
+      "translation": "to laugh",
+      "future": "θα γελάσω",
+      "past": "γέλασα"
     }
 ]
