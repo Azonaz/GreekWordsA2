@@ -922,5 +922,17 @@
         "translation": "to escape, to avoid",
         "future": "θα ξεφύγω",
         "past": "ξέφυγα"
+    },
+    {
+        "verb": "οδηγώ",
+        "translation": "to drive",
+        "future": "θα οδηγήσω",
+        "past": "οδήγησα"
+    },
+    {
+        "verb": "ονειρεύομαι",
+        "translation": "to dream",
+        "future": "θα ονειρευτώ",
+        "past": "ονειρεύτηκα"
     }
 ]
