@@ -1180,5 +1180,179 @@
         "translation": "to ask",
         "future": "θα ρωτήσω",
         "past": "ρώτησα"
+    },
+    {
+        "verb": "σβήνω",
+        "translation": "to rub, to erase",
+        "future": "θα σβήσω",
+        "past": "έσβησα"
+    },
+    {
+        "verb": "σερβίρω",
+        "translation": "to serve",
+        "future": "θα σερβίρω",
+        "past": "σερβίρισα"
+    },
+    {
+        "verb": "σημαίνω",
+        "translation": "to mean",
+        "future": "θα σημαίνω",
+        "past": "σήμανα"
+    },
+    {
+        "verb": "σημειώνω",
+        "translation": "to note, to write down",
+        "future": "θα σημειώσω",
+        "past": "σημείωσα"
+    },
+    {
+        "verb": "σκέφτομαι",
+        "translation": "to think",
+        "future": "θα σκεφτώ",
+        "past": "σκέφτηκα"
+    },
+    {
+        "verb": "σκορπίζω",
+        "translation": "to scatter",
+        "future": "θα σκορπίσω",
+        "past": "σκόρπισα"
+    },
+    {
+        "verb": "σκουπίζω",
+        "translation": "to sweep, to wipe",
+        "future": "θα σκουπίσω",
+        "past": "σκούπισα"
+    },
+    {
+        "verb": "σπάζω",
+        "translation": "to break, to smash",
+        "future": "θα σπάσω",
+        "past": "έσπασα"
+    },
+    {
+        "verb": "σπουδάζω",
+        "translation": "to study (at a university)",
+        "future": "θα σπουδάσω",
+        "past": "σπούδασα"
+    },
+    {
+        "verb": "σταματάω",
+        "translation": "to stop",
+        "future": "θα σταματήσω",
+        "past": "σταμάτησα"
+    },
+    {
+        "verb": "στέλνω",
+        "translation": "to send",
+        "future": "θα στείλω",
+        "past": "έστειλα"
+    },
+    {
+        "verb": "στρώνω",
+        "translation": "to lay, to set, to spread",
+        "future": "θα στρώσω",
+        "past": "έστρωσα"
+    },
+    {
+        "verb": "συγκρίνω",
+        "translation": "to compare",
+        "future": "θα συγκρίνω",
+        "past": "σύγκρινα"
+    },
+    {
+        "verb": "συζητάω",
+        "translation": "to discuss",
+        "future": "θα συζητήσω",
+        "past": "συζήτησα"
+    },
+    {
+        "verb": "συλλέγω",
+        "translation": "to collect",
+        "future": "θα συλλέξω",
+        "past": "συνέλεξα"
+    },
+    {
+        "verb": "συμπαθώ",
+        "translation": "to like, to sympathize",
+        "future": "θα συμπαθήσω",
+        "past": "συμπάθησα"
+    },
+    {
+        "verb": "συμφωνώ",
+        "translation": "to agree",
+        "future": "θα συμφωνήσω",
+        "past": "συμφώνησα"
+    },
+    {
+        "verb": "συμπληρώνω",
+        "translation": "to complete, to fill out",
+        "future": "θα συμπληρώσω",
+        "past": "συμπλήρωσα"
+    },
+    {
+        "verb": "συναντάω",
+        "translation": "to meet",
+        "future": "θα συναντήσω",
+        "past": "συνάντησα"
+    },
+    {
+        "verb": "συνεχίζω",
+        "translation": "to continue",
+        "future": "θα συνεχίσω",
+        "past": "συνέχισα"
+    },
+    {
+        "verb": "συστήνω",
+        "translation": "to introduce, to recommend",
+        "future": "θα συστήσω",
+        "past": "σύστησα"
+    },
+    {
+        "verb": "σχεδιάζω",
+        "translation": "to design, to plan",
+        "future": "θα σχεδιάσω",
+        "past": "σχεδίασα"
+    },
+    {
+        "verb": "στολίζω",
+        "translation": "to decorate",
+        "future": "θα στολίσω",
+        "past": "στόλισα"
+    },
+    {
+        "verb": "συμβουλεύω",
+        "translation": "to advise",
+        "future": "θα συμβουλέψω",
+        "past": "συμβούλεψα"
+    },
+    {
+        "verb": "συμμετέχω",
+        "translation": "to participate",
+        "future": "θα συμμετέχω",
+        "past": "συμμετείχα"
+    },
+    {
+        "verb": "συνδέω",
+        "translation": "to connect",
+        "future": "θα συνδέσω",
+        "past": "σύνδεσα"
+    },
+    {
+        "verb": "σφουγγαρίζω",
+        "translation": "to mop",
+        "future": "θα σφουγγαρίσω",
+        "past": "σφουγγάρισα"
+    },
+    {
+        "verb": "σηκώνομαι",
+        "translation": "to get up, to rise",
+        "future": "θα σηκωθώ",
+        "past": "σηκώθηκα"
+    },
+    {
+        "verb": "συγχωρώ",
+        "translation": "to forgive",
+        "future": "θα συγχωρήσω",
+        "past": "συγχώρησα"
     }
 ]
