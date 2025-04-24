@@ -934,5 +934,239 @@
         "translation": "to dream",
         "future": "θα ονειρευτώ",
         "past": "ονειρεύτηκα"
+    },
+    {
+        "verb": "παθαίνω",
+        "translation": "to suffer, to experience",
+        "future": "θα πάθω",
+        "past": "έπαθα"
+    },
+    {
+        "verb": "παίζω",
+        "translation": "to play",
+        "future": "θα παίξω",
+        "past": "έπαιξα"
+    },
+    {
+        "verb": "παίρνω",
+        "translation": "to take",
+        "future": "θα πάρω",
+        "past": "πήρα"
+    },
+    {
+        "verb": "παντρεύομαι",
+        "translation": "to get married",
+        "future": "θα παντρευτώ",
+        "past": "παντρεύτηκα"
+    },
+    {
+        "verb": "παραγγέλλω",
+        "translation": "to order",
+        "future": "θα παραγγείλω",
+        "past": "παράγγειλα"
+    },
+    {
+        "verb": "παρακαλώ",
+        "translation": "to please",
+        "future": "θα παρακαλέσω",
+        "past": "παρακάλεσα"
+    },
+    {
+        "verb": "παρακολουθώ",
+        "translation": "to watch",
+        "future": "θα παρακολουθήσω",
+        "past": "παρακολούθησα"
+    },
+    {
+        "verb": "παρατηρώ",
+        "translation": "to observe, to notice",
+        "future": "θα παρατηρήσω",
+        "past": "παρατήρησα"
+    },
+    {
+        "verb": "παρουσιάζω",
+        "translation": "to present",
+        "future": "θα παρουσιάσω",
+        "past": "παρουσίασα"
+    },
+    {
+        "verb": "παρουσιάζομαι",
+        "translation": "to present oneself",
+        "future": "θα παρουσιαστώ",
+        "past": "παρουσιάστηκα"
+    },
+    {
+        "verb": "πεθαίνω",
+        "translation": "to die",
+        "future": "θα πεθάνω",
+        "past": "πέθανα"
+    },
+    {
+        "verb": "πεινάω",
+        "translation": "to be hungry",
+        "future": "θα πεινάσω",
+        "past": "πείνασα"
+    },
+    {
+        "verb": "πείθω",
+        "translation": "to convince",
+        "future": "θα πείσω",
+        "past": "έπεισα"
+    },
+    {
+        "verb": "περιγράφω",
+        "translation": "to describe",
+        "future": "θα περιγράψω",
+        "past": "περίγραψα"
+    },
+    {
+        "verb": "περιλαμβάνω",
+        "translation": "to include",
+        "future": "θα περιλάβω",
+        "past": "περίλαβα"
+    },
+    {
+        "verb": "περιμένω",
+        "translation": "to wait",
+        "future": "θα περιμένω",
+        "past": "περίμενα"
+    },
+    {
+        "verb": "περνάω",
+        "translation": "to pass, to go through",
+        "future": "θα περάσω",
+        "past": "πέρασα"
+    },
+    {
+        "verb": "περπατάω",
+        "translation": "to walk",
+        "future": "θα περπατήσω",
+        "past": "περπάτησα"
+    },
+    {
+        "verb": "πετάω",
+        "translation": "to fly",
+        "future": "θα πετάξω",
+        "past": "πέταξα"
+    },
+    {
+        "verb": "πέφτω",
+        "translation": "to fall",
+        "future": "θα πέσω",
+        "past": "έπεσα"
+    },
+    {
+        "verb": "πηγαίνω",
+        "translation": "to go",
+        "future": "θα πάω",
+        "past": "πήγα"
+    },
+    {
+        "verb": "πίνω",
+        "translation": "to drink",
+        "future": "θα πιω",
+        "past": "ήπια"
+    },
+    {
+        "verb": "πιστεύω",
+        "translation": "to believe",
+        "future": "θα πιστέψω",
+        "past": "πίστεψα"
+    },
+    {
+        "verb": "πλένω",
+        "translation": "to wash",
+        "future": "θα πλύνω",
+        "past": "έπλυνα"
+    },
+    {
+        "verb": "πληρώνω",
+        "translation": "to pay",
+        "future": "θα πληρώσω",
+        "past": "πλήρωσα"
+    },
+    {
+        "verb": "πλησιάζω",
+        "translation": "to approach",
+        "future": "θα πλησιάσω",
+        "past": "πλησίασα"
+    },
+    {
+        "verb": "πνίγομαι",
+        "translation": "to choke, to drawn",
+        "future": "θα πνιγώ",
+        "past": "πνίγηκα"
+    },
+    {
+        "verb": "πονάω",
+        "translation": "to hurt, to be in pain",
+        "future": "θα πονέσω",
+        "past": "πόνεσα"
+    },
+    {
+        "verb": "προλαβαίνω",
+        "translation": "to catch (on time)",
+        "future": "θα προλάβω",
+        "past": "πρόλαβα"
+    },
+    {
+        "verb": "προσέχω",
+        "translation": "to pay attention",
+        "future": "θα προσέξω",
+        "past": "πρόσεξα"
+    },
+    {
+        "verb": "προσθέτω",
+        "translation": "to add",
+        "future": "θα προσθέσω",
+        "past": "πρόσθεσα"
+    },
+    {
+        "verb": "προσπαθώ",
+        "translation": "to try",
+        "future": "θα προσπαθήσω",
+        "past": "προσπάθησα"
+    },
+    {
+        "verb": "προσκαλώ",
+        "translation": "to invite",
+        "future": "θα προσκαλέσω",
+        "past": "προσκάλεσα"
+    },
+    {
+        "verb": "προτείνω",
+        "translation": "to suggest, to propose",
+        "future": "θα προτείνω",
+        "past": "πρότεινα"
+    },
+    {
+        "verb": "προτιμάω",
+        "translation": "to prefer",
+        "future": "θα προτιμήσω",
+        "past": "προτίμησα"
+    },
+    {
+        "verb": "πιάνω",
+        "translation": "to catch, to grab",
+        "future": "θα πιάσω",
+        "past": "έπιασα"
+    },
+    {
+        "verb": "πουλάω",
+        "translation": "to sell",
+        "future": "θα πουλήσω",
+        "past": "πούλησα"
+    },
+    {
+        "verb": "προσφέρω",
+        "translation": "to offer",
+        "future": "θα προσφέρω",
+        "past": "πρόσφερα"
+    },
+    {
+        "verb": "παρκάρω",
+        "translation": "to park",
+        "future": "θα παρκάρω",
+        "past": "πάρκσαρα"
     }
 ]
