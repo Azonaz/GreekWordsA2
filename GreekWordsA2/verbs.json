@@ -670,5 +670,47 @@
         "translation": "to steal",
         "future": "θα κλέψω",
         "past": "έκλεψα"
+    },
+    {
+        "verb": "λείπω",
+        "translation": "to be absent, to be missing",
+        "future": "θα λείψω",
+        "past": "έλειψα"
+    },
+    {
+        "verb": "λειτουργώ",
+        "translation": "to function, to operate",
+        "future": "θα λειτουργήσω",
+        "past": "λειτούργησα"
+    },
+    {
+        "verb": "λέω",
+        "translation": "to say",
+        "future": "θα πω",
+        "past": "είπα"
+    },
+    {
+        "verb": "λήγω",
+        "translation": "to end, to expire",
+        "future": "θα λήξω",
+        "past": "έληξα"
+    },
+    {
+        "verb": "λιώνω",
+        "translation": "to melt",
+        "future": "θα λιώσω",
+        "past": "έλιωσα"
+    },
+    {
+        "verb": "λυπάμαι",
+        "translation": "to be sorry, to feel sad",
+        "future": "θα λυπηθώ",
+        "past": "λυπήθηκα"
+    },
+    {
+        "verb": "λύνω",
+        "translation": "to solve",
+        "future": "θα λύσω",
+        "past": "έλυσα"
     }
 ]
