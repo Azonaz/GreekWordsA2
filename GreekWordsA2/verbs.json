@@ -862,5 +862,65 @@
         "translation": "to feel sleepy",
         "future": "θα νυστάξω",
         "past": "νύσταξα"
+    },
+    {
+        "verb": "ξεκινάω",
+        "translation": "to start",
+        "future": "θα ξεκινήσω",
+        "past": "ξεκίνησα"
+    },
+    {
+        "verb": "ξεκουράζομαι",
+        "translation": "to rest",
+        "future": "θα ξεκουραστώ",
+        "past": "ξεκουράστηκα"
+    },
+    {
+        "verb": "ξεπερνάω",
+        "translation": "to overcome, to exceed",
+        "future": "θα ξεπεράσω",
+        "past": "ξεπέρασα"
+    },
+    {
+        "verb": "ξεπλένω",
+        "translation": "to rinse",
+        "future": "θα ξεπλύνω",
+        "past": "ξέπλυνα"
+    },
+    {
+        "verb": "ξέρω",
+        "translation": "to know",
+        "future": "θα ξέρω",
+        "past": "ήξερα"
+    },
+    {
+        "verb": "ξεχνάω",
+        "translation": "to forget",
+        "future": "θα ξεχάσω",
+        "past": "ξέχασα"
+    },
+    {
+        "verb": "ξοδεύω",
+        "translation": "to spend",
+        "future": "θα ξοδέψω",
+        "past": "ξόδεψα"
+    },
+    {
+        "verb": "ξυπνάω",
+        "translation": "to wake up",
+        "future": "θα ξυπνήσω",
+        "past": "ξύπνησα"
+    },
+    {
+        "verb": "ξενυχτάω",
+        "translation": "to stay awake all night",
+        "future": "θα ξενυχτήσω",
+        "past": "ξενύχτησα"
+    },
+    {
+        "verb": "ξεφεύγω",
+        "translation": "to escape, to avoid",
+        "future": "θα ξεφύγω",
+        "past": "ξέφυγα"
     }
 ]
