@@ -826,5 +826,41 @@
         "translation": "to be able to, can",
         "future": "θα μπορέσω",
         "past": "μπόρεσα"
+    },
+    {
+        "verb": "νευριάζω",
+        "translation": "to get angry",
+        "future": "θα νευριάσω",
+        "past": "νευρίασα"
+    },
+    {
+        "verb": "νοικιάζω",
+        "translation": "to rent",
+        "future": "θα νοικιάσω",
+        "past": "νοίκιασα"
+    },
+    {
+        "verb": "νιώθω",
+        "translation": "to feel",
+        "future": "θα νιώσω",
+        "past": "ένιωσα"
+    },
+    {
+        "verb": "νομίζω",
+        "translation": "to think, to believe",
+        "future": "θα νομίσω",
+        "past": "νόμισα"
+    },
+    {
+        "verb": "ντύνομαι",
+        "translation": "to get dressed",
+        "future": "θα ντυθώ",
+        "past": "ντύθηκα"
+    },
+    {
+        "verb": "νυστάζω",
+        "translation": "to feel sleepy",
+        "future": "θα νυστάξω",
+        "past": "νύσταξα"
     }
 ]
