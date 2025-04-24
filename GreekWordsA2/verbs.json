@@ -712,5 +712,119 @@
         "translation": "to solve",
         "future": "θα λύσω",
         "past": "έλυσα"
+    },
+    {
+        "verb": "μαγειρεύω",
+        "translation": "to cook",
+        "future": "θα μαγειρέψω",
+        "past": "μαγείρεψα"
+    },
+    {
+        "verb": "μαζεύω",
+        "translation": "to gather, to collect",
+        "future": "θα μαζέψω",
+        "past": "μάζεψα"
+    },
+    {
+        "verb": "μαθαίνω",
+        "translation": "to learn",
+        "future": "θα μάθω",
+        "past": "έμαθα"
+    },
+    {
+        "verb": "μαλώνω",
+        "translation": "to argue, to quarrel",
+        "future": "θα μαλώσω",
+        "past": "μάλωσα"
+    },
+    {
+        "verb": "μαντεύω",
+        "translation": "to guess",
+        "future": "θα μαντέψω",
+        "past": "μάντεψα"
+    },
+    {
+        "verb": "μεγαλώνω",
+        "translation": "to grow up",
+        "future": "θα μεγαλώσω",
+        "past": "μεγάλωσα"
+    },
+    {
+        "verb": "μένω",
+        "translation": "to stay, to live",
+        "future": "θα μείνω",
+        "past": "έμεινα"
+    },
+    {
+        "verb": "μετακομίζω",
+        "translation": "to move (to a new place)",
+        "future": "θα μετακομίσω",
+        "past": "μετακόμισα"
+    },
+    {
+        "verb": "μεταφέρω",
+        "translation": "to transfer, to transport",
+        "future": "θα μεταφέρω",
+        "past": "μετέφερα"
+    },
+    {
+        "verb": "μιλάω",
+        "translation": "to speak",
+        "future": "θα μιλήσω",
+        "past": "μίλησα"
+    },
+    {
+        "verb": "μπαίνω",
+        "translation": "to enter",
+        "future": "θα μπω",
+        "past": "μπήκα"
+    },
+    {
+        "verb": "μπερδεύω",
+        "translation": "to confuse",
+        "future": "θα μπερδέψω",
+        "past": "μπέρδεψα"
+    },
+    {
+        "verb": "μελετάω",
+        "translation": "to study",
+        "future": "θα μελετήσω",
+        "past": "μελέτησα"
+    },
+    {
+        "verb": "μεταφράζω",
+        "translation": "to translate",
+        "future": "θα μεταφράσω",
+        "past": "μετέφρασα"
+    },
+    {
+        "verb": "μετράω",
+        "translation": "to count",
+        "future": "θα μετρήσω",
+        "past": "μέτρησα"
+    },
+    {
+        "verb": "μοιάζω",
+        "translation": "to resemble, to look like",
+        "future": "θα μοιάσω",
+        "past": "μοίασα"
+    },
+    {
+        "verb": "μοιράζω",
+        "translation": "to distribute",
+        "future": "θα μοιράσω",
+        "past": "μοίρασα"
+    },
+    {
+        "verb": "μυρίζω",
+        "translation": "to smell",
+        "future": "θα μυρίσω",
+        "past": "μύρισα"
+    },
+    {
+        "verb": "μπορώ",
+        "translation": "to be able to, can",
+        "future": "θα μπορέσω",
+        "past": "μπόρεσα"
     }
 ]
