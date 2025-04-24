@@ -1168,5 +1168,17 @@
         "translation": "to park",
         "future": "θα παρκάρω",
         "past": "πάρκσαρα"
+    },
+    {
+        "verb": "ρίχνω",
+        "translation": "to throw, to drop",
+        "future": "θα ρίξω",
+        "past": "έριξα"
+    },
+    {
+        "verb": "ρωτάω",
+        "translation": "to ask",
+        "future": "θα ρωτήσω",
+        "past": "ρώτησα"
     }
 ]
