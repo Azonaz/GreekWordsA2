@@ -1450,5 +1450,101 @@
         "translation": "to promise",
         "future": "θα υποσχεθώ",
         "past": "υποσχέθηκα"
+    },
+    {
+        "verb": "φαίνομαι",
+        "translation": "to seem",
+        "future": "θα φανώ",
+        "past": "φάνηκα"
+    },
+    {
+        "verb": "φέρνω",
+        "translation": "to bring",
+        "future": "θα φέρω",
+        "past": "έφερα"
+    },
+    {
+        "verb": "φεύγω",
+        "translation": "to leave",
+        "future": "θα φύγω",
+        "past": "έφυγα"
+    },
+    {
+        "verb": "φιλάω",
+        "translation": "to kiss",
+        "future": "θα φιλήσω",
+        "past": "φίλησα"
+    },
+    {
+        "verb": "φιλοξενώ",
+        "translation": "to host, to accommodate",
+        "future": "θα φιλοξενήσω",
+        "past": "φιλοξένησα"
+    },
+    {
+        "verb": "φοβάμαι",
+        "translation": "to be afraid",
+        "future": "θα φοβηθώ",
+        "past": "φοβήθηκα"
+    },
+    {
+        "verb": "φοιτώ",
+        "translation": "to attend (school, university)",
+        "future": "θα φοιτήσω",
+        "past": "φοίτησα"
+    },
+    {
+        "verb": "φοράω",
+        "translation": "to wear",
+        "future": "θα φορέσω",
+        "past": "φόρεσα"
+    },
+    {
+        "verb": "φροντίζω",
+        "translation": "to take care of",
+        "future": "θα φροντίσω",
+        "past": "φρόντισα"
+    },
+    {
+        "verb": "φτάνω",
+        "translation": "to arrive, to reach",
+        "future": "θα φτάσω",
+        "past": "έφτασα"
+    },
+    {
+        "verb": "φτιάχνω",
+        "translation": "to make, to fix",
+        "future": "θα φτιάξω",
+        "past": "έφτιαξα"
+    },
+    {
+        "verb": "φυτεύω",
+        "translation": "to plant",
+        "future": "θα φυτέψω",
+        "past": "φύτεψα"
+    },
+    {
+        "verb": "φυσάω",
+        "translation": "to blow (wind)",
+        "future": "θα φυσήξω",
+        "past": "φύσηξα"
+    },
+    {
+        "verb": "φωτίζω",
+        "translation": "to light, to illuminate",
+        "future": "θα φωτίσω",
+        "past": "φώτισα"
+    },
+    {
+        "verb": "φωνάζω",
+        "translation": "to yell",
+        "future": "θα φωνάξω",
+        "past": "φώναξα"
+    },
+    {
+        "verb": "φταίω",
+        "translation": "to be at fault",
+        "future": "θα φταίξω",
+        "past": "έφταιξα"
     }
 ]
