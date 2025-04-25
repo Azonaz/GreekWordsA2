@@ -1546,5 +1546,77 @@
         "translation": "to be at fault",
         "future": "θα φταίξω",
         "past": "έφταιξα"
+    },
+    {
+        "verb": "χαιρετώ",
+        "translation": "to greet",
+        "future": "θα χαιρετήσω",
+        "past": "χαιρέτησα"
+    },
+    {
+        "verb": "χαίρομαι",
+        "translation": "to be glad",
+        "future": "θα χαρώ",
+        "past": "χάρηκα"
+    },
+    {
+        "verb": "χαλάω",
+        "translation": "to break, to ruin, to spoil",
+        "future": "θα χαλάσω",
+        "past": "χάλασα"
+    },
+    {
+        "verb": "χάνω",
+        "translation": "to lose",
+        "future": "θα χάσω",
+        "past": "έχασα"
+    },
+    {
+        "verb": "χαρίζω",
+        "translation": "to give as a gift, to donate",
+        "future": "θα χαρίσω",
+        "past": "χάρισα"
+    },
+    {
+        "verb": "χορεύω",
+        "translation": "to dance",
+        "future": "θα χορέψω",
+        "past": "χόρεψα"
+    },
+    {
+        "verb": "χρειάζομαι",
+        "translation": "to need",
+        "future": "θα χρειαστώ",
+        "past": "χρειάστηκα"
+    },
+    {
+        "verb": "χρησιμοποιώ",
+        "translation": "to use",
+        "future": "θα χρησιμοποιήσω",
+        "past": "χρησιμοποίησα"
+    },
+    {
+        "verb": "χτυπάω",
+        "translation": "to hit, to knock",
+        "future": "θα χτυπήσω",
+        "past": "χτύπησα"
+    },
+    {
+        "verb": "χαλαρώνω",
+        "translation": "to relax",
+        "future": "θα χαλαρώσω",
+        "past": "χαλάρωσα"
+    },
+    {
+        "verb": "χαμογελάω",
+        "translation": "to smile",
+        "future": "θα χαμογελάσω",
+        "past": "χαμογέλασα"
+    },
+    {
+        "verb": "χωρίζω",
+        "translation": "to separate, to divorce",
+        "future": "θα χωρίσω",
+        "past": "χώρισα"
     }
 ]
