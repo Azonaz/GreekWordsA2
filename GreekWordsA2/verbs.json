@@ -1618,5 +1618,29 @@
         "translation": "to separate, to divorce",
         "future": "θα χωρίσω",
         "past": "χώρισα"
+    },
+    {
+        "verb": "ψάχνω",
+        "translation": "to search, to look for",
+        "future": "θα ψάξω",
+        "past": "έψαξα"
+    },
+    {
+        "verb": "ψωνίζω",
+        "translation": "to shop, to buy",
+        "future": "θα ψωνίσω",
+        "past": "ψώνισα"
+    },
+    {
+        "verb": "ψαρεύω",
+        "translation": "to fish",
+        "future": "θα ψαρέψω",
+        "past": "ψάρεψα"
+    },
+    {
+        "verb": "ψήνω",
+        "translation": "to bake, to grill",
+        "future": "θα ψήσω",
+        "past": "έψησα"
     }
 ]
