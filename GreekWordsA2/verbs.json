@@ -1426,5 +1426,29 @@
         "translation": "to pull, to drag",
         "future": "θα τραβήξω",
         "past": "τράβηξα"
+    },
+    {
+        "verb": "υπάρχω",
+        "translation": "to exist",
+        "future": "θα υπάρξω",
+        "past": "υπήρξα"
+    },
+    {
+        "verb": "υπογραμμίζω",
+        "translation": "to underline",
+        "future": "θα υπογραμμίσω",
+        "past": "υπογράμμισα"
+    },
+    {
+        "verb": "υπογράφω",
+        "translation": "to sign",
+        "future": "θα υπογράψω",
+        "past": "υπέγραψα"
+    },
+    {
+        "verb": "υπόσχομαι",
+        "translation": "to promise",
+        "future": "θα υποσχεθώ",
+        "past": "υποσχέθηκα"
     }
 ]
