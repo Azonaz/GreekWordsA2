@@ -1354,5 +1354,77 @@
         "translation": "to forgive",
         "future": "θα συγχωρήσω",
         "past": "συγχώρησα"
+    },
+    {
+        "verb": "ταιριάζω",
+        "translation": "to match, to suit",
+        "future": "θα ταιριάξω",
+        "past": "ταίριαξα"
+    },
+    {
+        "verb": "ταξιδεύω",
+        "translation": "to travel",
+        "future": "θα ταξιδέψω",
+        "past": "ταξίδεψα"
+    },
+    {
+        "verb": "τελειώνω",
+        "translation": "to finish, to end",
+        "future": "θα τελειώσω",
+        "past": "τελείωσα"
+    },
+    {
+        "verb": "τηλεφωνώ",
+        "translation": "to call (by phone)",
+        "future": "θα τηλεφωνήσω",
+        "past": "τηλεφώνησα"
+    },
+    {
+        "verb": "τραγουδάω",
+        "translation": "to sing",
+        "future": "θα τραγουδήσω",
+        "past": "τραγούδησα"
+    },
+    {
+        "verb": "τρέχω",
+        "translation": "to run",
+        "future": "θα τρέξω",
+        "past": "έτρεξα"
+    },
+    {
+        "verb": "τρίβω",
+        "translation": "to rub",
+        "future": "θα τρίψω",
+        "past": "έτριψα"
+    },
+    {
+        "verb": "τρώω",
+        "translation": "to eat",
+        "future": "θα φάω",
+        "past": "έφαγα"
+    },
+    {
+        "verb": "τηγανίζω",
+        "translation": "to fry",
+        "future": "θα τηγανίσω",
+        "past": "τηγάνισα"
+    },
+    {
+        "verb": "τρακάρω",
+        "translation": "to crash",
+        "future": "θα τρακάρω",
+        "past": "τράκαρα"
+    },
+    {
+        "verb": "τρελαίνομαι",
+        "translation": "to go crazy, to lose one's mind",
+        "future": "θα τρελαθώ",
+        "past": "τρελάθηκα"
+    },
+    {
+        "verb": "τραβάω",
+        "translation": "to pull, to drag",
+        "future": "θα τραβήξω",
+        "past": "τράβηξα"
     }
 ]
