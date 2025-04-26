@@ -1,0 +1,1646 @@
+[
+    {
+        "verb": "αγαπώ",
+        "translation": "to love",
+        "future": "θα αγαπήσω",
+        "past": "αγάπησα"
+    },
+    {
+        "verb": "αγοράζω",
+        "translation": "to buy",
+        "future": "θα αγοράσω",
+        "past": "αγόρασα"
+    },
+    {
+        "verb": "αισθάνομαι",
+        "translation": "to feel",
+        "future": "θα αισθανθώ",
+        "past": "αισθάνθηκα"
+    },
+    {
+        "verb": "ακολουθώ",
+        "translation": "to follow",
+        "future": "θα ακολουθήσω",
+        "past": "ακολούθησα"
+    },
+    {
+        "verb": "ακούω",
+        "translation": "to hear, to listen",
+        "future": "θα ακούσω",
+        "past": "άκουσα"
+    },
+    {
+        "verb": "αλλάζω",
+        "translation": "to change",
+        "future": "θα αλλάξω",
+        "past": "άλλαξα"
+    },
+    {
+        "verb": "ανακατεύω",
+        "translation": "to mix, to blend" ,
+        "future": "θα ανακατέψω",
+        "past": "ανακάτεψα"
+    },
+    {
+        "verb": "ανεβαίνω",
+        "translation": "to get on, to climb",
+        "future": "θα ανέβω",
+        "past": "ανέβηκα"
+    },
+    {
+        "verb": "ανοίγω",
+        "translation": "to open",
+        "future": "θα ανοίξω",
+        "past": "άνοιξα"
+    },
+    {
+        "verb": "απαντάω",
+        "translation": "to answer",
+        "future": "θα απαντήσω",
+        "past": "απάντησα"
+    },
+    {
+        "verb": "απλώνω",
+        "translation": "to spread",
+        "future": "θα απλώσω",
+        "past": "άπλωσα"
+    },
+    {
+        "verb": "αποκτώ",
+        "translation": "to obtain, to have",
+        "future": "θα αποκτήσω",
+        "past": "απέκτησα"
+    },
+    {
+        "verb": "αποφασίζω",
+        "translation": "to decide",
+        "future": "θα αποφασίσω",
+        "past": "αποφάσισα"
+    },
+    {
+        "verb": "αργώ",
+        "translation": "to be late",
+        "future": "θα αργήσω",
+        "past": "άργησα"
+    },
+    {
+        "verb": "(μου) αρέσει",
+        "translation": "to like",
+        "future": "θα (μου) αρέσει",
+        "past": "(μου) άρεσε"
+    },
+    {
+        "verb": "αρχίζω",
+        "translation": "to begin, to start",
+        "future": "θα αρχίσω",
+        "past": "άρχισα"
+    },
+    {
+        "verb": "αφήνω",
+        "translation": "to leave, to let go",
+        "future": "θα αφήσω",
+        "past": "άφησα"
+    },
+    {
+        "verb": "αδειάζω",
+        "translation": "to empty",
+        "future": "θα αδειάσω",
+        "past": "άδειασα"
+    },
+    {
+        "verb": "αδυνατίζω",
+        "translation": "to lose weight, to get slim",
+        "future": "θα αδυνατίσω",
+        "past": "αδυνάτισα"
+    },
+    {
+        "verb": "ανάβω",
+        "translation": "to light, to turn on",
+        "future": "θα ανάψω",
+        "past": "άναψα"
+    },
+    {
+        "verb": "αναγνωρίζω",
+        "translation": "to recognize",
+        "future": "θα αναγνωρίσω",
+        "past": "αναγνώρισα"
+    },
+    {
+        "verb": "αναπνέω",
+        "translation": "to breathe",
+        "future": "θα αναπνεύσω",
+        "past": "ανέπνευσα"
+    },
+    {
+        "verb": "αναφέρω",
+        "translation": "to mention, to refer",
+        "future": "θα αναφέρω",
+        "past": "ανέφερα"
+    },
+    {
+        "verb": "αντιστοιχίζω",
+        "translation": "to match",
+        "future": "θα αντιστοιχίσω",
+        "past": "αντιστοίχισα"
+    },
+    {
+        "verb": "απευθύνομαι",
+        "translation": "to address (to)",
+        "future": "θα απευθυνθώ",
+        "past": "απευθύνθηκα"
+    },
+    {
+        "verb": "αποφεύγω",
+        "translation": "to avoid",
+        "future": "θα αποφύγω",
+        "past": "απέφυγα"
+    },
+    {
+        "verb": "αρρωσταίνω",
+        "translation": "to get sick",
+        "future": "θα αρρωστήσω",
+        "past": "αρρώστησα"
+    },
+    {
+        "verb": "βάζω",
+        "translation": "to put",
+        "future": "θα βάλω",
+        "past": "έβαλα"
+    },
+    {
+        "verb": "βάφω",
+        "translation": "to paint, to dye",
+        "future": "θα βάψω",
+        "past": "έβαψα"
+    },
+    {
+        "verb": "βγάζω",
+        "translation": "to take out, to take off",
+        "future": "θα βγάλω",
+        "past": "έβγαλα"
+    },
+    {
+        "verb": "βγαίνω",
+        "translation": "to go out, to exit",
+        "future": "θα βγω",
+        "past": "βγήκα"
+    },
+    {
+        "verb": "βεβαιώνω",
+        "translation": "to confirm, to affirm",
+        "future": "θα βεβαιώσω",
+        "past": "βεβαίωσα"
+    },
+    {
+        "verb": "βλέπω",
+        "translation": "to see",
+        "future": "θα δω",
+        "past": "είδα"
+    },
+    {
+        "verb": "βοηθάω",
+        "translation": "to help",
+        "future": "θα βοηθήσω",
+        "past": "βοήθησα"
+    },
+    {
+        "verb": "βράζω",
+        "translation": "to boil",
+        "future": "θα βράσω",
+        "past": "έβρασα"
+    },
+    {
+        "verb": "βρίσκω",
+        "translation": "to find",
+        "future": "θα βρω",
+        "past": "βρήκα"
+    },
+    {
+        "verb": "βήχω",
+        "translation": "to cough",
+        "future": "θα βήξω",
+        "past": "έβηξα"
+    },
+    {
+        "verb": "βρέχω",
+        "translation": "to wet",
+        "future": "θα βρέξω",
+        "past": "έβρεξα"
+    },
+    {
+        "verb": "γεμίζω",
+        "translation": "to fill",
+        "future": "θα γεμίσω",
+        "past": "γέμισα"
+    },
+    {
+        "verb": "γεννάω",
+        "translation": "to give birth",
+        "future": "θα γεννήσω",
+        "past": "γέννησα"
+    },
+    {
+        "verb": "γίνομαι",
+        "translation": "to become",
+        "future": "θα γίνω",
+        "past": "έγινα"
+    },
+    {
+        "verb": "γιορτάζω",
+        "translation": "to celebrate",
+        "future": "θα γιορτάσω",
+        "past": "γιόρτασα"
+    },
+    {
+        "verb": "γνωρίζω",
+        "translation": "to know",
+        "future": "θα γνωρίσω",
+        "past": "γνώρισα"
+    },
+    {
+        "verb": "γράφω",
+        "translation": "to write",
+        "future": "θα γράψω",
+        "past": "έγραψα"
+    },
+    {
+        "verb": "γυρίζω",
+        "translation": "to turn, to return",
+        "future": "θα γυρίσω",
+        "past": "γύρισα"
+    },
+    {
+        "verb": "γελάω",
+        "translation": "to laugh",
+        "future": "θα γελάσω",
+        "past": "γέλασα"
+    },
+    {
+        "verb": "δείχνω",
+        "translation": "to show",
+        "future": "θα δείξω",
+        "past": "έδειξα"
+    },
+    {
+        "verb": "δηλητηριάζω",
+        "translation": "to poison",
+        "future": "θα δηλητηριάσω",
+        "past": "δηλητηρίασα"
+    },
+    {
+        "verb": "δηλώνω",
+        "translation": "to state, to declare",
+        "future": "θα δηλώσω",
+        "past": "δήλωσα"
+    },
+    {
+        "verb": "διαβάζω",
+        "translation": "to read",
+        "future": "θα διαβάσω",
+        "past": "διάβασα"
+    },
+    {
+        "verb": "διαγράφω",
+        "translation": "to delete, to erase",
+        "future": "θα διαγράψω",
+        "past": "διέγραψα"
+    },
+    {
+        "verb": "διαλέγω",
+        "translation": "to choose",
+        "future": "θα διαλέξω",
+        "past": "διάλεξα"
+    },
+    {
+        "verb": "διασκεδάζω",
+        "translation": "to have fun, to enjoy",
+        "future": "θα διασκεδάσω",
+        "past": "διασκέδασα"
+    },
+    {
+        "verb": "διαφημίζω",
+        "translation": "to advertise",
+        "future": "θα διαφημίσω",
+        "past": "διαφήμισα"
+    },
+    {
+        "verb": "διαφωνώ",
+        "translation": "to disagree",
+        "future": "θα διαφωνήσω",
+        "past": "διαφώνησα"
+    },
+    {
+        "verb": "δίνω",
+        "translation": "to give",
+        "future": "θα δώσω",
+        "past": "έδωσα"
+    },
+    {
+        "verb": "δοκιμάζω",
+        "translation": "to try, to taste",
+        "future": "θα δοκιμάσω",
+        "past": "δοκίμασα"
+    },
+    {
+        "verb": "δουλεύω",
+        "translation": "to work",
+        "future": "θα δουλέψω",
+        "past": "δούλεψα"
+    },
+    {
+        "verb": "δημιουργώ",
+        "translation": "to create",
+        "future": "θα δημιουργήσω",
+        "past": "δημιούργησα"
+    },
+    {
+        "verb": "διδάσκω",
+        "translation": "to teach",
+        "future": "θα διδάξω",
+        "past": "δίδαξα"
+    },
+    {
+        "verb": "διψάω",
+        "translation": "to be thirsty",
+        "future": "θα διψάσω",
+        "past": "δίψασα"
+    },
+    {
+        "verb": "ελπίζω",
+        "translation": "to hope",
+        "future": "θα ελπίσω",
+        "past": "ήλπισα"
+    },
+    {
+        "verb": "ενδιαφέρομαι",
+        "translation": "to be interested",
+        "future": "θα ενδιαφερθώ",
+        "past": "ενδιαφέρθηκα"
+    },
+    {
+        "verb": "ενημερώνω",
+        "translation": "to inform, to notify",
+        "future": "θα ενημερώσω",
+        "past": "ενημέρωσα"
+    },
+    {
+        "verb": "ενθουσιάζω",
+        "translation": "to excite",
+        "future": "θα ενθουσιάσω",
+        "past": "ενθουσίασα"
+    },
+    {
+        "verb": "εξηγώ",
+        "translation": "to explain",
+        "future": "θα εξηγήσω",
+        "past": "εξήγησα"
+    },
+    {
+        "verb": "εξυπηρετώ",
+        "translation": "to serve",
+        "future": "θα εξυπηρετήσω",
+        "past": "εξυπηρέτησα"
+    },
+    {
+        "verb": "επαναλαμβάνω",
+        "translation": "to repeat",
+        "future": "θα επαναλάβω",
+        "past": "επανέλαβα"
+    },
+    {
+        "verb": "επιθυμώ",
+        "translation": "to wish, to desire",
+        "future": "θα επιθυμήσω",
+        "past": "επιθύμησα"
+    },
+    {
+        "verb": "επικοινωνώ",
+        "translation": "to communicate, to contact",
+        "future": "θα επικοινωνήσω",
+        "past": "επικοινώνησα"
+    },
+    {
+        "verb": "επιλέγω",
+        "translation": "to choose",
+        "future": "θα επιλέξω",
+        "past": "επέλεξα"
+    },
+    {
+        "verb": "επισκέπτομαι",
+        "translation": "to visit",
+        "future": "θα επισκεφτώ",
+        "past": "επισκέφτηκα"
+    },
+    {
+        "verb": "επιστρέφω",
+        "translation": "to return",
+        "future": "θα επιστρέψω",
+        "past": "επέστρεψα"
+    },
+    {
+        "verb": "έρχομαι",
+        "translation": "to come",
+        "future": "θα έρθω",
+        "past": "ήρθα"
+    },
+    {
+        "verb": "ετοιμάζω",
+        "translation": "to prepare",
+        "future": "θα ετοιμάσω",
+        "past": "ετοίμασα"
+    },
+    {
+        "verb": "ευχαριστώ",
+        "translation": "to thank",
+        "future": "θα ευχαριστήσω",
+        "past": "ευχαρίστησα"
+    },
+    {
+        "verb": "έχω",
+        "translation": "to have",
+        "future": "θα έχω",
+        "past": "είχα"
+    },
+    {
+        "verb": "επιτρέπω",
+        "translation": "to allow",
+        "future": "θα επιτρέψω",
+        "past": "επέτρεψα"
+    },
+    {
+        "verb": "ζητάω",
+        "translation": "to ask, to request",
+        "future": "θα ζητήσω",
+        "past": "ζήτησα"
+    },
+    {
+        "verb": "ζω",
+        "translation": "to live",
+        "future": "θα ζήσω",
+        "past": "έζησα"
+    },
+    {
+        "verb": "ζωγραφίζω",
+        "translation": "to paint, to draw",
+        "future": "θα ζωγραφίσω",
+        "past": "ζωγράφισα"
+    },
+    {
+        "verb": "ζυγίζω",
+        "translation": "to weigh",
+        "future": "θα ζυγίσω",
+        "past": "ζύγισα"
+    },
+    {
+        "verb": "θέλω",
+        "translation": "to want",
+        "future": "θα θέλω",
+        "past": "ήθελα"
+    },
+    {
+        "verb": "θυμάμαι",
+        "translation": "to remember",
+        "future": "θα θυμηθώ",
+        "past": "θυμήθηκα"
+    },
+    {
+        "verb": "καθαρίζω",
+        "translation": "to clean",
+        "future": "θα καθαρίσω",
+        "past": "καθάρισα"
+    },
+    {
+        "verb": "κάθομαι",
+        "translation": "to sit",
+        "future": "θα καθίσω",
+        "past": "κάθισα"
+    },
+    {
+        "verb": "καίω",
+        "translation": "to burn",
+        "future": "θα κάψω",
+        "past": "έκαψα"
+    },
+    {
+        "verb": "καλύπτω",
+        "translation": "to cover",
+        "future": "θα καλύψω",
+        "past": "κάλυψα"
+    },
+    {
+        "verb": "καλώ",
+        "translation": "to call, to invite",
+        "future": "θα καλέσω",
+        "past": "κάλεσα"
+    },
+    {
+        "verb": "κάνω",
+        "translation": "to do, to make",
+        "future": "θα κάνω",
+        "past": "έκανα"
+    },
+    {
+        "verb": "καταλαβαίνω",
+        "translation": "to understand",
+        "future": "θα καταλάβω",
+        "past": "κατάλαβα"
+    },
+    {
+        "verb": "καταφέρνω",
+        "translation": "to manage, to achieve",
+        "future": "θα καταφέρω",
+        "past": "κατάφερα"
+    },
+    {
+        "verb": "κατεβαίνω",
+        "translation": "to go down",
+        "future": "θα κατέβω",
+        "past": "κατέβηκα"
+    },
+    {
+        "verb": "κατεβάζω",
+        "translation": "to download",
+        "future": "θα κατεβάσω",
+        "past": "κατέβασα"
+    },
+    {
+        "verb": "κερδίζω",
+        "translation": "to win",
+        "future": "θα κερδίσω",
+        "past": "κέρδισα"
+    },
+    {
+        "verb": "κλειδώνω",
+        "translation": "to lock",
+        "future": "θα κλειδώσω",
+        "past": "κλείδωσα"
+    },
+    {
+        "verb": "κλείνω",
+        "translation": "to close",
+        "future": "θα κλείσω",
+        "past": "έκλεισα"
+    },
+    {
+        "verb": "κόβω",
+        "translation": "to cut",
+        "future": "θα κόψω",
+        "past": "έκοψα"
+    },
+    {
+        "verb": "κοιμάμαι",
+        "translation": "to sleep",
+        "future": "θα κοιμηθώ",
+        "past": "κοιμήθηκα"
+    },
+    {
+        "verb": "κοιτάζω",
+        "translation": "to look at",
+        "future": "θα κοιτάξω",
+        "past": "κοίταξα"
+    },
+    {
+        "verb": "κολλάω",
+        "translation": "to stick, to glue",
+        "future": "θα κολλήσω",
+        "past": "κόλλησα"
+    },
+    {
+        "verb": "κοστίζω",
+        "translation": "to cost",
+        "future": "θα κοστίσω",
+        "past": "κόστισα"
+    },
+    {
+        "verb": "κουράζω",
+        "translation": "to tire, to exhaust",
+        "future": "θα κουράσω",
+        "past": "κούρασα"
+    },
+    {
+      "verb": "κουράζομαι",
+      "translation": "to get tired",
+      "future": "θα κουραστώ",
+      "past": "κουράστηκα"
+    },
+    {
+        "verb": "κρατάω",
+        "translation": "to hold",
+        "future": "θα κρατήσω",
+        "past": "κράτησα"
+    },
+    {
+        "verb": "κρύβω",
+        "translation": "to hide",
+        "future": "θα κρύψω",
+        "past": "έκρυψα"
+    },
+    {
+        "verb": "κρυώνω",
+        "translation": "to feel cold",
+        "future": "θα κρυώσω",
+        "past": "κρύωσα"
+    },
+    {
+        "verb": "κολυμπάω",
+        "translation": "to swim",
+        "future": "θα κολυμπήσω",
+        "past": "κολύμπησα"
+    },
+    {
+        "verb": "κυκλώνω",
+        "translation": "to circle, to encircle",
+        "future": "θα κυκλώσω",
+        "past": "κυκλωσα"
+    },
+    {
+        "verb": "καπνίζω",
+        "translation": "to smoke",
+        "future": "θα καπνίσω",
+        "past": "κάπνισα"
+    },
+    {
+        "verb": "κλαίω",
+        "translation": "to cry",
+        "future": "θα κλάψω",
+        "past": "έκλαψα"
+    },
+    {
+        "verb": "κλέβω",
+        "translation": "to steal",
+        "future": "θα κλέψω",
+        "past": "έκλεψα"
+    },
+    {
+        "verb": "λείπω",
+        "translation": "to be absent, to be missing",
+        "future": "θα λείψω",
+        "past": "έλειψα"
+    },
+    {
+        "verb": "λειτουργώ",
+        "translation": "to function, to operate",
+        "future": "θα λειτουργήσω",
+        "past": "λειτούργησα"
+    },
+    {
+        "verb": "λέω",
+        "translation": "to say",
+        "future": "θα πω",
+        "past": "είπα"
+    },
+    {
+        "verb": "λήγω",
+        "translation": "to end, to expire",
+        "future": "θα λήξω",
+        "past": "έληξα"
+    },
+    {
+        "verb": "λιώνω",
+        "translation": "to melt",
+        "future": "θα λιώσω",
+        "past": "έλιωσα"
+    },
+    {
+        "verb": "λυπάμαι",
+        "translation": "to be sorry, to feel sad",
+        "future": "θα λυπηθώ",
+        "past": "λυπήθηκα"
+    },
+    {
+        "verb": "λύνω",
+        "translation": "to solve",
+        "future": "θα λύσω",
+        "past": "έλυσα"
+    },
+    {
+        "verb": "μαγειρεύω",
+        "translation": "to cook",
+        "future": "θα μαγειρέψω",
+        "past": "μαγείρεψα"
+    },
+    {
+        "verb": "μαζεύω",
+        "translation": "to gather, to collect",
+        "future": "θα μαζέψω",
+        "past": "μάζεψα"
+    },
+    {
+        "verb": "μαθαίνω",
+        "translation": "to learn",
+        "future": "θα μάθω",
+        "past": "έμαθα"
+    },
+    {
+        "verb": "μαλώνω",
+        "translation": "to argue, to quarrel",
+        "future": "θα μαλώσω",
+        "past": "μάλωσα"
+    },
+    {
+        "verb": "μαντεύω",
+        "translation": "to guess",
+        "future": "θα μαντέψω",
+        "past": "μάντεψα"
+    },
+    {
+        "verb": "μεγαλώνω",
+        "translation": "to grow up",
+        "future": "θα μεγαλώσω",
+        "past": "μεγάλωσα"
+    },
+    {
+        "verb": "μένω",
+        "translation": "to stay, to live",
+        "future": "θα μείνω",
+        "past": "έμεινα"
+    },
+    {
+        "verb": "μετακομίζω",
+        "translation": "to move (to a new place)",
+        "future": "θα μετακομίσω",
+        "past": "μετακόμισα"
+    },
+    {
+        "verb": "μεταφέρω",
+        "translation": "to transfer, to transport",
+        "future": "θα μεταφέρω",
+        "past": "μετέφερα"
+    },
+    {
+        "verb": "μιλάω",
+        "translation": "to speak",
+        "future": "θα μιλήσω",
+        "past": "μίλησα"
+    },
+    {
+        "verb": "μπαίνω",
+        "translation": "to enter",
+        "future": "θα μπω",
+        "past": "μπήκα"
+    },
+    {
+        "verb": "μπερδεύω",
+        "translation": "to confuse",
+        "future": "θα μπερδέψω",
+        "past": "μπέρδεψα"
+    },
+    {
+        "verb": "μελετάω",
+        "translation": "to study",
+        "future": "θα μελετήσω",
+        "past": "μελέτησα"
+    },
+    {
+        "verb": "μεταφράζω",
+        "translation": "to translate",
+        "future": "θα μεταφράσω",
+        "past": "μετέφρασα"
+    },
+    {
+        "verb": "μετράω",
+        "translation": "to count",
+        "future": "θα μετρήσω",
+        "past": "μέτρησα"
+    },
+    {
+        "verb": "μοιάζω",
+        "translation": "to resemble, to look like",
+        "future": "θα μοιάσω",
+        "past": "μοίασα"
+    },
+    {
+        "verb": "μοιράζω",
+        "translation": "to distribute",
+        "future": "θα μοιράσω",
+        "past": "μοίρασα"
+    },
+    {
+        "verb": "μυρίζω",
+        "translation": "to smell",
+        "future": "θα μυρίσω",
+        "past": "μύρισα"
+    },
+    {
+        "verb": "μπορώ",
+        "translation": "to be able to, can",
+        "future": "θα μπορέσω",
+        "past": "μπόρεσα"
+    },
+    {
+        "verb": "νευριάζω",
+        "translation": "to get angry",
+        "future": "θα νευριάσω",
+        "past": "νευρίασα"
+    },
+    {
+        "verb": "νοικιάζω",
+        "translation": "to rent",
+        "future": "θα νοικιάσω",
+        "past": "νοίκιασα"
+    },
+    {
+        "verb": "νιώθω",
+        "translation": "to feel",
+        "future": "θα νιώσω",
+        "past": "ένιωσα"
+    },
+    {
+        "verb": "νομίζω",
+        "translation": "to think, to believe",
+        "future": "θα νομίσω",
+        "past": "νόμισα"
+    },
+    {
+        "verb": "ντύνομαι",
+        "translation": "to get dressed",
+        "future": "θα ντυθώ",
+        "past": "ντύθηκα"
+    },
+    {
+        "verb": "νυστάζω",
+        "translation": "to feel sleepy",
+        "future": "θα νυστάξω",
+        "past": "νύσταξα"
+    },
+    {
+        "verb": "ξεκινάω",
+        "translation": "to start",
+        "future": "θα ξεκινήσω",
+        "past": "ξεκίνησα"
+    },
+    {
+        "verb": "ξεκουράζομαι",
+        "translation": "to rest",
+        "future": "θα ξεκουραστώ",
+        "past": "ξεκουράστηκα"
+    },
+    {
+        "verb": "ξεπερνάω",
+        "translation": "to overcome, to exceed",
+        "future": "θα ξεπεράσω",
+        "past": "ξεπέρασα"
+    },
+    {
+        "verb": "ξεπλένω",
+        "translation": "to rinse",
+        "future": "θα ξεπλύνω",
+        "past": "ξέπλυνα"
+    },
+    {
+        "verb": "ξέρω",
+        "translation": "to know",
+        "future": "θα ξέρω",
+        "past": "ήξερα"
+    },
+    {
+        "verb": "ξεχνάω",
+        "translation": "to forget",
+        "future": "θα ξεχάσω",
+        "past": "ξέχασα"
+    },
+    {
+        "verb": "ξοδεύω",
+        "translation": "to spend",
+        "future": "θα ξοδέψω",
+        "past": "ξόδεψα"
+    },
+    {
+        "verb": "ξυπνάω",
+        "translation": "to wake up",
+        "future": "θα ξυπνήσω",
+        "past": "ξύπνησα"
+    },
+    {
+        "verb": "ξενυχτάω",
+        "translation": "to stay awake all night",
+        "future": "θα ξενυχτήσω",
+        "past": "ξενύχτησα"
+    },
+    {
+        "verb": "ξεφεύγω",
+        "translation": "to escape, to avoid",
+        "future": "θα ξεφύγω",
+        "past": "ξέφυγα"
+    },
+    {
+        "verb": "οδηγώ",
+        "translation": "to drive",
+        "future": "θα οδηγήσω",
+        "past": "οδήγησα"
+    },
+    {
+        "verb": "ονειρεύομαι",
+        "translation": "to dream",
+        "future": "θα ονειρευτώ",
+        "past": "ονειρεύτηκα"
+    },
+    {
+        "verb": "παθαίνω",
+        "translation": "to suffer, to experience",
+        "future": "θα πάθω",
+        "past": "έπαθα"
+    },
+    {
+        "verb": "παίζω",
+        "translation": "to play",
+        "future": "θα παίξω",
+        "past": "έπαιξα"
+    },
+    {
+        "verb": "παίρνω",
+        "translation": "to take",
+        "future": "θα πάρω",
+        "past": "πήρα"
+    },
+    {
+        "verb": "παντρεύομαι",
+        "translation": "to get married",
+        "future": "θα παντρευτώ",
+        "past": "παντρεύτηκα"
+    },
+    {
+        "verb": "παραγγέλλω",
+        "translation": "to order",
+        "future": "θα παραγγείλω",
+        "past": "παράγγειλα"
+    },
+    {
+        "verb": "παρακαλώ",
+        "translation": "to please",
+        "future": "θα παρακαλέσω",
+        "past": "παρακάλεσα"
+    },
+    {
+        "verb": "παρακολουθώ",
+        "translation": "to watch",
+        "future": "θα παρακολουθήσω",
+        "past": "παρακολούθησα"
+    },
+    {
+        "verb": "παρατηρώ",
+        "translation": "to observe, to notice",
+        "future": "θα παρατηρήσω",
+        "past": "παρατήρησα"
+    },
+    {
+        "verb": "παρουσιάζω",
+        "translation": "to present",
+        "future": "θα παρουσιάσω",
+        "past": "παρουσίασα"
+    },
+    {
+        "verb": "παρουσιάζομαι",
+        "translation": "to present oneself",
+        "future": "θα παρουσιαστώ",
+        "past": "παρουσιάστηκα"
+    },
+    {
+        "verb": "πεθαίνω",
+        "translation": "to die",
+        "future": "θα πεθάνω",
+        "past": "πέθανα"
+    },
+    {
+        "verb": "πεινάω",
+        "translation": "to be hungry",
+        "future": "θα πεινάσω",
+        "past": "πείνασα"
+    },
+    {
+        "verb": "πείθω",
+        "translation": "to convince",
+        "future": "θα πείσω",
+        "past": "έπεισα"
+    },
+    {
+        "verb": "περιγράφω",
+        "translation": "to describe",
+        "future": "θα περιγράψω",
+        "past": "περίγραψα"
+    },
+    {
+        "verb": "περιλαμβάνω",
+        "translation": "to include",
+        "future": "θα περιλάβω",
+        "past": "περίλαβα"
+    },
+    {
+        "verb": "περιμένω",
+        "translation": "to wait",
+        "future": "θα περιμένω",
+        "past": "περίμενα"
+    },
+    {
+        "verb": "περνάω",
+        "translation": "to pass, to go through",
+        "future": "θα περάσω",
+        "past": "πέρασα"
+    },
+    {
+        "verb": "περπατάω",
+        "translation": "to walk",
+        "future": "θα περπατήσω",
+        "past": "περπάτησα"
+    },
+    {
+        "verb": "πετάω",
+        "translation": "to fly",
+        "future": "θα πετάξω",
+        "past": "πέταξα"
+    },
+    {
+        "verb": "πέφτω",
+        "translation": "to fall",
+        "future": "θα πέσω",
+        "past": "έπεσα"
+    },
+    {
+        "verb": "πηγαίνω",
+        "translation": "to go",
+        "future": "θα πάω",
+        "past": "πήγα"
+    },
+    {
+        "verb": "πίνω",
+        "translation": "to drink",
+        "future": "θα πιω",
+        "past": "ήπια"
+    },
+    {
+        "verb": "πιστεύω",
+        "translation": "to believe",
+        "future": "θα πιστέψω",
+        "past": "πίστεψα"
+    },
+    {
+        "verb": "πλένω",
+        "translation": "to wash",
+        "future": "θα πλύνω",
+        "past": "έπλυνα"
+    },
+    {
+        "verb": "πληρώνω",
+        "translation": "to pay",
+        "future": "θα πληρώσω",
+        "past": "πλήρωσα"
+    },
+    {
+        "verb": "πλησιάζω",
+        "translation": "to approach",
+        "future": "θα πλησιάσω",
+        "past": "πλησίασα"
+    },
+    {
+        "verb": "πνίγομαι",
+        "translation": "to choke, to drawn",
+        "future": "θα πνιγώ",
+        "past": "πνίγηκα"
+    },
+    {
+        "verb": "πονάω",
+        "translation": "to hurt, to be in pain",
+        "future": "θα πονέσω",
+        "past": "πόνεσα"
+    },
+    {
+        "verb": "προλαβαίνω",
+        "translation": "to catch (on time)",
+        "future": "θα προλάβω",
+        "past": "πρόλαβα"
+    },
+    {
+        "verb": "προσέχω",
+        "translation": "to pay attention",
+        "future": "θα προσέξω",
+        "past": "πρόσεξα"
+    },
+    {
+        "verb": "προσθέτω",
+        "translation": "to add",
+        "future": "θα προσθέσω",
+        "past": "πρόσθεσα"
+    },
+    {
+        "verb": "προσπαθώ",
+        "translation": "to try",
+        "future": "θα προσπαθήσω",
+        "past": "προσπάθησα"
+    },
+    {
+        "verb": "προσκαλώ",
+        "translation": "to invite",
+        "future": "θα προσκαλέσω",
+        "past": "προσκάλεσα"
+    },
+    {
+        "verb": "προτείνω",
+        "translation": "to suggest, to propose",
+        "future": "θα προτείνω",
+        "past": "πρότεινα"
+    },
+    {
+        "verb": "προτιμάω",
+        "translation": "to prefer",
+        "future": "θα προτιμήσω",
+        "past": "προτίμησα"
+    },
+    {
+        "verb": "πιάνω",
+        "translation": "to catch, to grab",
+        "future": "θα πιάσω",
+        "past": "έπιασα"
+    },
+    {
+        "verb": "πουλάω",
+        "translation": "to sell",
+        "future": "θα πουλήσω",
+        "past": "πούλησα"
+    },
+    {
+        "verb": "προσφέρω",
+        "translation": "to offer",
+        "future": "θα προσφέρω",
+        "past": "πρόσφερα"
+    },
+    {
+        "verb": "παρκάρω",
+        "translation": "to park",
+        "future": "θα παρκάρω",
+        "past": "πάρκσαρα"
+    },
+    {
+        "verb": "ρίχνω",
+        "translation": "to throw, to drop",
+        "future": "θα ρίξω",
+        "past": "έριξα"
+    },
+    {
+        "verb": "ρωτάω",
+        "translation": "to ask",
+        "future": "θα ρωτήσω",
+        "past": "ρώτησα"
+    },
+    {
+        "verb": "σβήνω",
+        "translation": "to rub, to erase",
+        "future": "θα σβήσω",
+        "past": "έσβησα"
+    },
+    {
+        "verb": "σερβίρω",
+        "translation": "to serve",
+        "future": "θα σερβίρω",
+        "past": "σερβίρισα"
+    },
+    {
+        "verb": "σημαίνω",
+        "translation": "to mean",
+        "future": "θα σημαίνω",
+        "past": "σήμανα"
+    },
+    {
+        "verb": "σημειώνω",
+        "translation": "to note, to write down",
+        "future": "θα σημειώσω",
+        "past": "σημείωσα"
+    },
+    {
+        "verb": "σκέφτομαι",
+        "translation": "to think",
+        "future": "θα σκεφτώ",
+        "past": "σκέφτηκα"
+    },
+    {
+        "verb": "σκορπίζω",
+        "translation": "to scatter",
+        "future": "θα σκορπίσω",
+        "past": "σκόρπισα"
+    },
+    {
+        "verb": "σκουπίζω",
+        "translation": "to sweep, to wipe",
+        "future": "θα σκουπίσω",
+        "past": "σκούπισα"
+    },
+    {
+        "verb": "σπάζω",
+        "translation": "to break, to smash",
+        "future": "θα σπάσω",
+        "past": "έσπασα"
+    },
+    {
+        "verb": "σπουδάζω",
+        "translation": "to study (at a university)",
+        "future": "θα σπουδάσω",
+        "past": "σπούδασα"
+    },
+    {
+        "verb": "σταματάω",
+        "translation": "to stop",
+        "future": "θα σταματήσω",
+        "past": "σταμάτησα"
+    },
+    {
+        "verb": "στέλνω",
+        "translation": "to send",
+        "future": "θα στείλω",
+        "past": "έστειλα"
+    },
+    {
+        "verb": "στρώνω",
+        "translation": "to lay, to set, to spread",
+        "future": "θα στρώσω",
+        "past": "έστρωσα"
+    },
+    {
+        "verb": "συγκρίνω",
+        "translation": "to compare",
+        "future": "θα συγκρίνω",
+        "past": "σύγκρινα"
+    },
+    {
+        "verb": "συζητάω",
+        "translation": "to discuss",
+        "future": "θα συζητήσω",
+        "past": "συζήτησα"
+    },
+    {
+        "verb": "συλλέγω",
+        "translation": "to collect",
+        "future": "θα συλλέξω",
+        "past": "συνέλεξα"
+    },
+    {
+        "verb": "συμπαθώ",
+        "translation": "to like, to sympathize",
+        "future": "θα συμπαθήσω",
+        "past": "συμπάθησα"
+    },
+    {
+        "verb": "συμφωνώ",
+        "translation": "to agree",
+        "future": "θα συμφωνήσω",
+        "past": "συμφώνησα"
+    },
+    {
+        "verb": "συμπληρώνω",
+        "translation": "to complete, to fill out",
+        "future": "θα συμπληρώσω",
+        "past": "συμπλήρωσα"
+    },
+    {
+        "verb": "συναντάω",
+        "translation": "to meet",
+        "future": "θα συναντήσω",
+        "past": "συνάντησα"
+    },
+    {
+        "verb": "συνεχίζω",
+        "translation": "to continue",
+        "future": "θα συνεχίσω",
+        "past": "συνέχισα"
+    },
+    {
+        "verb": "συστήνω",
+        "translation": "to introduce, to recommend",
+        "future": "θα συστήσω",
+        "past": "σύστησα"
+    },
+    {
+        "verb": "σχεδιάζω",
+        "translation": "to design, to plan",
+        "future": "θα σχεδιάσω",
+        "past": "σχεδίασα"
+    },
+    {
+        "verb": "στολίζω",
+        "translation": "to decorate",
+        "future": "θα στολίσω",
+        "past": "στόλισα"
+    },
+    {
+        "verb": "συμβουλεύω",
+        "translation": "to advise",
+        "future": "θα συμβουλέψω",
+        "past": "συμβούλεψα"
+    },
+    {
+        "verb": "συμμετέχω",
+        "translation": "to participate",
+        "future": "θα συμμετέχω",
+        "past": "συμμετείχα"
+    },
+    {
+        "verb": "συνδέω",
+        "translation": "to connect",
+        "future": "θα συνδέσω",
+        "past": "σύνδεσα"
+    },
+    {
+        "verb": "σφουγγαρίζω",
+        "translation": "to mop",
+        "future": "θα σφουγγαρίσω",
+        "past": "σφουγγάρισα"
+    },
+    {
+        "verb": "σηκώνομαι",
+        "translation": "to get up, to rise",
+        "future": "θα σηκωθώ",
+        "past": "σηκώθηκα"
+    },
+    {
+        "verb": "συγχωρώ",
+        "translation": "to forgive",
+        "future": "θα συγχωρήσω",
+        "past": "συγχώρησα"
+    },
+    {
+        "verb": "ταιριάζω",
+        "translation": "to match, to suit",
+        "future": "θα ταιριάξω",
+        "past": "ταίριαξα"
+    },
+    {
+        "verb": "ταξιδεύω",
+        "translation": "to travel",
+        "future": "θα ταξιδέψω",
+        "past": "ταξίδεψα"
+    },
+    {
+        "verb": "τελειώνω",
+        "translation": "to finish, to end",
+        "future": "θα τελειώσω",
+        "past": "τελείωσα"
+    },
+    {
+        "verb": "τηλεφωνώ",
+        "translation": "to call (by phone)",
+        "future": "θα τηλεφωνήσω",
+        "past": "τηλεφώνησα"
+    },
+    {
+        "verb": "τραγουδάω",
+        "translation": "to sing",
+        "future": "θα τραγουδήσω",
+        "past": "τραγούδησα"
+    },
+    {
+        "verb": "τρέχω",
+        "translation": "to run",
+        "future": "θα τρέξω",
+        "past": "έτρεξα"
+    },
+    {
+        "verb": "τρίβω",
+        "translation": "to rub",
+        "future": "θα τρίψω",
+        "past": "έτριψα"
+    },
+    {
+        "verb": "τρώω",
+        "translation": "to eat",
+        "future": "θα φάω",
+        "past": "έφαγα"
+    },
+    {
+        "verb": "τηγανίζω",
+        "translation": "to fry",
+        "future": "θα τηγανίσω",
+        "past": "τηγάνισα"
+    },
+    {
+        "verb": "τρακάρω",
+        "translation": "to crash",
+        "future": "θα τρακάρω",
+        "past": "τράκαρα"
+    },
+    {
+        "verb": "τρελαίνομαι",
+        "translation": "to go crazy, to lose one's mind",
+        "future": "θα τρελαθώ",
+        "past": "τρελάθηκα"
+    },
+    {
+        "verb": "τραβάω",
+        "translation": "to pull, to drag",
+        "future": "θα τραβήξω",
+        "past": "τράβηξα"
+    },
+    {
+        "verb": "υπάρχω",
+        "translation": "to exist",
+        "future": "θα υπάρξω",
+        "past": "υπήρξα"
+    },
+    {
+        "verb": "υπογραμμίζω",
+        "translation": "to underline",
+        "future": "θα υπογραμμίσω",
+        "past": "υπογράμμισα"
+    },
+    {
+        "verb": "υπογράφω",
+        "translation": "to sign",
+        "future": "θα υπογράψω",
+        "past": "υπέγραψα"
+    },
+    {
+        "verb": "υπόσχομαι",
+        "translation": "to promise",
+        "future": "θα υποσχεθώ",
+        "past": "υποσχέθηκα"
+    },
+    {
+        "verb": "φαίνομαι",
+        "translation": "to seem",
+        "future": "θα φανώ",
+        "past": "φάνηκα"
+    },
+    {
+        "verb": "φέρνω",
+        "translation": "to bring",
+        "future": "θα φέρω",
+        "past": "έφερα"
+    },
+    {
+        "verb": "φεύγω",
+        "translation": "to leave",
+        "future": "θα φύγω",
+        "past": "έφυγα"
+    },
+    {
+        "verb": "φιλάω",
+        "translation": "to kiss",
+        "future": "θα φιλήσω",
+        "past": "φίλησα"
+    },
+    {
+        "verb": "φιλοξενώ",
+        "translation": "to host, to accommodate",
+        "future": "θα φιλοξενήσω",
+        "past": "φιλοξένησα"
+    },
+    {
+        "verb": "φοβάμαι",
+        "translation": "to be afraid",
+        "future": "θα φοβηθώ",
+        "past": "φοβήθηκα"
+    },
+    {
+        "verb": "φοιτώ",
+        "translation": "to attend (school, university)",
+        "future": "θα φοιτήσω",
+        "past": "φοίτησα"
+    },
+    {
+        "verb": "φοράω",
+        "translation": "to wear",
+        "future": "θα φορέσω",
+        "past": "φόρεσα"
+    },
+    {
+        "verb": "φροντίζω",
+        "translation": "to take care of",
+        "future": "θα φροντίσω",
+        "past": "φρόντισα"
+    },
+    {
+        "verb": "φτάνω",
+        "translation": "to arrive, to reach",
+        "future": "θα φτάσω",
+        "past": "έφτασα"
+    },
+    {
+        "verb": "φτιάχνω",
+        "translation": "to make, to fix",
+        "future": "θα φτιάξω",
+        "past": "έφτιαξα"
+    },
+    {
+        "verb": "φυτεύω",
+        "translation": "to plant",
+        "future": "θα φυτέψω",
+        "past": "φύτεψα"
+    },
+    {
+        "verb": "φυσάω",
+        "translation": "to blow (wind)",
+        "future": "θα φυσήξω",
+        "past": "φύσηξα"
+    },
+    {
+        "verb": "φωτίζω",
+        "translation": "to light, to illuminate",
+        "future": "θα φωτίσω",
+        "past": "φώτισα"
+    },
+    {
+        "verb": "φωνάζω",
+        "translation": "to yell",
+        "future": "θα φωνάξω",
+        "past": "φώναξα"
+    },
+    {
+        "verb": "φταίω",
+        "translation": "to be at fault",
+        "future": "θα φταίξω",
+        "past": "έφταιξα"
+    },
+    {
+        "verb": "χαιρετώ",
+        "translation": "to greet",
+        "future": "θα χαιρετήσω",
+        "past": "χαιρέτησα"
+    },
+    {
+        "verb": "χαίρομαι",
+        "translation": "to be glad",
+        "future": "θα χαρώ",
+        "past": "χάρηκα"
+    },
+    {
+        "verb": "χαλάω",
+        "translation": "to break, to ruin, to spoil",
+        "future": "θα χαλάσω",
+        "past": "χάλασα"
+    },
+    {
+        "verb": "χάνω",
+        "translation": "to lose",
+        "future": "θα χάσω",
+        "past": "έχασα"
+    },
+    {
+        "verb": "χαρίζω",
+        "translation": "to give as a gift, to donate",
+        "future": "θα χαρίσω",
+        "past": "χάρισα"
+    },
+    {
+        "verb": "χορεύω",
+        "translation": "to dance",
+        "future": "θα χορέψω",
+        "past": "χόρεψα"
+    },
+    {
+        "verb": "χρειάζομαι",
+        "translation": "to need",
+        "future": "θα χρειαστώ",
+        "past": "χρειάστηκα"
+    },
+    {
+        "verb": "χρησιμοποιώ",
+        "translation": "to use",
+        "future": "θα χρησιμοποιήσω",
+        "past": "χρησιμοποίησα"
+    },
+    {
+        "verb": "χτυπάω",
+        "translation": "to hit, to knock",
+        "future": "θα χτυπήσω",
+        "past": "χτύπησα"
+    },
+    {
+        "verb": "χαλαρώνω",
+        "translation": "to relax",
+        "future": "θα χαλαρώσω",
+        "past": "χαλάρωσα"
+    },
+    {
+        "verb": "χαμογελάω",
+        "translation": "to smile",
+        "future": "θα χαμογελάσω",
+        "past": "χαμογέλασα"
+    },
+    {
+        "verb": "χωρίζω",
+        "translation": "to separate, to divorce",
+        "future": "θα χωρίσω",
+        "past": "χώρισα"
+    },
+    {
+        "verb": "ψάχνω",
+        "translation": "to search, to look for",
+        "future": "θα ψάξω",
+        "past": "έψαξα"
+    },
+    {
+        "verb": "ψωνίζω",
+        "translation": "to shop, to buy",
+        "future": "θα ψωνίσω",
+        "past": "ψώνισα"
+    },
+    {
+        "verb": "ψαρεύω",
+        "translation": "to fish",
+        "future": "θα ψαρέψω",
+        "past": "ψάρεψα"
+    },
+    {
+        "verb": "ψήνω",
+        "translation": "to bake, to grill",
+        "future": "θα ψήσω",
+        "past": "έψησα"
+    }
+]

@@ -23,7 +23,7 @@ struct ChooseTypeView: View {
     }
 
     private var topPadding: CGFloat {
-        sizeClass == .regular ? 100 : 20
+        sizeClass == .regular ? 40 : 20
     }
 
     var body: some View {
@@ -33,29 +33,54 @@ struct ChooseTypeView: View {
                     .edgesIgnoringSafeArea(.all)
 
                 VStack(spacing: 20) {
-                    Text("Greek Words A2")
+                    Text("Greek Words Quiz A2")
                         .font(sizeClass == .regular ? .largeTitle : .title2)
                         .fontWeight(.semibold)
                         .foregroundColor(.greenUniversal)
-                        .padding(.bottom, 16)
                         .padding(.top, topPadding)
 
-                    NavigationLink(destination: QuizView(viewModel: groupsViewModel, group: nil)) {
-                        Text("Random selection")
+                    HStack(spacing: 16) {
+                        NavigationLink(destination: QuizView(viewModel: groupsViewModel, group: nil)) {
+                            Text("Random\nselection")
+                                .multilineTextAlignment(.center)
+                                .lineLimit(2)
+                                .foregroundColor(.blackDN)
+                                .frame(height: buttonHeight + 20)
+                                .frame(maxWidth: .infinity)
+                                .padding(.horizontal, 12)
+                                .background(Color.whiteDN)
+                                .cornerRadius(16)
+                                .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
+                                .font(sizeClass == .regular ? .title : .title3)
+                        }
+
+                        NavigationLink(destination: GroupsView(viewModel: groupsViewModel)) {
+                            Text("Words by\ngroups")
+                                .multilineTextAlignment(.center)
+                                .lineLimit(2)
+                                .foregroundColor(.blackDN)
+                                .frame(height: buttonHeight + 20)
+                                .frame(maxWidth: .infinity)
+                                .padding(.horizontal, 12)
+                                .background(Color.whiteDN)
+                                .cornerRadius(16)
+                                .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
+                                .font(sizeClass == .regular ? .title : .title3)
+                        }
+                    }
+                    .padding(.horizontal, 20)
+
+                    Text("Verbs A2")
+                        .font(sizeClass == .regular ? .largeTitle : .title2)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.greenUniversal)
+                        .padding(.top, topPadding)
+
+                    NavigationLink(destination: VerbView()) {
+                        Text("Check verbs")
                             .foregroundColor(.blackDN)
                             .frame(height: buttonHeight)
                             .padding(.horizontal, buttonPaddingHorizontal)
-                            .background(Color.whiteDN)
-                            .cornerRadius(16)
-                            .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
-                            .font(sizeClass == .regular ? .title : .title3)
-                    }
-
-                    NavigationLink(destination: GroupsView(viewModel: groupsViewModel)) {
-                        Text("Words by groups")
-                            .foregroundColor(.blackDN)
-                            .frame(height: buttonHeight)
-                            .padding(.horizontal, buttonPaddingHorizontal + 2)
                             .background(Color.whiteDN)
                             .cornerRadius(16)
                             .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
