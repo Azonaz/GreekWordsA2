@@ -20,12 +20,12 @@ struct VerbView: View {
             if let currentVerb = currentVerb {
                 VStack(spacing: 20) {
                     Text(currentVerb.translation)
-                        .font(sizeClass == .regular ? .largeTitle : .title)
+                        .font(sizeClass == .regular ? .largeTitle : .title2)
                         .foregroundColor(.greenUniversal)
                         .tracking(3)
                         .shadow(color: .grayUniversal.opacity(0.3), radius: 1, x: 1, y: 1)
                         .multilineTextAlignment(.center)
-                        .padding(.top, sizeClass == .regular ? 90 : 50)
+                        .padding(.top, sizeClass == .regular ? 90 : 40)
 
                     Spacer()
 
@@ -51,9 +51,10 @@ struct VerbView: View {
                             Image(systemName: "arrow.uturn.right")
                         }
                         .foregroundColor(.greenUniversal)
-                        .font(sizeClass == .regular ? .title2 : .title3)
+                        .font(sizeClass == .regular ? .title : .title2)
                         .padding()
                         .frame(maxWidth: .infinity)
+                        .frame(height: sizeClass == .regular ? 90 : 60)
                         .background(Color.white)
                         .cornerRadius(16)
                         .shadow(color: .grayUniversal.opacity(0.3), radius: 5, x: 2, y: 2)
@@ -86,14 +87,15 @@ struct VerbView: View {
                 Button(action: {
                     showInfoSheet.toggle()
                 }, label: {
-                    Image(systemName: "info.bubble")
+                    Image(systemName: "info.circle")
                         .foregroundColor(Color(.greenUniversal))
+                        .font(sizeClass == .regular ? .title2 : .title3)
                 })
             }
         }
         .sheet(isPresented: $showInfoSheet) {
             VerbTenseView(isShowing: $showInfoSheet)
-                .presentationDetents([.height(500)])
+                .presentationDetents(sizeClass == .regular ? [.height(550)] : [.height(350)])
                 .presentationDragIndicator(.visible)
         }
     }

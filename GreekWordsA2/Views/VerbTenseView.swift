@@ -2,6 +2,10 @@ import SwiftUI
 
 struct VerbTenseView: View {
     @Binding var isShowing: Bool
+    @Environment(\.horizontalSizeClass) var sizeClass
+    var isLargeScreen: Bool {
+        UIDevice.current.userInterfaceIdiom == .pad || sizeClass == .regular
+    }
 
     var body: some View {
         ZStack {
@@ -10,31 +14,25 @@ struct VerbTenseView: View {
 
             ScrollView {
                 Text("Verb tenses")
-                    .font(.title3)
+                    .font(isLargeScreen ? .title : .title3)
                     .foregroundColor(.greenUniversal)
                     .padding(.top)
                     .padding(.bottom, 20)
 
                 VStack(alignment: .leading, spacing: 10) {
                     // swiftlint:disable line_length
+                    Text("Ενεστώτας ").verbTitleStyle() +
+                    Text("shows what is happening now, what happens often, or what is always true. It is like Simple Present in English.")
 
-                    Text("Ενεστώτας ")
-                        .fontWeight(.bold)
-                        .foregroundColor(.greenUniversal) +
-                    Text("can express things that are happening now, things that happen regularly, or general truths. It's one of the basic tenses used to talk about what is true or happening right now.")
+                    Text("Στιγμιαίος Μέλλοντας ").verbTitleStyle() +
+                    Text("shows something that will happen once in the future and be finished. It's like Simple Future in English.")
 
-                    Text("Στιγμιαίος Μέλλοντας ")
-                        .fontWeight(.bold)
-                        .foregroundColor(.greenUniversal) +
-                    Text("is used to express a single completed action that will happen in the future. It is similar to the Simple Future Tense in English.")
-
-                    Text("Αόριστος ")
-                        .fontWeight(.bold)
-                        .foregroundColor(.greenUniversal) +
-                    Text("is a past tense used to describe actions that were completed in the past, without indicating when exactly the action occurred or how long it lasted. This time it captures an event that has happened only once, an action that ended in the past. It's similar to the Simple Past Tense in English.")
+                    Text("Αόριστος ").verbTitleStyle() +
+                    Text("shows something that happened once in the past and is finished. It doesn't say when or how long. It's like Simple Past in English.")
                     // swiftlint:enable line_length
                 }
                 .foregroundColor(.blackDN)
+                .font(isLargeScreen ? .title2 : .body)
                 .padding(.horizontal)
             }
             .frame(maxHeight: .infinity)

@@ -2,7 +2,7 @@ import SwiftUI
 
 struct LaunchScreenView: View {
     @Environment(\.horizontalSizeClass) var sizeClass
-    var siseLogo: CGFloat {
+    var sizeLogo: CGFloat {
         sizeClass == .regular ? 250 : 150
     }
 
@@ -13,7 +13,7 @@ struct LaunchScreenView: View {
             VStack {
                 Image(.launchLogo)
                     .resizable()
-                    .frame(width: siseLogo, height: siseLogo)
+                    .frame(width: sizeLogo, height: sizeLogo)
             }
         }
     }

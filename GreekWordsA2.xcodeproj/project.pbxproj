@@ -17,6 +17,7 @@
 		84420A922C415FEB008A6F79 /* CharViewForGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420A912C415FEB008A6F79 /* CharViewForGame.swift */; };
 		84420A942C416154008A6F79 /* WordDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420A932C416154008A6F79 /* WordDayView.swift */; };
 		845596092DBBD03800FB27F7 /* VerbTenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845596082DBBD03800FB27F7 /* VerbTenseView.swift */; };
+		8455960C2DBCD4C500FB27F7 /* Text+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455960B2DBCD4C500FB27F7 /* Text+Extension.swift */; };
 		8488B11D2C11BB9F0044D455 /* GreekWordsA2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488B11C2C11BB9F0044D455 /* GreekWordsA2App.swift */; };
 		8488B11F2C11BB9F0044D455 /* ChooseTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488B11E2C11BB9F0044D455 /* ChooseTypeView.swift */; };
 		8488B1212C11BBA00044D455 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8488B1202C11BBA00044D455 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 		84420A912C415FEB008A6F79 /* CharViewForGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharViewForGame.swift; sourceTree = "<group>"; };
 		84420A932C416154008A6F79 /* WordDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDayView.swift; sourceTree = "<group>"; };
 		845596082DBBD03800FB27F7 /* VerbTenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbTenseView.swift; sourceTree = "<group>"; };
+		8455960B2DBCD4C500FB27F7 /* Text+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Extension.swift"; sourceTree = "<group>"; };
 		8488B1192C11BB9F0044D455 /* GreekWordsA2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreekWordsA2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8488B11C2C11BB9F0044D455 /* GreekWordsA2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreekWordsA2App.swift; sourceTree = "<group>"; };
 		8488B11E2C11BB9F0044D455 /* ChooseTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseTypeView.swift; sourceTree = "<group>"; };
@@ -99,6 +101,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		8455960A2DBCD4A700FB27F7 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				8455960B2DBCD4C500FB27F7 /* Text+Extension.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		8488B1102C11BB9F0044D455 = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +133,7 @@
 				842489492C1734840060FE60 /* Models */,
 				849217B42C202C0800C84401 /* ViewModels */,
 				842489442C1733DC0060FE60 /* Services */,
+				8455960A2DBCD4A700FB27F7 /* Helper */,
 				8488B1202C11BBA00044D455 /* Assets.xcassets */,
 				841E13E02DB7AB6500DFD07C /* verbs.json */,
 				8488B1222C11BBA00044D455 /* Preview Content */,
@@ -243,6 +254,7 @@
 				841E13E32DB7CDA500DFD07C /* VerbCardView.swift in Sources */,
 				84F2B03B2C9DC6F5008A9774 /* LaunchScreenView.swift in Sources */,
 				849217B32C2028DE00C84401 /* GroupsView.swift in Sources */,
+				8455960C2DBCD4C500FB27F7 /* Text+Extension.swift in Sources */,
 				84420A922C415FEB008A6F79 /* CharViewForGame.swift in Sources */,
 				84D675352C2191C5003DBC2A /* QuizView.swift in Sources */,
 				849217B62C202C2C00C84401 /* GroupsViewModel.swift in Sources */,
@@ -402,7 +414,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = cy.azonaz.GreekWordsA2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -436,7 +448,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = cy.azonaz.GreekWordsA2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

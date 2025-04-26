@@ -23,7 +23,7 @@ struct ChooseTypeView: View {
     }
 
     private var topPadding: CGFloat {
-        sizeClass == .regular ? 100 : 20
+        sizeClass == .regular ? 40 : 20
     }
 
     var body: some View {
