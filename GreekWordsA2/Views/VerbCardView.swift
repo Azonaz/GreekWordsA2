@@ -1,12 +1,11 @@
 import SwiftUI
 
 struct VerbCardView: View {
+    @State private var isFlipped = false
+    @Environment(\.horizontalSizeClass) var sizeClass
     let title: String
     let content: String
     var resetTrigger: Bool
-
-    @State private var isFlipped = false
-    @Environment(\.horizontalSizeClass) var sizeClass
 
     var body: some View {
         ZStack {

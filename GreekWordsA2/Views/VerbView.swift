@@ -2,12 +2,10 @@ import SwiftUI
 
 struct VerbView: View {
     @Environment(\.horizontalSizeClass) var sizeClass
-    @Environment(\.dismiss) private var dismiss
     @State private var verbs: [Verb] = []
     @State private var currentIndex: Int = 0
     @State private var resetTrigger = false
     @State private var showInfoSheet = false
-    @State private var dragOffset = CGSize.zero
     var currentVerb: Verb? {
         guard !verbs.isEmpty else { return nil }
         return verbs[currentIndex]
@@ -73,17 +71,7 @@ struct VerbView: View {
             verbs = loadVerbs()
             verbs.shuffle()
         }
-        .gesture(
-            DragGesture().onChanged { gesture in
-                dragOffset = gesture.translation
-            }
-                .onEnded { _ in
-                    if dragOffset.width > 100 {
-                        dismiss()
-                    }
-                    dragOffset = .zero
-                }
-        )
+        .onSwipeDismiss()
         .navigationBarBackButtonHidden(true)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
