@@ -4,8 +4,8 @@ struct VerbView: View {
     @Environment(\.horizontalSizeClass) var sizeClass
     @State private var verbs: [Verb] = []
     @State private var currentIndex: Int = 0
-    @State private var resetTrigger = false
     @State private var showInfoSheet = false
+    @State private var flippedStates: [Bool] = [false, false, false]
     var currentVerb: Verb? {
         guard !verbs.isEmpty else { return nil }
         return verbs[currentIndex]
@@ -28,21 +28,31 @@ struct VerbView: View {
 
                     Spacer()
 
-                    VerbCardView(title: "Ενεστώτας", content: currentVerb.verb, resetTrigger: resetTrigger)
-                    VerbCardView(title: "Στιγμιαίος Μέλλοντας", content: currentVerb.future, resetTrigger: resetTrigger)
-                    VerbCardView(title: "Αόριστος", content: currentVerb.past, resetTrigger: resetTrigger)
+                    VerbCardView(isFlipped: $flippedStates[0],
+                                 title: "Ενεστώτας",
+                                 content: currentVerb.verb)
+                    VerbCardView(isFlipped: $flippedStates[1],
+                                 title: "Στιγμιαίος Μέλλοντας",
+                                 content: currentVerb.future)
+                    VerbCardView(isFlipped: $flippedStates[2],
+                                 title: "Αόριστος",
+                                 content: currentVerb.past)
 
                     Spacer()
 
                     Button(action: {
-                        withAnimation(.easeInOut(duration: 0.4)) {
-                            if currentIndex < verbs.count - 1 {
-                                currentIndex += 1
-                            } else {
-                                verbs.shuffle()
-                                currentIndex = 0
+                        withAnimation(.easeInOut(duration: 0.3)) {
+                            flippedStates = [false, false, false]
+                        }
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                            withAnimation(.easeInOut(duration: 0.3)) {
+                                if currentIndex < verbs.count - 1 {
+                                    currentIndex += 1
+                                } else {
+                                    verbs.shuffle()
+                                    currentIndex = 0
+                                }
                             }
-                            resetTrigger.toggle()
                         }
                     }, label: {
                         HStack(spacing: 20) {

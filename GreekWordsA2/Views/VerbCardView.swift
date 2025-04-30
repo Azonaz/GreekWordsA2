@@ -1,11 +1,10 @@
 import SwiftUI
 
 struct VerbCardView: View {
-    @State private var isFlipped = false
+    @Binding var isFlipped: Bool
     @Environment(\.horizontalSizeClass) var sizeClass
     let title: String
     let content: String
-    var resetTrigger: Bool
 
     var body: some View {
         ZStack {
@@ -19,25 +18,26 @@ struct VerbCardView: View {
                         .foregroundColor(.blackDN)
                         .multilineTextAlignment(.center)
                         .padding()
-                        .rotation3DEffect(
-                            .degrees(isFlipped ? 180 : 0),
-                            axis: (x: 0, y: 1, z: 0)
-                        )
+                        .scaleEffect(isFlipped ? CGSize(width: -1, height: 1) : CGSize(width: 1, height: 1))
                 )
+                .rotation3DEffect(.degrees(isFlipped ? 180 : 0), axis: (x: 0, y: 1, z: 0))
+                .animation(.easeInOut(duration: 0.4), value: isFlipped)
         }
-        .rotation3DEffect(.degrees(isFlipped ? 180 : 0), axis: (x: 0, y: 1, z: 0))
         .onTapGesture {
-            withAnimation(.spring(response: 0.7, dampingFraction: 0.5)) {
-                isFlipped.toggle()
-            }
-        }
-        .onChange(of: resetTrigger) { _ in
-            isFlipped = false
+            isFlipped.toggle()
         }
         .padding(.horizontal)
     }
 }
 
 #Preview {
-    VerbCardView(title: "Ενεστώτας", content: "πηγαίνω", resetTrigger: false)
+    VerbCardPreview()
+}
+
+private struct VerbCardPreview: View {
+    @State private var flipped = false
+
+    var body: some View {
+        VerbCardView(isFlipped: $flipped, title: "Ενεστώτας", content: "πηγαίνω")
+    }
 }
