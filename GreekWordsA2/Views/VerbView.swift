@@ -44,7 +44,7 @@ struct VerbView: View {
                         withAnimation(.easeInOut(duration: 0.3)) {
                             flippedStates = [false, false, false]
                         }
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                             withAnimation(.easeInOut(duration: 0.3)) {
                                 if currentIndex < verbs.count - 1 {
                                     currentIndex += 1
