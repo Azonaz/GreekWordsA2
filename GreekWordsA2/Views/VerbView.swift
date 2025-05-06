@@ -64,7 +64,7 @@ struct VerbView: View {
                         .padding()
                         .frame(maxWidth: .infinity)
                         .frame(height: sizeClass == .regular ? 90 : 60)
-                        .background(Color.white)
+                        .background(Color.whiteDN)
                         .cornerRadius(16)
                         .shadow(color: .grayUniversal.opacity(0.3), radius: 5, x: 2, y: 2)
                     })
