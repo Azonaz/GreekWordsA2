@@ -96,6 +96,12 @@
         "past": "άρχισα"
     },
     {
+      "verb": "ανησυχώ",
+      "translation": "to worry",
+      "future": "θα ανησυχήσω",
+      "past": "ανησύχησα"
+    },
+    {
         "verb": "αφήνω",
         "translation": "to leave, to let go",
         "future": "θα αφήσω",
