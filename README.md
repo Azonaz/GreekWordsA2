@@ -6,10 +6,9 @@ Works only in portrait mode. Made with vanilla swift and native SDK.
 
 # Screencast
 
-![greekworda21](https://github.com/user-attachments/assets/c804aad5-a1db-4737-9cbc-b2ad97bd5218)
+![a2-1](https://github.com/user-attachments/assets/eaf10559-72d9-4417-bca6-777df0f922e5)
 
-![greekworda2](https://github.com/user-attachments/assets/f4b48ff7-e931-41e1-b168-b0e4f2a8cb05)
-
+![a2-2](https://github.com/user-attachments/assets/5f644b0a-a89e-4239-82d3-8341923dc40d)
 
 # Requirements
 
