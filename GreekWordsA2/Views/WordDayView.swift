@@ -23,7 +23,7 @@ struct WordDayView: View {
     private let solvedDateKey = "solvedDate"
     private let feedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
     private var radius: CGFloat {
-        return sizeClass == .regular ? 150 : 100
+        return sizeClass == .regular ? 180 : 120
     }
     private var paddingHorizontal: CGFloat {
         sizeClass == .regular ? 160 : 80
@@ -38,7 +38,7 @@ struct WordDayView: View {
             let screenWidth = geometry.size.width
             let screenHeight = geometry.size.height
             let diameter = radius * 2.7
-            let verticalPadding: CGFloat = sizeClass == .regular ? 100 : 60
+            let verticalPadding: CGFloat = max((screenHeight - diameter) / 2, 0)
 
             if !isWordAlreadySolvedForToday {
                 ZStack {
@@ -116,7 +116,7 @@ struct WordDayView: View {
         .background(Color.whiteDN)
         .cornerRadius(16)
         .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
-        .position(x: screenWidth / 2, y: screenHeight / 1.5)
+        .position(x: screenWidth / 2, y: screenHeight / 2)
     }
 
     private func createDragGesture(screenWidth: CGFloat, screenHeight: CGFloat,

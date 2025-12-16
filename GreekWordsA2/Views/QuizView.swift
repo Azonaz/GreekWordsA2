@@ -101,12 +101,17 @@ struct QuizView: View {
                     Spacer()
                 }
                 .navigationBarBackButtonHidden(true)
-                .navigationBarItems(leading: HStack {
-                    BackButton()
-                    Text(group?.name ?? "Random words")
-                        .font(sizeClass == .regular ? .largeTitle : .title)
-                        .fontWeight(.semibold)
-                })
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        BackButton()
+                    }
+                    ToolbarItem(placement: .principal) {
+                        Text(group?.name ?? "Random words")
+                            .font(sizeClass == .regular ? .largeTitle : .title)
+                            .fontWeight(.semibold)
+                            .frame(maxWidth: .infinity, alignment: .center)
+                    }
+                }
             }
         }
         .onAppear {

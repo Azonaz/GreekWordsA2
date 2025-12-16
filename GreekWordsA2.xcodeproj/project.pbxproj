@@ -26,9 +26,11 @@
 		849217B62C202C2C00C84401 /* GroupsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849217B52C202C2C00C84401 /* GroupsViewModel.swift */; };
 		849217BA2C20318B00C84401 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849217B92C20318B00C84401 /* BackButton.swift */; };
 		84A7920D2C5D132300848517 /* WordsDayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A7920C2C5D132300848517 /* WordsDayViewModel.swift */; };
+		84ADEBA12EF1C4D000F67052 /* TrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ADEBA02EF1C4C800F67052 /* TrainingView.swift */; };
 		84D675352C2191C5003DBC2A /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D675342C2191C5003DBC2A /* QuizView.swift */; };
 		84E39EA72DBFBCF7009A7BC9 /* SwipeDismissModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E39EA62DBFBCF7009A7BC9 /* SwipeDismissModifier.swift */; };
 		84F2B03B2C9DC6F5008A9774 /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F2B03A2C9DC6F5008A9774 /* LaunchScreenView.swift */; };
+		84F8A2022D00000100AA55AA /* WordDayGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8A2012D00000100AA55AA /* WordDayGameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,9 +54,11 @@
 		849217B52C202C2C00C84401 /* GroupsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewModel.swift; sourceTree = "<group>"; };
 		849217B92C20318B00C84401 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		84A7920C2C5D132300848517 /* WordsDayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsDayViewModel.swift; sourceTree = "<group>"; };
+		84ADEBA02EF1C4C800F67052 /* TrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingView.swift; sourceTree = "<group>"; };
 		84D675342C2191C5003DBC2A /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		84E39EA62DBFBCF7009A7BC9 /* SwipeDismissModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeDismissModifier.swift; sourceTree = "<group>"; };
 		84F2B03A2C9DC6F5008A9774 /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
+		84F8A2012D00000100AA55AA /* WordDayGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDayGameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +98,12 @@
 				8488B11E2C11BB9F0044D455 /* ChooseTypeView.swift */,
 				849217B22C2028DE00C84401 /* GroupsView.swift */,
 				84D675342C2191C5003DBC2A /* QuizView.swift */,
+				84ADEBA02EF1C4C800F67052 /* TrainingView.swift */,
 				844032CE2DB14E9100A52B39 /* VerbView.swift */,
 				841E13E22DB7CDA500DFD07C /* VerbCardView.swift */,
 				845596082DBBD03800FB27F7 /* VerbTenseView.swift */,
 				84420A932C416154008A6F79 /* WordDayView.swift */,
+				84F8A2012D00000100AA55AA /* WordDayGameView.swift */,
 				84420A912C415FEB008A6F79 /* CharViewForGame.swift */,
 			);
 			path = Views;
@@ -190,7 +196,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 2620;
 				TargetAttributes = {
 					8488B1182C11BB9F0044D455 = {
 						CreatedOnToolsVersion = 15.4;
@@ -231,6 +237,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		8488B12A2C11F0A60044D455 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -244,7 +251,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\n";
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -263,6 +270,7 @@
 				84D675352C2191C5003DBC2A /* QuizView.swift in Sources */,
 				849217B62C202C2C00C84401 /* GroupsViewModel.swift in Sources */,
 				844032CB2DB14AB800A52B39 /* VerbModel.swift in Sources */,
+				84F8A2022D00000100AA55AA /* WordDayGameView.swift in Sources */,
 				84420A942C416154008A6F79 /* WordDayView.swift in Sources */,
 				845596092DBBD03800FB27F7 /* VerbTenseView.swift in Sources */,
 				8488B11F2C11BB9F0044D455 /* ChooseTypeView.swift in Sources */,
@@ -271,6 +279,7 @@
 				842489462C1733F40060FE60 /* NetworkService.swift in Sources */,
 				844032CF2DB14E9100A52B39 /* VerbView.swift in Sources */,
 				8424894B2C1734A10060FE60 /* WordModel.swift in Sources */,
+				84ADEBA12EF1C4D000F67052 /* TrainingView.swift in Sources */,
 				84A7920D2C5D132300848517 /* WordsDayViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,6 +322,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = H2L9U6M2SX;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -336,6 +346,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -376,6 +387,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = H2L9U6M2SX;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -392,6 +404,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -405,14 +418,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GreekWordsA2/Preview Content\"";
-				DEVELOPMENT_TEAM = H2L9U6M2SX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -439,14 +451,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GreekWordsA2/Preview Content\"";
-				DEVELOPMENT_TEAM = H2L9U6M2SX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
