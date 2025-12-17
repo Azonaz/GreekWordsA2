@@ -99,13 +99,14 @@ struct WordDayGameView: View {
         .onAppear {
             viewModel.setWordForCurrentDate()
         }
-        .onChange(of: scenePhase) { newPhase in
-            if newPhase == .active {
-                let today = viewModel.getCurrentDate()
-                viewModel.setWordForCurrentDate()
-                if today != UserDefaults.standard.string(forKey: "lastPlayedDate") {
-                    isWordAlreadySolvedForToday = false
-                }
+        .onChange(of: scenePhase) {
+            guard scenePhase == .active else { return }
+
+            let today = viewModel.getCurrentDate()
+            viewModel.setWordForCurrentDate()
+
+            if today != UserDefaults.standard.string(forKey: "lastPlayedDate") {
+                isWordAlreadySolvedForToday = false
             }
         }
         .onSwipeDismiss()

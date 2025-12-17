@@ -72,10 +72,9 @@ struct WordDayView: View {
                         updateWord(viewModel.grWord)
                     }
                 }
-                .onChange(of: viewModel.grWord) { newValue in
-                    if !isWordAlreadySolvedForToday {
-                        updateWord(newValue)
-                    }
+                .onChange(of: viewModel.grWord) {
+                    guard !isWordAlreadySolvedForToday else { return }
+                    updateWord(viewModel.grWord)
                 }
             } else {
                 createSolvedWordView(screenWidth: screenWidth, screenHeight: screenHeight)

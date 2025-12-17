@@ -1,58 +1,42 @@
-import Foundation
-
 // swiftlint:disable identifier_name
 // swiftlint:disable nesting
+struct VocabularyFile: Codable {
+    let vocabulary: Vocabulary
+}
+
 struct Vocabulary: Codable {
-    let vocabulary: VocabularyData
+    let groups: [WordGroup]
 }
 
-struct VocabularyData: Codable {
-    let groups: [VocabularyGroup]
+struct WordGroup: Codable {
+    let id: Int
+    let name: LocalizedString
+    let version: Int
+    let words: [WordItem]
 }
 
-struct VocabularyGroup: Codable, Identifiable, Hashable {
-    let id: UUID
-    let name: String
-    let words: [Word]
-
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.id = UUID()
-        self.name = try container.decode(String.self, forKey: .name)
-        self.words = try container.decode([Word].self, forKey: .words)
-    }
-
-    static func == (lhs: VocabularyGroup, rhs: VocabularyGroup) -> Bool {
-        return lhs.id == rhs.id
-    }
-
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(id)
-    }
+struct LocalizedString: Codable {
+    let en: String
+    let ru: String
 }
 
-struct Word: Codable, Identifiable {
-    let id: UUID
+struct WordItem: Codable {
+    let id: Int
     let gr: String
     let en: String
-
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.id = UUID()
-        self.gr = try container.decode(String.self, forKey: .gr)
-        self.en = try container.decode(String.self, forKey: .en)
-    }
+    let ru: String
 }
 
 struct VocabularyWordDay: Codable {
     let vocabulary: VocabularyData
 
     struct VocabularyData: Codable {
-        let words: [Word]
+        let words: [WordDay]
 
-        struct Word: Codable {
+        struct WordDay: Codable {
             let gr: String
             let en: String
+            let ru: String?
         }
     }
 }

@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ChooseTypeView: View {
     @StateObject var groupsViewModel = GroupsViewModel()
+    @Environment(\.modelContext) private var modelContext
     @Environment(\.horizontalSizeClass) var sizeClass
 
     private var buttonHeight: CGFloat {
@@ -42,7 +43,7 @@ struct ChooseTypeView: View {
                                 .font(sizeClass == .regular ? .title : .title3)
                         }
 
-                        NavigationLink(destination: QuizView(viewModel: groupsViewModel, group: nil)) {
+                        NavigationLink(destination: QuizView(viewModel: groupsViewModel, group: nil as GroupMeta?)) {
                             Text("Quiz: Random selection")
                                 .multilineTextAlignment(.center)
                                 .lineLimit(2)
@@ -118,6 +119,9 @@ struct ChooseTypeView: View {
                 }
                 .padding()
             }
+        }
+        .task {
+            await groupsViewModel.syncAndLoadGroups(modelContext: modelContext)
         }
     }
 }
