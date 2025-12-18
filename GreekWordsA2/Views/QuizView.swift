@@ -6,7 +6,7 @@ struct QuizView: View {
     @Environment(\.modelContext) private var modelContext
 
     @State private var greekWord: String = ""
-    @State private var enWords: [String] = []
+    @State private var trWords: [String] = []
     @State private var selectedAnswer: String?
     @State private var isCorrect: Bool?
     @State private var isButtonDisabled: Bool = false
@@ -17,6 +17,7 @@ struct QuizView: View {
 
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.horizontalSizeClass) var sizeClass
+    @Environment(\.locale) private var locale
 
     let group: GroupMeta?
 
@@ -29,8 +30,16 @@ struct QuizView: View {
         sizeClass == .regular ? UIScreen.main.bounds.width - 280 : UIScreen.main.bounds.width - 120
     }
 
+    private var isEnglish: Bool {
+        Locale.preferredLanguages.first?.hasPrefix("en") == true
+    }
+
     private var title: String {
-        group?.nameEn ?? "Random words"
+        if let group {
+            return isEnglish ? group.nameEn : group.nameRu
+        } else {
+            return isEnglish ? "Random words" : "Случайные слова"
+        }
     }
 
     private var parsedWords: [String] {
@@ -91,9 +100,9 @@ struct QuizView: View {
 
                     Spacer()
 
-                    if enWords.count == 3 {
-                        ForEach(0..<enWords.count, id: \.self) { index in
-                            Text(enWords[index])
+                    if trWords.count == 3 {
+                        ForEach(0..<trWords.count, id: \.self) { index in
+                            Text(trWords[index])
                                 .foregroundColor(.blackDN)
                                 .frame(width: width, height: sizeClass == .regular ? 80 : 60)
                                 .background(
@@ -102,7 +111,7 @@ struct QuizView: View {
                                         .overlay(
                                             RoundedRectangle(cornerRadius: 16)
                                                 .stroke(
-                                                    selectedAnswer == enWords[index]
+                                                    selectedAnswer == trWords[index]
                                                     ? (isCorrect == true ? Color.green : Color.red)
                                                     : Color.clear,
                                                     lineWidth: 3
@@ -114,13 +123,13 @@ struct QuizView: View {
                                 .font(sizeClass == .regular ? .title : .title3)
                                 .onTapGesture {
                                     if !isButtonDisabled {
-                                        handleAnswerSelection(answer: enWords[index])
+                                        handleAnswerSelection(answer: trWords[index])
                                     }
                                 }
                                 .padding(.top, 5)
                         }
                     } else {
-                        Text(enWords.isEmpty ? "Loading options..." : "Not enough options")
+                        Text(trWords.isEmpty ? "Loading options..." : "Not enough options")
                     }
 
                     Spacer()
@@ -172,13 +181,14 @@ struct QuizView: View {
             updateQuizContent()
         } else {
             greekWord = "No words"
-            enWords = []
+            trWords = []
         }
     }
 
     private func handleAnswerSelection(answer: String) {
         selectedAnswer = answer
-        isCorrect = (viewModel.correctWord?.en == selectedAnswer)
+        let correctText = isEnglish ? viewModel.correctWord?.en : viewModel.correctWord?.ru
+        isCorrect = (correctText == selectedAnswer)
         if isCorrect == true { correctAnswersCount += 1 }
         isButtonDisabled = true
 
@@ -197,7 +207,7 @@ struct QuizView: View {
 
     private func updateQuizContent() {
         greekWord = viewModel.nextGreekWord()
-        enWords = viewModel.optionsForCurrentWord()
+        trWords = viewModel.optionsForCurrentWord(using: locale)
     }
 
     private func resetQuiz() {

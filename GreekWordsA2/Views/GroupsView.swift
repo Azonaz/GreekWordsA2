@@ -6,6 +6,10 @@ struct GroupsView: View {
     @Environment(\.horizontalSizeClass) private var sizeClass
     @Query(sort: [SortDescriptor(\GroupMeta.id, order: .forward)]) private var groups: [GroupMeta]
 
+    private var isEnglish: Bool {
+        Locale.preferredLanguages.first?.hasPrefix("en") == true
+    }
+
     var body: some View {
         NavigationStack {
             ZStack {
@@ -18,7 +22,7 @@ struct GroupsView: View {
                             QuizView(viewModel: viewModel, group: group)
                         } label: {
                             HStack {
-                                Text(group.nameEn)
+                                Text(isEnglish ? group.nameEn : group.nameRu)
                                     .font(sizeClass == .regular ? .title : .title3)
                                 Spacer()
                             }

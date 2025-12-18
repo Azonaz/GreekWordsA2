@@ -23,6 +23,7 @@
 		8488B11F2C11BB9F0044D455 /* ChooseTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488B11E2C11BB9F0044D455 /* ChooseTypeView.swift */; };
 		8488B1212C11BBA00044D455 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8488B1202C11BBA00044D455 /* Assets.xcassets */; };
 		8488B1242C11BBA00044D455 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8488B1232C11BBA00044D455 /* Preview Assets.xcassets */; };
+		8493DDA42EF4406C00AA477F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8493DDA22EF4406900AA477F /* Localizable.strings */; };
 		849217B32C2028DE00C84401 /* GroupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849217B22C2028DE00C84401 /* GroupsView.swift */; };
 		849217B62C202C2C00C84401 /* GroupsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849217B52C202C2C00C84401 /* GroupsViewModel.swift */; };
 		849217BA2C20318B00C84401 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849217B92C20318B00C84401 /* BackButton.swift */; };
@@ -259,6 +260,7 @@
 				8488B1242C11BBA00044D455 /* Preview Assets.xcassets in Resources */,
 				841E13E12DB7AB6500DFD07C /* verbs.json in Resources */,
 				8488B1212C11BBA00044D455 /* Assets.xcassets in Resources */,
+				8493DDA42EF4406C00AA477F /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
