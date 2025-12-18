@@ -1,6 +1,11 @@
 import Foundation
 import SwiftData
 
+enum QuizMode {
+    case direct
+    case reverse
+}
+
 @MainActor
 final class GroupsViewModel: ObservableObject {
     @Published var correctWord: Word?
@@ -25,16 +30,22 @@ final class GroupsViewModel: ObservableObject {
         }
     }
 
-    func nextGreekWord() -> String {
+    func nextWord(for mode: QuizMode, isEnglish: Bool) -> String {
         guard let word = currentRoundWords.popLast() else {
             correctWord = nil
             return ""
         }
         correctWord = word
-        return word.gr
+
+        switch mode {
+        case .direct:
+            return word.gr
+        case .reverse:
+            return isEnglish ? word.en : word.ru
+        }
     }
 
-    func optionsForCurrentWord(using locale: Locale) -> [String] {
+    func optionsForCurrentWord(using locale: Locale, mode: QuizMode) -> [String] {
         guard let correct = correctWord else { return [] }
         var options: [Word] = [correct]
 
@@ -45,8 +56,13 @@ final class GroupsViewModel: ObservableObject {
 
         options.append(contentsOf: others)
         options.shuffle()
-        let isEnglish = locale.language.languageCode?.identifier.hasPrefix("en") == true
-        return options.map { isEnglish ? $0.en : $0.ru }
+        switch mode {
+        case .direct:
+            let isEnglish = locale.language.languageCode?.identifier.hasPrefix("en") == true
+            return options.map { isEnglish ? $0.en : $0.ru }
+        case .reverse:
+            return options.map { $0.gr }
+        }
     }
 }
 

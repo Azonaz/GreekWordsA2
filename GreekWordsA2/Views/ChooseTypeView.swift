@@ -49,7 +49,7 @@ struct ChooseTypeView: View {
                                         ChooseButtonLabel(title: "Quiz: Random selection", height: bHeight, font: bFont)
                                     }
 
-                                    NavigationLink(destination: QuizView(viewModel: groupsVM, group: nil)) {
+                                    NavigationLink(destination: GroupsView(viewModel: groupsVM, quizMode: .reverse)) {
                                         ChooseButtonLabel(title: "Quiz: reverse", height: bHeight, font: bFont)
                                     }
                                 }
@@ -81,7 +81,7 @@ struct ChooseTypeView: View {
                                     ChooseButtonLabel(title: "Quiz: Random selection", height: bHeight, font: bFont)
                                 }
 
-                                NavigationLink(destination: QuizView(viewModel: groupsVM, group: nil)) {
+                                NavigationLink(destination: GroupsView(viewModel: groupsVM, quizMode: .reverse)) {
                                     ChooseButtonLabel(title: "Quiz: reverse", height: bHeight, font: bFont)
                                 }
                             }

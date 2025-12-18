@@ -5,6 +5,12 @@ struct GroupsView: View {
     @ObservedObject var viewModel: GroupsViewModel
     @Environment(\.horizontalSizeClass) private var sizeClass
     @Query(sort: [SortDescriptor(\GroupMeta.id, order: .forward)]) private var groups: [GroupMeta]
+    let quizMode: QuizMode
+
+    init(viewModel: GroupsViewModel, quizMode: QuizMode = .direct) {
+        _viewModel = ObservedObject(wrappedValue: viewModel)
+        self.quizMode = quizMode
+    }
 
     private var isEnglish: Bool {
         Locale.preferredLanguages.first?.hasPrefix("en") == true
@@ -19,7 +25,7 @@ struct GroupsView: View {
                 List {
                     ForEach(Array(groups.enumerated()), id: \.element.id) { index, group in
                         NavigationLink {
-                            QuizView(viewModel: viewModel, group: group)
+                            QuizView(viewModel: viewModel, group: group, mode: quizMode)
                         } label: {
                             HStack {
                                 Text(isEnglish ? group.nameEn : group.nameRu)

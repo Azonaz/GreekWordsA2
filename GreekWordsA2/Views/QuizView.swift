@@ -5,8 +5,8 @@ struct QuizView: View {
     @ObservedObject var viewModel: GroupsViewModel
     @Environment(\.modelContext) private var modelContext
 
-    @State private var greekWord: String = ""
-    @State private var trWords: [String] = []
+    @State private var questionWord: String = ""
+    @State private var options: [String] = []
     @State private var selectedAnswer: String?
     @State private var isCorrect: Bool?
     @State private var isButtonDisabled: Bool = false
@@ -20,10 +20,12 @@ struct QuizView: View {
     @Environment(\.locale) private var locale
 
     let group: GroupMeta?
+    let mode: QuizMode
 
-    init(viewModel: GroupsViewModel, group: GroupMeta? = nil) {
+    init(viewModel: GroupsViewModel, group: GroupMeta? = nil, mode: QuizMode = .direct) {
         self.viewModel = viewModel
         self.group = group
+        self.mode = mode
     }
 
     private var width: CGFloat {
@@ -31,21 +33,31 @@ struct QuizView: View {
     }
 
     private var isEnglish: Bool {
-        Locale.preferredLanguages.first?.hasPrefix("en") == true
+        locale.language.languageCode?.identifier.hasPrefix("en") == true
+    }
+
+    private var isReverse: Bool {
+        mode == .reverse
     }
 
     private var title: String {
         if let group {
             return isEnglish ? group.nameEn : group.nameRu
         } else {
-            return isEnglish ? "Random words" : "Случайные слова"
+            if isReverse {
+                return isEnglish ? "Reverse quiz" : "Обратный квиз"
+            } else {
+                return isEnglish ? "Random words" : "Случайные слова"
+            }
         }
     }
 
     private var parsedWords: [String] {
-        let splitWords = greekWord.components(separatedBy: ",")
+        if isReverse { return [questionWord] }
+
+        let splitWords = questionWord.components(separatedBy: ",")
         if splitWords.count == 1 {
-            let separatedWords = greekWord.split(separator: " ")
+            let separatedWords = questionWord.split(separator: " ")
             if separatedWords.count > 2 {
                 if separatedWords[0].count > 2 {
                     let firstPart = String(separatedWords[0])
@@ -58,7 +70,7 @@ struct QuizView: View {
                     return [String(firstPart), String(secondPart)]
                 }
             } else {
-                return [greekWord]
+                return [questionWord]
             }
         } else {
             return splitWords
@@ -100,9 +112,9 @@ struct QuizView: View {
 
                     Spacer()
 
-                    if trWords.count == 3 {
-                        ForEach(0..<trWords.count, id: \.self) { index in
-                            Text(trWords[index])
+                    if options.count == 3 {
+                        ForEach(0..<options.count, id: \.self) { index in
+                            Text(options[index])
                                 .foregroundColor(.blackDN)
                                 .frame(width: width, height: sizeClass == .regular ? 80 : 60)
                                 .background(
@@ -111,7 +123,7 @@ struct QuizView: View {
                                         .overlay(
                                             RoundedRectangle(cornerRadius: 16)
                                                 .stroke(
-                                                    selectedAnswer == trWords[index]
+                                                    selectedAnswer == options[index]
                                                     ? (isCorrect == true ? Color.green : Color.red)
                                                     : Color.clear,
                                                     lineWidth: 3
@@ -123,13 +135,13 @@ struct QuizView: View {
                                 .font(sizeClass == .regular ? .title : .title3)
                                 .onTapGesture {
                                     if !isButtonDisabled {
-                                        handleAnswerSelection(answer: trWords[index])
+                                        handleAnswerSelection(answer: options[index])
                                     }
                                 }
                                 .padding(.top, 5)
                         }
                     } else {
-                        Text(trWords.isEmpty ? "Loading options..." : "Not enough options")
+                        Text(options.isEmpty ? "Loading options..." : "Not enough options")
                     }
 
                     Spacer()
@@ -180,14 +192,14 @@ struct QuizView: View {
         if roundCount > 0 {
             updateQuizContent()
         } else {
-            greekWord = "No words"
-            trWords = []
+            questionWord = "No words"
+            options = []
         }
     }
 
     private func handleAnswerSelection(answer: String) {
         selectedAnswer = answer
-        let correctText = isEnglish ? viewModel.correctWord?.en : viewModel.correctWord?.ru
+        let correctText = correctAnswer
         isCorrect = (correctText == selectedAnswer)
         if isCorrect == true { correctAnswersCount += 1 }
         isButtonDisabled = true
@@ -206,12 +218,23 @@ struct QuizView: View {
     }
 
     private func updateQuizContent() {
-        greekWord = viewModel.nextGreekWord()
-        trWords = viewModel.optionsForCurrentWord(using: locale)
+        questionWord = viewModel.nextWord(for: mode, isEnglish: isEnglish)
+        options = viewModel.optionsForCurrentWord(using: locale, mode: mode)
     }
 
     private func resetQuiz() {
         Task { await startQuiz() }
+    }
+
+    private var correctAnswer: String? {
+        guard let correct = viewModel.correctWord else { return nil }
+
+        switch mode {
+        case .direct:
+            return isEnglish ? correct.en : correct.ru
+        case .reverse:
+            return correct.gr
+        }
     }
 }
 
