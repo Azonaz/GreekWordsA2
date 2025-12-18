@@ -3,8 +3,8 @@ import SwiftData
 
 struct GroupsView: View {
     @ObservedObject var viewModel: GroupsViewModel
-    @Environment(\.modelContext) private var modelContext
     @Environment(\.horizontalSizeClass) private var sizeClass
+    @Query(sort: [SortDescriptor(\GroupMeta.id, order: .forward)]) private var groups: [GroupMeta]
 
     var body: some View {
         NavigationStack {
@@ -13,7 +13,7 @@ struct GroupsView: View {
                     .edgesIgnoringSafeArea(.all)
 
                 List {
-                    ForEach(Array(viewModel.groups.enumerated()), id: \.element.id) { index, group in
+                    ForEach(Array(groups.enumerated()), id: \.element.id) { index, group in
                         NavigationLink {
                             QuizView(viewModel: viewModel, group: group)
                         } label: {
@@ -31,7 +31,7 @@ struct GroupsView: View {
                             Rectangle()
                                 .frame(height: 1)
                                 .foregroundColor(
-                                    index == viewModel.groups.indices.last
+                                    index == groups.indices.last
                                     ? Color.whiteDN
                                     : Color.greenUniversal.opacity(0.3)
                                 )
@@ -61,9 +61,6 @@ struct GroupsView: View {
                         .fontWeight(.semibold)
                         .frame(maxWidth: .infinity, alignment: .center)
                 }
-            }
-            .onAppear {
-                Task { await viewModel.syncAndLoadGroups(modelContext: modelContext) }
             }
             .onSwipeDismiss()
         }

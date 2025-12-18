@@ -158,10 +158,6 @@ struct QuizView: View {
     }
 
     private func startQuiz() async {
-        if !viewModel.isSynced {
-            await viewModel.syncAndLoadGroups(modelContext: modelContext)
-        }
-
         let roundCount = await viewModel.prepareRound(modelContext: modelContext, group: group, count: 10)
 
         totalQuestions = roundCount

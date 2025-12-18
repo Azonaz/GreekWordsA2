@@ -2,93 +2,79 @@ import Foundation
 import SwiftData
 
 @MainActor
-final class VocabularyStore {
-    private let service: WordService
+final class VocabularySyncService {
+    private let context: ModelContext
+    private let remoteURL: URL
 
-    init(service: WordService = WordService()) {
-        self.service = service
+    init(context: ModelContext, remoteURL: URL) {
+        self.context = context
+        self.remoteURL = remoteURL
     }
 
-    func sync(modelContext: ModelContext) async throws {
-        let remoteGroups = try await service.fetchGroups()
+    func syncVocabulary() async throws {
+        let (data, _) = try await URLSession.shared.data(from: remoteURL)
+        let vocabularyFile = try JSONDecoder().decode(VocabularyFile.self, from: data)
 
-        let existingMetas = try modelContext.fetch(FetchDescriptor<GroupMeta>())
-        var metaByID: [Int: GroupMeta] = Dictionary(uniqueKeysWithValues: existingMetas.map { ($0.id, $0) })
-
-        for rGroup in remoteGroups {
-            let meta: GroupMeta
-            let isNewMeta: Bool
-
-            if let found = metaByID[rGroup.id] {
-                meta = found
-                isNewMeta = false
-            } else {
-                meta = GroupMeta(id: rGroup.id, version: -1, nameEn: rGroup.name.en, nameRu: rGroup.name.ru)
-                modelContext.insert(meta)
-                metaByID[rGroup.id] = meta
-                isNewMeta = true
-            }
-
-            meta.nameEn = rGroup.name.en
-            meta.nameRu = rGroup.name.ru
-
-            let needsWordsUpdate = isNewMeta || meta.version != rGroup.version
-            guard needsWordsUpdate else { continue }
-
-            let oldWords = try modelContext.fetch(
-                FetchDescriptor<Word>(predicate: #Predicate { $0.groupID == rGroup.id })
-            )
-            for word in oldWords { modelContext.delete(word) }
-
-            for item in rGroup.words {
-                let newWord = Word(localID: item.id, groupID: rGroup.id, gr: item.gr, en: item.en, ru: item.ru)
-                modelContext.insert(newWord)
-
-                let compositeID = newWord.compositeID
-                if try modelContext.fetch(
-                    FetchDescriptor<WordProgress>(predicate: #Predicate { $0.compositeID == compositeID })
-                ).first == nil {
-                    modelContext.insert(
-                        WordProgress(
-                            compositeID: compositeID,
-                            learned: false,
-                            correctAnswers: 0,
-                            seen: false
-                        )
-                    )
-                }
-            }
-
-            meta.version = rGroup.version
+        for group in vocabularyFile.vocabulary.groups {
+            try await syncGroup(group)
         }
 
-        try modelContext.save()
+        try context.save()
     }
 }
 
-extension VocabularyStore {
-    func fetchGroups(modelContext: ModelContext) throws -> [GroupMeta] {
-        try modelContext.fetch(
-            FetchDescriptor<GroupMeta>(
-                sortBy: [SortDescriptor(\.id)]
-            )
-        )
-    }
+private extension VocabularySyncService {
+    func syncGroup(_ group: WordGroup) async throws {
+        let existingMeta = try context.fetch(
+            FetchDescriptor<GroupMeta>(predicate: #Predicate { $0.id == group.id })
+        ).first
 
-    func fetchWords(modelContext: ModelContext, groupID: Int?) throws -> [Word] {
-        if let groupID {
-            return try modelContext.fetch(
-                FetchDescriptor<Word>(
-                    predicate: #Predicate { $0.groupID == groupID },
-                    sortBy: [SortDescriptor(\.localID)]
-                )
+        if let existingMeta = existingMeta, existingMeta.version >= group.version {
+            return
+        }
+
+        let meta = existingMeta ?? GroupMeta(
+            id: group.id,
+            version: group.version,
+            nameEn: group.name.en,
+            nameRu: group.name.ru
+        )
+        meta.version = group.version
+        meta.nameEn = group.name.en
+        meta.nameRu = group.name.ru
+        context.insert(meta)
+
+        let oldWords = try context.fetch(
+            FetchDescriptor<Word>(predicate: #Predicate { $0.groupID == group.id })
+        )
+        for oldWord in oldWords { context.delete(oldWord) }
+
+        for word in group.words {
+            let newWord = Word(
+                localID: word.id,
+                groupID: group.id,
+                gr: word.gr,
+                en: word.en,
+                ru: word.ru
             )
-        } else {
-            return try modelContext.fetch(
-                FetchDescriptor<Word>(
-                    sortBy: [SortDescriptor(\.localID)]
+            context.insert(newWord)
+
+            let compositeID = newWord.compositeID
+            let existingProgress = try context.fetch(
+                FetchDescriptor<WordProgress>(
+                    predicate: #Predicate { $0.compositeID == compositeID }
                 )
-            )
+            ).first
+
+            if existingProgress == nil {
+                let progress = WordProgress(
+                    compositeID: compositeID,
+                    learned: false,
+                    correctAnswers: 0,
+                    seen: false
+                )
+                context.insert(progress)
+            }
         }
     }
 }

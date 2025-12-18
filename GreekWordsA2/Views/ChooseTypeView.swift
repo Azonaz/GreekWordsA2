@@ -4,6 +4,7 @@ struct ChooseTypeView: View {
     @StateObject var groupsViewModel = GroupsViewModel()
     @Environment(\.modelContext) private var modelContext
     @Environment(\.horizontalSizeClass) var sizeClass
+    @Environment(\.scenePhase) private var scenePhase
 
     private var buttonHeight: CGFloat {
         sizeClass == .regular ? 80 : 60
@@ -120,8 +121,23 @@ struct ChooseTypeView: View {
                 .padding()
             }
         }
-        .task {
-            await groupsViewModel.syncAndLoadGroups(modelContext: modelContext)
+        .task { await syncVocabulary() }
+        .onChange(of: scenePhase) { _, phase in
+            if phase == .active {
+                Task { await syncVocabulary() }
+            }
+        }
+    }
+
+    @MainActor
+    private func syncVocabulary() async {
+        guard let url = URL(string: WordService().dictionaryUrl) else { return }
+
+        do {
+            let service = VocabularySyncService(context: modelContext, remoteURL: url)
+            try await service.syncVocabulary()
+        } catch {
+            print("Synchronisation error: \(error)")
         }
     }
 }
