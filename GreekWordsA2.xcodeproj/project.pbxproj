@@ -23,7 +23,6 @@
 		8488B11F2C11BB9F0044D455 /* ChooseTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488B11E2C11BB9F0044D455 /* ChooseTypeView.swift */; };
 		8488B1212C11BBA00044D455 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8488B1202C11BBA00044D455 /* Assets.xcassets */; };
 		8488B1242C11BBA00044D455 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8488B1232C11BBA00044D455 /* Preview Assets.xcassets */; };
-		8493DDA42EF4406C00AA477F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8493DDA22EF4406900AA477F /* Localizable.strings */; };
 		849217B32C2028DE00C84401 /* GroupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849217B22C2028DE00C84401 /* GroupsView.swift */; };
 		849217B62C202C2C00C84401 /* GroupsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849217B52C202C2C00C84401 /* GroupsViewModel.swift */; };
 		849217BA2C20318B00C84401 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849217B92C20318B00C84401 /* BackButton.swift */; };
@@ -31,6 +30,7 @@
 		8493DD9A2EF3F4A200AA477F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493DD972EF3F4A200AA477F /* SettingsView.swift */; };
 		8493DD9B2EF3F4A200AA477F /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493DD982EF3F4A200AA477F /* StatisticsView.swift */; };
 		8493DD9D2EF43EF100AA477F /* QuizStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493DD9C2EF43EF000AA477F /* QuizStats.swift */; };
+		8493DDA42EF4406C00AA477F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8493DDA22EF4406900AA477F /* Localizable.strings */; };
 		84A7920D2C5D132300848517 /* WordsDayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A7920C2C5D132300848517 /* WordsDayViewModel.swift */; };
 		84ADEBA12EF1C4D000F67052 /* TrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ADEBA02EF1C4C800F67052 /* TrainingView.swift */; };
 		84AF1F6B2EF2E50A00A7B3D7 /* SwiftDataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF1F6A2EF2E50600A7B3D7 /* SwiftDataModels.swift */; };
@@ -476,7 +476,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -509,7 +509,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

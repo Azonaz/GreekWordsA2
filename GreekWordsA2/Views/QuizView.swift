@@ -14,7 +14,9 @@ struct QuizView: View {
     @State private var totalQuestions: Int = 10
     @State private var correctAnswersCount: Int = 0
     @State private var showAlert: Bool = false
+    @State private var isBlurActive: Bool = false
 
+    @AppStorage("isBlurEnabled") private var isBlurEnabled = false
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.horizontalSizeClass) var sizeClass
     @Environment(\.locale) private var locale
@@ -77,6 +79,10 @@ struct QuizView: View {
         }
     }
 
+    private var shouldBlurAnswers: Bool {
+        isBlurEnabled && isBlurActive
+    }
+
     var body: some View {
         NavigationStack {
             ZStack {
@@ -133,6 +139,8 @@ struct QuizView: View {
                                 .cornerRadius(16)
                                 .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
                                 .font(sizeClass == .regular ? .title : .title3)
+                                .blur(radius: shouldBlurAnswers ? 10 : 0)
+                                .allowsHitTesting(!shouldBlurAnswers)
                                 .onTapGesture {
                                     if !isButtonDisabled {
                                         handleAnswerSelection(answer: options[index])
@@ -145,6 +153,12 @@ struct QuizView: View {
                     }
 
                     Spacer()
+                }
+                .contentShape(Rectangle())
+                .onTapGesture {
+                    if shouldBlurAnswers {
+                        isBlurActive = false
+                    }
                 }
                 .navigationBarBackButtonHidden(true)
                 .toolbar {
@@ -164,6 +178,9 @@ struct QuizView: View {
             await startQuiz()
         }
         .onSwipeDismiss()
+        .onChange(of: isBlurEnabled) { newValue in
+            isBlurActive = newValue
+        }
         .alert(isPresented: $showAlert) {
             Alert(
                 title: Text("Quiz completed"),
@@ -220,6 +237,7 @@ struct QuizView: View {
     private func updateQuizContent() {
         questionWord = viewModel.nextWord(for: mode, isEnglish: isEnglish)
         options = viewModel.optionsForCurrentWord(using: locale, mode: mode)
+        isBlurActive = isBlurEnabled
     }
 
     private func resetQuiz() {
