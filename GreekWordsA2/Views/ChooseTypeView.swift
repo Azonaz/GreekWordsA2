@@ -1,17 +1,26 @@
 import SwiftUI
 
 struct ChooseTypeView: View {
-    @StateObject var groupsViewModel = GroupsViewModel()
+    @StateObject var groupsVM = GroupsViewModel()
     @Environment(\.modelContext) private var modelContext
     @Environment(\.horizontalSizeClass) var sizeClass
+    @Environment(\.verticalSizeClass) var verticalSizeClass
     @Environment(\.scenePhase) private var scenePhase
 
-    private var buttonHeight: CGFloat {
+    private var bHeight: CGFloat {
         sizeClass == .regular ? 80 : 60
     }
 
     private var topPadding: CGFloat {
         sizeClass == .regular ? 40 : 20
+    }
+
+    private var bFont: Font {
+        sizeClass == .regular ? .title : .title3
+    }
+
+    private var isLandscapePhone: Bool {
+        sizeClass == .compact && verticalSizeClass == .compact
     }
 
     var body: some View {
@@ -25,98 +34,94 @@ struct ChooseTypeView: View {
                         .font(sizeClass == .regular ? .largeTitle : .title2)
                         .fontWeight(.semibold)
                         .foregroundColor(.greenUniversal)
+
+                    if isLandscapePhone {
+                        HStack(alignment: .top, spacing: 24) {
+                            VStack(spacing: 16) {
+                                NavigationLink(destination: GroupsView(viewModel: groupsVM)) {
+                                    ChooseButtonLabel(title: "Quiz: Words by groups", height: bHeight, font: bFont)
+                                }
+
+                                NavigationLink(destination: QuizView(viewModel: groupsVM,
+                                                                     group: nil as GroupMeta?)) {
+                                    ChooseButtonLabel(title: "Quiz: Random selection", height: bHeight, font: bFont)
+                                }
+
+                                NavigationLink(destination: QuizView(viewModel: groupsVM, group: nil)) {
+                                    ChooseButtonLabel(title: "Quiz: reverse", height: bHeight, font: bFont)
+                                }
+                            }
+                            .frame(maxWidth: .infinity, alignment: .top)
+
+                            VStack(spacing: 16) {
+                                NavigationLink(destination: TrainingView()) {
+                                    ChooseButtonLabel(title: "Training", height: bHeight, font: bFont)
+                                }
+
+                                NavigationLink(destination: VerbView()) {
+                                    ChooseButtonLabel(title: "Check verbs", height: bHeight, font: bFont)
+                                }
+
+                                NavigationLink(destination: WordDayGameView()) {
+                                    ChooseButtonLabel(title: "Word of the day", height: bHeight, font: bFont)
+                                }
+                            }
+                            .frame(maxWidth: .infinity, alignment: .top)
+                        }
+                        .padding(.horizontal, 20)
+                    } else {
+                        Spacer()
+
+                        VStack(spacing: 16) {
+                            NavigationLink(destination: GroupsView(viewModel: groupsVM)) {
+                                ChooseButtonLabel(title: "Quiz: Words by groups", height: bHeight, font: bFont)
+                            }
+
+                            NavigationLink(destination: QuizView(viewModel: groupsVM, group: nil as GroupMeta?)) {
+                                ChooseButtonLabel(title: "Quiz: Random selection", height: bHeight, font: bFont)
+                            }
+
+                            NavigationLink(destination: QuizView(viewModel: groupsVM, group: nil)) {
+                                ChooseButtonLabel(title: "Quiz: reverse", height: bHeight, font: bFont)
+                            }
+                        }
+                        .padding(.horizontal, 20)
+
+                        VStack(spacing: 16) {
+                            NavigationLink(destination: TrainingView()) {
+                                ChooseButtonLabel(title: "Training", height: bHeight, font: bFont)
+                            }
+
+                            NavigationLink(destination: VerbView()) {
+                                ChooseButtonLabel(title: "Check verbs", height: bHeight, font: bFont)
+                            }
+                        }
+                        .padding(.horizontal, 20)
                         .padding(.top, topPadding)
 
-                    Spacer()
+                        NavigationLink(destination: WordDayGameView()) {
+                            ChooseButtonLabel(title: "Word of the day", height: bHeight, font: bFont)
+                        }
+                        .padding(.horizontal, 20)
+                        .padding(.top, topPadding)
 
-                    VStack(spacing: 16) {
-                        NavigationLink(destination: GroupsView(viewModel: groupsViewModel)) {
-                            Text("Quiz: Words by groups")
-                                .multilineTextAlignment(.center)
-                                .lineLimit(2)
-                                .foregroundColor(.blackDN)
-                                .frame(height: buttonHeight)
-                                .frame(maxWidth: .infinity)
-                                .padding(.horizontal, 12)
-                                .background(Color.whiteDN)
-                                .cornerRadius(16)
-                                .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
-                                .font(sizeClass == .regular ? .title : .title3)
+                        Spacer()
+                    }
+                    HStack(spacing: 16) {
+                        NavigationLink(destination: InfoView()) {
+                            ChooseIconButtonLabel(systemName: "info.circle", height: 50)
                         }
 
-                        NavigationLink(destination: QuizView(viewModel: groupsViewModel, group: nil as GroupMeta?)) {
-                            Text("Quiz: Random selection")
-                                .multilineTextAlignment(.center)
-                                .lineLimit(2)
-                                .foregroundColor(.blackDN)
-                                .frame(height: buttonHeight)
-                                .frame(maxWidth: .infinity)
-                                .padding(.horizontal, 12)
-                                .background(Color.whiteDN)
-                                .cornerRadius(16)
-                                .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
-                                .font(sizeClass == .regular ? .title : .title3)
+                        NavigationLink(destination: StatisticsView()) {
+                            ChooseIconButtonLabel(systemName: "chart.pie", height: 50)
                         }
 
-                        NavigationLink(destination: QuizView(viewModel: groupsViewModel, group: nil)) {
-                            Text("Quiz: reverse")
-                                .multilineTextAlignment(.center)
-                                .lineLimit(2)
-                                .foregroundColor(.blackDN)
-                                .frame(height: buttonHeight)
-                                .frame(maxWidth: .infinity)
-                                .padding(.horizontal, 12)
-                                .background(Color.whiteDN)
-                                .cornerRadius(16)
-                                .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
-                                .font(sizeClass == .regular ? .title : .title3)
+                        NavigationLink(destination: SettingsView()) {
+                            ChooseIconButtonLabel(systemName: "gear", height: 50)
                         }
                     }
                     .padding(.horizontal, 20)
-
-                    NavigationLink(destination: TrainingView()) {
-                        Text("Training")
-                            .foregroundColor(.blackDN)
-                            .frame(height: buttonHeight)
-                            .frame(maxWidth: .infinity)
-                            .padding(.horizontal, 12)
-                            .background(Color.whiteDN)
-                            .cornerRadius(16)
-                            .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
-                            .font(sizeClass == .regular ? .title : .title3)
-                    }
-                    .padding(.horizontal, 20)
-                    .padding(.top, topPadding)
-
-                    NavigationLink(destination: VerbView()) {
-                        Text("Check verbs")
-                            .foregroundColor(.blackDN)
-                            .frame(height: buttonHeight)
-                            .frame(maxWidth: .infinity)
-                            .padding(.horizontal, 12)
-                            .background(Color.whiteDN)
-                            .cornerRadius(16)
-                            .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
-                            .font(sizeClass == .regular ? .title : .title3)
-                    }
-                    .padding(.horizontal, 20)
-                    .padding(.top, topPadding)
-
-                    NavigationLink(destination: WordDayGameView()) {
-                        Text("Word of the day")
-                            .foregroundColor(.blackDN)
-                            .frame(height: buttonHeight)
-                            .frame(maxWidth: .infinity)
-                            .padding(.horizontal, 12)
-                            .background(Color.whiteDN)
-                            .cornerRadius(16)
-                            .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
-                            .font(sizeClass == .regular ? .title : .title3)
-                    }
-                    .padding(.horizontal, 20)
-                    .padding(.top, topPadding)
-
-                    Spacer()
+                    .padding(.bottom, 12)
                 }
                 .padding()
             }
