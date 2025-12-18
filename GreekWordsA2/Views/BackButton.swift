@@ -1,17 +1,17 @@
 import SwiftUI
 
 struct BackButton: View {
-    @Environment(\.presentationMode) var presentationMode
-    @Environment(\.horizontalSizeClass) var sizeClass
+    @Environment(\.dismiss) private var dismiss
+    @Environment(\.horizontalSizeClass) private var sizeClass
 
     var body: some View {
-        Button(action: {
-            presentationMode.wrappedValue.dismiss()
-        }, label: {
+        Button {
+            dismiss()
+        } label: {
             Image(systemName: "chevron.left")
-                .foregroundColor(Color(.greenUniversal))
+                .foregroundColor(.greenUniversal)
                 .font(sizeClass == .regular ? .title2 : .title3)
-        })
+        }
     }
 }
 
