@@ -5,6 +5,8 @@ struct GroupsView: View {
     @ObservedObject var viewModel: GroupsViewModel
     @Environment(\.horizontalSizeClass) private var sizeClass
     @Query(sort: [SortDescriptor(\GroupMeta.id, order: .forward)]) private var groups: [GroupMeta]
+    @Query private var progress: [WordProgress]
+    @Query private var words: [Word]
     let quizMode: QuizMode
 
     init(viewModel: GroupsViewModel, quizMode: QuizMode = .direct) {
@@ -28,7 +30,7 @@ struct GroupsView: View {
                             QuizView(viewModel: viewModel, group: group, mode: quizMode)
                         } label: {
                             HStack {
-                                Text(isEnglish ? group.nameEn : group.nameRu)
+                                formattedTitle(for: group)
                                     .font(sizeClass == .regular ? .title : .title3)
                                 Spacer()
                             }
@@ -74,6 +76,13 @@ struct GroupsView: View {
             }
             .onSwipeDismiss()
         }
+    }
+
+    private func formattedTitle(for group: GroupMeta) -> some View {
+        let total = words.filter { $0.groupID == group.id }.count
+        let seen = progress.filter { $0.compositeID.hasPrefix("\(group.id)_") && $0.seen }.count
+        let name = isEnglish ? group.nameEn : group.nameRu
+        return Text(name) + Text(" (\(seen)/\(total))").foregroundColor(.blackDN.opacity(0.6))
     }
 }
 
