@@ -178,7 +178,7 @@ struct QuizView: View {
             await startQuiz()
         }
         .onSwipeDismiss()
-        .onChange(of: isBlurEnabled) { newValue in
+        .onChange(of: isBlurEnabled) { _, newValue in
             isBlurActive = newValue
         }
         .alert(isPresented: $showAlert) {
@@ -220,16 +220,21 @@ struct QuizView: View {
         isCorrect = (correctText == selectedAnswer)
         if isCorrect == true { correctAnswersCount += 1 }
         isButtonDisabled = true
+        viewModel.markCurrentWordAsSeen(modelContext: modelContext)
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
-            if currentQuestionIndex < totalQuestions - 1 {
+        let isLastQuestion = currentQuestionIndex >= totalQuestions - 1
+
+        if isLastQuestion {
+            let score = calculateScorePercent()
+            recordQuizStats(scorePercent: score)
+            showAlert = true
+        } else {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                 currentQuestionIndex += 1
                 updateQuizContent()
                 selectedAnswer = nil
                 isCorrect = nil
                 isButtonDisabled = false
-            } else {
-                showAlert = true
             }
         }
     }
@@ -254,9 +259,21 @@ struct QuizView: View {
             return correct.gr
         }
     }
+
+    private func calculateScorePercent() -> Int {
+        guard totalQuestions > 0 else { return 0 }
+        return Int((Double(correctAnswersCount) / Double(totalQuestions)) * 100)
+    }
+
+    private func recordQuizStats(scorePercent: Int) {
+        let container = modelContext.container
+        Task.detached(priority: .background) {
+            await StatsService.recordQuizResult(score: scorePercent, container: container)
+        }
+    }
 }
 
 #Preview {
     QuizView(viewModel: GroupsViewModel())
-        .modelContainer(for: [Word.self, GroupMeta.self, WordProgress.self], inMemory: true)
+        .modelContainer(for: [Word.self, GroupMeta.self, WordProgress.self, QuizStats.self], inMemory: true)
 }

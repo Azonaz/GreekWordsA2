@@ -45,6 +45,30 @@ final class GroupsViewModel: ObservableObject {
         }
     }
 
+    func markCurrentWordAsSeen(modelContext: ModelContext) {
+        guard let current = correctWord else { return }
+        let currentCompositeID = current.compositeID
+
+        do {
+            let descriptor = FetchDescriptor<WordProgress>(
+                predicate: #Predicate { $0.compositeID == currentCompositeID }
+            )
+
+            if let progress = try modelContext.fetch(descriptor).first {
+                if !progress.seen { progress.seen = true }
+            } else {
+                let progress = WordProgress(compositeID: current.compositeID, seen: true)
+                modelContext.insert(progress)
+            }
+
+            if modelContext.hasChanges {
+                try modelContext.save()
+            }
+        } catch {
+            print("Failed to mark word seen: \(error)")
+        }
+    }
+
     func optionsForCurrentWord(using locale: Locale, mode: QuizMode) -> [String] {
         guard let correct = correctWord else { return [] }
         var options: [Word] = [correct]

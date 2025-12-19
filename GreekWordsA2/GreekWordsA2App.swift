@@ -11,7 +11,8 @@ struct GreekWordsA2App: App {
             let schema = Schema([
                 Word.self,
                 GroupMeta.self,
-                WordProgress.self
+                WordProgress.self,
+                QuizStats.self
             ])
             container = try ModelContainer(for: schema)
         } catch {
