@@ -94,7 +94,7 @@ enum Texts {
         NSLocalizedString("noPurchase", comment: "")
     }
 
-    static var quizRandomSelection: String {
+    static var randomSelection: String {
         NSLocalizedString("quizRandomSelection", comment: "")
     }
 
@@ -117,7 +117,7 @@ enum Texts {
     static var training: String {
         NSLocalizedString("training", comment: "")
     }
-    
+
     static var nextVerb: String {
         NSLocalizedString("nextVerb", comment: "")
     }

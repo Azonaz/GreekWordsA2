@@ -5,6 +5,7 @@ struct StatisticsView: View {
     @Query(sort: [SortDescriptor(\Word.localID)]) private var words: [Word]
     @Query private var progress: [WordProgress]
     @Query private var quizStats: [QuizStats]
+    @Query private var groups: [GroupMeta]
     @Environment(\.horizontalSizeClass) var sizeClass
 
     private var totalWords: Int {
@@ -21,6 +22,14 @@ struct StatisticsView: View {
 
     private var averageScore: Int {
         StatsService.averageQuizScore(quizStats)
+    }
+
+    private var trainingWords: Int {
+        StatsService.studyingWordsCount(words: words, groups: groups)
+    }
+
+    private var learnedTrainingWords: Int {
+        StatsService.learnedWordsCount(progress)
     }
 
     private var statCards: [StatCard] {
@@ -52,6 +61,23 @@ struct StatisticsView: View {
         ]
     }
 
+    private var trainingCards: [StatCard] {
+        [
+            StatCard(
+                title: Texts.wordsLearn,
+                value: "\(trainingWords)",
+                icon: "list.bullet.clipboard.fill",
+                tint: .greenUniversal
+            ),
+            StatCard(
+                title: Texts.wordsLearned,
+                value: "\(learnedTrainingWords)",
+                icon: "star.fill",
+                tint: .greenUniversal
+            )
+        ]
+    }
+
     private let grid = [
         GridItem(.flexible(), spacing: 16),
         GridItem(.flexible(), spacing: 16)
@@ -72,6 +98,17 @@ struct StatisticsView: View {
 
                     LazyVGrid(columns: grid, spacing: 16) {
                         ForEach(statCards) { card in
+                            StatCardView(card: card)
+                        }
+                    }
+
+                    Text(Texts.training)
+                        .font(sizeClass == .regular ? .largeTitle : .title)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.blackDN)
+
+                    LazyVGrid(columns: grid, spacing: 16) {
+                        ForEach(trainingCards) { card in
                             StatCardView(card: card)
                         }
                     }
@@ -130,7 +167,7 @@ private struct StatCardView: View {
                 .foregroundColor(.blackDN.opacity(0.8))
         }
         .padding()
-        .frame(maxWidth: .infinity, minHeight: 120, alignment: .leading)
+        .frame(maxWidth: .infinity, minHeight: 110, maxHeight: 130, alignment: .topLeading)
         .background(
             RoundedRectangle(cornerRadius: 16)
                 .fill(Color.whiteDN)

@@ -46,7 +46,7 @@ struct ChooseTypeView: View {
 
                                     NavigationLink(destination: QuizView(viewModel: groupsVM,
                                                                          group: nil as GroupMeta?)) {
-                                        ChooseButtonLabel(title: Texts.quizRandomSelection, height: bHeight, font: bFont)
+                                        ChooseButtonLabel(title: Texts.randomSelection, height: bHeight, font: bFont)
                                     }
 
                                     NavigationLink(destination: GroupsView(viewModel: groupsVM, quizMode: .reverse)) {
@@ -74,11 +74,11 @@ struct ChooseTypeView: View {
                         } else {
                             VStack(spacing: 16) {
                                 NavigationLink(destination: GroupsView(viewModel: groupsVM)) {
-                                    ChooseButtonLabel(title:  Texts.quizGroups, height: bHeight, font: bFont)
+                                    ChooseButtonLabel(title: Texts.quizGroups, height: bHeight, font: bFont)
                                 }
 
                                 NavigationLink(destination: QuizView(viewModel: groupsVM, group: nil as GroupMeta?)) {
-                                    ChooseButtonLabel(title: Texts.quizRandomSelection, height: bHeight, font: bFont)
+                                    ChooseButtonLabel(title: Texts.randomSelection, height: bHeight, font: bFont)
                                 }
 
                                 NavigationLink(destination: GroupsView(viewModel: groupsVM, quizMode: .reverse)) {

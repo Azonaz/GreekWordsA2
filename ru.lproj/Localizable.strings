@@ -62,7 +62,7 @@
 "rating.hard" = "Трудно";
 "rating.good" = "Хорошо";
 "rating.easy" = "Легко";
-"wordsLearn" =  "Слова в процессе изучения";
+"wordsLearn" =  "Слова в изучении";
 "wordsLearned" = "Выучено слов";
 "weakWords" = "Слова, которые вам не даются";
 "wWords" = "Слова, которые не даются";
