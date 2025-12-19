@@ -1,1 +1,87 @@
-"hello" = "Hello!";
+"quiz" = "Quiz";
+"quizRandomSelection" = "Quiz by random selection";
+"quizGroups" = "Quiz by groups";
+"checkVerbs" = "Check verbs";
+"verbs" = "Verbs";
+"nextVerb" = "Next verb";
+"wordDay" = "Word of the day";
+"training" = "Training";
+"categories" = "Choose a group";
+"settings" = "Settings";
+"language" = "Language";
+"blurOn" = "Show answers on tap";
+"blurOff" = "Answers visible";
+"restart" = "Restart";
+"back" = "Back";
+"result" = "Result";
+"statistics" = "Statistics";
+"allWords" = "Total words";
+"quizzesCompleted" = "Quizzes completed";
+"wordsSeen" = "Words seen";
+"averagePercentage" = "Average percentage";
+"information" = "Information";
+"quizInfo" = "Quiz Mode";
+"quizHelp" = "The Quiz section lets you test your knowledge of Greek words in an interactive way.
+
+Each round has 10 questions.
+
+Words are divided into groups, and the counter on the right side of each group shows how many words you have already seen and the total number of words in that group.
+
+In the Settings section, you can select your preferred language or enable blur mode to hide answers until you tap the screen.
+
+You can see your quiz statistics and progress in the Statistics section.";
+"trainingInfo" = "Training Mode";
+"trainingHelp" = "The Training section helps you reinforce Greek vocabulary using a spaced-repetition system inspired by Anki.
+
+Once you open a topic in the Quiz section, all its words automatically become available for training. You can review flashcards at your own pace, while the app selects the optimal moment to repeat each word.
+
+Each flashcard screen offers four rating options:
+• Again — you couldn’t recall the word; the next review is scheduled sooner.
+• Hard — the word is recalled with effort; the interval increases only slightly.
+• Good — the word is remembered confidently.
+• Easy — the word is well mastered; the interval increases noticeably more.
+
+The algorithm analyzes your answers and determines the best time to show each word again, helping you store it in long-term memory.
+
+The Statistics section includes two additional sets:
+• Words you struggle with — according to the algorithm, these are learned the least reliably.
+• Words you haven’t reviewed in a while — those that haven’t appeared in training for an extended period.
+
+You can revisit these lists at any time to strengthen weak areas and maintain steady progress.
+
+Try the Training mode free for one week. After the trial, full access can be unlocked with a one-time purchase.";
+"showTranslation" = "Show translation";
+"wordsDone" = "All the words for today are done!";
+"noOpenGroups" = "You don't have any open groups yet. 
+To open a group, complete at least one topic in the Quiz section.";
+"wordsToday" = "Words for today:";
+"new" = "New:";
+"learning" = "Learning:";
+"review" = "Review:";
+"rating.again" = "Again";
+"rating.hard" = "Hard";
+"rating.good" = "Good";
+"rating.easy" = "Easy";
+"wordsLearn" =  "Words in progress";
+"wordsLearned" = "Words learned";
+"weakWords" = "Words you struggle with";
+"wWords" = "Challenging words";
+"staleWords" = "Words you haven’t reviewed in a while";
+"studyWords" = "Study words";
+"reviewWords" = "Review words";
+"done" = "All the words are done!";
+"wordsLeft" = "Words left: ";
+"newWordsNumber" = "New words per day";
+"trainingAccess" = "Training access";
+"accessExpired" = "Training access expired";
+"unlockAccess" = "Your free trial week has ended. Unlock unlimited access to Training with a one-time purchase.";
+"errorPurchase" = "Purchase failed. Please try again.";
+"unlockFor" = "Unlock for";
+"loadPrice" = "Loading price…";
+"restore" = "Restore purchase";
+"purchaseRestored" = "Purchase restored";
+"noPurchase" = "No purchases to restore";
+"rateApp" = "Rate the app";
+"reverseQuiz" = "Reverse quiz";
+"reverseQuizInfo" = "Reverse Quiz Mode";
+"reverseQuizHelp" = "The Reverse Quiz follows the same rules as the regular mode, but in reverse: you are shown a word in your native language and choose its correct translation into Greek.";

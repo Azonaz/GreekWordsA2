@@ -52,7 +52,7 @@ struct SettingsView: View {
                 BackButton()
             }
             ToolbarItem(placement: .principal) {
-                Text("Settings")
+                Text(Texts.settings)
                     .font(sizeClass == .regular ? .largeTitle : .title)
                     .fontWeight(.semibold)
                     .frame(maxWidth: .infinity, alignment: .center)
@@ -96,7 +96,7 @@ struct SettingsView: View {
                         .imageScale(.large)
                         .foregroundColor(.primary)
 
-                    Text("Choose language")
+                    Text(Texts.language)
                         .font(.body)
                         .foregroundColor(.primary)
 
@@ -119,7 +119,7 @@ struct SettingsView: View {
                         .imageScale(.large)
                         .foregroundColor(.primary)
 
-                    Text("Enable blur")
+                    Text(isBlurEnabled ? Texts.blurOn : Texts.blurOff)
                         .font(.body)
                         .foregroundColor(.primary)
                 }
@@ -133,7 +133,7 @@ struct SettingsView: View {
                         .imageScale(.large)
                         .foregroundColor(.primary)
 
-                    Text("New words per day")
+                    Text(Texts.newWordsNumber)
                         .font(.body)
                         .foregroundColor(.primary)
                 }

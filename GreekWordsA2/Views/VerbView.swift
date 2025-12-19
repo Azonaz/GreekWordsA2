@@ -56,7 +56,7 @@ struct VerbView: View {
                         }
                     }, label: {
                         HStack(spacing: 20) {
-                            Text("Next verb")
+                            Text(Texts.nextVerb)
                             Image(systemName: "arrow.uturn.right")
                         }
                         .foregroundColor(.greenUniversal)
@@ -73,7 +73,7 @@ struct VerbView: View {
                 .padding(.bottom, sizeClass == .regular ? 150 : 100)
                 .padding(.horizontal, sizeClass == .regular ? 60 : 30)
             } else {
-                ProgressView("Loading...")
+                ProgressView()
                     .foregroundColor(.white)
             }
         }
@@ -88,7 +88,7 @@ struct VerbView: View {
                 BackButton()
             }
             ToolbarItem(placement: .principal) {
-                Text("Check yourself")
+                Text(Texts.verbs)
                     .font(sizeClass == .regular ? .largeTitle : .title)
                     .fontWeight(.semibold)
                     .frame(maxWidth: .infinity, alignment: .center)

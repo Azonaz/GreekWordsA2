@@ -17,8 +17,13 @@
 		84420A922C415FEB008A6F79 /* CharViewForGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420A912C415FEB008A6F79 /* CharViewForGame.swift */; };
 		84420A942C416154008A6F79 /* WordDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420A932C416154008A6F79 /* WordDayView.swift */; };
 		845596092DBBD03800FB27F7 /* VerbTenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845596082DBBD03800FB27F7 /* VerbTenseView.swift */; };
-		8455960C2DBCD4C500FB27F7 /* Text+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455960B2DBCD4C500FB27F7 /* Text+Extension.swift */; };
+		8455960C2DBCD4C500FB27F7 /* TextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455960B2DBCD4C500FB27F7 /* TextExtension.swift */; };
 		8475FC192EF56A210021EB60 /* StatsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475FC182EF56A200021EB60 /* StatsService.swift */; };
+		8475FC1B2EF58DD40021EB60 /* TrainingScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475FC1A2EF58DD30021EB60 /* TrainingScheduler.swift */; };
+		8475FC1F2EF58EA90021EB60 /* TrainingView+Layouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475FC1E2EF58EA80021EB60 /* TrainingView+Layouts.swift */; };
+		8475FC212EF58EBC0021EB60 /* TrainingView+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475FC202EF58EBB0021EB60 /* TrainingView+Loading.swift */; };
+		8475FC232EF595270021EB60 /* RatingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475FC222EF595270021EB60 /* RatingExtension.swift */; };
+		8475FC252EF59E680021EB60 /* Texts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475FC242EF59E5D0021EB60 /* Texts.swift */; };
 		8483E0B62EF40C2C00D1EE11 /* ChooseButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483E0B52EF40C2C00D1EE11 /* ChooseButtonLabel.swift */; };
 		8488B11D2C11BB9F0044D455 /* GreekWordsA2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488B11C2C11BB9F0044D455 /* GreekWordsA2App.swift */; };
 		8488B11F2C11BB9F0044D455 /* ChooseTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488B11E2C11BB9F0044D455 /* ChooseTypeView.swift */; };
@@ -54,8 +59,13 @@
 		84420A912C415FEB008A6F79 /* CharViewForGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharViewForGame.swift; sourceTree = "<group>"; };
 		84420A932C416154008A6F79 /* WordDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDayView.swift; sourceTree = "<group>"; };
 		845596082DBBD03800FB27F7 /* VerbTenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbTenseView.swift; sourceTree = "<group>"; };
-		8455960B2DBCD4C500FB27F7 /* Text+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Extension.swift"; sourceTree = "<group>"; };
+		8455960B2DBCD4C500FB27F7 /* TextExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExtension.swift; sourceTree = "<group>"; };
 		8475FC182EF56A200021EB60 /* StatsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsService.swift; sourceTree = "<group>"; };
+		8475FC1A2EF58DD30021EB60 /* TrainingScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingScheduler.swift; sourceTree = "<group>"; };
+		8475FC1E2EF58EA80021EB60 /* TrainingView+Layouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrainingView+Layouts.swift"; sourceTree = "<group>"; };
+		8475FC202EF58EBB0021EB60 /* TrainingView+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrainingView+Loading.swift"; sourceTree = "<group>"; };
+		8475FC222EF595270021EB60 /* RatingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingExtension.swift; sourceTree = "<group>"; };
+		8475FC242EF59E5D0021EB60 /* Texts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Texts.swift; sourceTree = "<group>"; };
 		8483E0B52EF40C2C00D1EE11 /* ChooseButtonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseButtonLabel.swift; sourceTree = "<group>"; };
 		8488B1192C11BB9F0044D455 /* GreekWordsA2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreekWordsA2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8488B11C2C11BB9F0044D455 /* GreekWordsA2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreekWordsA2App.swift; sourceTree = "<group>"; };
@@ -96,10 +106,11 @@
 		842489442C1733DC0060FE60 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				8475FC182EF56A200021EB60 /* StatsService.swift */,
 				842489452C1733F40060FE60 /* NetworkService.swift */,
 				842489472C17346D0060FE60 /* WordService.swift */,
 				84AF1F6F2EF2E98000A7B3D7 /* VocabularyStore.swift */,
+				8475FC1A2EF58DD30021EB60 /* TrainingScheduler.swift */,
+				8475FC182EF56A200021EB60 /* StatsService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -128,6 +139,8 @@
 				849217B22C2028DE00C84401 /* GroupsView.swift */,
 				84D675342C2191C5003DBC2A /* QuizView.swift */,
 				84ADEBA02EF1C4C800F67052 /* TrainingView.swift */,
+				8475FC1E2EF58EA80021EB60 /* TrainingView+Layouts.swift */,
+				8475FC202EF58EBB0021EB60 /* TrainingView+Loading.swift */,
 				844032CE2DB14E9100A52B39 /* VerbView.swift */,
 				841E13E22DB7CDA500DFD07C /* VerbCardView.swift */,
 				845596082DBBD03800FB27F7 /* VerbTenseView.swift */,
@@ -141,7 +154,9 @@
 		8455960A2DBCD4A700FB27F7 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				8455960B2DBCD4C500FB27F7 /* Text+Extension.swift */,
+				8475FC242EF59E5D0021EB60 /* Texts.swift */,
+				8455960B2DBCD4C500FB27F7 /* TextExtension.swift */,
+				8475FC222EF595270021EB60 /* RatingExtension.swift */,
 				84E39EA62DBFBCF7009A7BC9 /* SwipeDismissModifier.swift */,
 			);
 			path = Helper;
@@ -300,7 +315,7 @@
 				84F2B03B2C9DC6F5008A9774 /* LaunchScreenView.swift in Sources */,
 				849217B32C2028DE00C84401 /* GroupsView.swift in Sources */,
 				84E39EA72DBFBCF7009A7BC9 /* SwipeDismissModifier.swift in Sources */,
-				8455960C2DBCD4C500FB27F7 /* Text+Extension.swift in Sources */,
+				8455960C2DBCD4C500FB27F7 /* TextExtension.swift in Sources */,
 				84420A922C415FEB008A6F79 /* CharViewForGame.swift in Sources */,
 				84AF1F702EF2E98100A7B3D7 /* VocabularyStore.swift in Sources */,
 				84D675352C2191C5003DBC2A /* QuizView.swift in Sources */,
@@ -312,18 +327,23 @@
 				8493DD9D2EF43EF100AA477F /* QuizStats.swift in Sources */,
 				8488B11F2C11BB9F0044D455 /* ChooseTypeView.swift in Sources */,
 				842489482C17346D0060FE60 /* WordService.swift in Sources */,
+				8475FC1B2EF58DD40021EB60 /* TrainingScheduler.swift in Sources */,
+				8475FC232EF595270021EB60 /* RatingExtension.swift in Sources */,
 				8488B11D2C11BB9F0044D455 /* GreekWordsA2App.swift in Sources */,
 				842489462C1733F40060FE60 /* NetworkService.swift in Sources */,
 				844032CF2DB14E9100A52B39 /* VerbView.swift in Sources */,
+				8475FC212EF58EBC0021EB60 /* TrainingView+Loading.swift in Sources */,
 				8424894B2C1734A10060FE60 /* WordModel.swift in Sources */,
 				84AF1F6B2EF2E50A00A7B3D7 /* SwiftDataModels.swift in Sources */,
 				84ADEBA12EF1C4D000F67052 /* TrainingView.swift in Sources */,
 				84A7920D2C5D132300848517 /* WordsDayViewModel.swift in Sources */,
 				8475FC192EF56A210021EB60 /* StatsService.swift in Sources */,
+				8475FC252EF59E680021EB60 /* Texts.swift in Sources */,
 				8483E0B62EF40C2C00D1EE11 /* ChooseButtonLabel.swift in Sources */,
 				8493DD992EF3F4A200AA477F /* InfoView.swift in Sources */,
 				8493DD9A2EF3F4A200AA477F /* SettingsView.swift in Sources */,
 				8493DD9B2EF3F4A200AA477F /* StatisticsView.swift in Sources */,
+				8475FC1F2EF58EA90021EB60 /* TrainingView+Layouts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

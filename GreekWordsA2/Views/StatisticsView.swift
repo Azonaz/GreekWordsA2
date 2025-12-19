@@ -26,25 +26,25 @@ struct StatisticsView: View {
     private var statCards: [StatCard] {
         [
             StatCard(
-                title: "Всего слов",
+                title: Texts.allWords,
                 value: "\(totalWords)",
                 icon: "text.book.closed.fill",
                 tint: .greenUniversal
             ),
             StatCard(
-                title: "Просмотрено",
+                title: Texts.wordsSeen,
                 value: "\(seenWords)",
                 icon: "eye.fill",
                 tint: .greenUniversal
             ),
             StatCard(
-                title: "Пройдено квизов",
+                title: Texts.quizzesCompleted,
                 value: "\(completedQuizzes)",
                 icon: "checkmark.seal.fill",
                 tint: .greenUniversal
             ),
             StatCard(
-                title: "Средний результат",
+                title: Texts.averagePercentage,
                 value: "\(averageScore)%",
                 icon: "chart.bar.fill",
                 tint: .greenUniversal
@@ -64,7 +64,7 @@ struct StatisticsView: View {
 
             ScrollView {
                 VStack(alignment: .leading, spacing: 20) {
-                    Text("Quiz")
+                    Text(Texts.quiz)
                         .font(sizeClass == .regular ? .largeTitle : .title)
                         .fontWeight(.semibold)
                         .foregroundColor(.blackDN)
@@ -86,7 +86,7 @@ struct StatisticsView: View {
                 BackButton()
             }
             ToolbarItem(placement: .principal) {
-                Text("Statistics")
+                Text(Texts.statistics)
                     .font(sizeClass == .regular ? .largeTitle : .title)
                     .fontWeight(.semibold)
                     .frame(maxWidth: .infinity, alignment: .center)

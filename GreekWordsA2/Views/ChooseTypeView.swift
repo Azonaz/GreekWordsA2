@@ -41,31 +41,31 @@ struct ChooseTypeView: View {
                             HStack(alignment: .top, spacing: 24) {
                                 VStack(spacing: 16) {
                                     NavigationLink(destination: GroupsView(viewModel: groupsVM)) {
-                                        ChooseButtonLabel(title: "Quiz: Words by groups", height: bHeight, font: bFont)
+                                        ChooseButtonLabel(title: Texts.quizGroups, height: bHeight, font: bFont)
                                     }
 
                                     NavigationLink(destination: QuizView(viewModel: groupsVM,
                                                                          group: nil as GroupMeta?)) {
-                                        ChooseButtonLabel(title: "Quiz: Random selection", height: bHeight, font: bFont)
+                                        ChooseButtonLabel(title: Texts.quizRandomSelection, height: bHeight, font: bFont)
                                     }
 
                                     NavigationLink(destination: GroupsView(viewModel: groupsVM, quizMode: .reverse)) {
-                                        ChooseButtonLabel(title: "Quiz: reverse", height: bHeight, font: bFont)
+                                        ChooseButtonLabel(title: Texts.reverseQuiz, height: bHeight, font: bFont)
                                     }
                                 }
                                 .frame(maxWidth: .infinity, alignment: .top)
 
                                 VStack(spacing: 16) {
                                     NavigationLink(destination: TrainingView()) {
-                                        ChooseButtonLabel(title: "Training", height: bHeight, font: bFont)
+                                        ChooseButtonLabel(title: Texts.training, height: bHeight, font: bFont)
                                     }
 
                                     NavigationLink(destination: VerbView()) {
-                                        ChooseButtonLabel(title: "Check verbs", height: bHeight, font: bFont)
+                                        ChooseButtonLabel(title: Texts.checkVerbs, height: bHeight, font: bFont)
                                     }
 
                                     NavigationLink(destination: WordDayGameView()) {
-                                        ChooseButtonLabel(title: "Word of the day", height: bHeight, font: bFont)
+                                        ChooseButtonLabel(title: Texts.wordDay, height: bHeight, font: bFont)
                                     }
                                 }
                                 .frame(maxWidth: .infinity, alignment: .top)
@@ -74,33 +74,33 @@ struct ChooseTypeView: View {
                         } else {
                             VStack(spacing: 16) {
                                 NavigationLink(destination: GroupsView(viewModel: groupsVM)) {
-                                    ChooseButtonLabel(title: "Quiz: Words by groups", height: bHeight, font: bFont)
+                                    ChooseButtonLabel(title:  Texts.quizGroups, height: bHeight, font: bFont)
                                 }
 
                                 NavigationLink(destination: QuizView(viewModel: groupsVM, group: nil as GroupMeta?)) {
-                                    ChooseButtonLabel(title: "Quiz: Random selection", height: bHeight, font: bFont)
+                                    ChooseButtonLabel(title: Texts.quizRandomSelection, height: bHeight, font: bFont)
                                 }
 
                                 NavigationLink(destination: GroupsView(viewModel: groupsVM, quizMode: .reverse)) {
-                                    ChooseButtonLabel(title: "Quiz: reverse", height: bHeight, font: bFont)
+                                    ChooseButtonLabel(title: Texts.reverseQuiz, height: bHeight, font: bFont)
                                 }
                             }
                             .padding(.horizontal, 20)
 
                             VStack(spacing: 16) {
                                 NavigationLink(destination: TrainingView()) {
-                                    ChooseButtonLabel(title: "Training", height: bHeight, font: bFont)
+                                    ChooseButtonLabel(title: Texts.training, height: bHeight, font: bFont)
                                 }
 
                                 NavigationLink(destination: VerbView()) {
-                                    ChooseButtonLabel(title: "Check verbs", height: bHeight, font: bFont)
+                                    ChooseButtonLabel(title: Texts.checkVerbs, height: bHeight, font: bFont)
                                 }
                             }
                             .padding(.horizontal, 20)
                             .padding(.top, topPadding)
 
                             NavigationLink(destination: WordDayGameView()) {
-                                ChooseButtonLabel(title: "Word of the day", height: bHeight, font: bFont)
+                                ChooseButtonLabel(title: Texts.wordDay, height: bHeight, font: bFont)
                             }
                             .padding(.horizontal, 20)
                             .padding(.top, topPadding)

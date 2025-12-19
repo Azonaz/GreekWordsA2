@@ -149,7 +149,7 @@ struct QuizView: View {
                                 .padding(.top, 5)
                         }
                     } else {
-                        Text(options.isEmpty ? "Loading options..." : "Not enough options")
+                        ProgressView()
                     }
 
                     Spacer()
@@ -183,18 +183,19 @@ struct QuizView: View {
         }
         .alert(isPresented: $showAlert) {
             Alert(
-                title: Text("Quiz completed"),
-                message: Text("Your result: \(correctAnswersCount)/\(max(totalQuestions, 1))"),
-                primaryButton: .default(Text("Play again")) {
+                title: Text(Texts.result),
+                message: Text("\(correctAnswersCount)/\(max(totalQuestions, 1))"),
+                primaryButton: .default(Text(Texts.restart)) {
                     resetQuiz()
                 },
-                secondaryButton: .default(Text("Select group")) {
+                secondaryButton: .default(Text(Texts.back)) {
                     presentationMode.wrappedValue.dismiss()
                 }
             )
         }
     }
 
+    @MainActor
     private func startQuiz() async {
         let roundCount = await viewModel.prepareRound(modelContext: modelContext, group: group, count: 10)
 

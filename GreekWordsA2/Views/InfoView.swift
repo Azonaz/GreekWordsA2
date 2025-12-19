@@ -6,13 +6,13 @@ struct InfoView: View {
             Color.grayDN
                 .ignoresSafeArea()
 
-            Text("Info")
+            Text(Texts.information)
                 .font(.title2)
                 .foregroundColor(.blackDN)
                 .padding()
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         }
-        .navigationTitle("Info")
+        .navigationTitle(Texts.information)
     }
 }
 

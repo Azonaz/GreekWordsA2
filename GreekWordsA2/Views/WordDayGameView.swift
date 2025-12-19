@@ -89,7 +89,7 @@ struct WordDayGameView: View {
                     BackButton()
                 }
                 ToolbarItem(placement: .principal) {
-                    Text("Word of the day")
+                    Text(Texts.wordDay)
                         .font(sizeClass == .regular ? .largeTitle : .title)
                         .fontWeight(.semibold)
                         .frame(maxWidth: .infinity, alignment: .center)

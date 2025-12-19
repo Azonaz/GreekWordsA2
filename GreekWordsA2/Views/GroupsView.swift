@@ -4,6 +4,7 @@ import SwiftData
 struct GroupsView: View {
     @ObservedObject var viewModel: GroupsViewModel
     @Environment(\.horizontalSizeClass) private var sizeClass
+    @Environment(\.modelContext) private var modelContext
     @Query(sort: [SortDescriptor(\GroupMeta.id, order: .forward)]) private var groups: [GroupMeta]
     @Query private var progress: [WordProgress]
     @Query private var words: [Word]
@@ -36,6 +37,11 @@ struct GroupsView: View {
                             }
                             .padding(.top, 4)
                         }
+                        .simultaneousGesture(
+                            TapGesture().onEnded {
+                                markGroupOpened(group)
+                            }
+                        )
                         .listRowInsets(EdgeInsets(top: 10, leading: 8, bottom: 10, trailing: 16))
                         .listRowBackground(Color.whiteDN)
                         .listRowSeparator(.hidden)
@@ -68,7 +74,7 @@ struct GroupsView: View {
                     BackButton()
                 }
                 ToolbarItem(placement: .principal) {
-                    Text("Choose a group")
+                    Text(Texts.categories)
                         .font(sizeClass == .regular ? .largeTitle : .title)
                         .fontWeight(.semibold)
                         .frame(maxWidth: .infinity, alignment: .center)
@@ -83,6 +89,26 @@ struct GroupsView: View {
         let seen = progress.filter { $0.compositeID.hasPrefix("\(group.id)_") && $0.seen }.count
         let name = isEnglish ? group.nameEn : group.nameRu
         return Text(name) + Text(" (\(seen)/\(total))").foregroundColor(.blackDN.opacity(0.6))
+    }
+
+    private func markGroupOpened(_ group: GroupMeta) {
+        let targetID = group.id
+
+        do {
+            let descriptor = FetchDescriptor<GroupMeta>(
+                predicate: #Predicate { $0.id == targetID }
+            )
+
+            if let meta = try modelContext.fetch(descriptor).first, !meta.opened {
+                meta.opened = true
+            }
+
+            if modelContext.hasChanges {
+                try modelContext.save()
+            }
+        } catch {
+            print("Failed to mark group opened: \(error)")
+        }
     }
 }
 
