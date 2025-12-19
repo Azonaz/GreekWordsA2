@@ -58,7 +58,7 @@ struct WordDayGameView: View {
                     .overlay(alignment: .bottomTrailing) {
                         if !isWordAlreadySolvedForToday && isLabelVisible {
                             Label("", systemImage: "questionmark.circle")
-                                .foregroundColor(.blackDN.opacity(0.5))
+                                .foregroundColor(.greenUniversal.opacity(0.5))
                                 .font(sizeClass == .regular ? .system(size: 36) : .largeTitle)
                                 .padding(.bottom, sizeClass == .regular ? 30 : 10)
                                 .padding(.trailing, sizeClass == .regular ? 10 : 0)
@@ -111,8 +111,4 @@ struct WordDayGameView: View {
         }
         .onSwipeDismiss()
     }
-}
-
-#Preview {
-    WordDayGameView()
 }

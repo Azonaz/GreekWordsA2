@@ -40,7 +40,3 @@ struct VerbTenseView: View {
         }
     }
 }
-
-#Preview {
-    VerbTenseView(isShowing: .constant(true))
-}

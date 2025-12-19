@@ -119,7 +119,3 @@ struct VerbView: View {
         return decoded
     }
 }
-
-#Preview {
-    VerbView()
-}

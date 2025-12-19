@@ -31,11 +31,3 @@ struct CharViewForGame: View {
         }
     }
 }
-
-#Preview {
-    Color.grayDN
-        .ignoresSafeArea()
-        .overlay {
-            CharViewForGame(letter: "A", isSelected: Binding.constant(false))
-        }
-}

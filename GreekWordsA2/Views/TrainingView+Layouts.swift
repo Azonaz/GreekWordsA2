@@ -110,7 +110,7 @@ private extension TrainingView {
         let isSingleWord = !word.gr.contains(" ")
 
         return Text(word.gr)
-            .font(.largeTitle.bold())
+            .font(.title.bold())
             .foregroundColor(.blackDN)
             .multilineTextAlignment(.center)
             .lineLimit(isSingleWord ? 1 : nil)
@@ -142,7 +142,7 @@ private extension TrainingView {
             ratingButtons(
                 for: word,
                 height: sizeClass == .regular ? 55 : 44,
-                cornerRadius: sizeClass == .regular ? 20 : 16
+                cornerRadius: sizeClass == .regular ? 20 : 12
             )
                 .padding(.horizontal, 8)
                 .padding(.bottom, 40)
@@ -166,7 +166,7 @@ private extension TrainingView {
                        direction: Axis.Set = .horizontal) -> some View {
         Group {
             if direction == .horizontal {
-                HStack(spacing: 12) {
+                HStack(spacing: 6) {
                     ratingButtonsContent(for: word, height: height, cornerRadius: cornerRadius)
                 }
             } else {
@@ -185,7 +185,6 @@ private extension TrainingView {
                 Text(rating.localized)
                     .font(.body)
                     .foregroundColor(.blackDN)
-                    .padding(.horizontal, 12)
                     .frame(maxWidth: .infinity, minHeight: height)
                     .trainingButtonBackground(cornerRadius: cornerRadius)
             }
@@ -197,7 +196,7 @@ private extension TrainingView {
             withAnimation { showTranslation = true }
         } label: {
             Text(Texts.showTranslation)
-                .font(sizeClass == .regular ? .title : .title2)
+                .font(sizeClass == .regular ? .title2 : .title3)
                 .multilineTextAlignment(.center)
                 .foregroundColor(.blackDN)
                 .padding(.horizontal, 12)

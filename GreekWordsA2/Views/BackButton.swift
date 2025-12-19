@@ -14,7 +14,3 @@ struct BackButton: View {
         }
     }
 }
-
-#Preview {
-    BackButton()
-}

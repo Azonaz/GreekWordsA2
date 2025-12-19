@@ -273,8 +273,3 @@ struct QuizView: View {
         }
     }
 }
-
-#Preview {
-    QuizView(viewModel: GroupsViewModel())
-        .modelContainer(for: [Word.self, GroupMeta.self, WordProgress.self, QuizStats.self], inMemory: true)
-}

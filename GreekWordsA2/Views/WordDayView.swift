@@ -23,7 +23,7 @@ struct WordDayView: View {
     private let solvedDateKey = "solvedDate"
     private let feedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
     private var radius: CGFloat {
-        return sizeClass == .regular ? 180 : 120
+        return sizeClass == .regular ? 180 : 110
     }
     private var paddingHorizontal: CGFloat {
         sizeClass == .regular ? 160 : 80
@@ -267,11 +267,3 @@ struct WordDayView: View {
     }
 }
 // swiftlint:enable identifier_name
-
-#Preview {
-    Color.grayDN
-        .ignoresSafeArea()
-        .overlay {
-            WordDayView(viewModel: WordsDayViewModel(), isWordAlreadySolvedForToday: .constant(false))
-        }
-}

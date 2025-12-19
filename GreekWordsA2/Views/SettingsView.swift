@@ -128,7 +128,7 @@ struct SettingsView: View {
         case .limit:
             VStack(alignment: .leading, spacing: 8) {
                 HStack(spacing: 14) {
-                    Image(systemName: "number")
+                    Image(systemName: "character.book.closed")
                         .font(.body)
                         .imageScale(.large)
                         .foregroundColor(.primary)
@@ -153,8 +153,4 @@ private enum SettingsRow {
     case language
     case blur
     case limit
-}
-
-#Preview {
-    SettingsView()
 }

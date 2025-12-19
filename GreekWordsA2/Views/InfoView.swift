@@ -15,7 +15,3 @@ struct InfoView: View {
         .navigationTitle(Texts.information)
     }
 }
-
-#Preview {
-    InfoView()
-}

@@ -148,7 +148,3 @@ struct ChooseTypeView: View {
         }
     }
 }
-
-#Preview {
-    ChooseTypeView()
-}

@@ -29,15 +29,3 @@ struct VerbCardView: View {
         .padding(.horizontal)
     }
 }
-
-#Preview {
-    VerbCardPreview()
-}
-
-private struct VerbCardPreview: View {
-    @State private var flipped = false
-
-    var body: some View {
-        VerbCardView(isFlipped: $flipped, title: "Ενεστώτας", content: "πηγαίνω")
-    }
-}

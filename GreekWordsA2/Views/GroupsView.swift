@@ -37,11 +37,6 @@ struct GroupsView: View {
                             }
                             .padding(.top, 4)
                         }
-                        .simultaneousGesture(
-                            TapGesture().onEnded {
-                                markGroupOpened(group)
-                            }
-                        )
                         .listRowInsets(EdgeInsets(top: 10, leading: 8, bottom: 10, trailing: 16))
                         .listRowBackground(Color.whiteDN)
                         .listRowSeparator(.hidden)
@@ -90,29 +85,4 @@ struct GroupsView: View {
         let name = isEnglish ? group.nameEn : group.nameRu
         return Text(name) + Text(" (\(seen)/\(total))").foregroundColor(.blackDN.opacity(0.6))
     }
-
-    private func markGroupOpened(_ group: GroupMeta) {
-        let targetID = group.id
-
-        do {
-            let descriptor = FetchDescriptor<GroupMeta>(
-                predicate: #Predicate { $0.id == targetID }
-            )
-
-            if let meta = try modelContext.fetch(descriptor).first, !meta.opened {
-                meta.opened = true
-            }
-
-            if modelContext.hasChanges {
-                try modelContext.save()
-            }
-        } catch {
-            print("Failed to mark group opened: \(error)")
-        }
-    }
-}
-
-#Preview {
-    GroupsView(viewModel: GroupsViewModel())
-        .modelContainer(for: [Word.self, GroupMeta.self, WordProgress.self], inMemory: true)
 }

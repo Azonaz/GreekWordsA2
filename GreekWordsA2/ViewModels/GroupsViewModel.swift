@@ -16,6 +16,11 @@ final class GroupsViewModel: ObservableObject {
     @discardableResult
     func prepareRound(modelContext: ModelContext, group: GroupMeta?, count: Int = 10) async -> Int {
         do {
+            if let group, group.opened == false {
+                group.opened = true
+                try modelContext.save()
+            }
+
             words = try fetchWords(modelContext: modelContext, groupID: group?.id)
             let number = min(count, words.count)
             currentRoundWords = Array(words.shuffled().prefix(number))

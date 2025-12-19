@@ -175,8 +175,3 @@ private struct StatCardView: View {
         )
     }
 }
-
-#Preview {
-    StatisticsView()
-        .modelContainer(for: [Word.self, GroupMeta.self, WordProgress.self, QuizStats.self], inMemory: true)
-}
