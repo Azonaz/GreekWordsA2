@@ -6,6 +6,7 @@ struct VerbView: View {
     @State private var currentIndex: Int = 0
     @State private var showInfoSheet = false
     @State private var flippedStates: [Bool] = [false, false, false]
+    @State var isEnglish: Bool = Locale.preferredLanguages.first?.hasPrefix("en") == true
     var currentVerb: Verb? {
         guard !verbs.isEmpty else { return nil }
         return verbs[currentIndex]
@@ -18,7 +19,7 @@ struct VerbView: View {
 
             if let currentVerb = currentVerb {
                 VStack(spacing: 20) {
-                    Text(currentVerb.translation)
+                    Text(isEnglish ? currentVerb.enWords : currentVerb.ruWords)
                         .font(sizeClass == .regular ? .largeTitle : .title2)
                         .foregroundColor(.greenUniversal)
                         .tracking(3)

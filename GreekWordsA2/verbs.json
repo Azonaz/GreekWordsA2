@@ -95,7 +95,6 @@
         "future": "θα αποκτήσω",
         "past": "απέκτησα"
     },
-    },
     {
         "id": 13,
         "verb": "αποφασίζω",
@@ -1257,6 +1256,7 @@
         "past": "ονειρεύτηκα"
     },
     {
+        "id": 158,
         "verb": "παθαίνω",
         "translation": "to suffer, to experience",
         "ru_translation": "страдать, переживать",
