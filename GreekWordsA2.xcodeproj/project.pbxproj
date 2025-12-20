@@ -87,6 +87,7 @@
 		84A0A39E2EF6EB14008D352B /* TrainingPaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingPaywallView.swift; sourceTree = "<group>"; };
 		84A0A3A02EF6EB53008D352B /* PurchaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseManager.swift; sourceTree = "<group>"; };
 		84A0A3A22EF6EB6A008D352B /* TrainingAccessManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingAccessManager.swift; sourceTree = "<group>"; };
+		84A0A3A42EF6ED5A008D352B /* GreekWordsA2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GreekWordsA2.entitlements; sourceTree = "<group>"; };
 		84A7920C2C5D132300848517 /* WordsDayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsDayViewModel.swift; sourceTree = "<group>"; };
 		84ADEBA02EF1C4C800F67052 /* TrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingView.swift; sourceTree = "<group>"; };
 		84AF1F6A2EF2E50600A7B3D7 /* SwiftDataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataModels.swift; sourceTree = "<group>"; };
@@ -191,6 +192,7 @@
 		8488B11B2C11BB9F0044D455 /* GreekWordsA2 */ = {
 			isa = PBXGroup;
 			children = (
+				84A0A3A42EF6ED5A008D352B /* GreekWordsA2.entitlements */,
 				8488B11C2C11BB9F0044D455 /* GreekWordsA2App.swift */,
 				8424894C2C1736320060FE60 /* Views */,
 				842489492C1734840060FE60 /* Models */,
@@ -502,6 +504,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GreekWordsA2/GreekWordsA2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GreekWordsA2/Preview Content\"";
@@ -535,6 +538,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GreekWordsA2/GreekWordsA2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GreekWordsA2/Preview Content\"";

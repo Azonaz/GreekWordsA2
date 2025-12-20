@@ -45,12 +45,6 @@ Each flashcard screen offers four rating options:
 
 The algorithm analyzes your answers and determines the best time to show each word again, helping you store it in long-term memory.
 
-The Statistics section includes two additional sets:
-• Words you struggle with — according to the algorithm, these are learned the least reliably.
-• Words you haven’t reviewed in a while — those that haven’t appeared in training for an extended period.
-
-You can revisit these lists at any time to strengthen weak areas and maintain steady progress.
-
 Try the Training mode free for one week. After the trial, full access can be unlocked with a one-time purchase.";
 "showTranslation" = "Show translation";
 "wordsDone" = "All the words for today are done!";

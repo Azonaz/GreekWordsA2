@@ -25,8 +25,8 @@ struct TrainingPaywallView: View {
 
     var body: some View {
         ZStack {
-            Color.gray.opacity(0.05)
-                .ignoresSafeArea()
+            Color.grayDN
+                .edgesIgnoringSafeArea(.all)
 
             VStack(spacing: 40) {
                 Text(Texts.accessExpired)
@@ -70,7 +70,6 @@ struct TrainingPaywallView: View {
                                     .foregroundColor(.primary)
                             }
                             .frame(maxWidth: .infinity)
-//                            .glassCard(height: buttonHeight, cornerRadius: cornerRadius)
                         }
                         .disabled(purchasing)
 
@@ -92,16 +91,20 @@ struct TrainingPaywallView: View {
             .frame(maxHeight: .infinity, alignment: .center)
             .offset(y: -40)
         }
-        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden(true)
         .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                BackButton()
+            }
             ToolbarItem(placement: .principal) {
                 Text(Texts.trainingAccess)
-                    .font(sizeClass == .regular ? .largeTitle : .title2)
-                    .foregroundColor(.primary)
+                    .font(sizeClass == .regular ? .largeTitle : .title)
+                    .fontWeight(.semibold)
+                    .frame(maxWidth: .infinity, alignment: .center)
             }
         }
         .onReceive(purchaseManager.$products) { products in
-            product = products.first(where: { $0.id == "training_access_unlock" })
+            product = products.first(where: { $0.id == "unlock_training_access" })
         }
     }
 }

@@ -2,10 +2,13 @@ import SwiftUI
 
 struct ChooseTypeView: View {
     @StateObject var groupsVM = GroupsViewModel()
+    @EnvironmentObject var trainingAccess: TrainingAccessManager
     @Environment(\.modelContext) private var modelContext
     @Environment(\.horizontalSizeClass) var sizeClass
     @Environment(\.verticalSizeClass) var verticalSizeClass
     @Environment(\.scenePhase) private var scenePhase
+    @State private var goTraining = false
+    @State private var goPaywall = false
 
     private var bHeight: CGFloat {
         sizeClass == .regular ? 80 : 60
@@ -20,11 +23,11 @@ struct ChooseTypeView: View {
     }
 
     var body: some View {
-        GeometryReader { proxy in
-            let isLandscape = proxy.size.width > proxy.size.height
-            let isLandscapePhone = (UIDevice.current.userInterfaceIdiom == .phone) && isLandscape
+        NavigationStack {
+            GeometryReader { proxy in
+                let isLandscape = proxy.size.width > proxy.size.height
+                let isLandscapePhone = (UIDevice.current.userInterfaceIdiom == .phone) && isLandscape
 
-            NavigationStack {
                 ZStack {
                     Color.grayDN
                         .edgesIgnoringSafeArea(.all)
@@ -56,9 +59,7 @@ struct ChooseTypeView: View {
                                 .frame(maxWidth: .infinity, alignment: .top)
 
                                 VStack(spacing: 16) {
-                                    NavigationLink(destination: TrainingView()) {
-                                        ChooseButtonLabel(title: Texts.training, height: bHeight, font: bFont)
-                                    }
+                                    trainingButton
 
                                     NavigationLink(destination: VerbView()) {
                                         ChooseButtonLabel(title: Texts.checkVerbs, height: bHeight, font: bFont)
@@ -88,9 +89,7 @@ struct ChooseTypeView: View {
                             .padding(.horizontal, 20)
 
                             VStack(spacing: 16) {
-                                NavigationLink(destination: TrainingView()) {
-                                    ChooseButtonLabel(title: Texts.training, height: bHeight, font: bFont)
-                                }
+                                trainingButton
 
                                 NavigationLink(destination: VerbView()) {
                                     ChooseButtonLabel(title: Texts.checkVerbs, height: bHeight, font: bFont)
@@ -127,11 +126,17 @@ struct ChooseTypeView: View {
                     .padding()
                 }
             }
-            .task { await syncVocabulary() }
-            .onChange(of: scenePhase) { _, phase in
-                if phase == .active {
-                    Task { await syncVocabulary() }
-                }
+            .navigationDestination(isPresented: $goTraining) {
+                TrainingView()
+            }
+            .navigationDestination(isPresented: $goPaywall) {
+                TrainingPaywallView()
+            }
+        }
+        .task { await syncVocabulary() }
+        .onChange(of: scenePhase) {
+            if scenePhase == .active {
+                Task { await syncVocabulary() }
             }
         }
     }
@@ -145,6 +150,21 @@ struct ChooseTypeView: View {
             try await service.syncVocabulary()
         } catch {
             print("Synchronisation error: \(error)")
+        }
+    }
+
+    private var trainingButton: some View {
+        Button {
+            trainingAccess.startTrialIfNeeded()
+            trainingAccess.refreshState()
+
+            if trainingAccess.hasAccess {
+                goTraining = true
+            } else {
+                goPaywall = true
+            }
+        } label: {
+            ChooseButtonLabel(title: Texts.training, height: bHeight, font: bFont)
         }
     }
 }
