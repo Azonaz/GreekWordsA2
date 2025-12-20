@@ -54,6 +54,7 @@ struct VerbView: View {
                                     currentIndex = 0
                                 }
                             }
+                            markCurrentVerbSeen()
                         }
                     }, label: {
                         HStack(spacing: 20) {
@@ -79,8 +80,9 @@ struct VerbView: View {
             }
         }
         .onAppear {
-            verbs = loadVerbs()
+            verbs = StatsService.verbsList()
             verbs.shuffle()
+            markCurrentVerbSeen()
         }
         .onSwipeDismiss()
         .navigationBarBackButtonHidden(true)
@@ -111,12 +113,8 @@ struct VerbView: View {
         }
     }
 
-    func loadVerbs() -> [Verb] {
-        guard let url = Bundle.main.url(forResource: "verbs", withExtension: "json"),
-              let data = try? Data(contentsOf: url),
-              let decoded = try? JSONDecoder().decode([Verb].self, from: data) else {
-            return []
-        }
-        return decoded
+    private func markCurrentVerbSeen() {
+        guard let currentVerb else { return }
+        StatsService.markVerbSeen(id: currentVerb.id)
     }
 }

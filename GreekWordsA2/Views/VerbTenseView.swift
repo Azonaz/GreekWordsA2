@@ -20,16 +20,11 @@ struct VerbTenseView: View {
                     .padding(.bottom, 20)
 
                 VStack(alignment: .leading, spacing: 10) {
-                    // swiftlint:disable line_length
-                    Text("Ενεστώτας ").verbTitleStyle() +
-                    Text("shows what is happening now, what happens often, or what is always true. It is like Simple Present in English.")
+                    Text("Ενεστώτας ").verbTitleStyle() + Text(Texts.present)
 
-                    Text("Στιγμιαίος Μέλλοντας ").verbTitleStyle() +
-                    Text("shows something that will happen once in the future and be finished. It's like Simple Future in English.")
+                    Text("Στιγμιαίος Μέλλοντας ").verbTitleStyle() + Text(Texts.future)
 
-                    Text("Αόριστος ").verbTitleStyle() +
-                    Text("shows something that happened once in the past and is finished. It doesn't say when or how long. It's like Simple Past in English.")
-                    // swiftlint:enable line_length
+                    Text("Αόριστος ").verbTitleStyle() + Text(Texts.past)
                 }
                 .foregroundColor(.blackDN)
                 .font(isLargeScreen ? .title2 : .body)

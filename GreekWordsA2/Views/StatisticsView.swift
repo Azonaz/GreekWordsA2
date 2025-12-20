@@ -32,6 +32,14 @@ struct StatisticsView: View {
         StatsService.learnedWordsCount(progress)
     }
 
+    private var totalVerbs: Int {
+        StatsService.totalVerbs()
+    }
+
+    private var seenVerbs: Int {
+        StatsService.seenVerbsCount()
+    }
+
     private var statCards: [StatCard] {
         [
             StatCard(
@@ -78,6 +86,23 @@ struct StatisticsView: View {
         ]
     }
 
+    private var verbCards: [StatCard] {
+        [
+            StatCard(
+                title: Texts.totalVerbs,
+                value: "\(totalVerbs)",
+                icon: "textformat.123",
+                tint: .greenUniversal
+            ),
+            StatCard(
+                title: Texts.seenVerbs,
+                value: "\(seenVerbs)",
+                icon: "eye.fill",
+                tint: .greenUniversal
+            )
+        ]
+    }
+
     private let grid = [
         GridItem(.flexible(), spacing: 16),
         GridItem(.flexible(), spacing: 16)
@@ -109,6 +134,17 @@ struct StatisticsView: View {
 
                     LazyVGrid(columns: grid, spacing: 16) {
                         ForEach(trainingCards) { card in
+                            StatCardView(card: card)
+                        }
+                    }
+
+                    Text(Texts.verbs)
+                        .font(sizeClass == .regular ? .largeTitle : .title)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.blackDN)
+
+                    LazyVGrid(columns: grid, spacing: 16) {
+                        ForEach(verbCards) { card in
                             StatCardView(card: card)
                         }
                     }

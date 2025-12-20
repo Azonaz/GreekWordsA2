@@ -4,6 +4,8 @@
 "checkVerbs" = "Check verbs";
 "verbs" = "Verbs";
 "nextVerb" = "Next verb";
+"totalVerbs" = "Total verbs";
+"seenVerbs" = "Verbs seen";
 "wordDay" = "Word of the day";
 "training" = "Training";
 "categories" = "Choose a group";
@@ -85,3 +87,8 @@ To open a group, complete at least one topic in the Quiz section.";
 "reverseQuiz" = "Reverse quiz";
 "reverseQuizInfo" = "Reverse Quiz Mode";
 "reverseQuizHelp" = "The Reverse Quiz follows the same rules as the regular mode, but in reverse: you are shown a word in your native language and choose its correct translation into Greek.";
+"present" = "shows what is happening now, what happens often, or what is always true. It is like Simple Present in English.";
+"future" = "shows something that will happen once in the future and be finished. It's like Simple Future in English.";
+"past" = "shows something that happened once in the past and is finished. It doesn't say when or how long. It's like Simple Past in English.";
+"totalVerbs" = "Total verbs";
+"seenVerbs" = "Verbs seen";

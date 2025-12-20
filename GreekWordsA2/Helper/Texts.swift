@@ -37,6 +37,9 @@ enum Texts {
     static let reverseQuizInfo: LocalizedStringKey = "reverseQuizInfo"
     static let reverseQuizHelp: LocalizedStringKey = "reverseQuizHelp"
     static let verbs: LocalizedStringKey = "verbs"
+    static let present: LocalizedStringKey = "present"
+    static let past: LocalizedStringKey = "past"
+    static let future: LocalizedStringKey = "future"
 
     static var allWords: String {
         NSLocalizedString("allWords", comment: "")
@@ -120,5 +123,13 @@ enum Texts {
 
     static var nextVerb: String {
         NSLocalizedString("nextVerb", comment: "")
+    }
+
+    static var totalVerbs: String {
+        NSLocalizedString("totalVerbs", comment: "")
+    }
+
+    static var seenVerbs: String {
+        NSLocalizedString("seenVerbs", comment: "")
     }
 }

@@ -3,6 +3,13 @@ import FSRS
 import SwiftData
 
 final class StatsService {
+    private static let seenVerbIDsKey = "verb_seen_ids"
+    private static var cachedVerbs: [Verb]?
+
+    static func verbsList() -> [Verb] {
+        loadVerbs()
+    }
+
     // Quiz stats
     static func totalWords(_ words: [Word]) -> Int {
         words.count
@@ -54,5 +61,39 @@ final class StatsService {
 
     static func learnedWordsCount(_ progress: [WordProgress]) -> Int {
         progress.filter { $0.learned }.count
+    }
+
+    // Verb stats
+    static func totalVerbs() -> Int {
+        verbsList().count
+    }
+
+    static func seenVerbsCount() -> Int {
+        loadSeenVerbIDs().count
+    }
+
+    static func markVerbSeen(id: Int) {
+        var ids = loadSeenVerbIDs()
+        let inserted = ids.insert(id).inserted
+        guard inserted else { return }
+        UserDefaults.standard.set(Array(ids), forKey: seenVerbIDsKey)
+    }
+
+    private static func loadVerbs() -> [Verb] {
+        if let cachedVerbs { return cachedVerbs }
+        guard
+            let url = Bundle.main.url(forResource: "verbs", withExtension: "json"),
+            let data = try? Data(contentsOf: url),
+            let decoded = try? JSONDecoder().decode([Verb].self, from: data)
+        else {
+            return []
+        }
+        cachedVerbs = decoded
+        return decoded
+    }
+
+    private static func loadSeenVerbIDs() -> Set<Int> {
+        let storedIDs = UserDefaults.standard.array(forKey: seenVerbIDsKey) as? [Int] ?? []
+        return Set(storedIDs)
     }
 }
