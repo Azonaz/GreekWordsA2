@@ -1,1651 +1,2201 @@
 [
     {
+        "id": 1,
         "verb": "αγαπώ",
         "translation": "to love",
+        "ru_translation": "любить",
         "future": "θα αγαπήσω",
         "past": "αγάπησα"
     },
     {
+        "id": 2,
         "verb": "αγοράζω",
         "translation": "to buy",
+        "ru_translation": "покупать",
         "future": "θα αγοράσω",
         "past": "αγόρασα"
     },
     {
+        "id": 3,
         "verb": "αισθάνομαι",
         "translation": "to feel",
+        "ru_translation": "чувствовать",
         "future": "θα αισθανθώ",
         "past": "αισθάνθηκα"
     },
     {
+        "id": 4,
         "verb": "ακολουθώ",
         "translation": "to follow",
+        "ru_translation": "следовать",
         "future": "θα ακολουθήσω",
         "past": "ακολούθησα"
     },
     {
+        "id": 5,
         "verb": "ακούω",
         "translation": "to hear, to listen",
+        "ru_translation": "слышать, слушать",
         "future": "θα ακούσω",
         "past": "άκουσα"
     },
     {
+        "id": 6,
         "verb": "αλλάζω",
         "translation": "to change",
+        "ru_translation": "менять",
         "future": "θα αλλάξω",
         "past": "άλλαξα"
     },
     {
+        "id": 7,
         "verb": "ανακατεύω",
-        "translation": "to mix, to blend" ,
+        "translation": "to mix, to blend",
+        "ru_translation": "смешивать, перемешивать",
         "future": "θα ανακατέψω",
         "past": "ανακάτεψα"
     },
     {
+        "id": 8,
         "verb": "ανεβαίνω",
         "translation": "to get on, to climb",
+        "ru_translation": "садиться (в транспорт), подниматься",
         "future": "θα ανέβω",
         "past": "ανέβηκα"
     },
     {
+        "id": 9,
         "verb": "ανοίγω",
         "translation": "to open",
+        "ru_translation": "открывать",
         "future": "θα ανοίξω",
         "past": "άνοιξα"
     },
     {
+        "id": 10,
         "verb": "απαντάω",
         "translation": "to answer",
+        "ru_translation": "отвечать",
         "future": "θα απαντήσω",
         "past": "απάντησα"
     },
     {
+        "id": 11,
         "verb": "απλώνω",
         "translation": "to spread",
+        "ru_translation": "распространять",
         "future": "θα απλώσω",
         "past": "άπλωσα"
     },
     {
+        "id": 12,
         "verb": "αποκτώ",
         "translation": "to obtain, to have",
+        "ru_translation": "получать, иметь",
         "future": "θα αποκτήσω",
         "past": "απέκτησα"
     },
+    },
     {
+        "id": 13,
         "verb": "αποφασίζω",
         "translation": "to decide",
+        "ru_translation": "решать",
         "future": "θα αποφασίσω",
         "past": "αποφάσισα"
     },
     {
+        "id": 14,
         "verb": "αργώ",
         "translation": "to be late",
+        "ru_translation": "опаздывать",
         "future": "θα αργήσω",
         "past": "άργησα"
     },
     {
+        "id": 15,
         "verb": "(μου) αρέσει",
         "translation": "to like",
+        "ru_translation": "(мне) нравиться",
         "future": "θα (μου) αρέσει",
         "past": "(μου) άρεσε"
     },
     {
+        "id": 16,
         "verb": "αρχίζω",
         "translation": "to begin, to start",
+        "ru_translation": "начинать, запускать",
         "future": "θα αρχίσω",
         "past": "άρχισα"
     },
     {
-      "verb": "ανησυχώ",
-      "translation": "to worry",
-      "future": "θα ανησυχήσω",
-      "past": "ανησύχησα"
+        "id": 17,
+        "verb": "ανησυχώ",
+        "translation": "to worry",
+        "ru_translation": "волноваться",
+        "future": "θα ανησυχήσω",
+        "past": "ανησύχησα"
     },
     {
+        "id": 18,
         "verb": "αφήνω",
         "translation": "to leave, to let go",
+        "ru_translation": "уходить, отпускать",
         "future": "θα αφήσω",
         "past": "άφησα"
     },
     {
+        "id": 19,
         "verb": "αδειάζω",
         "translation": "to empty",
+        "ru_translation": "опустошать",
         "future": "θα αδειάσω",
         "past": "άδειασα"
     },
     {
+        "id": 20,
         "verb": "αδυνατίζω",
         "translation": "to lose weight, to get slim",
+        "ru_translation": "худеть, становиться стройнее",
         "future": "θα αδυνατίσω",
         "past": "αδυνάτισα"
     },
     {
+        "id": 21,
         "verb": "ανάβω",
         "translation": "to light, to turn on",
+        "ru_translation": "зажигать, включать",
         "future": "θα ανάψω",
         "past": "άναψα"
     },
     {
+        "id": 22,
         "verb": "αναγνωρίζω",
         "translation": "to recognize",
+        "ru_translation": "узнавать",
         "future": "θα αναγνωρίσω",
         "past": "αναγνώρισα"
     },
     {
+        "id": 23,
         "verb": "αναπνέω",
         "translation": "to breathe",
+        "ru_translation": "дышать",
         "future": "θα αναπνεύσω",
         "past": "ανέπνευσα"
     },
     {
+        "id": 24,
         "verb": "αναφέρω",
         "translation": "to mention, to refer",
+        "ru_translation": "упоминать, ссылаться",
         "future": "θα αναφέρω",
         "past": "ανέφερα"
     },
     {
+        "id": 25,
         "verb": "αντιστοιχίζω",
         "translation": "to match",
+        "ru_translation": "соотносить",
         "future": "θα αντιστοιχίσω",
         "past": "αντιστοίχισα"
     },
     {
+        "id": 26,
         "verb": "απευθύνομαι",
         "translation": "to address (to)",
+        "ru_translation": "обращаться (к)",
         "future": "θα απευθυνθώ",
         "past": "απευθύνθηκα"
     },
     {
+        "id": 27,
         "verb": "αποφεύγω",
         "translation": "to avoid",
+        "ru_translation": "избегать",
         "future": "θα αποφύγω",
         "past": "απέφυγα"
     },
     {
+        "id": 28,
         "verb": "αρρωσταίνω",
         "translation": "to get sick",
+        "ru_translation": "заболевать",
         "future": "θα αρρωστήσω",
         "past": "αρρώστησα"
     },
     {
+        "id": 29,
         "verb": "βάζω",
         "translation": "to put",
+        "ru_translation": "класть",
         "future": "θα βάλω",
         "past": "έβαλα"
     },
     {
+        "id": 30,
         "verb": "βάφω",
         "translation": "to paint, to dye",
+        "ru_translation": "красить, окрашивать",
         "future": "θα βάψω",
         "past": "έβαψα"
     },
     {
+        "id": 31,
         "verb": "βγάζω",
         "translation": "to take out, to take off",
+        "ru_translation": "вынимать, снимать",
         "future": "θα βγάλω",
         "past": "έβγαλα"
     },
     {
+        "id": 32,
         "verb": "βγαίνω",
         "translation": "to go out, to exit",
+        "ru_translation": "выходить, покидать",
         "future": "θα βγω",
         "past": "βγήκα"
     },
     {
+        "id": 33,
         "verb": "βεβαιώνω",
         "translation": "to confirm, to affirm",
+        "ru_translation": "подтверждать, заверять",
         "future": "θα βεβαιώσω",
         "past": "βεβαίωσα"
     },
     {
+        "id": 34,
         "verb": "βλέπω",
         "translation": "to see",
+        "ru_translation": "видеть",
         "future": "θα δω",
         "past": "είδα"
     },
     {
+        "id": 35,
         "verb": "βοηθάω",
         "translation": "to help",
+        "ru_translation": "помогать",
         "future": "θα βοηθήσω",
         "past": "βοήθησα"
     },
     {
+        "id": 36,
         "verb": "βράζω",
         "translation": "to boil",
+        "ru_translation": "кипятить",
         "future": "θα βράσω",
         "past": "έβρασα"
     },
     {
+        "id": 37,
         "verb": "βρίσκω",
         "translation": "to find",
+        "ru_translation": "находить",
         "future": "θα βρω",
         "past": "βρήκα"
     },
     {
+        "id": 38,
         "verb": "βήχω",
         "translation": "to cough",
+        "ru_translation": "кашлять",
         "future": "θα βήξω",
         "past": "έβηξα"
     },
     {
+        "id": 39,
         "verb": "βρέχω",
         "translation": "to wet",
+        "ru_translation": "мочить",
         "future": "θα βρέξω",
         "past": "έβρεξα"
     },
     {
+        "id": 40,
         "verb": "γεμίζω",
         "translation": "to fill",
+        "ru_translation": "наполнять",
         "future": "θα γεμίσω",
         "past": "γέμισα"
     },
     {
+        "id": 41,
         "verb": "γεννάω",
         "translation": "to give birth",
+        "ru_translation": "рожать",
         "future": "θα γεννήσω",
         "past": "γέννησα"
     },
     {
+        "id": 42,
         "verb": "γίνομαι",
         "translation": "to become",
+        "ru_translation": "становиться",
         "future": "θα γίνω",
         "past": "έγινα"
     },
     {
+        "id": 43,
         "verb": "γιορτάζω",
         "translation": "to celebrate",
+        "ru_translation": "праздновать",
         "future": "θα γιορτάσω",
         "past": "γιόρτασα"
     },
     {
+        "id": 44,
         "verb": "γνωρίζω",
         "translation": "to know",
+        "ru_translation": "знать",
         "future": "θα γνωρίσω",
         "past": "γνώρισα"
     },
     {
+        "id": 45,
         "verb": "γράφω",
         "translation": "to write",
+        "ru_translation": "писать",
         "future": "θα γράψω",
         "past": "έγραψα"
     },
     {
+        "id": 46,
         "verb": "γυρίζω",
         "translation": "to turn, to return",
+        "ru_translation": "поворачивать, возвращаться",
         "future": "θα γυρίσω",
         "past": "γύρισα"
     },
     {
+        "id": 47,
         "verb": "γελάω",
         "translation": "to laugh",
+        "ru_translation": "смеяться",
         "future": "θα γελάσω",
         "past": "γέλασα"
     },
     {
+        "id": 48,
         "verb": "δείχνω",
         "translation": "to show",
+        "ru_translation": "показывать",
         "future": "θα δείξω",
         "past": "έδειξα"
     },
     {
+        "id": 49,
         "verb": "δηλητηριάζω",
         "translation": "to poison",
+        "ru_translation": "отравлять",
         "future": "θα δηλητηριάσω",
         "past": "δηλητηρίασα"
     },
     {
+        "id": 50,
         "verb": "δηλώνω",
         "translation": "to state, to declare",
+        "ru_translation": "заявлять, декларировать",
         "future": "θα δηλώσω",
         "past": "δήλωσα"
     },
     {
+        "id": 51,
         "verb": "διαβάζω",
         "translation": "to read",
+        "ru_translation": "читать",
         "future": "θα διαβάσω",
         "past": "διάβασα"
     },
     {
+        "id": 52,
         "verb": "διαγράφω",
         "translation": "to delete, to erase",
+        "ru_translation": "удалять, стирать",
         "future": "θα διαγράψω",
         "past": "διέγραψα"
     },
     {
+        "id": 53,
         "verb": "διαλέγω",
         "translation": "to choose",
+        "ru_translation": "выбирать",
         "future": "θα διαλέξω",
         "past": "διάλεξα"
     },
     {
+        "id": 54,
         "verb": "διασκεδάζω",
         "translation": "to have fun, to enjoy",
+        "ru_translation": "веселиться, наслаждаться",
         "future": "θα διασκεδάσω",
         "past": "διασκέδασα"
     },
     {
+        "id": 55,
         "verb": "διαφημίζω",
         "translation": "to advertise",
+        "ru_translation": "рекламировать",
         "future": "θα διαφημίσω",
         "past": "διαφήμισα"
     },
     {
+        "id": 56,
         "verb": "διαφωνώ",
         "translation": "to disagree",
+        "ru_translation": "не соглашаться",
         "future": "θα διαφωνήσω",
         "past": "διαφώνησα"
     },
     {
+        "id": 57,
         "verb": "δίνω",
         "translation": "to give",
+        "ru_translation": "давать",
         "future": "θα δώσω",
         "past": "έδωσα"
     },
     {
+        "id": 58,
         "verb": "δοκιμάζω",
         "translation": "to try, to taste",
+        "ru_translation": "пробовать, дегустировать",
         "future": "θα δοκιμάσω",
         "past": "δοκίμασα"
     },
     {
+        "id": 59,
         "verb": "δουλεύω",
         "translation": "to work",
+        "ru_translation": "работать",
         "future": "θα δουλέψω",
         "past": "δούλεψα"
     },
     {
+        "id": 60,
         "verb": "δημιουργώ",
         "translation": "to create",
+        "ru_translation": "создавать",
         "future": "θα δημιουργήσω",
         "past": "δημιούργησα"
     },
     {
+        "id": 61,
         "verb": "διδάσκω",
         "translation": "to teach",
+        "ru_translation": "преподавать",
         "future": "θα διδάξω",
         "past": "δίδαξα"
     },
     {
+        "id": 62,
         "verb": "διψάω",
         "translation": "to be thirsty",
+        "ru_translation": "хотеть пить",
         "future": "θα διψάσω",
         "past": "δίψασα"
     },
     {
+        "id": 63,
         "verb": "ελπίζω",
         "translation": "to hope",
+        "ru_translation": "надеяться",
         "future": "θα ελπίσω",
         "past": "ήλπισα"
     },
     {
+        "id": 64,
         "verb": "ενδιαφέρομαι",
         "translation": "to be interested",
+        "ru_translation": "интересоваться",
         "future": "θα ενδιαφερθώ",
         "past": "ενδιαφέρθηκα"
     },
     {
+        "id": 65,
         "verb": "ενημερώνω",
         "translation": "to inform, to notify",
+        "ru_translation": "информировать, уведомлять",
         "future": "θα ενημερώσω",
         "past": "ενημέρωσα"
     },
     {
+        "id": 66,
         "verb": "ενθουσιάζω",
         "translation": "to excite",
+        "ru_translation": "восхищать, вдохновлять",
         "future": "θα ενθουσιάσω",
         "past": "ενθουσίασα"
     },
     {
+        "id": 67,
         "verb": "εξηγώ",
         "translation": "to explain",
+        "ru_translation": "объяснять",
         "future": "θα εξηγήσω",
         "past": "εξήγησα"
     },
     {
+        "id": 68,
         "verb": "εξυπηρετώ",
         "translation": "to serve",
+        "ru_translation": "обслуживать",
         "future": "θα εξυπηρετήσω",
         "past": "εξυπηρέτησα"
     },
     {
+        "id": 69,
         "verb": "επαναλαμβάνω",
         "translation": "to repeat",
+        "ru_translation": "повторять",
         "future": "θα επαναλάβω",
         "past": "επανέλαβα"
     },
     {
+        "id": 70,
         "verb": "επιθυμώ",
         "translation": "to wish, to desire",
+        "ru_translation": "желать, стремиться",
         "future": "θα επιθυμήσω",
         "past": "επιθύμησα"
     },
     {
+        "id": 71,
         "verb": "επικοινωνώ",
         "translation": "to communicate, to contact",
+        "ru_translation": "общаться, связываться",
         "future": "θα επικοινωνήσω",
         "past": "επικοινώνησα"
     },
     {
+        "id": 72,
         "verb": "επιλέγω",
         "translation": "to choose",
+        "ru_translation": "выбирать",
         "future": "θα επιλέξω",
         "past": "επέλεξα"
     },
     {
+        "id": 73,
         "verb": "επισκέπτομαι",
         "translation": "to visit",
+        "ru_translation": "посещать",
         "future": "θα επισκεφτώ",
         "past": "επισκέφτηκα"
     },
     {
+        "id": 74,
         "verb": "επιστρέφω",
         "translation": "to return",
+        "ru_translation": "возвращаться",
         "future": "θα επιστρέψω",
         "past": "επέστρεψα"
     },
     {
+        "id": 75,
         "verb": "έρχομαι",
         "translation": "to come",
+        "ru_translation": "приходить",
         "future": "θα έρθω",
         "past": "ήρθα"
     },
     {
+        "id": 76,
         "verb": "ετοιμάζω",
         "translation": "to prepare",
+        "ru_translation": "готовить",
         "future": "θα ετοιμάσω",
         "past": "ετοίμασα"
     },
     {
+        "id": 77,
         "verb": "ευχαριστώ",
         "translation": "to thank",
+        "ru_translation": "благодарить",
         "future": "θα ευχαριστήσω",
         "past": "ευχαρίστησα"
     },
     {
+        "id": 78,
         "verb": "έχω",
         "translation": "to have",
+        "ru_translation": "иметь",
         "future": "θα έχω",
         "past": "είχα"
     },
     {
+        "id": 79,
         "verb": "επιτρέπω",
         "translation": "to allow",
+        "ru_translation": "разрешать",
         "future": "θα επιτρέψω",
         "past": "επέτρεψα"
     },
     {
+        "id": 80,
         "verb": "ζητάω",
         "translation": "to ask, to request",
+        "ru_translation": "просить, запрашивать",
         "future": "θα ζητήσω",
         "past": "ζήτησα"
     },
     {
+        "id": 81,
         "verb": "ζω",
         "translation": "to live",
+        "ru_translation": "жить",
         "future": "θα ζήσω",
         "past": "έζησα"
     },
     {
+        "id": 82,
         "verb": "ζωγραφίζω",
         "translation": "to paint, to draw",
+        "ru_translation": "рисовать, писать красками",
         "future": "θα ζωγραφίσω",
         "past": "ζωγράφισα"
     },
     {
+        "id": 83,
         "verb": "ζυγίζω",
         "translation": "to weigh",
+        "ru_translation": "взвешивать",
         "future": "θα ζυγίσω",
         "past": "ζύγισα"
     },
     {
+        "id": 84,
         "verb": "θέλω",
         "translation": "to want",
+        "ru_translation": "хотеть",
         "future": "θα θέλω",
         "past": "ήθελα"
     },
     {
+        "id": 85,
         "verb": "θυμάμαι",
         "translation": "to remember",
+        "ru_translation": "помнить, вспоминать",
         "future": "θα θυμηθώ",
         "past": "θυμήθηκα"
     },
     {
+        "id": 86,
         "verb": "καθαρίζω",
         "translation": "to clean",
+        "ru_translation": "чистить, убирать",
         "future": "θα καθαρίσω",
         "past": "καθάρισα"
     },
     {
+        "id": 87,
         "verb": "κάθομαι",
         "translation": "to sit",
+        "ru_translation": "сидеть",
         "future": "θα καθίσω",
         "past": "κάθισα"
     },
     {
+        "id": 88,
         "verb": "καίω",
         "translation": "to burn",
+        "ru_translation": "сжигать",
         "future": "θα κάψω",
         "past": "έκαψα"
     },
     {
+        "id": 89,
         "verb": "καλύπτω",
         "translation": "to cover",
+        "ru_translation": "покрывать",
         "future": "θα καλύψω",
         "past": "κάλυψα"
     },
     {
+        "id": 90,
         "verb": "καλώ",
         "translation": "to call, to invite",
+        "ru_translation": "звонить, приглашать",
         "future": "θα καλέσω",
         "past": "κάλεσα"
     },
     {
+        "id": 91,
         "verb": "κάνω",
         "translation": "to do, to make",
+        "ru_translation": "делать, создавать",
         "future": "θα κάνω",
         "past": "έκανα"
     },
     {
+        "id": 92,
         "verb": "καταλαβαίνω",
         "translation": "to understand",
+        "ru_translation": "понимать",
         "future": "θα καταλάβω",
         "past": "κατάλαβα"
     },
     {
+        "id": 93,
         "verb": "καταφέρνω",
         "translation": "to manage, to achieve",
+        "ru_translation": "справляться, достигать",
         "future": "θα καταφέρω",
         "past": "κατάφερα"
     },
     {
+        "id": 94,
         "verb": "κατεβαίνω",
         "translation": "to go down",
+        "ru_translation": "спускаться",
         "future": "θα κατέβω",
         "past": "κατέβηκα"
     },
     {
+        "id": 95,
         "verb": "κατεβάζω",
         "translation": "to download",
+        "ru_translation": "скачивать",
         "future": "θα κατεβάσω",
         "past": "κατέβασα"
     },
     {
+        "id": 96,
         "verb": "κερδίζω",
         "translation": "to win",
+        "ru_translation": "побеждать",
         "future": "θα κερδίσω",
         "past": "κέρδισα"
     },
     {
+        "id": 97,
         "verb": "κλειδώνω",
         "translation": "to lock",
+        "ru_translation": "запирать",
         "future": "θα κλειδώσω",
         "past": "κλείδωσα"
     },
     {
+        "id": 98,
         "verb": "κλείνω",
         "translation": "to close",
+        "ru_translation": "закрывать",
         "future": "θα κλείσω",
         "past": "έκλεισα"
     },
     {
+        "id": 99,
         "verb": "κόβω",
         "translation": "to cut",
+        "ru_translation": "резать",
         "future": "θα κόψω",
         "past": "έκοψα"
     },
     {
+        "id": 100,
         "verb": "κοιμάμαι",
         "translation": "to sleep",
+        "ru_translation": "спать",
         "future": "θα κοιμηθώ",
         "past": "κοιμήθηκα"
     },
     {
+        "id": 101,
         "verb": "κοιτάζω",
         "translation": "to look at",
+        "ru_translation": "смотреть на",
         "future": "θα κοιτάξω",
         "past": "κοίταξα"
     },
     {
+        "id": 102,
         "verb": "κολλάω",
         "translation": "to stick, to glue",
+        "ru_translation": "приклеивать, склеивать",
         "future": "θα κολλήσω",
         "past": "κόλλησα"
     },
     {
+        "id": 103,
         "verb": "κοστίζω",
         "translation": "to cost",
+        "ru_translation": "стоить",
         "future": "θα κοστίσω",
         "past": "κόστισα"
     },
     {
+        "id": 104,
         "verb": "κουράζω",
         "translation": "to tire, to exhaust",
+        "ru_translation": "утомлять, изнурять",
         "future": "θα κουράσω",
         "past": "κούρασα"
     },
     {
-      "verb": "κουράζομαι",
-      "translation": "to get tired",
-      "future": "θα κουραστώ",
-      "past": "κουράστηκα"
+        "id": 105,
+        "verb": "κουράζομαι",
+        "translation": "to get tired",
+        "ru_translation": "уставать",
+        "future": "θα κουραστώ",
+        "past": "κουράστηκα"
     },
     {
+        "id": 106,
         "verb": "κρατάω",
         "translation": "to hold",
+        "ru_translation": "держать",
         "future": "θα κρατήσω",
         "past": "κράτησα"
     },
     {
+        "id": 107,
         "verb": "κρύβω",
         "translation": "to hide",
+        "ru_translation": "прятать",
         "future": "θα κρύψω",
         "past": "έκρυψα"
     },
     {
+        "id": 108,
         "verb": "κρυώνω",
         "translation": "to feel cold",
+        "ru_translation": "замерзать, чувствовать холод",
         "future": "θα κρυώσω",
         "past": "κρύωσα"
     },
     {
+        "id": 109,
         "verb": "κολυμπάω",
         "translation": "to swim",
+        "ru_translation": "плавать",
         "future": "θα κολυμπήσω",
         "past": "κολύμπησα"
     },
     {
+        "id": 110,
         "verb": "κυκλώνω",
         "translation": "to circle, to encircle",
+        "ru_translation": "окружать, обводить",
         "future": "θα κυκλώσω",
         "past": "κύκλωσα"
     },
     {
+        "id": 111,
         "verb": "καπνίζω",
         "translation": "to smoke",
+        "ru_translation": "курить",
         "future": "θα καπνίσω",
         "past": "κάπνισα"
     },
     {
+        "id": 112,
         "verb": "κλαίω",
         "translation": "to cry",
+        "ru_translation": "плакать",
         "future": "θα κλάψω",
         "past": "έκλαψα"
     },
     {
+        "id": 113,
         "verb": "κλέβω",
         "translation": "to steal",
+        "ru_translation": "красть",
         "future": "θα κλέψω",
         "past": "έκλεψα"
     },
     {
+        "id": 114,
         "verb": "λείπω",
         "translation": "to be absent, to be missing",
+        "ru_translation": "отсутствовать, недоставать",
         "future": "θα λείψω",
         "past": "έλειψα"
     },
     {
+        "id": 115,
         "verb": "λειτουργώ",
         "translation": "to function, to operate",
+        "ru_translation": "функционировать, работать (о технике)",
         "future": "θα λειτουργήσω",
         "past": "λειτούργησα"
     },
     {
+        "id": 116,
         "verb": "λέω",
         "translation": "to say",
+        "ru_translation": "говорить, сказать",
         "future": "θα πω",
         "past": "είπα"
     },
     {
+        "id": 117,
         "verb": "λήγω",
         "translation": "to end, to expire",
+        "ru_translation": "заканчиваться, истекать",
         "future": "θα λήξω",
         "past": "έληξα"
     },
     {
+        "id": 118,
         "verb": "λιώνω",
         "translation": "to melt",
+        "ru_translation": "таять, плавиться",
         "future": "θα λιώσω",
         "past": "έλιωσα"
     },
     {
+        "id": 119,
         "verb": "λυπάμαι",
         "translation": "to be sorry, to feel sad",
+        "ru_translation": "сожалеть, грустить",
         "future": "θα λυπηθώ",
         "past": "λυπήθηκα"
     },
     {
+        "id": 120,
         "verb": "λύνω",
         "translation": "to solve",
+        "ru_translation": "решать",
         "future": "θα λύσω",
         "past": "έλυσα"
     },
     {
+        "id": 121,
         "verb": "μαγειρεύω",
         "translation": "to cook",
+        "ru_translation": "готовить (еду)",
         "future": "θα μαγειρέψω",
         "past": "μαγείρεψα"
     },
     {
+        "id": 122,
         "verb": "μαζεύω",
         "translation": "to gather, to collect",
+        "ru_translation": "собирать",
         "future": "θα μαζέψω",
         "past": "μάζεψα"
     },
     {
+        "id": 123,
         "verb": "μαθαίνω",
         "translation": "to learn",
+        "ru_translation": "учить, узнавать",
         "future": "θα μάθω",
         "past": "έμαθα"
     },
     {
+        "id": 124,
         "verb": "μαλώνω",
         "translation": "to argue, to quarrel",
+        "ru_translation": "ссориться, ругаться",
         "future": "θα μαλώσω",
         "past": "μάλωσα"
     },
     {
+        "id": 125,
         "verb": "μαντεύω",
         "translation": "to guess",
+        "ru_translation": "угадывать, догадываться",
         "future": "θα μαντέψω",
         "past": "μάντεψα"
     },
     {
+        "id": 126,
         "verb": "μεγαλώνω",
         "translation": "to grow up",
+        "ru_translation": "расти, взрослеть",
         "future": "θα μεγαλώσω",
         "past": "μεγάλωσα"
     },
     {
+        "id": 127,
         "verb": "μένω",
         "translation": "to stay, to live",
+        "ru_translation": "оставаться, жить",
         "future": "θα μείνω",
         "past": "έμεινα"
     },
     {
+        "id": 128,
         "verb": "μετακομίζω",
         "translation": "to move (to a new place)",
+        "ru_translation": "переезжать",
         "future": "θα μετακομίσω",
         "past": "μετακόμισα"
     },
     {
+        "id": 129,
         "verb": "μεταφέρω",
         "translation": "to transfer, to transport",
+        "ru_translation": "перевозить, переносить",
         "future": "θα μεταφέρω",
         "past": "μετέφερα"
     },
     {
+        "id": 130,
         "verb": "μιλάω",
         "translation": "to speak",
+        "ru_translation": "говорить",
         "future": "θα μιλήσω",
         "past": "μίλησα"
     },
     {
+        "id": 131,
         "verb": "μπαίνω",
         "translation": "to enter",
+        "ru_translation": "входить",
         "future": "θα μπω",
         "past": "μπήκα"
     },
     {
+        "id": 132,
         "verb": "μπερδεύω",
         "translation": "to confuse",
+        "ru_translation": "путать, сбивать с толку",
         "future": "θα μπερδέψω",
         "past": "μπέρδεψα"
     },
     {
+        "id": 133,
         "verb": "μελετάω",
         "translation": "to study",
+        "ru_translation": "изучать",
         "future": "θα μελετήσω",
         "past": "μελέτησα"
     },
     {
+        "id": 134,
         "verb": "μεταφράζω",
         "translation": "to translate",
+        "ru_translation": "переводить",
         "future": "θα μεταφράσω",
         "past": "μετέφρασα"
     },
     {
+        "id": 135,
         "verb": "μετράω",
         "translation": "to count",
+        "ru_translation": "считать",
         "future": "θα μετρήσω",
         "past": "μέτρησα"
     },
     {
+        "id": 136,
         "verb": "μοιάζω",
         "translation": "to resemble, to look like",
+        "ru_translation": "походить, быть похожим",
         "future": "θα μοιάσω",
         "past": "μοίασα"
     },
     {
+        "id": 137,
         "verb": "μοιράζω",
         "translation": "to distribute",
+        "ru_translation": "раздавать, распределять",
         "future": "θα μοιράσω",
         "past": "μοίρασα"
     },
     {
+        "id": 138,
         "verb": "μυρίζω",
         "translation": "to smell",
+        "ru_translation": "пахнуть, нюхать",
         "future": "θα μυρίσω",
         "past": "μύρισα"
     },
     {
+        "id": 139,
         "verb": "μπορώ",
         "translation": "to be able to, can",
+        "ru_translation": "мочь",
         "future": "θα μπορέσω",
         "past": "μπόρεσα"
     },
     {
+        "id": 140,
         "verb": "νευριάζω",
         "translation": "to get angry",
+        "ru_translation": "злиться, раздражаться",
         "future": "θα νευριάσω",
         "past": "νευρίασα"
     },
     {
+        "id": 141,
         "verb": "νοικιάζω",
         "translation": "to rent",
+        "ru_translation": "арендовать",
         "future": "θα νοικιάσω",
         "past": "νοίκιασα"
     },
     {
+        "id": 142,
         "verb": "νιώθω",
         "translation": "to feel",
+        "ru_translation": "чувствовать",
         "future": "θα νιώσω",
         "past": "ένιωσα"
     },
     {
+        "id": 143,
         "verb": "νομίζω",
         "translation": "to think, to believe",
+        "ru_translation": "думать, полагать",
         "future": "θα νομίσω",
         "past": "νόμισα"
     },
     {
+        "id": 144,
         "verb": "ντύνομαι",
         "translation": "to get dressed",
+        "ru_translation": "одеваться",
         "future": "θα ντυθώ",
         "past": "ντύθηκα"
     },
     {
+        "id": 145,
         "verb": "νυστάζω",
         "translation": "to feel sleepy",
+        "ru_translation": "хотеть спать",
         "future": "θα νυστάξω",
         "past": "νύσταξα"
     },
     {
+        "id": 146,
         "verb": "ξεκινάω",
         "translation": "to start",
+        "ru_translation": "начинать",
         "future": "θα ξεκινήσω",
         "past": "ξεκίνησα"
     },
     {
+        "id": 147,
         "verb": "ξεκουράζομαι",
         "translation": "to rest",
+        "ru_translation": "отдыхать",
         "future": "θα ξεκουραστώ",
         "past": "ξεκουράστηκα"
     },
     {
+        "id": 148,
         "verb": "ξεπερνάω",
         "translation": "to overcome, to exceed",
+        "ru_translation": "преодолевать, превышать",
         "future": "θα ξεπεράσω",
         "past": "ξεπέρασα"
     },
     {
+        "id": 149,
         "verb": "ξεπλένω",
         "translation": "to rinse",
+        "ru_translation": "ополаскивать",
         "future": "θα ξεπλύνω",
         "past": "ξέπλυνα"
     },
     {
+        "id": 150,
         "verb": "ξέρω",
         "translation": "to know",
+        "ru_translation": "знать",
         "future": "θα ξέρω",
         "past": "ήξερα"
     },
     {
+        "id": 151,
         "verb": "ξεχνάω",
         "translation": "to forget",
+        "ru_translation": "забывать",
         "future": "θα ξεχάσω",
         "past": "ξέχασα"
     },
     {
+        "id": 152,
         "verb": "ξοδεύω",
         "translation": "to spend",
+        "ru_translation": "тратить",
         "future": "θα ξοδέψω",
         "past": "ξόδεψα"
     },
     {
+        "id": 153,
         "verb": "ξυπνάω",
         "translation": "to wake up",
+        "ru_translation": "просыпаться",
         "future": "θα ξυπνήσω",
         "past": "ξύπνησα"
     },
     {
+        "id": 154,
         "verb": "ξενυχτάω",
         "translation": "to stay awake all night",
+        "ru_translation": "не спать всю ночь",
         "future": "θα ξενυχτήσω",
         "past": "ξενύχτησα"
     },
     {
+        "id": 155,
         "verb": "ξεφεύγω",
         "translation": "to escape, to avoid",
+        "ru_translation": "избегать, ускользать",
         "future": "θα ξεφύγω",
         "past": "ξέφυγα"
     },
     {
+        "id": 156,
         "verb": "οδηγώ",
         "translation": "to drive",
+        "ru_translation": "водить",
         "future": "θα οδηγήσω",
         "past": "οδήγησα"
     },
     {
+        "id": 157,
         "verb": "ονειρεύομαι",
         "translation": "to dream",
+        "ru_translation": "мечтать",
         "future": "θα ονειρευτώ",
         "past": "ονειρεύτηκα"
     },
     {
         "verb": "παθαίνω",
         "translation": "to suffer, to experience",
+        "ru_translation": "страдать, переживать",
         "future": "θα πάθω",
         "past": "έπαθα"
     },
     {
+        "id": 159,
         "verb": "παίζω",
         "translation": "to play",
+        "ru_translation": "играть",
         "future": "θα παίξω",
         "past": "έπαιξα"
     },
     {
+        "id": 160,
         "verb": "παίρνω",
         "translation": "to take",
+        "ru_translation": "брать",
         "future": "θα πάρω",
         "past": "πήρα"
     },
     {
+        "id": 161,
         "verb": "παντρεύομαι",
         "translation": "to get married",
+        "ru_translation": "жениться, выходить замуж",
         "future": "θα παντρευτώ",
         "past": "παντρεύτηκα"
     },
     {
+        "id": 162,
         "verb": "παραγγέλλω",
         "translation": "to order",
+        "ru_translation": "заказывать",
         "future": "θα παραγγείλω",
         "past": "παράγγειλα"
     },
     {
+        "id": 163,
         "verb": "παρακαλώ",
         "translation": "to please",
+        "ru_translation": "просить, пожалуйста",
         "future": "θα παρακαλέσω",
         "past": "παρακάλεσα"
     },
     {
+        "id": 164,
         "verb": "παρακολουθώ",
         "translation": "to watch",
+        "ru_translation": "наблюдать, смотреть",
         "future": "θα παρακολουθήσω",
         "past": "παρακολούθησα"
     },
     {
+        "id": 165,
         "verb": "παρατηρώ",
         "translation": "to observe, to notice",
+        "ru_translation": "наблюдать, замечать",
         "future": "θα παρατηρήσω",
         "past": "παρατήρησα"
     },
     {
+        "id": 166,
         "verb": "παρουσιάζω",
         "translation": "to present",
+        "ru_translation": "представлять, презентовать",
         "future": "θα παρουσιάσω",
         "past": "παρουσίασα"
     },
     {
+        "id": 167,
         "verb": "παρουσιάζομαι",
         "translation": "to present oneself",
+        "ru_translation": "представляться",
         "future": "θα παρουσιαστώ",
         "past": "παρουσιάστηκα"
     },
     {
+        "id": 168,
         "verb": "πεθαίνω",
         "translation": "to die",
+        "ru_translation": "умирать",
         "future": "θα πεθάνω",
         "past": "πέθανα"
     },
     {
+        "id": 169,
         "verb": "πεινάω",
         "translation": "to be hungry",
+        "ru_translation": "хотеть есть",
         "future": "θα πεινάσω",
         "past": "πείνασα"
     },
     {
+        "id": 170,
         "verb": "πείθω",
         "translation": "to convince",
+        "ru_translation": "убеждать",
         "future": "θα πείσω",
         "past": "έπεισα"
     },
     {
+        "id": 171,
         "verb": "περιγράφω",
         "translation": "to describe",
+        "ru_translation": "описывать",
         "future": "θα περιγράψω",
         "past": "περίγραψα"
     },
     {
+        "id": 172,
         "verb": "περιλαμβάνω",
         "translation": "to include",
+        "ru_translation": "включать",
         "future": "θα περιλάβω",
         "past": "περίλαβα"
     },
     {
+        "id": 173,
         "verb": "περιμένω",
         "translation": "to wait",
+        "ru_translation": "ждать",
         "future": "θα περιμένω",
         "past": "περίμενα"
     },
     {
+        "id": 174,
         "verb": "περνάω",
         "translation": "to pass, to go through",
+        "ru_translation": "проходить, пересекать",
         "future": "θα περάσω",
         "past": "πέρασα"
     },
     {
+        "id": 175,
         "verb": "περπατάω",
         "translation": "to walk",
+        "ru_translation": "гулять, ходить пешком",
         "future": "θα περπατήσω",
         "past": "περπάτησα"
     },
     {
+        "id": 176,
         "verb": "πετάω",
         "translation": "to fly",
+        "ru_translation": "летать",
         "future": "θα πετάξω",
         "past": "πέταξα"
     },
     {
+        "id": 177,
         "verb": "πέφτω",
         "translation": "to fall",
+        "ru_translation": "падать",
         "future": "θα πέσω",
         "past": "έπεσα"
     },
     {
+        "id": 178,
         "verb": "πηγαίνω",
         "translation": "to go",
+        "ru_translation": "идти",
         "future": "θα πάω",
         "past": "πήγα"
     },
     {
+        "id": 179,
         "verb": "πίνω",
         "translation": "to drink",
+        "ru_translation": "пить",
         "future": "θα πιω",
         "past": "ήπια"
     },
     {
+        "id": 180,
         "verb": "πιστεύω",
         "translation": "to believe",
+        "ru_translation": "верить",
         "future": "θα πιστέψω",
         "past": "πίστεψα"
     },
     {
+        "id": 181,
         "verb": "πλένω",
         "translation": "to wash",
+        "ru_translation": "мыть",
         "future": "θα πλύνω",
         "past": "έπλυνα"
     },
     {
+        "id": 182,
         "verb": "πληρώνω",
         "translation": "to pay",
+        "ru_translation": "платить",
         "future": "θα πληρώσω",
         "past": "πλήρωσα"
     },
     {
+        "id": 183,
         "verb": "πλησιάζω",
         "translation": "to approach",
+        "ru_translation": "приближаться",
         "future": "θα πλησιάσω",
         "past": "πλησίασα"
     },
     {
+        "id": 184,
         "verb": "πνίγομαι",
-        "translation": "to choke, to drawn",
+        "translation": "to choke, to drown",
+        "ru_translation": "задыхаться, тонуть",
         "future": "θα πνιγώ",
         "past": "πνίγηκα"
     },
     {
+        "id": 185,
         "verb": "πονάω",
         "translation": "to hurt, to be in pain",
+        "ru_translation": "болеть, чувствовать боль",
         "future": "θα πονέσω",
         "past": "πόνεσα"
     },
     {
+        "id": 186,
         "verb": "προλαβαίνω",
         "translation": "to catch (on time)",
+        "ru_translation": "успевать",
         "future": "θα προλάβω",
         "past": "πρόλαβα"
     },
     {
+        "id": 187,
         "verb": "προσέχω",
         "translation": "to pay attention",
+        "ru_translation": "обращать внимание",
         "future": "θα προσέξω",
         "past": "πρόσεξα"
     },
     {
+        "id": 188,
         "verb": "προσθέτω",
         "translation": "to add",
+        "ru_translation": "добавлять",
         "future": "θα προσθέσω",
         "past": "πρόσθεσα"
     },
     {
+        "id": 189,
         "verb": "προσπαθώ",
         "translation": "to try",
+        "ru_translation": "пытаться",
         "future": "θα προσπαθήσω",
         "past": "προσπάθησα"
     },
     {
+        "id": 190,
         "verb": "προσκαλώ",
         "translation": "to invite",
+        "ru_translation": "приглашать",
         "future": "θα προσκαλέσω",
         "past": "προσκάλεσα"
     },
     {
+        "id": 191,
         "verb": "προτείνω",
         "translation": "to suggest, to propose",
+        "ru_translation": "предлагать",
         "future": "θα προτείνω",
         "past": "πρότεινα"
     },
     {
+        "id": 192,
         "verb": "προτιμάω",
         "translation": "to prefer",
+        "ru_translation": "предпочитать",
         "future": "θα προτιμήσω",
         "past": "προτίμησα"
     },
     {
+        "id": 193,
         "verb": "πιάνω",
         "translation": "to catch, to grab",
+        "ru_translation": "ловить, хватать",
         "future": "θα πιάσω",
         "past": "έπιασα"
     },
     {
+        "id": 194,
         "verb": "πουλάω",
         "translation": "to sell",
+        "ru_translation": "продавать",
         "future": "θα πουλήσω",
         "past": "πούλησα"
     },
     {
+        "id": 195,
         "verb": "προσφέρω",
         "translation": "to offer",
+        "ru_translation": "предлагать",
         "future": "θα προσφέρω",
         "past": "πρόσφερα"
     },
     {
+        "id": 196,
         "verb": "παρκάρω",
         "translation": "to park",
+        "ru_translation": "парковаться",
         "future": "θα παρκάρω",
-        "past": "πάρκσαρα"
+        "past": "πάρκαρα"
     },
     {
+        "id": 197,
         "verb": "ρίχνω",
         "translation": "to throw, to drop",
+        "ru_translation": "бросать, ронять",
         "future": "θα ρίξω",
         "past": "έριξα"
     },
     {
+        "id": 198,
         "verb": "ρωτάω",
         "translation": "to ask",
+        "ru_translation": "спрашивать",
         "future": "θα ρωτήσω",
         "past": "ρώτησα"
     },
     {
+        "id": 199,
         "verb": "σβήνω",
         "translation": "to rub, to erase",
+        "ru_translation": "стирать, тушить",
         "future": "θα σβήσω",
         "past": "έσβησα"
     },
     {
+        "id": 200,
         "verb": "σερβίρω",
         "translation": "to serve",
+        "ru_translation": "подавать, обслуживать",
         "future": "θα σερβίρω",
         "past": "σερβίρισα"
     },
     {
+        "id": 201,
         "verb": "σημαίνω",
         "translation": "to mean",
+        "ru_translation": "значить, означать",
         "future": "θα σημαίνω",
         "past": "σήμανα"
     },
     {
+        "id": 202,
         "verb": "σημειώνω",
         "translation": "to note, to write down",
+        "ru_translation": "отмечать, записывать",
         "future": "θα σημειώσω",
         "past": "σημείωσα"
     },
     {
+        "id": 203,
         "verb": "σκέφτομαι",
         "translation": "to think",
+        "ru_translation": "думать",
         "future": "θα σκεφτώ",
         "past": "σκέφτηκα"
     },
     {
+        "id": 204,
         "verb": "σκορπίζω",
         "translation": "to scatter",
+        "ru_translation": "разбрасывать, рассыпать",
         "future": "θα σκορπίσω",
         "past": "σκόρπισα"
     },
     {
+        "id": 205,
         "verb": "σκουπίζω",
         "translation": "to sweep, to wipe",
+        "ru_translation": "подметать, вытирать",
         "future": "θα σκουπίσω",
         "past": "σκούπισα"
     },
     {
+        "id": 206,
         "verb": "σπάζω",
         "translation": "to break, to smash",
+        "ru_translation": "ломать, разбивать",
         "future": "θα σπάσω",
         "past": "έσπασα"
     },
     {
+        "id": 207,
         "verb": "σπουδάζω",
         "translation": "to study (at a university)",
+        "ru_translation": "учиться (в университете)",
         "future": "θα σπουδάσω",
         "past": "σπούδασα"
     },
     {
+        "id": 208,
         "verb": "σταματάω",
         "translation": "to stop",
+        "ru_translation": "останавливаться, прекращать",
         "future": "θα σταματήσω",
         "past": "σταμάτησα"
     },
     {
+        "id": 209,
         "verb": "στέλνω",
         "translation": "to send",
+        "ru_translation": "посылать, отправлять",
         "future": "θα στείλω",
         "past": "έστειλα"
     },
     {
+        "id": 210,
         "verb": "στρώνω",
         "translation": "to lay, to set, to spread",
+        "ru_translation": "стелить, накрывать, расстилать",
         "future": "θα στρώσω",
         "past": "έστρωσα"
     },
     {
+        "id": 211,
         "verb": "συγκρίνω",
         "translation": "to compare",
+        "ru_translation": "сравнивать",
         "future": "θα συγκρίνω",
         "past": "σύγκρινα"
     },
     {
+        "id": 212,
         "verb": "συζητάω",
         "translation": "to discuss",
+        "ru_translation": "обсуждать",
         "future": "θα συζητήσω",
         "past": "συζήτησα"
     },
     {
+        "id": 213,
         "verb": "συλλέγω",
         "translation": "to collect",
+        "ru_translation": "собирать, коллекционировать",
         "future": "θα συλλέξω",
         "past": "συνέλεξα"
     },
     {
+        "id": 214,
         "verb": "συμπαθώ",
         "translation": "to like, to sympathize",
+        "ru_translation": "испытывать симпатию, сочувствовать",
         "future": "θα συμπαθήσω",
         "past": "συμπάθησα"
     },
     {
+        "id": 215,
         "verb": "συμφωνώ",
         "translation": "to agree",
+        "ru_translation": "соглашаться",
         "future": "θα συμφωνήσω",
         "past": "συμφώνησα"
     },
     {
+        "id": 216,
         "verb": "συμπληρώνω",
         "translation": "to complete, to fill out",
+        "ru_translation": "заполнять, дополнять",
         "future": "θα συμπληρώσω",
         "past": "συμπλήρωσα"
     },
     {
+        "id": 217,
         "verb": "συναντάω",
         "translation": "to meet",
+        "ru_translation": "встречать, встречаться",
         "future": "θα συναντήσω",
         "past": "συνάντησα"
     },
     {
+        "id": 218,
         "verb": "συνεχίζω",
         "translation": "to continue",
+        "ru_translation": "продолжать",
         "future": "θα συνεχίσω",
         "past": "συνέχισα"
     },
     {
+        "id": 219,
         "verb": "συστήνω",
         "translation": "to introduce, to recommend",
+        "ru_translation": "представлять, рекомендовать",
         "future": "θα συστήσω",
         "past": "σύστησα"
     },
     {
+        "id": 220,
         "verb": "σχεδιάζω",
         "translation": "to design, to plan",
+        "ru_translation": "проектировать, планировать",
         "future": "θα σχεδιάσω",
         "past": "σχεδίασα"
     },
     {
+        "id": 221,
         "verb": "στολίζω",
         "translation": "to decorate",
+        "ru_translation": "украшать",
         "future": "θα στολίσω",
         "past": "στόλισα"
     },
     {
+        "id": 222,
         "verb": "συμβουλεύω",
         "translation": "to advise",
+        "ru_translation": "советовать",
         "future": "θα συμβουλέψω",
         "past": "συμβούλεψα"
     },
     {
+        "id": 223,
         "verb": "συμμετέχω",
         "translation": "to participate",
+        "ru_translation": "участвовать",
         "future": "θα συμμετέχω",
         "past": "συμμετείχα"
     },
     {
+        "id": 224,
         "verb": "συνδέω",
         "translation": "to connect",
+        "ru_translation": "соединять, связывать",
         "future": "θα συνδέσω",
         "past": "σύνδεσα"
     },
     {
+        "id": 225,
         "verb": "σφουγγαρίζω",
         "translation": "to mop",
+        "ru_translation": "мыть пол",
         "future": "θα σφουγγαρίσω",
         "past": "σφουγγάρισα"
     },
     {
+        "id": 226,
         "verb": "σηκώνομαι",
-        "translation": "to get up, to rise",
+        "translation": "to get up, to stand up",
+        "ru_translation": "вставать, подниматься",
         "future": "θα σηκωθώ",
         "past": "σηκώθηκα"
     },
     {
+        "id": 227,
         "verb": "συγχωρώ",
         "translation": "to forgive",
+        "ru_translation": "прощать",
         "future": "θα συγχωρήσω",
         "past": "συγχώρησα"
     },
     {
+        "id": 228,
         "verb": "ταιριάζω",
         "translation": "to match, to suit",
+        "ru_translation": "подходить, сочетаться",
         "future": "θα ταιριάξω",
         "past": "ταίριαξα"
     },
     {
+        "id": 229,
         "verb": "ταξιδεύω",
         "translation": "to travel",
+        "ru_translation": "путешествовать",
         "future": "θα ταξιδέψω",
         "past": "ταξίδεψα"
     },
     {
+        "id": 230,
         "verb": "τελειώνω",
         "translation": "to finish, to end",
+        "ru_translation": "заканчивать",
         "future": "θα τελειώσω",
         "past": "τελείωσα"
     },
     {
+        "id": 231,
         "verb": "τηλεφωνώ",
         "translation": "to call (by phone)",
+        "ru_translation": "звонить (по телефону)",
         "future": "θα τηλεφωνήσω",
         "past": "τηλεφώνησα"
     },
     {
+        "id": 232,
         "verb": "τραγουδάω",
         "translation": "to sing",
+        "ru_translation": "петь",
         "future": "θα τραγουδήσω",
         "past": "τραγούδησα"
     },
     {
+        "id": 233,
         "verb": "τρέχω",
         "translation": "to run",
+        "ru_translation": "бежать",
         "future": "θα τρέξω",
         "past": "έτρεξα"
     },
     {
+        "id": 234,
         "verb": "τρίβω",
         "translation": "to rub",
+        "ru_translation": "тереть",
         "future": "θα τρίψω",
         "past": "έτριψα"
     },
     {
+        "id": 235,
         "verb": "τρώω",
         "translation": "to eat",
+        "ru_translation": "есть",
         "future": "θα φάω",
         "past": "έφαγα"
     },
     {
+        "id": 236,
         "verb": "τηγανίζω",
         "translation": "to fry",
+        "ru_translation": "жарить",
         "future": "θα τηγανίσω",
         "past": "τηγάνισα"
     },
     {
+        "id": 237,
         "verb": "τρακάρω",
         "translation": "to crash",
+        "ru_translation": "врезаться, попасть в аварию",
         "future": "θα τρακάρω",
         "past": "τράκαρα"
     },
     {
+        "id": 238,
         "verb": "τρελαίνομαι",
         "translation": "to go crazy, to lose one's mind",
+        "ru_translation": "сходить с ума",
         "future": "θα τρελαθώ",
         "past": "τρελάθηκα"
     },
     {
+        "id": 239,
         "verb": "τραβάω",
         "translation": "to pull, to drag",
+        "ru_translation": "тянуть, тащить",
         "future": "θα τραβήξω",
         "past": "τράβηξα"
     },
     {
+        "id": 240,
         "verb": "υπάρχω",
         "translation": "to exist",
+        "ru_translation": "существовать",
         "future": "θα υπάρξω",
         "past": "υπήρξα"
     },
     {
+        "id": 241,
         "verb": "υπογραμμίζω",
         "translation": "to underline",
+        "ru_translation": "подчеркивать",
         "future": "θα υπογραμμίσω",
         "past": "υπογράμμισα"
     },
     {
+        "id": 242,
         "verb": "υπογράφω",
         "translation": "to sign",
+        "ru_translation": "подписывать",
         "future": "θα υπογράψω",
         "past": "υπέγραψα"
     },
     {
+        "id": 243,
         "verb": "υπόσχομαι",
         "translation": "to promise",
+        "ru_translation": "обещать",
         "future": "θα υποσχεθώ",
         "past": "υποσχέθηκα"
     },
     {
+        "id": 244,
         "verb": "φαίνομαι",
         "translation": "to seem",
+        "ru_translation": "казаться",
         "future": "θα φανώ",
         "past": "φάνηκα"
     },
     {
+        "id": 245,
         "verb": "φέρνω",
         "translation": "to bring",
+        "ru_translation": "приносить",
         "future": "θα φέρω",
         "past": "έφερα"
     },
     {
+        "id": 246,
         "verb": "φεύγω",
         "translation": "to leave",
+        "ru_translation": "уходить, уезжать",
         "future": "θα φύγω",
         "past": "έφυγα"
     },
     {
+        "id": 247,
         "verb": "φιλάω",
         "translation": "to kiss",
+        "ru_translation": "целовать",
         "future": "θα φιλήσω",
         "past": "φίλησα"
     },
     {
+        "id": 248,
         "verb": "φιλοξενώ",
         "translation": "to host, to accommodate",
+        "ru_translation": "принимать гостей, размещать",
         "future": "θα φιλοξενήσω",
         "past": "φιλοξένησα"
     },
     {
+        "id": 249,
         "verb": "φοβάμαι",
         "translation": "to be afraid",
+        "ru_translation": "бояться",
         "future": "θα φοβηθώ",
         "past": "φοβήθηκα"
     },
     {
+        "id": 250,
         "verb": "φοιτώ",
         "translation": "to attend (school, university)",
+        "ru_translation": "учиться (в школе, университете)",
         "future": "θα φοιτήσω",
         "past": "φοίτησα"
     },
     {
+        "id": 251,
         "verb": "φοράω",
         "translation": "to wear",
+        "ru_translation": "носить (одежду), быть одетым",
         "future": "θα φορέσω",
         "past": "φόρεσα"
     },
     {
+        "id": 252,
         "verb": "φροντίζω",
         "translation": "to take care of",
+        "ru_translation": "заботиться, ухаживать",
         "future": "θα φροντίσω",
         "past": "φρόντισα"
     },
     {
+        "id": 253,
         "verb": "φτάνω",
         "translation": "to arrive, to reach",
+        "ru_translation": "прибывать, достигать",
         "future": "θα φτάσω",
         "past": "έφτασα"
     },
     {
+        "id": 254,
         "verb": "φτιάχνω",
         "translation": "to make, to fix",
+        "ru_translation": "делать, чинить",
         "future": "θα φτιάξω",
         "past": "έφτιαξα"
     },
     {
+        "id": 255,
         "verb": "φυτεύω",
         "translation": "to plant",
+        "ru_translation": "сажать (растения)",
         "future": "θα φυτέψω",
         "past": "φύτεψα"
     },
     {
+        "id": 256,
         "verb": "φυσάω",
         "translation": "to blow (wind)",
+        "ru_translation": "дуть (о ветре)",
         "future": "θα φυσήξω",
         "past": "φύσηξα"
     },
     {
+        "id": 257,
         "verb": "φωτίζω",
         "translation": "to light, to illuminate",
+        "ru_translation": "освещать",
         "future": "θα φωτίσω",
         "past": "φώτισα"
     },
     {
+        "id": 258,
         "verb": "φωνάζω",
         "translation": "to yell",
+        "ru_translation": "кричать, звать",
         "future": "θα φωνάξω",
         "past": "φώναξα"
     },
     {
+        "id": 259,
         "verb": "φταίω",
         "translation": "to be at fault",
+        "ru_translation": "быть виноватым",
         "future": "θα φταίξω",
         "past": "έφταιξα"
     },
     {
+        "id": 260,
         "verb": "χαιρετώ",
         "translation": "to greet",
+        "ru_translation": "приветствовать",
         "future": "θα χαιρετήσω",
         "past": "χαιρέτησα"
     },
     {
+        "id": 261,
         "verb": "χαίρομαι",
         "translation": "to be glad",
+        "ru_translation": "радоваться",
         "future": "θα χαρώ",
         "past": "χάρηκα"
     },
     {
+        "id": 262,
         "verb": "χαλάω",
         "translation": "to break, to ruin, to spoil",
+        "ru_translation": "ломать(ся), портить(ся)",
         "future": "θα χαλάσω",
         "past": "χάλασα"
     },
     {
+        "id": 263,
         "verb": "χάνω",
         "translation": "to lose",
+        "ru_translation": "терять",
         "future": "θα χάσω",
         "past": "έχασα"
     },
     {
+        "id": 264,
         "verb": "χαρίζω",
         "translation": "to give as a gift, to donate",
+        "ru_translation": "дарить, жертвовать",
         "future": "θα χαρίσω",
         "past": "χάρισα"
     },
     {
+        "id": 265,
         "verb": "χορεύω",
         "translation": "to dance",
+        "ru_translation": "танцевать",
         "future": "θα χορέψω",
         "past": "χόρεψα"
     },
     {
+        "id": 266,
         "verb": "χρειάζομαι",
         "translation": "to need",
+        "ru_translation": "нуждаться, быть нужным",
         "future": "θα χρειαστώ",
         "past": "χρειάστηκα"
     },
     {
+        "id": 267,
         "verb": "χρησιμοποιώ",
         "translation": "to use",
+        "ru_translation": "использовать",
         "future": "θα χρησιμοποιήσω",
         "past": "χρησιμοποίησα"
     },
     {
+        "id": 268,
         "verb": "χτυπάω",
         "translation": "to hit, to knock",
+        "ru_translation": "ударять, стучать",
         "future": "θα χτυπήσω",
         "past": "χτύπησα"
     },
     {
+        "id": 269,
         "verb": "χαλαρώνω",
         "translation": "to relax",
+        "ru_translation": "расслабляться",
         "future": "θα χαλαρώσω",
         "past": "χαλάρωσα"
     },
     {
+        "id": 270,
         "verb": "χαμογελάω",
         "translation": "to smile",
+        "ru_translation": "улыбаться",
         "future": "θα χαμογελάσω",
         "past": "χαμογέλασα"
     },
     {
+        "id": 271,
         "verb": "χωρίζω",
         "translation": "to separate, to divorce",
+        "ru_translation": "расставаться, разводиться",
         "future": "θα χωρίσω",
         "past": "χώρισα"
     },
     {
+        "id": 272,
         "verb": "ψάχνω",
         "translation": "to search, to look for",
+        "ru_translation": "искать",
         "future": "θα ψάξω",
         "past": "έψαξα"
     },
     {
+        "id": 273,
         "verb": "ψωνίζω",
         "translation": "to shop, to buy",
+        "ru_translation": "делать покупки, покупать",
         "future": "θα ψωνίσω",
         "past": "ψώνισα"
     },
     {
+        "id": 274,
         "verb": "ψαρεύω",
         "translation": "to fish",
+        "ru_translation": "ловить рыбу",
         "future": "θα ψαρέψω",
         "past": "ψάρεψα"
     },
     {
+        "id": 275,
         "verb": "ψήνω",
         "translation": "to bake, to grill",
+        "ru_translation": "запекать, жарить на гриле",
         "future": "θα ψήσω",
         "past": "έψησα"
     }

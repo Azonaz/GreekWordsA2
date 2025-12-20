@@ -84,94 +84,92 @@ struct QuizView: View {
     }
 
     var body: some View {
-        NavigationStack {
-            ZStack {
-                Color.grayDN.edgesIgnoringSafeArea(.all)
+        ZStack {
+            Color.grayDN.edgesIgnoringSafeArea(.all)
+
+            VStack {
+                Text("\(currentQuestionIndex + 1)/\(max(totalQuestions, 1))")
+                    .frame(maxWidth: .infinity, alignment: .trailing)
+                    .font(sizeClass == .regular
+                          ? .system(size: 28, weight: .semibold)
+                          : .system(size: 18, weight: .semibold))
+                    .padding(.top, -10)
+                    .padding(.trailing, sizeClass == .regular ? 40 : 20)
+
+                Spacer()
 
                 VStack {
-                    Text("\(currentQuestionIndex + 1)/\(max(totalQuestions, 1))")
-                        .frame(maxWidth: .infinity, alignment: .trailing)
-                        .font(sizeClass == .regular
-                              ? .system(size: 28, weight: .semibold)
-                              : .system(size: 18, weight: .semibold))
-                        .padding(.top, -10)
-                        .padding(.trailing, sizeClass == .regular ? 40 : 20)
-
-                    Spacer()
-
-                    VStack {
-                        ForEach(parsedWords, id: \.self) { word in
-                            Text(word)
-                                .foregroundColor(.blackDN)
-                                .font(sizeClass == .regular ? .largeTitle : .title2)
-                                .multilineTextAlignment(.center)
-                                .padding(.bottom, 1)
-                        }
+                    ForEach(parsedWords, id: \.self) { word in
+                        Text(word)
+                            .foregroundColor(.blackDN)
+                            .font(sizeClass == .regular ? .largeTitle : .title2)
+                            .multilineTextAlignment(.center)
+                            .padding(.bottom, 1)
                     }
-                    .frame(width: width, height: sizeClass == .regular ? 180 : 150)
-                    .background(
-                        RoundedRectangle(cornerRadius: 16)
-                            .fill(Color.whiteDN)
+                }
+                .frame(width: width, height: sizeClass == .regular ? 180 : 150)
+                .background(
+                    RoundedRectangle(cornerRadius: 16)
+                        .fill(Color.whiteDN)
+                        .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
+                        .padding(.horizontal, 20)
+                )
+
+                Spacer()
+
+                if options.count == 3 {
+                    ForEach(0..<options.count, id: \.self) { index in
+                        Text(options[index])
+                            .foregroundColor(.blackDN)
+                            .frame(width: width, height: sizeClass == .regular ? 80 : 60)
+                            .background(
+                                RoundedRectangle(cornerRadius: 16)
+                                    .fill(Color.whiteDN)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 16)
+                                            .stroke(
+                                                selectedAnswer == options[index]
+                                                ? (isCorrect == true ? Color.green : Color.red)
+                                                : Color.clear,
+                                                lineWidth: 3
+                                            )
+                                    )
+                            )
+                            .cornerRadius(16)
                             .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
-                            .padding(.horizontal, 20)
-                    )
-
-                    Spacer()
-
-                    if options.count == 3 {
-                        ForEach(0..<options.count, id: \.self) { index in
-                            Text(options[index])
-                                .foregroundColor(.blackDN)
-                                .frame(width: width, height: sizeClass == .regular ? 80 : 60)
-                                .background(
-                                    RoundedRectangle(cornerRadius: 16)
-                                        .fill(Color.whiteDN)
-                                        .overlay(
-                                            RoundedRectangle(cornerRadius: 16)
-                                                .stroke(
-                                                    selectedAnswer == options[index]
-                                                    ? (isCorrect == true ? Color.green : Color.red)
-                                                    : Color.clear,
-                                                    lineWidth: 3
-                                                )
-                                        )
-                                )
-                                .cornerRadius(16)
-                                .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
-                                .font(sizeClass == .regular ? .title : .title3)
-                                .blur(radius: shouldBlurAnswers ? 10 : 0)
-                                .allowsHitTesting(!shouldBlurAnswers)
-                                .onTapGesture {
-                                    if !isButtonDisabled {
-                                        handleAnswerSelection(answer: options[index])
-                                    }
+                            .font(sizeClass == .regular ? .title : .title3)
+                            .blur(radius: shouldBlurAnswers ? 10 : 0)
+                            .allowsHitTesting(!shouldBlurAnswers)
+                            .onTapGesture {
+                                if !isButtonDisabled {
+                                    handleAnswerSelection(answer: options[index])
                                 }
-                                .padding(.top, 5)
-                        }
-                    } else {
-                        ProgressView()
+                            }
+                            .padding(.top, 5)
                     }
+                } else {
+                    ProgressView()
+                }
 
-                    Spacer()
+                Spacer()
+            }
+            .contentShape(Rectangle())
+            .onTapGesture {
+                if shouldBlurAnswers {
+                    isBlurActive = false
                 }
-                .contentShape(Rectangle())
-                .onTapGesture {
-                    if shouldBlurAnswers {
-                        isBlurActive = false
-                    }
-                }
-                .navigationBarBackButtonHidden(true)
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarLeading) {
-                        BackButton()
-                    }
-                    ToolbarItem(placement: .principal) {
-                        Text(title)
-                            .font(sizeClass == .regular ? .largeTitle : .title)
-                            .fontWeight(.semibold)
-                            .frame(maxWidth: .infinity, alignment: .center)
-                    }
-                }
+            }
+        }
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                BackButton()
+            }
+            ToolbarItem(placement: .principal) {
+                Text(title)
+                    .font(sizeClass == .regular ? .largeTitle : .title)
+                    .fontWeight(.semibold)
+                    .frame(maxWidth: .infinity, alignment: .center)
             }
         }
         .task(id: group?.id) {

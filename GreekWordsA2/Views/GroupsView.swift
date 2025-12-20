@@ -20,63 +20,61 @@ struct GroupsView: View {
     }
 
     var body: some View {
-        NavigationStack {
-            ZStack {
-                Color.grayDN
-                    .edgesIgnoringSafeArea(.all)
+        ZStack {
+            Color.grayDN
+                .edgesIgnoringSafeArea(.all)
 
-                List {
-                    ForEach(Array(groups.enumerated()), id: \.element.id) { index, group in
-                        NavigationLink {
-                            QuizView(viewModel: viewModel, group: group, mode: quizMode)
-                        } label: {
-                            HStack {
-                                formattedTitle(for: group)
-                                    .font(sizeClass == .regular ? .title : .title3)
-                                Spacer()
-                            }
-                            .padding(.top, 4)
+            List {
+                ForEach(Array(groups.enumerated()), id: \.element.id) { index, group in
+                    NavigationLink {
+                        QuizView(viewModel: viewModel, group: group, mode: quizMode)
+                    } label: {
+                        HStack {
+                            formattedTitle(for: group)
+                                .font(sizeClass == .regular ? .title : .title3)
+                            Spacer()
                         }
-                        .listRowInsets(EdgeInsets(top: 10, leading: 8, bottom: 10, trailing: 16))
-                        .listRowBackground(Color.whiteDN)
-                        .listRowSeparator(.hidden)
-                        .overlay(
-                            Rectangle()
-                                .frame(height: 1)
-                                .foregroundColor(
-                                    index == groups.indices.last
-                                    ? Color.whiteDN
-                                    : Color.greenUniversal.opacity(0.3)
-                                )
-                                .offset(y: 21)
-                        )
+                        .padding(.top, 4)
                     }
-                }
-                .listStyle(.plain)
-                .scrollIndicators(.hidden)
-                .scrollContentBackground(.hidden)
-                .padding(.horizontal)
-                .background(
-                    RoundedRectangle(cornerRadius: 16)
-                        .fill(Color.whiteDN)
-                )
-                .padding()
-                .foregroundColor(.blackDN)
-            }
-            .navigationBarBackButtonHidden(true)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    BackButton()
-                }
-                ToolbarItem(placement: .principal) {
-                    Text(Texts.categories)
-                        .font(sizeClass == .regular ? .largeTitle : .title)
-                        .fontWeight(.semibold)
-                        .frame(maxWidth: .infinity, alignment: .center)
+                    .listRowInsets(EdgeInsets(top: 10, leading: 8, bottom: 10, trailing: 16))
+                    .listRowBackground(Color.whiteDN)
+                    .listRowSeparator(.hidden)
+                    .overlay(
+                        Rectangle()
+                            .frame(height: 1)
+                            .foregroundColor(
+                                index == groups.indices.last
+                                ? Color.whiteDN
+                                : Color.greenUniversal.opacity(0.3)
+                            )
+                            .offset(y: 21)
+                    )
                 }
             }
-            .onSwipeDismiss()
+            .listStyle(.plain)
+            .scrollIndicators(.hidden)
+            .scrollContentBackground(.hidden)
+            .padding(.horizontal)
+            .background(
+                RoundedRectangle(cornerRadius: 16)
+                    .fill(Color.whiteDN)
+            )
+            .padding()
+            .foregroundColor(.blackDN)
         }
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                BackButton()
+            }
+            ToolbarItem(placement: .principal) {
+                Text(Texts.categories)
+                    .font(sizeClass == .regular ? .largeTitle : .title)
+                    .fontWeight(.semibold)
+                    .frame(maxWidth: .infinity, alignment: .center)
+            }
+        }
+        .onSwipeDismiss()
     }
 
     private func formattedTitle(for group: GroupMeta) -> some View {
