@@ -100,12 +100,9 @@ struct WordDayGameView: View {
         .onChange(of: scenePhase) {
             guard scenePhase == .active else { return }
 
-            let today = viewModel.getCurrentDate()
             viewModel.setWordForCurrentDate()
-
-            if today != UserDefaults.standard.string(forKey: "lastPlayedDate") {
-                isWordAlreadySolvedForToday = false
-            }
+            let today = viewModel.getCurrentDate()
+            isWordAlreadySolvedForToday = StatsService.isWordDayCompleted(dateString: today)
         }
         .onSwipeDismiss()
     }

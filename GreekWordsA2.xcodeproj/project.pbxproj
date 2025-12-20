@@ -37,6 +37,9 @@
 		8493DD9B2EF3F4A200AA477F /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493DD982EF3F4A200AA477F /* StatisticsView.swift */; };
 		8493DD9D2EF43EF100AA477F /* QuizStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493DD9C2EF43EF000AA477F /* QuizStats.swift */; };
 		8493DDA42EF4406C00AA477F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8493DDA22EF4406900AA477F /* Localizable.strings */; };
+		84A0A39F2EF6EB16008D352B /* TrainingPaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A0A39E2EF6EB14008D352B /* TrainingPaywallView.swift */; };
+		84A0A3A12EF6EB54008D352B /* PurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A0A3A02EF6EB53008D352B /* PurchaseManager.swift */; };
+		84A0A3A32EF6EB6A008D352B /* TrainingAccessManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A0A3A22EF6EB6A008D352B /* TrainingAccessManager.swift */; };
 		84A7920D2C5D132300848517 /* WordsDayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A7920C2C5D132300848517 /* WordsDayViewModel.swift */; };
 		84ADEBA12EF1C4D000F67052 /* TrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ADEBA02EF1C4C800F67052 /* TrainingView.swift */; };
 		84AF1F6B2EF2E50A00A7B3D7 /* SwiftDataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF1F6A2EF2E50600A7B3D7 /* SwiftDataModels.swift */; };
@@ -81,6 +84,9 @@
 		8493DD9C2EF43EF000AA477F /* QuizStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizStats.swift; sourceTree = "<group>"; };
 		8493DDA12EF4406900AA477F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8493DDA32EF4406C00AA477F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		84A0A39E2EF6EB14008D352B /* TrainingPaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingPaywallView.swift; sourceTree = "<group>"; };
+		84A0A3A02EF6EB53008D352B /* PurchaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseManager.swift; sourceTree = "<group>"; };
+		84A0A3A22EF6EB6A008D352B /* TrainingAccessManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingAccessManager.swift; sourceTree = "<group>"; };
 		84A7920C2C5D132300848517 /* WordsDayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsDayViewModel.swift; sourceTree = "<group>"; };
 		84ADEBA02EF1C4C800F67052 /* TrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingView.swift; sourceTree = "<group>"; };
 		84AF1F6A2EF2E50600A7B3D7 /* SwiftDataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataModels.swift; sourceTree = "<group>"; };
@@ -111,6 +117,8 @@
 				84AF1F6F2EF2E98000A7B3D7 /* VocabularyStore.swift */,
 				8475FC1A2EF58DD30021EB60 /* TrainingScheduler.swift */,
 				8475FC182EF56A200021EB60 /* StatsService.swift */,
+				84A0A3A02EF6EB53008D352B /* PurchaseManager.swift */,
+				84A0A3A22EF6EB6A008D352B /* TrainingAccessManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -138,6 +146,7 @@
 				8483E0B52EF40C2C00D1EE11 /* ChooseButtonLabel.swift */,
 				849217B22C2028DE00C84401 /* GroupsView.swift */,
 				84D675342C2191C5003DBC2A /* QuizView.swift */,
+				84A0A39E2EF6EB14008D352B /* TrainingPaywallView.swift */,
 				84ADEBA02EF1C4C800F67052 /* TrainingView.swift */,
 				8475FC1E2EF58EA80021EB60 /* TrainingView+Layouts.swift */,
 				8475FC202EF58EBB0021EB60 /* TrainingView+Loading.swift */,
@@ -320,6 +329,7 @@
 				84AF1F702EF2E98100A7B3D7 /* VocabularyStore.swift in Sources */,
 				84D675352C2191C5003DBC2A /* QuizView.swift in Sources */,
 				849217B62C202C2C00C84401 /* GroupsViewModel.swift in Sources */,
+				84A0A3A12EF6EB54008D352B /* PurchaseManager.swift in Sources */,
 				844032CB2DB14AB800A52B39 /* VerbModel.swift in Sources */,
 				84F8A2022D00000100AA55AA /* WordDayGameView.swift in Sources */,
 				84420A942C416154008A6F79 /* WordDayView.swift in Sources */,
@@ -327,6 +337,7 @@
 				8493DD9D2EF43EF100AA477F /* QuizStats.swift in Sources */,
 				8488B11F2C11BB9F0044D455 /* ChooseTypeView.swift in Sources */,
 				842489482C17346D0060FE60 /* WordService.swift in Sources */,
+				84A0A39F2EF6EB16008D352B /* TrainingPaywallView.swift in Sources */,
 				8475FC1B2EF58DD40021EB60 /* TrainingScheduler.swift in Sources */,
 				8475FC232EF595270021EB60 /* RatingExtension.swift in Sources */,
 				8488B11D2C11BB9F0044D455 /* GreekWordsA2App.swift in Sources */,
@@ -342,6 +353,7 @@
 				8483E0B62EF40C2C00D1EE11 /* ChooseButtonLabel.swift in Sources */,
 				8493DD992EF3F4A200AA477F /* InfoView.swift in Sources */,
 				8493DD9A2EF3F4A200AA477F /* SettingsView.swift in Sources */,
+				84A0A3A32EF6EB6A008D352B /* TrainingAccessManager.swift in Sources */,
 				8493DD9B2EF3F4A200AA477F /* StatisticsView.swift in Sources */,
 				8475FC1F2EF58EA90021EB60 /* TrainingView+Layouts.swift in Sources */,
 			);

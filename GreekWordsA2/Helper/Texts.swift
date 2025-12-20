@@ -132,4 +132,12 @@ enum Texts {
     static var seenVerbs: String {
         NSLocalizedString("seenVerbs", comment: "")
     }
+
+    static var wordDayStreak: String {
+        NSLocalizedString("wordDayStreak", comment: "")
+    }
+
+    static var wordDayCompleted: String {
+        NSLocalizedString("wordDayCompleted", comment: "")
+    }
 }

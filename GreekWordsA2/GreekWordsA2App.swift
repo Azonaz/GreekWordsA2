@@ -4,6 +4,8 @@ import SwiftData
 @main
 struct GreekWordsA2App: App {
     @State private var showLaunchScreen = true
+    @StateObject private var trainingAccess = TrainingAccessManager()
+    @StateObject private var purchaseManager = PurchaseManager()
     private let container: ModelContainer
 
     init() {
@@ -31,6 +33,8 @@ struct GreekWordsA2App: App {
                     }
             } else {
                 ChooseTypeView()
+                    .environmentObject(trainingAccess)
+                    .environmentObject(purchaseManager)
             }
         }
         .modelContainer(container)

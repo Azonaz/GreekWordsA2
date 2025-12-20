@@ -19,8 +19,6 @@ struct WordDayView: View {
     @State private var isTextVisible = false
     @Binding var isWordAlreadySolvedForToday: Bool
     @Environment(\.horizontalSizeClass) var sizeClass
-    private let userDefaults = UserDefaults.standard
-    private let solvedDateKey = "solvedDate"
     private let feedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
     private var radius: CGFloat {
         return sizeClass == .regular ? 180 : 110
@@ -250,7 +248,7 @@ struct WordDayView: View {
 
     private func saveSolvedDate() {
         let today = viewModel.getCurrentDate()
-        userDefaults.set(today, forKey: solvedDateKey)
+        StatsService.recordWordDayCompletion(dateString: today)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
             isWordAlreadySolvedForToday = true
             isTextVisible = false
@@ -259,11 +257,7 @@ struct WordDayView: View {
 
     private func checkIfWordSolvedToday() {
         let today = viewModel.getCurrentDate()
-        if let savedDate = userDefaults.string(forKey: solvedDateKey) {
-            isWordAlreadySolvedForToday = (savedDate == today)
-        } else {
-            isWordAlreadySolvedForToday = false
-        }
+        isWordAlreadySolvedForToday = StatsService.isWordDayCompleted(dateString: today)
     }
 }
 // swiftlint:enable identifier_name

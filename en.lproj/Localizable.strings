@@ -92,3 +92,5 @@ To open a group, complete at least one topic in the Quiz section.";
 "past" = "shows something that happened once in the past and is finished. It doesn't say when or how long. It's like Simple Past in English.";
 "totalVerbs" = "Total verbs";
 "seenVerbs" = "Verbs seen";
+"wordDayStreak" = "Streak";
+"wordDayCompleted" = "Days completed";
