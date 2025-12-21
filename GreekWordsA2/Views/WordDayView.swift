@@ -24,7 +24,7 @@ struct WordDayView: View {
         return sizeClass == .regular ? 180 : 110
     }
     private var paddingHorizontal: CGFloat {
-        sizeClass == .regular ? 160 : 80
+        sizeClass == .regular ? 40 : 24
     }
 
     var body: some View {
@@ -98,20 +98,33 @@ struct WordDayView: View {
     }
 
     private func createSolvedWordView(screenWidth: CGFloat, screenHeight: CGFloat) -> some View {
-        VStack {
+        let viewWidth = max(screenWidth - paddingHorizontal * 2, CGFloat(240))
+        let verticalPadding: CGFloat = sizeClass == .regular ? 20 : 14
+        let horizontalPadding: CGFloat = sizeClass == .regular ? 20 : 14
+        let minHeight: CGFloat = sizeClass == .regular ? 160 : 130
+
+        return VStack {
             Text(viewModel.grWord)
                 .foregroundColor(.blackDN)
                 .font(sizeClass == .regular ? .largeTitle : .title)
-                .padding(.bottom, sizeClass == .regular ? 20 : 10)
+                .lineLimit(2)
+                .multilineTextAlignment(.center)
+                .minimumScaleFactor(0.6)
+                .padding(.bottom, sizeClass == .regular ? 12 : 8)
 
             Text(viewModel.enWord)
                 .foregroundColor(.blackDN)
                 .font(sizeClass == .regular ? .title2 : .title3)
+                .lineLimit(2)
+                .multilineTextAlignment(.center)
+                .minimumScaleFactor(0.6)
         }
-        .frame(height: 150)
-        .padding(.horizontal, paddingHorizontal)
+        .padding(.vertical, verticalPadding)
+        .padding(.horizontal, horizontalPadding)
+        .frame(width: viewWidth)
+        .frame(minHeight: minHeight)
         .background(Color.whiteDN)
-        .cornerRadius(16)
+        .cornerRadius(sizeClass == .regular ? 20 : 16)
         .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
         .position(x: screenWidth / 2, y: screenHeight / 2)
     }
