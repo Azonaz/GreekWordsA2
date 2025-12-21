@@ -19,6 +19,7 @@ struct QuizView: View {
     @AppStorage("isBlurEnabled") private var isBlurEnabled = false
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.horizontalSizeClass) var sizeClass
+    @Environment(\.verticalSizeClass) var vSizeClass
     @Environment(\.locale) private var locale
 
     let group: GroupMeta?
@@ -83,6 +84,14 @@ struct QuizView: View {
         isBlurEnabled && isBlurActive
     }
 
+    private var isPhoneLandscape: Bool {
+        UIDevice.current.userInterfaceIdiom == .phone && vSizeClass == .compact
+    }
+
+    private var landscapeWidth: CGFloat {
+        UIScreen.main.bounds.width * 0.45
+    }
+
     var body: some View {
         ZStack {
             Color.grayDN.edgesIgnoringSafeArea(.all)
@@ -98,57 +107,23 @@ struct QuizView: View {
 
                 Spacer()
 
-                VStack {
-                    ForEach(parsedWords, id: \.self) { word in
-                        Text(word)
-                            .foregroundColor(.blackDN)
-                            .font(sizeClass == .regular ? .largeTitle : .title2)
-                            .multilineTextAlignment(.center)
-                            .padding(.bottom, 1)
-                    }
-                }
-                .frame(width: width, height: sizeClass == .regular ? 180 : 150)
-                .background(
-                    RoundedRectangle(cornerRadius: 16)
-                        .fill(Color.whiteDN)
-                        .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
-                        .padding(.horizontal, 20)
-                )
+                if isPhoneLandscape {
+                    HStack(spacing: 20) {
+                        questionCard(width: landscapeWidth)
+                            .frame(maxHeight: .infinity, alignment: .center)
 
-                Spacer()
-
-                if options.count == 3 {
-                    ForEach(0..<options.count, id: \.self) { index in
-                        Text(options[index])
-                            .foregroundColor(.blackDN)
-                            .frame(width: width, height: sizeClass == .regular ? 80 : 60)
-                            .background(
-                                RoundedRectangle(cornerRadius: 16)
-                                    .fill(Color.whiteDN)
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 16)
-                                            .stroke(
-                                                selectedAnswer == options[index]
-                                                ? (isCorrect == true ? Color.green : Color.red)
-                                                : Color.clear,
-                                                lineWidth: 3
-                                            )
-                                    )
-                            )
-                            .cornerRadius(16)
-                            .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
-                            .font(sizeClass == .regular ? .title : .title3)
-                            .blur(radius: shouldBlurAnswers ? 10 : 0)
-                            .allowsHitTesting(!shouldBlurAnswers)
-                            .onTapGesture {
-                                if !isButtonDisabled {
-                                    handleAnswerSelection(answer: options[index])
-                                }
-                            }
-                            .padding(.top, 5)
+                        VStack(spacing: 12) {
+                            answersSection(width: landscapeWidth)
+                        }
+                        .frame(maxHeight: .infinity, alignment: .center)
                     }
+                    .padding(.horizontal, 20)
                 } else {
-                    ProgressView()
+                    questionCard(width: width)
+
+                    Spacer()
+
+                    answersSection(width: width)
                 }
 
                 Spacer()
@@ -192,9 +167,72 @@ struct QuizView: View {
             )
         }
     }
+}
+
+private extension QuizView {
+    @ViewBuilder
+    func questionCard(width: CGFloat) -> some View {
+        VStack {
+            ForEach(parsedWords, id: \.self) { word in
+                Text(word)
+                    .foregroundColor(.blackDN)
+                    .font(sizeClass == .regular ? .largeTitle : .title2)
+                    .multilineTextAlignment(.center)
+                    .padding(.bottom, 1)
+            }
+        }
+        .frame(width: width, height: sizeClass == .regular ? 180 : 150)
+        .background(
+            RoundedRectangle(cornerRadius: 16)
+                .fill(Color.whiteDN)
+                .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
+                .padding(.horizontal, 20)
+        )
+    }
+
+    @ViewBuilder
+    func answersSection(width: CGFloat) -> some View {
+        if options.count == 3 {
+            ForEach(0..<options.count, id: \.self) { index in
+                answerButton(text: options[index], width: width, isFirst: index == 0)
+            }
+        } else {
+            ProgressView()
+        }
+    }
+
+    func answerButton(text: String, width: CGFloat, isFirst: Bool) -> some View {
+        Text(text)
+            .foregroundColor(.blackDN)
+            .frame(width: width, height: sizeClass == .regular ? 80 : 60)
+            .background(
+                RoundedRectangle(cornerRadius: 16)
+                    .fill(Color.whiteDN)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 16)
+                            .stroke(
+                                selectedAnswer == text
+                                ? (isCorrect == true ? Color.green : Color.red)
+                                : Color.clear,
+                                lineWidth: 3
+                            )
+                    )
+            )
+            .cornerRadius(16)
+            .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
+            .font(sizeClass == .regular ? .title : .title3)
+            .blur(radius: shouldBlurAnswers ? 10 : 0)
+            .allowsHitTesting(!shouldBlurAnswers)
+            .onTapGesture {
+                if !isButtonDisabled {
+                    handleAnswerSelection(answer: text)
+                }
+            }
+            .padding(.top, isFirst ? 0 : 5)
+    }
 
     @MainActor
-    private func startQuiz() async {
+    func startQuiz() async {
         let roundCount = await viewModel.prepareRound(modelContext: modelContext, group: group, count: 10)
 
         totalQuestions = roundCount
@@ -213,7 +251,7 @@ struct QuizView: View {
         }
     }
 
-    private func handleAnswerSelection(answer: String) {
+    func handleAnswerSelection(answer: String) {
         selectedAnswer = answer
         let correctText = correctAnswer
         isCorrect = (correctText == selectedAnswer)
@@ -238,17 +276,17 @@ struct QuizView: View {
         }
     }
 
-    private func updateQuizContent() {
+    func updateQuizContent() {
         questionWord = viewModel.nextWord(for: mode, isEnglish: isEnglish)
         options = viewModel.optionsForCurrentWord(using: locale, mode: mode)
         isBlurActive = isBlurEnabled
     }
 
-    private func resetQuiz() {
+    func resetQuiz() {
         Task { await startQuiz() }
     }
 
-    private var correctAnswer: String? {
+    var correctAnswer: String? {
         guard let correct = viewModel.correctWord else { return nil }
 
         switch mode {
@@ -259,12 +297,12 @@ struct QuizView: View {
         }
     }
 
-    private func calculateScorePercent() -> Int {
+    func calculateScorePercent() -> Int {
         guard totalQuestions > 0 else { return 0 }
         return Int((Double(correctAnswersCount) / Double(totalQuestions)) * 100)
     }
 
-    private func recordQuizStats(scorePercent: Int) {
+    func recordQuizStats(scorePercent: Int) {
         let container = modelContext.container
         Task.detached(priority: .background) {
             await StatsService.recordQuizResult(score: scorePercent, container: container)
