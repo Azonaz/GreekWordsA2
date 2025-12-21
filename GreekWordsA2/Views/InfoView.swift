@@ -50,6 +50,7 @@ struct InfoView: View {
             }
             .listStyle(.insetGrouped)
         }
+        .navigationBarBackButtonHidden(true)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 BackButton()
@@ -61,5 +62,6 @@ struct InfoView: View {
                     .frame(maxWidth: .infinity, alignment: .center)
             }
         }
+        .onSwipeDismiss()
     }
 }

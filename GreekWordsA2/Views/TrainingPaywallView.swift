@@ -15,10 +15,6 @@ struct TrainingPaywallView: View {
         sizeClass == .regular ? 120 : 90
     }
 
-    private var cornerRadius: CGFloat {
-        sizeClass == .regular ? 50 : 40
-    }
-
     private var horizontalPadding: CGFloat {
         sizeClass == .regular ? 100 : 60
     }
@@ -62,20 +58,21 @@ struct TrainingPaywallView: View {
                             VStack(spacing: 4) {
                                 Text(Texts.unlockFor)
                                     .font(sizeClass == .regular ? .title2 : .title3)
-                                    .foregroundColor(.primary)
+                                    .foregroundColor(.blackDN)
 
                                 Text(product.displayPrice)
                                     .font(sizeClass == .regular ? .largeTitle : .title)
                                     .fontWeight(.semibold)
-                                    .foregroundColor(.primary)
+                                    .foregroundColor(.blackDN)
                             }
-                            .frame(maxWidth: .infinity)
+                            .modifier(PaywallButtonStyle(height: buttonHeight))
                         }
                         .disabled(purchasing)
 
                     } else {
                         ProgressView(Texts.loadPrice)
-                            .frame(maxWidth: .infinity)
+                            .foregroundColor(.blackDN)
+                            .modifier(PaywallButtonStyle(height: buttonHeight))
                     }
                 }
                 .padding(.horizontal, horizontalPadding)
@@ -103,8 +100,24 @@ struct TrainingPaywallView: View {
                     .frame(maxWidth: .infinity, alignment: .center)
             }
         }
+        .onSwipeDismiss()
         .onReceive(purchaseManager.$products) { products in
             product = products.first(where: { $0.id == "unlock_training_access" })
         }
+    }
+}
+
+private struct PaywallButtonStyle: ViewModifier {
+    let height: CGFloat
+
+    func body(content: Content) -> some View {
+        content
+            .multilineTextAlignment(.center)
+            .frame(height: height)
+            .frame(maxWidth: .infinity)
+            .padding(.horizontal, 12)
+            .background(Color.whiteDN)
+            .cornerRadius(16)
+            .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
     }
 }

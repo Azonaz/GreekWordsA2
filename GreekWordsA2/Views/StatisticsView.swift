@@ -141,7 +141,7 @@ struct StatisticsView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 20) {
                     Text(Texts.quiz)
-                        .font(sizeClass == .regular ? .largeTitle : .title)
+                        .font(sizeClass == .regular ? .title : .title2)
                         .fontWeight(.semibold)
                         .foregroundColor(.blackDN)
                         .padding(.top, 8)
@@ -153,7 +153,7 @@ struct StatisticsView: View {
                     }
 
                     Text(Texts.training)
-                        .font(sizeClass == .regular ? .largeTitle : .title)
+                        .font(sizeClass == .regular ? .title : .title2)
                         .fontWeight(.semibold)
                         .foregroundColor(.blackDN)
 
@@ -164,7 +164,7 @@ struct StatisticsView: View {
                     }
 
                     Text(Texts.verbs)
-                        .font(sizeClass == .regular ? .largeTitle : .title)
+                        .font(sizeClass == .regular ? .title : .title2)
                         .fontWeight(.semibold)
                         .foregroundColor(.blackDN)
 
@@ -175,7 +175,7 @@ struct StatisticsView: View {
                     }
 
                     Text(Texts.wordDay)
-                        .font(sizeClass == .regular ? .largeTitle : .title)
+                        .font(sizeClass == .regular ? .title : .title2)
                         .fontWeight(.semibold)
                         .foregroundColor(.blackDN)
 
