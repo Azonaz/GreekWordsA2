@@ -38,12 +38,8 @@ struct VerbView: View {
             verbs.shuffle()
             markCurrentVerbSeen()
         }
-        .onSwipeDismiss()
         .navigationBarBackButtonHidden(true)
         .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                BackButton()
-            }
             ToolbarItem(placement: .principal) {
                 Text(Texts.verbs)
                     .font(sizeClass == .regular ? .largeTitle : .title)

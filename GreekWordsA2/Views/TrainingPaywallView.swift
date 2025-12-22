@@ -90,9 +90,6 @@ struct TrainingPaywallView: View {
         }
         .navigationBarBackButtonHidden(true)
         .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                BackButton()
-            }
             ToolbarItem(placement: .principal) {
                 Text(Texts.trainingAccess)
                     .font(sizeClass == .regular ? .largeTitle : .title)
@@ -100,7 +97,6 @@ struct TrainingPaywallView: View {
                     .frame(maxWidth: .infinity, alignment: .center)
             }
         }
-        .onSwipeDismiss()
         .onReceive(purchaseManager.$products) { products in
             product = products.first(where: { $0.id == "unlock_training_access" })
         }

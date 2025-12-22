@@ -137,9 +137,6 @@ struct QuizView: View {
         }
         .navigationBarBackButtonHidden(true)
         .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                BackButton()
-            }
             ToolbarItem(placement: .principal) {
                 Text(title)
                     .font(sizeClass == .regular ? .largeTitle : .title)
@@ -150,7 +147,6 @@ struct QuizView: View {
         .task(id: group?.id) {
             await startQuiz()
         }
-        .onSwipeDismiss()
         .onChange(of: isBlurEnabled) { _, newValue in
             isBlurActive = newValue
         }

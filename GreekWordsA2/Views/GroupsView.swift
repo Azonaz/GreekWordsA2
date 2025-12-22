@@ -62,11 +62,7 @@ struct GroupsView: View {
             .padding()
             .foregroundColor(.blackDN)
         }
-        .navigationBarBackButtonHidden(true)
         .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                BackButton()
-            }
             ToolbarItem(placement: .principal) {
                 Text(Texts.categories)
                     .font(sizeClass == .regular ? .largeTitle : .title)
@@ -74,7 +70,6 @@ struct GroupsView: View {
                     .frame(maxWidth: .infinity, alignment: .center)
             }
         }
-        .onSwipeDismiss()
     }
 
     private func formattedTitle(for group: GroupMeta) -> some View {

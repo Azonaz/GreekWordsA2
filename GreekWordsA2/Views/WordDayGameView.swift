@@ -84,9 +84,6 @@ struct WordDayGameView: View {
         }
         .navigationBarBackButtonHidden(true)
         .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                BackButton()
-            }
             ToolbarItem(placement: .principal) {
                 Text(Texts.wordDay)
                     .font(sizeClass == .regular ? .largeTitle : .title)
@@ -104,6 +101,5 @@ struct WordDayGameView: View {
             let today = viewModel.getCurrentDate()
             isWordAlreadySolvedForToday = StatsService.isWordDayCompleted(dateString: today)
         }
-        .onSwipeDismiss()
     }
 }

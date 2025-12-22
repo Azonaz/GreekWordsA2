@@ -36,11 +36,7 @@ struct LevelsView: View {
             }
             .padding()
         }
-        .navigationBarBackButtonHidden(true)
         .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                BackButton()
-            }
             ToolbarItem(placement: .principal) {
                 Text(Texts.levels)
                     .font(sizeClass == .regular ? .largeTitle : .title)
@@ -48,7 +44,6 @@ struct LevelsView: View {
                     .frame(maxWidth: .infinity, alignment: .center)
             }
         }
-        .onSwipeDismiss()
         .background(Color.grayDN)
     }
 }

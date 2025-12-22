@@ -191,9 +191,6 @@ struct StatisticsView: View {
         }
         .navigationBarBackButtonHidden(true)
         .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                BackButton()
-            }
             ToolbarItem(placement: .principal) {
                 Text(Texts.statistics)
                     .font(sizeClass == .regular ? .largeTitle : .title)
@@ -201,7 +198,6 @@ struct StatisticsView: View {
                     .frame(maxWidth: .infinity, alignment: .center)
             }
         }
-        .onSwipeDismiss()
     }
 }
 

@@ -96,9 +96,6 @@ struct TrainingView: View {
         }
         .navigationBarBackButtonHidden(true)
         .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                BackButton()
-            }
             ToolbarItem(placement: .principal) {
                 Text(Texts.training)
                     .font(sizeClass == .regular ? .largeTitle : .title)

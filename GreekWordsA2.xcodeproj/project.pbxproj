@@ -32,7 +32,6 @@
 		8488B1242C11BBA00044D455 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8488B1232C11BBA00044D455 /* Preview Assets.xcassets */; };
 		849217B32C2028DE00C84401 /* GroupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849217B22C2028DE00C84401 /* GroupsView.swift */; };
 		849217B62C202C2C00C84401 /* GroupsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849217B52C202C2C00C84401 /* GroupsViewModel.swift */; };
-		849217BA2C20318B00C84401 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849217B92C20318B00C84401 /* BackButton.swift */; };
 		8493DD992EF3F4A200AA477F /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493DD962EF3F4A200AA477F /* InfoView.swift */; };
 		8493DD9A2EF3F4A200AA477F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493DD972EF3F4A200AA477F /* SettingsView.swift */; };
 		8493DD9B2EF3F4A200AA477F /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493DD982EF3F4A200AA477F /* StatisticsView.swift */; };
@@ -47,7 +46,6 @@
 		84AF1F6E2EF2E5A400A7B3D7 /* FSRS in Frameworks */ = {isa = PBXBuildFile; productRef = 84AF1F6D2EF2E5A400A7B3D7 /* FSRS */; };
 		84AF1F702EF2E98100A7B3D7 /* VocabularyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF1F6F2EF2E98000A7B3D7 /* VocabularyStore.swift */; };
 		84D675352C2191C5003DBC2A /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D675342C2191C5003DBC2A /* QuizView.swift */; };
-		84E39EA72DBFBCF7009A7BC9 /* SwipeDismissModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E39EA62DBFBCF7009A7BC9 /* SwipeDismissModifier.swift */; };
 		84F2B03B2C9DC6F5008A9774 /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F2B03A2C9DC6F5008A9774 /* LaunchScreenView.swift */; };
 		84F8A2022D00000100AA55AA /* WordDayGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8A2012D00000100AA55AA /* WordDayGameView.swift */; };
 /* End PBXBuildFile section */
@@ -79,7 +77,6 @@
 		8488B1232C11BBA00044D455 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		849217B22C2028DE00C84401 /* GroupsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsView.swift; sourceTree = "<group>"; };
 		849217B52C202C2C00C84401 /* GroupsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewModel.swift; sourceTree = "<group>"; };
-		849217B92C20318B00C84401 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		8493DD962EF3F4A200AA477F /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		8493DD972EF3F4A200AA477F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		8493DD982EF3F4A200AA477F /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
@@ -95,7 +92,6 @@
 		84AF1F6A2EF2E50600A7B3D7 /* SwiftDataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataModels.swift; sourceTree = "<group>"; };
 		84AF1F6F2EF2E98000A7B3D7 /* VocabularyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularyStore.swift; sourceTree = "<group>"; };
 		84D675342C2191C5003DBC2A /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
-		84E39EA62DBFBCF7009A7BC9 /* SwipeDismissModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeDismissModifier.swift; sourceTree = "<group>"; };
 		84F2B03A2C9DC6F5008A9774 /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 		84F8A2012D00000100AA55AA /* WordDayGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDayGameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,7 +141,6 @@
 				8493DD972EF3F4A200AA477F /* SettingsView.swift */,
 				8474C6AC2EF940D000DAD7C5 /* LevelsView.swift */,
 				8493DD982EF3F4A200AA477F /* StatisticsView.swift */,
-				849217B92C20318B00C84401 /* BackButton.swift */,
 				8488B11E2C11BB9F0044D455 /* ChooseTypeView.swift */,
 				8483E0B52EF40C2C00D1EE11 /* ChooseButtonLabel.swift */,
 				849217B22C2028DE00C84401 /* GroupsView.swift */,
@@ -170,7 +165,6 @@
 				8475FC242EF59E5D0021EB60 /* Texts.swift */,
 				8455960B2DBCD4C500FB27F7 /* TextExtension.swift */,
 				8475FC222EF595270021EB60 /* RatingExtension.swift */,
-				84E39EA62DBFBCF7009A7BC9 /* SwipeDismissModifier.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -324,11 +318,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				849217BA2C20318B00C84401 /* BackButton.swift in Sources */,
 				841E13E32DB7CDA500DFD07C /* VerbCardView.swift in Sources */,
 				84F2B03B2C9DC6F5008A9774 /* LaunchScreenView.swift in Sources */,
 				849217B32C2028DE00C84401 /* GroupsView.swift in Sources */,
-				84E39EA72DBFBCF7009A7BC9 /* SwipeDismissModifier.swift in Sources */,
 				8455960C2DBCD4C500FB27F7 /* TextExtension.swift in Sources */,
 				84420A922C415FEB008A6F79 /* CharViewForGame.swift in Sources */,
 				84AF1F702EF2E98100A7B3D7 /* VocabularyStore.swift in Sources */,

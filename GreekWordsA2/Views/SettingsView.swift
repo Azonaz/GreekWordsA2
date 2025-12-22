@@ -65,11 +65,7 @@ struct SettingsView: View {
             .padding()
             .foregroundColor(.blackDN)
         }
-        .navigationBarBackButtonHidden(true)
         .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                BackButton()
-            }
             ToolbarItem(placement: .principal) {
                 Text(Texts.settings)
                     .font(sizeClass == .regular ? .largeTitle : .title)
@@ -77,7 +73,6 @@ struct SettingsView: View {
                     .frame(maxWidth: .infinity, alignment: .center)
             }
         }
-        .onSwipeDismiss()
         .onAppear {
             updateLanguage()
         }
