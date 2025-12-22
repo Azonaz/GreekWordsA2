@@ -10,7 +10,7 @@ struct GreekWordsA2App: App {
     private let container: ModelContainer
 
     init() {
-        let navTint = UIColor(named: "GreenUniversal") ?? UIColor(Color.greenUniversal)
+        let navTint = UIColor(Color.greenUniversal)
 
         let backImage = UIImage(systemName: "chevron.backward")?
             .withTintColor(navTint, renderingMode: .alwaysOriginal)

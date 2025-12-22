@@ -43,6 +43,9 @@ enum Texts {
     static let levels: LocalizedStringKey = "levels"
     static let here: LocalizedStringKey = "here"
     static let otherLevels: LocalizedStringKey = "otherLevels"
+    static let verbInfo: LocalizedStringKey = "verbInfo"
+    static let verbHelp: LocalizedStringKey = "verbHelp"
+    static let wordDayHelp: LocalizedStringKey = "wordDayHelp"
 
     static var allWords: String {
         NSLocalizedString("allWords", comment: "")

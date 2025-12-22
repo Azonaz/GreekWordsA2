@@ -1,5 +1,5 @@
 "quiz" = "Quiz";
-"quizRandomSelection" = "Quiz by random selection";
+"quizRandomSelection" = "Random quiz";
 "quizGroups" = "Quiz by groups";
 "checkVerbs" = "Check verbs";
 "verbs" = "Verbs";
@@ -27,7 +27,9 @@
 
 Each round has 10 questions.
 
-Words are divided into groups, and the counter on the right side of each group shows how many words you have already seen and the total number of words in that group.
+You can choose a game mode:
+• By groups — words are grouped by topics, and the counter next to each group shows how many words you have already seen and the total number of words in that group;
+• Random — words are selected from the entire vocabulary without being tied to specific topics.
 
 In the Settings section, you can select your preferred language or enable blur mode to hide answers until you tap the screen.
 
@@ -94,3 +96,8 @@ To open a group, complete at least one topic in the Quiz section.";
 "a2" =  "Current level";
 "b1" = "The next step in learning";
 "here" = "You're here";
+"verbInfo" = "Verb Mode";
+"verbHelp" = "In the “Verbs” section, you see a verb in the selected language and three hidden cards with the Greek verb in the present, future, and past tenses.
+Cards are revealed when tapped, allowing you to check the correct answer.";
+"wordDayHelp" = "In the “Word of the Day” section, the letters are scrambled, and your task is to arrange them to form the hidden Greek word.
+A hint is available to help you.";
