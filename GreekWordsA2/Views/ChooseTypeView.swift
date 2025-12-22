@@ -23,62 +23,31 @@ struct ChooseTypeView: View {
     }
 
     var body: some View {
-        NavigationStack {
-            GeometryReader { proxy in
-                let isLandscape = proxy.size.width > proxy.size.height
-                let isLandscapePhone = (UIDevice.current.userInterfaceIdiom == .phone) && isLandscape
+        GeometryReader { proxy in
+            let isLandscape = proxy.size.width > proxy.size.height
+            let isLandscapePhone = (UIDevice.current.userInterfaceIdiom == .phone) && isLandscape
 
-                ZStack {
-                    Color.grayDN
-                        .edgesIgnoringSafeArea(.all)
+            ZStack {
+                Color.grayDN
+                    .edgesIgnoringSafeArea(.all)
 
-                    VStack(spacing: 30) {
-                        Text("Greek Words A2")
-                            .font(sizeClass == .regular ? .largeTitle : .title2)
-                            .fontWeight(.semibold)
-                            .foregroundColor(.greenUniversal)
+                VStack(spacing: 30) {
+                    Text("Greek Words A2")
+                        .font(sizeClass == .regular ? .largeTitle : .title2)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.greenUniversal)
 
-                        if !isLandscapePhone { Spacer() }
+                    if !isLandscapePhone { Spacer() }
 
-                        if isLandscape {
-                            HStack(alignment: .top, spacing: 24) {
-                                VStack(spacing: 16) {
-                                    NavigationLink(destination: GroupsView(viewModel: groupsVM)) {
-                                        ChooseButtonLabel(title: Texts.quizGroups, height: bHeight, font: bFont)
-                                    }
-
-                                    NavigationLink(destination: QuizView(viewModel: groupsVM,
-                                                                         group: nil as GroupMeta?)) {
-                                        ChooseButtonLabel(title: Texts.randomSelection, height: bHeight, font: bFont)
-                                    }
-
-                                    NavigationLink(destination: GroupsView(viewModel: groupsVM, quizMode: .reverse)) {
-                                        ChooseButtonLabel(title: Texts.reverseQuiz, height: bHeight, font: bFont)
-                                    }
-                                }
-                                .frame(maxWidth: .infinity, alignment: .top)
-
-                                VStack(spacing: 16) {
-                                    trainingButton
-
-                                    NavigationLink(destination: VerbView()) {
-                                        ChooseButtonLabel(title: Texts.checkVerbs, height: bHeight, font: bFont)
-                                    }
-
-                                    NavigationLink(destination: WordDayGameView()) {
-                                        ChooseButtonLabel(title: Texts.wordDay, height: bHeight, font: bFont)
-                                    }
-                                }
-                                .frame(maxWidth: .infinity, alignment: .top)
-                            }
-                            .padding(.horizontal, 20)
-                        } else {
+                    if isLandscape {
+                        HStack(alignment: .top, spacing: 24) {
                             VStack(spacing: 16) {
                                 NavigationLink(destination: GroupsView(viewModel: groupsVM)) {
                                     ChooseButtonLabel(title: Texts.quizGroups, height: bHeight, font: bFont)
                                 }
 
-                                NavigationLink(destination: QuizView(viewModel: groupsVM, group: nil as GroupMeta?)) {
+                                NavigationLink(destination: QuizView(viewModel: groupsVM,
+                                                                     group: nil as GroupMeta?)) {
                                     ChooseButtonLabel(title: Texts.randomSelection, height: bHeight, font: bFont)
                                 }
 
@@ -86,7 +55,7 @@ struct ChooseTypeView: View {
                                     ChooseButtonLabel(title: Texts.reverseQuiz, height: bHeight, font: bFont)
                                 }
                             }
-                            .padding(.horizontal, 20)
+                            .frame(maxWidth: .infinity, alignment: .top)
 
                             VStack(spacing: 16) {
                                 trainingButton
@@ -94,44 +63,73 @@ struct ChooseTypeView: View {
                                 NavigationLink(destination: VerbView()) {
                                     ChooseButtonLabel(title: Texts.checkVerbs, height: bHeight, font: bFont)
                                 }
-                            }
-                            .padding(.horizontal, 20)
-                            .padding(.top, topPadding)
 
-                            NavigationLink(destination: WordDayGameView()) {
-                                ChooseButtonLabel(title: Texts.wordDay, height: bHeight, font: bFont)
+                                NavigationLink(destination: WordDayGameView()) {
+                                    ChooseButtonLabel(title: Texts.wordDay, height: bHeight, font: bFont)
+                                }
                             }
-                            .padding(.horizontal, 20)
-                            .padding(.top, topPadding)
+                            .frame(maxWidth: .infinity, alignment: .top)
                         }
-
-                        if !isLandscapePhone { Spacer() }
-
-                        HStack(spacing: 16) {
-                            NavigationLink(destination: InfoView()) {
-                                ChooseIconButtonLabel(systemName: "info.circle", height: 50)
+                        .padding(.horizontal, 20)
+                    } else {
+                        VStack(spacing: 16) {
+                            NavigationLink(destination: GroupsView(viewModel: groupsVM)) {
+                                ChooseButtonLabel(title: Texts.quizGroups, height: bHeight, font: bFont)
                             }
 
-                            NavigationLink(destination: StatisticsView()) {
-                                ChooseIconButtonLabel(systemName: "chart.pie", height: 50)
+                            NavigationLink(destination: QuizView(viewModel: groupsVM, group: nil as GroupMeta?)) {
+                                ChooseButtonLabel(title: Texts.randomSelection, height: bHeight, font: bFont)
                             }
 
-                            NavigationLink(destination: SettingsView()) {
-                                ChooseIconButtonLabel(systemName: "gear", height: 50)
+                            NavigationLink(destination: GroupsView(viewModel: groupsVM, quizMode: .reverse)) {
+                                ChooseButtonLabel(title: Texts.reverseQuiz, height: bHeight, font: bFont)
                             }
                         }
                         .padding(.horizontal, 20)
-                        .padding(.bottom, 12)
+
+                        VStack(spacing: 16) {
+                            trainingButton
+
+                            NavigationLink(destination: VerbView()) {
+                                ChooseButtonLabel(title: Texts.checkVerbs, height: bHeight, font: bFont)
+                            }
+                        }
+                        .padding(.horizontal, 20)
+                        .padding(.top, topPadding)
+
+                        NavigationLink(destination: WordDayGameView()) {
+                            ChooseButtonLabel(title: Texts.wordDay, height: bHeight, font: bFont)
+                        }
+                        .padding(.horizontal, 20)
+                        .padding(.top, topPadding)
                     }
-                    .padding()
+
+                    if !isLandscapePhone { Spacer() }
+
+                    HStack(spacing: 16) {
+                        NavigationLink(destination: InfoView()) {
+                            ChooseIconButtonLabel(systemName: "info.circle", height: 50)
+                        }
+
+                        NavigationLink(destination: StatisticsView()) {
+                            ChooseIconButtonLabel(systemName: "chart.pie", height: 50)
+                        }
+
+                        NavigationLink(destination: SettingsView()) {
+                            ChooseIconButtonLabel(systemName: "gear", height: 50)
+                        }
+                    }
+                    .padding(.horizontal, 20)
+                    .padding(.bottom, 12)
                 }
+                .padding()
             }
-            .navigationDestination(isPresented: $goTraining) {
-                TrainingView()
-            }
-            .navigationDestination(isPresented: $goPaywall) {
-                TrainingPaywallView()
-            }
+        }
+        .navigationDestination(isPresented: $goTraining) {
+            TrainingView()
+        }
+        .navigationDestination(isPresented: $goPaywall) {
+            TrainingPaywallView()
         }
         .task { await syncVocabulary() }
         .onChange(of: scenePhase) {

@@ -189,7 +189,6 @@ struct StatisticsView: View {
                 .padding(.bottom, 20)
             }
         }
-        .navigationBarBackButtonHidden(true)
         .toolbar {
             ToolbarItem(placement: .principal) {
                 Text(Texts.statistics)

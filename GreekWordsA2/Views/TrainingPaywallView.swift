@@ -88,7 +88,6 @@ struct TrainingPaywallView: View {
             .frame(maxHeight: .infinity, alignment: .center)
             .offset(y: -40)
         }
-        .navigationBarBackButtonHidden(true)
         .toolbar {
             ToolbarItem(placement: .principal) {
                 Text(Texts.trainingAccess)

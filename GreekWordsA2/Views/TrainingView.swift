@@ -94,7 +94,6 @@ struct TrainingView: View {
         .task {
             await loadDueWords()
         }
-        .navigationBarBackButtonHidden(true)
         .toolbar {
             ToolbarItem(placement: .principal) {
                 Text(Texts.training)

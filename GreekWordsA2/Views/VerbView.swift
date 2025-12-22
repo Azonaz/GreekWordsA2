@@ -38,7 +38,6 @@ struct VerbView: View {
             verbs.shuffle()
             markCurrentVerbSeen()
         }
-        .navigationBarBackButtonHidden(true)
         .toolbar {
             ToolbarItem(placement: .principal) {
                 Text(Texts.verbs)

@@ -135,7 +135,6 @@ struct QuizView: View {
                 }
             }
         }
-        .navigationBarBackButtonHidden(true)
         .toolbar {
             ToolbarItem(placement: .principal) {
                 Text(title)

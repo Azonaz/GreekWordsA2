@@ -82,7 +82,6 @@ struct WordDayGameView: View {
             }
             .padding()
         }
-        .navigationBarBackButtonHidden(true)
         .toolbar {
             ToolbarItem(placement: .principal) {
                 Text(Texts.wordDay)
