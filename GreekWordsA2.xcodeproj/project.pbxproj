@@ -18,6 +18,7 @@
 		84420A942C416154008A6F79 /* WordDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84420A932C416154008A6F79 /* WordDayView.swift */; };
 		845596092DBBD03800FB27F7 /* VerbTenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845596082DBBD03800FB27F7 /* VerbTenseView.swift */; };
 		8455960C2DBCD4C500FB27F7 /* TextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8455960B2DBCD4C500FB27F7 /* TextExtension.swift */; };
+		8474C6AD2EF940D200DAD7C5 /* LevelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474C6AC2EF940D000DAD7C5 /* LevelsView.swift */; };
 		8475FC192EF56A210021EB60 /* StatsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475FC182EF56A200021EB60 /* StatsService.swift */; };
 		8475FC1B2EF58DD40021EB60 /* TrainingScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475FC1A2EF58DD30021EB60 /* TrainingScheduler.swift */; };
 		8475FC1F2EF58EA90021EB60 /* TrainingView+Layouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475FC1E2EF58EA80021EB60 /* TrainingView+Layouts.swift */; };
@@ -63,6 +64,7 @@
 		84420A932C416154008A6F79 /* WordDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDayView.swift; sourceTree = "<group>"; };
 		845596082DBBD03800FB27F7 /* VerbTenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbTenseView.swift; sourceTree = "<group>"; };
 		8455960B2DBCD4C500FB27F7 /* TextExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExtension.swift; sourceTree = "<group>"; };
+		8474C6AC2EF940D000DAD7C5 /* LevelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsView.swift; sourceTree = "<group>"; };
 		8475FC182EF56A200021EB60 /* StatsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsService.swift; sourceTree = "<group>"; };
 		8475FC1A2EF58DD30021EB60 /* TrainingScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingScheduler.swift; sourceTree = "<group>"; };
 		8475FC1E2EF58EA80021EB60 /* TrainingView+Layouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrainingView+Layouts.swift"; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				84F2B03A2C9DC6F5008A9774 /* LaunchScreenView.swift */,
 				8493DD962EF3F4A200AA477F /* InfoView.swift */,
 				8493DD972EF3F4A200AA477F /* SettingsView.swift */,
+				8474C6AC2EF940D000DAD7C5 /* LevelsView.swift */,
 				8493DD982EF3F4A200AA477F /* StatisticsView.swift */,
 				849217B92C20318B00C84401 /* BackButton.swift */,
 				8488B11E2C11BB9F0044D455 /* ChooseTypeView.swift */,
@@ -349,6 +352,7 @@
 				8424894B2C1734A10060FE60 /* WordModel.swift in Sources */,
 				84AF1F6B2EF2E50A00A7B3D7 /* SwiftDataModels.swift in Sources */,
 				84ADEBA12EF1C4D000F67052 /* TrainingView.swift in Sources */,
+				8474C6AD2EF940D200DAD7C5 /* LevelsView.swift in Sources */,
 				84A7920D2C5D132300848517 /* WordsDayViewModel.swift in Sources */,
 				8475FC192EF56A210021EB60 /* StatsService.swift in Sources */,
 				8475FC252EF59E680021EB60 /* Texts.swift in Sources */,

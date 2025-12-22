@@ -40,6 +40,9 @@ enum Texts {
     static let present: LocalizedStringKey = "present"
     static let past: LocalizedStringKey = "past"
     static let future: LocalizedStringKey = "future"
+    static let levels: LocalizedStringKey = "levels"
+    static let here: LocalizedStringKey = "here"
+    static let otherLevels: LocalizedStringKey = "otherLevels"
 
     static var allWords: String {
         NSLocalizedString("allWords", comment: "")
@@ -139,5 +142,17 @@ enum Texts {
 
     static var wordDayCompleted: String {
         NSLocalizedString("wordDayCompleted", comment: "")
+    }
+
+    static var a1Level: String {
+        NSLocalizedString("a1", comment: "")
+    }
+
+    static var a2Level: String {
+        NSLocalizedString("a2", comment: "")
+    }
+
+    static var b1Level: String {
+        NSLocalizedString("b1", comment: "")
     }
 }

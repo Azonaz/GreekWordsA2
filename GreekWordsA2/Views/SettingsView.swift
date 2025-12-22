@@ -14,11 +14,12 @@ struct SettingsView: View {
     @State private var restoring = false
     @State private var restoreMessage: String?
     @State private var restoreSucceeded: Bool?
+    @State private var showOtherLevels = false
 
     private let appRate = "https://apps.apple.com/cy/app/greek-words-a2/id6736978135?action=write-review"
 
     private var rows: [SettingsRow] {
-        var base: [SettingsRow] = [.language, .blur, .limit, .restore]
+        var base: [SettingsRow] = [.language, .blur, .limit, .restore, .otherLevels]
         if shouldShowRateButton {
             base.append(.rateApp)
         }
@@ -80,6 +81,9 @@ struct SettingsView: View {
         .onAppear {
             updateLanguage()
         }
+        .navigationDestination(isPresented: $showOtherLevels) {
+            LevelsView()
+        }
     }
 
     private func openAppSettings() {
@@ -115,7 +119,9 @@ struct SettingsView: View {
 
         return restored
     }
+}
 
+private extension SettingsView {
     @ViewBuilder
     private func rowView(for row: SettingsRow) -> some View {
         switch row {
@@ -127,6 +133,8 @@ struct SettingsView: View {
             limitRow()
         case .restore:
             restoreRow()
+        case .otherLevels:
+            otherLevelsRow()
         case .rateApp:
             rateRow()
         }
@@ -255,6 +263,29 @@ struct SettingsView: View {
     }
 
     @ViewBuilder
+    private func otherLevelsRow() -> some View {
+        HStack(spacing: 14) {
+            Image(systemName: "graduationcap")
+                .imageScale(.large)
+                .foregroundColor(.primary)
+
+            Text(Texts.otherLevels)
+                .font(.body)
+                .foregroundColor(.primary)
+
+            Spacer()
+
+            Image(systemName: "chevron.right")
+                .foregroundColor(.primary)
+        }
+        .padding(.vertical, 8)
+        .contentShape(Rectangle())
+        .onTapGesture {
+            showOtherLevels = true
+        }
+    }
+
+    @ViewBuilder
     private func rateRow() -> some View {
         HStack(spacing: 14) {
             Image(systemName: "star.fill")
@@ -287,5 +318,6 @@ private enum SettingsRow {
     case blur
     case limit
     case restore
+    case otherLevels
     case rateApp
 }
