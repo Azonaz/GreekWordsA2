@@ -73,9 +73,10 @@ private extension VerbView {
         Group {
             if isPhoneLandscape {
                 HStack(spacing: 16) {
-                    VStack(spacing: 80) {
+                    VStack {
                         translationView(for: verb)
-
+                            .padding(.top, 30)
+                        Spacer()
                         nextButton
                     }
                     .frame(maxWidth: .infinity, alignment: .center)
