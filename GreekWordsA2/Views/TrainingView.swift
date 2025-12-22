@@ -63,7 +63,7 @@ struct TrainingView: View {
                                 .fill(Color.whiteDN)
                                 .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
                         )
-                        .padding(.horizontal, 16)
+                        .padding(.horizontal, sizeClass == .regular ? 40 : 16)
                 } else if finished {
                     Text(Texts.wordsDone)
                         .foregroundColor(.blackDN)
@@ -77,7 +77,7 @@ struct TrainingView: View {
                                 .fill(Color.whiteDN)
                                 .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
                         )
-                        .padding(.horizontal, 16)
+                        .padding(.horizontal, sizeClass == .regular ? 40 : 16)
                 } else if currentIndex < dueWords.count {
                     let word = dueWords[currentIndex]
 

@@ -91,7 +91,7 @@ private extension VerbView {
             } else {
                 VStack(spacing: 20) {
                     translationView(for: verb)
-                        .padding(.top, sizeClass == .regular ? 90 : 40)
+                        .padding(.top, sizeClass == .regular ? 80 : 40)
 
                     Spacer()
 
@@ -102,7 +102,7 @@ private extension VerbView {
                     nextButton
                         .padding(.horizontal)
                 }
-                .padding(.bottom, sizeClass == .regular ? 150 : 100)
+                .padding(.bottom, sizeClass == .regular ? 140 : 100)
                 .padding(.horizontal, sizeClass == .regular ? 60 : 30)
             }
         }
@@ -111,7 +111,7 @@ private extension VerbView {
     @ViewBuilder
     func translationView(for verb: Verb) -> some View {
         Text(isEnglish ? verb.enWords : verb.ruWords)
-            .font(sizeClass == .regular ? .largeTitle : .title2)
+            .font(sizeClass == .regular ? .largeTitle : .title)
             .foregroundColor(.greenUniversal)
             .tracking(3)
             .shadow(color: .grayUniversal.opacity(0.3), radius: 1, x: 1, y: 1)

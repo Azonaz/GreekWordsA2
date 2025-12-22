@@ -8,9 +8,14 @@ struct WordDayGameView: View {
     @State private var isLabelVisible = true
     @Environment(\.scenePhase) private var scenePhase
     @Environment(\.horizontalSizeClass) private var sizeClass
+    @Environment(\.verticalSizeClass) private var vSizeClass
 
     private var circleDiameter: CGFloat {
-        sizeClass == .regular ? 180 * 2.7 : 300
+        sizeClass == .regular ? 180 * 2.7 : 260
+    }
+
+    private var isPhoneLandscape: Bool {
+        UIDevice.current.userInterfaceIdiom == .phone && vSizeClass == .compact
     }
 
     var body: some View {
@@ -51,16 +56,18 @@ struct WordDayGameView: View {
                         .animation(.spring(response: 0.6, dampingFraction: 0.8, blendDuration: 0.5),
                                    value: rotation)
                 }
-                .frame(maxWidth: .infinity)
+                .frame(maxWidth: isPhoneLandscape ? circleDiameter : .infinity)
                 .frame(height: sizeClass == .regular ? 520 : 420)
                 .padding(.horizontal)
-                .overlay(alignment: .bottomTrailing) {
+                .overlay(alignment: isPhoneLandscape ? Alignment(horizontal: .trailing, vertical: .center)
+                         : .bottomTrailing) {
                     if !isWordAlreadySolvedForToday && isLabelVisible {
                         Label("", systemImage: "questionmark.circle")
                             .foregroundColor(.greenUniversal.opacity(0.5))
                             .font(sizeClass == .regular ? .system(size: 36) : .largeTitle)
-                            .padding(.bottom, sizeClass == .regular ? 30 : 10)
-                            .padding(.trailing, sizeClass == .regular ? 10 : 0)
+                            .padding(.bottom, isPhoneLandscape ? 0 : (sizeClass == .regular ? 30 : 10))
+                            .padding(.trailing, isPhoneLandscape ? 0 : (sizeClass == .regular ? 10 : 0))
+                            .offset(x: isPhoneLandscape ? 100 : 0, y: isPhoneLandscape ? 80 : 0)
                             .onTapGesture {
                                 withAnimation {
                                     rotation += 180

@@ -7,10 +7,7 @@ struct VerbCardView: View {
     let title: String
     let content: String
     private var cardHeight: CGFloat {
-        if UIDevice.current.userInterfaceIdiom == .phone && vSizeClass == .compact {
-            return 80
-        }
-        return sizeClass == .regular ? 150 : 100
+        return sizeClass == .regular ? 100 : 80
     }
 
     var body: some View {
