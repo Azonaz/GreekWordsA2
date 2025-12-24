@@ -101,3 +101,6 @@ To open a group, complete at least one topic in the Quiz section.";
 Cards are revealed when tapped, allowing you to check the correct answer.";
 "wordDayHelp" = "In the “Word of the Day” section, the letters are scrambled, and your task is to arrange them to form the hidden Greek word.
 A hint is available to help you.";
+"freeTrialActive" = "Free trial active";
+"unlocked" = "Unlocked";
+"locked" = "Locked";

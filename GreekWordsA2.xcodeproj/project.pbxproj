@@ -46,6 +46,7 @@
 		84AF1F6E2EF2E5A400A7B3D7 /* FSRS in Frameworks */ = {isa = PBXBuildFile; productRef = 84AF1F6D2EF2E5A400A7B3D7 /* FSRS */; };
 		84AF1F702EF2E98100A7B3D7 /* VocabularyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF1F6F2EF2E98000A7B3D7 /* VocabularyStore.swift */; };
 		84D675352C2191C5003DBC2A /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D675342C2191C5003DBC2A /* QuizView.swift */; };
+		84ECD28A2EFC1ABC009B629E /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 84ECD2882EFC1ABC009B629E /* Localizable.stringsdict */; };
 		84F2B03B2C9DC6F5008A9774 /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F2B03A2C9DC6F5008A9774 /* LaunchScreenView.swift */; };
 		84F8A2022D00000100AA55AA /* WordDayGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8A2012D00000100AA55AA /* WordDayGameView.swift */; };
 /* End PBXBuildFile section */
@@ -92,6 +93,8 @@
 		84AF1F6A2EF2E50600A7B3D7 /* SwiftDataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataModels.swift; sourceTree = "<group>"; };
 		84AF1F6F2EF2E98000A7B3D7 /* VocabularyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabularyStore.swift; sourceTree = "<group>"; };
 		84D675342C2191C5003DBC2A /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		84ECD2892EFC1ABC009B629E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		84ECD28B2EFC1B99009B629E /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = ru; path = ru.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		84F2B03A2C9DC6F5008A9774 /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 		84F8A2012D00000100AA55AA /* WordDayGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDayGameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -173,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				8493DDA22EF4406900AA477F /* Localizable.strings */,
+				84ECD2882EFC1ABC009B629E /* Localizable.stringsdict */,
 				8488B11B2C11BB9F0044D455 /* GreekWordsA2 */,
 				8488B11A2C11BB9F0044D455 /* Products */,
 			);
@@ -286,6 +290,7 @@
 				8488B1242C11BBA00044D455 /* Preview Assets.xcassets in Resources */,
 				841E13E12DB7AB6500DFD07C /* verbs.json in Resources */,
 				8488B1212C11BBA00044D455 /* Assets.xcassets in Resources */,
+				84ECD28A2EFC1ABC009B629E /* Localizable.stringsdict in Resources */,
 				8493DDA42EF4406C00AA477F /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,6 +372,15 @@
 				8493DDA32EF4406C00AA477F /* ru */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		84ECD2882EFC1ABC009B629E /* Localizable.stringsdict */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84ECD2892EFC1ABC009B629E /* en */,
+				84ECD28B2EFC1B99009B629E /* ru */,
+			);
+			name = Localizable.stringsdict;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -502,7 +516,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = GreekWordsA2/GreekWordsA2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"GreekWordsA2/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -536,7 +550,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = GreekWordsA2/GreekWordsA2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"GreekWordsA2/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

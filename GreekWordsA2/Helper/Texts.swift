@@ -28,8 +28,6 @@ enum Texts {
     static let wordsLeft: LocalizedStringKey = "wordsLeft"
     static let newWordsNumber: LocalizedStringKey = "newWordsNumber"
     static let trainingAccess: LocalizedStringKey = "trainingAccess"
-    static let accessExpired: LocalizedStringKey = "accessExpired"
-    static let unlockAccess: LocalizedStringKey = "unlockAccess"
     static let unlockFor: LocalizedStringKey = "unlockFor"
     static let loadPrice: LocalizedStringKey = "loadPrice"
     static let restore: LocalizedStringKey = "restore"
@@ -46,6 +44,8 @@ enum Texts {
     static let verbInfo: LocalizedStringKey = "verbInfo"
     static let verbHelp: LocalizedStringKey = "verbHelp"
     static let wordDayHelp: LocalizedStringKey = "wordDayHelp"
+    static let unlocked: LocalizedStringKey = "unlocked"
+    static let locked: LocalizedStringKey = "locked"
 
     static var allWords: String {
         NSLocalizedString("allWords", comment: "")
@@ -157,5 +157,31 @@ enum Texts {
 
     static var b1Level: String {
         NSLocalizedString("b1", comment: "")
+    }
+
+    static var accessExpired: String {
+        NSLocalizedString("accessExpired", comment: "")
+    }
+
+    static var unlockAccess: String {
+        NSLocalizedString("unlockAccess", comment: "")
+    }
+
+    static var freeTrialActive: String {
+        NSLocalizedString("freeTrialActive", comment: "")
+    }
+
+    static func trialStatusText(daysLeft: Int) -> String {
+        String(
+            format: NSLocalizedString("trialDaysLeft", comment: ""),
+            daysLeft
+        )
+    }
+
+    static func trialDaysShort(_ days: Int) -> String {
+        String(
+            format: NSLocalizedString("trialDaysShort", comment: ""),
+            days
+        )
     }
 }

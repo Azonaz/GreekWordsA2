@@ -15,11 +15,12 @@ struct SettingsView: View {
     @State private var restoreMessage: String?
     @State private var restoreSucceeded: Bool?
     @State private var showOtherLevels = false
+    @State private var showTrainingPaywall = false
 
     private let appRate = "https://apps.apple.com/cy/app/greek-words-a2/id6736978135?action=write-review"
 
     private var rows: [SettingsRow] {
-        var base: [SettingsRow] = [.language, .blur, .limit, .restore, .otherLevels]
+        var base: [SettingsRow] = [.language, .blur, .limit, .trainingAccess, .restore, .otherLevels]
         if shouldShowRateButton {
             base.append(.rateApp)
         }
@@ -79,6 +80,9 @@ struct SettingsView: View {
         .navigationDestination(isPresented: $showOtherLevels) {
             LevelsView()
         }
+        .navigationDestination(isPresented: $showTrainingPaywall) {
+            TrainingPaywallView()
+        }
     }
 
     private func openAppSettings() {
@@ -130,6 +134,8 @@ private extension SettingsView {
             restoreRow()
         case .otherLevels:
             otherLevelsRow()
+        case .trainingAccess:
+            trainingAccessRow()
         case .rateApp:
             rateRow()
         }
@@ -306,6 +312,41 @@ private extension SettingsView {
             shouldShowRateButton = false
         }
     }
+
+    @ViewBuilder
+    private func trainingAccessRow() -> some View {
+        let isPurchased = trainingAccess.hasAccess && !trainingAccess.isInTrial
+
+        Button {
+            if isPurchased { return }
+            showTrainingPaywall = true
+        } label: {
+            HStack(spacing: 14) {
+                Image(systemName: trainingAccess.hasAccess ? "lock.open" : "lock")
+                    .imageScale(.large)
+                    .foregroundColor(.primary)
+
+                Text(Texts.trainingAccess)
+                    .font(.body)
+                    .foregroundColor(.primary)
+
+                Spacer()
+
+                if isPurchased {
+                    Text(Texts.unlocked)
+                        .foregroundColor(.secondary)
+                } else if trainingAccess.isInTrial {
+                    Text(Texts.trialDaysShort(trainingAccess.daysLeft ?? 0))
+                        .foregroundColor(.secondary)
+                } else {
+                    Text(Texts.locked)
+                        .foregroundColor(.secondary)
+                }
+            }
+            .padding(.vertical, 8)
+        }
+        .disabled(isPurchased)
+    }
 }
 
 private enum SettingsRow {
@@ -314,5 +355,6 @@ private enum SettingsRow {
     case limit
     case restore
     case otherLevels
+    case trainingAccess
     case rateApp
 }
