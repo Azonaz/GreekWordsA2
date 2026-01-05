@@ -1,67 +1,81 @@
 import SwiftUI
+import SwiftData
 
 struct GroupsView: View {
-    @State private var selectedGroup: VocabularyGroup?
     @ObservedObject var viewModel: GroupsViewModel
-    @Environment(\.horizontalSizeClass) var sizeClass
+    @Environment(\.horizontalSizeClass) private var sizeClass
+    @Environment(\.modelContext) private var modelContext
+    @Query(sort: [SortDescriptor(\GroupMeta.id, order: .forward)]) private var groups: [GroupMeta]
+    @Query private var progress: [WordProgress]
+    @Query private var words: [Word]
+    let quizMode: QuizMode
+
+    init(viewModel: GroupsViewModel, quizMode: QuizMode = .direct) {
+        _viewModel = ObservedObject(wrappedValue: viewModel)
+        self.quizMode = quizMode
+    }
+
+    private var isEnglish: Bool {
+        Locale.preferredLanguages.first?.hasPrefix("en") == true
+    }
 
     var body: some View {
-        NavigationStack {
-            ZStack {
-                Color.grayDN
-                    .edgesIgnoringSafeArea(.all)
-                List {
-                    ForEach(viewModel.groups.indices, id: \.self) { index in
-                        let group = viewModel.groups[index]
-                        NavigationLink(destination: QuizView(viewModel: viewModel, group: group),
-                                       tag: group, selection: $selectedGroup) {
-                            HStack {
-                                Text(group.name)
-                                    .font(sizeClass == .regular ? .title : .title3)
-                                Spacer()
-                            }
-                            .padding(.top, 4)
+        ZStack {
+            Color.grayDN
+                .edgesIgnoringSafeArea(.all)
+
+            List {
+                ForEach(Array(groups.enumerated()), id: \.element.id) { index, group in
+                    NavigationLink {
+                        QuizView(viewModel: viewModel, group: group, mode: quizMode)
+                    } label: {
+                        HStack {
+                            formattedTitle(for: group)
+                                .font(sizeClass == .regular ? .title : .title3)
+                            Spacer()
                         }
-                                       .listRowInsets(EdgeInsets(top: 10, leading: 8, bottom: 10, trailing: 16))
-                                       .listRowBackground(Color.whiteDN)
-                                       .listRowSeparator(.hidden)
-                                       .overlay(
-                                        Rectangle()
-                                            .frame(height: 1)
-                                            .foregroundColor(index == viewModel.groups.indices.last ?
-                                                             Color.whiteDN : Color.greenUniversal.opacity(0.3))
-                                            .offset(y: 21)
-                                       )
+                        .padding(.top, 4)
                     }
+                    .listRowInsets(EdgeInsets(top: 10, leading: 8, bottom: 10, trailing: 16))
+                    .listRowBackground(Color.whiteDN)
+                    .listRowSeparator(.hidden)
+                    .overlay(
+                        Rectangle()
+                            .frame(height: 1)
+                            .foregroundColor(
+                                index == groups.indices.last
+                                ? Color.whiteDN
+                                : Color.greenUniversal.opacity(0.3)
+                            )
+                            .offset(y: 21)
+                    )
                 }
-                .listStyle(PlainListStyle())
-                .scrollIndicators(.hidden)
-                .padding(.horizontal)
-                .background(
-                    RoundedRectangle(cornerRadius: 16)
-                        .fill(Color.whiteDN)
-                )
-                .padding()
-                .foregroundColor(.blackDN)
             }
-            .navigationBarBackButtonHidden(true)
-            .navigationBarItems(leading: HStack {
-                BackButton()
-                Text("Choose a group")
+            .listStyle(.plain)
+            .scrollIndicators(.hidden)
+            .scrollContentBackground(.hidden)
+            .padding(.horizontal)
+            .background(
+                RoundedRectangle(cornerRadius: 16)
+                    .fill(Color.whiteDN)
+            )
+            .padding()
+            .foregroundColor(.blackDN)
+        }
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                Text(Texts.categories)
                     .font(sizeClass == .regular ? .largeTitle : .title)
                     .fontWeight(.semibold)
-            })
-            .onChange(of: selectedGroup) { newGroup in
-                viewModel.selectedGroup = newGroup
+                    .frame(maxWidth: .infinity, alignment: .center)
             }
-            .onAppear {
-                viewModel.load()
-            }
-            .onSwipeDismiss()
         }
     }
-}
 
-#Preview {
-    GroupsView(viewModel: GroupsViewModel())
+    private func formattedTitle(for group: GroupMeta) -> some View {
+        let total = words.filter { $0.groupID == group.id }.count
+        let seen = progress.filter { $0.compositeID.hasPrefix("\(group.id)_") && $0.seen }.count
+        let name = isEnglish ? group.nameEn : group.nameRu
+        return Text(name) + Text(" (\(seen)/\(total))").foregroundColor(.blackDN.opacity(0.6))
+    }
 }

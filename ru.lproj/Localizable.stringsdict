@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+ "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>trialDaysLeft</key>
+  <dict>
+    <key>NSStringLocalizedFormatKey</key>
+    <string>%#@days@</string>
+    <key>days</key>
+    <dict>
+      <key>NSStringFormatSpecTypeKey</key>
+      <string>NSStringPluralRuleType</string>
+      <key>NSStringFormatValueTypeKey</key>
+      <string>d</string>
+      <key>one</key>
+      <string>Остался %d день. Вы можете разблокировать полный доступ в любое время.</string>
+      <key>few</key>
+      <string>Осталось %d дня. Вы можете разблокировать полный доступ в любое время.</string>
+      <key>many</key>
+      <string>Осталось %d дней. Вы можете разблокировать полный доступ в любое время.</string>
+      <key>other</key>
+      <string>Осталось %d дня. Вы можете разблокировать полный доступ в любое время.</string>
+    </dict>
+  </dict>
+  <key>trialDaysShort</key>
+  <dict>
+    <key>NSStringLocalizedFormatKey</key>
+    <string>%#@days@</string>
+    <key>days</key>
+    <dict>
+      <key>NSStringFormatSpecTypeKey</key>
+      <string>NSStringPluralRuleType</string>
+      <key>NSStringFormatValueTypeKey</key>
+      <string>d</string>
+      <key>one</key>
+      <string>%d день</string>
+      <key>few</key>
+      <string>%d дня</string>
+      <key>many</key>
+      <string>%d дней</string>
+      <key>other</key>
+      <string>%d дня</string>
+    </dict>
+  </dict>
+
+</dict>
+</plist>

@@ -1,55 +1,115 @@
 import Foundation
+import SwiftData
 
+enum QuizMode {
+    case direct
+    case reverse
+}
+
+@MainActor
 final class GroupsViewModel: ObservableObject {
-    @Published var groups = [VocabularyGroup]()
-    @Published var selectedGroup: VocabularyGroup?
     @Published var correctWord: Word?
+
     private var words: [Word] = []
     private var currentRoundWords: [Word] = []
-    private let wordService = WordService()
 
-    func load() {
-        wordService.getGroups { result in
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let groups):
-                    self.groups = groups
-                case .failure(let error):
-                    print("Failed to load groups: \(error)")
-                }
+    @discardableResult
+    func prepareRound(modelContext: ModelContext, group: GroupMeta?, count: Int = 10) async -> Int {
+        do {
+            if let group, group.opened == false {
+                group.opened = true
+                try modelContext.save()
             }
+
+            words = try fetchWords(modelContext: modelContext, groupID: group?.id)
+            let number = min(count, words.count)
+            currentRoundWords = Array(words.shuffled().prefix(number))
+            correctWord = nil
+            return currentRoundWords.count
+        } catch {
+            words = []
+            currentRoundWords = []
+            correctWord = nil
+            print("Prepare round failed: \(error)")
+            return 0
         }
     }
 
-    func getWords(completion: @escaping () -> Void) {
-        if let selectedGroup = selectedGroup {
-            words = wordService.getWords(for: selectedGroup)
-            currentRoundWords = wordService.getRandomWords(for: selectedGroup, count: 10)
-            completion()
-        } else {
-            wordService.getRandomWordsForAll(count: 10) { randomWords in
-                self.currentRoundWords = randomWords
-                self.words = randomWords
-                completion()
-            }
-        }
-    }
-
-    func setRandomWord() -> String {
-        if let randomWord = currentRoundWords.popLast() {
-            correctWord = randomWord
-            return randomWord.gr
-        } else {
+    func nextWord(for mode: QuizMode, isEnglish: Bool) -> String {
+        guard let word = currentRoundWords.popLast() else {
+            correctWord = nil
             return ""
         }
+        correctWord = word
+
+        switch mode {
+        case .direct:
+            return word.gr
+        case .reverse:
+            return isEnglish ? word.en : word.ru
+        }
     }
 
-    func setRandomValuesForWord() -> [String] {
-        guard let correctWord = correctWord?.gr else { return [] }
-        var options = words.filter { $0.gr == correctWord }
-        let remainingWords = words.filter { $0.gr != correctWord }
-        options.append(contentsOf: remainingWords.shuffled().prefix(2))
+    func markCurrentWordAsSeen(modelContext: ModelContext) {
+        guard let current = correctWord else { return }
+        let currentCompositeID = current.compositeID
+
+        do {
+            let descriptor = FetchDescriptor<WordProgress>(
+                predicate: #Predicate { $0.compositeID == currentCompositeID }
+            )
+
+            if let progress = try modelContext.fetch(descriptor).first {
+                if !progress.seen { progress.seen = true }
+            } else {
+                let progress = WordProgress(compositeID: current.compositeID, seen: true)
+                modelContext.insert(progress)
+            }
+
+            if modelContext.hasChanges {
+                try modelContext.save()
+            }
+        } catch {
+            print("Failed to mark word seen: \(error)")
+        }
+    }
+
+    func optionsForCurrentWord(using locale: Locale, mode: QuizMode) -> [String] {
+        guard let correct = correctWord else { return [] }
+        var options: [Word] = [correct]
+
+        let others = words
+            .filter { $0.compositeID != correct.compositeID }
+            .shuffled()
+            .prefix(2)
+
+        options.append(contentsOf: others)
         options.shuffle()
-        return options.map { $0.en }
+        switch mode {
+        case .direct:
+            let isEnglish = locale.language.languageCode?.identifier.hasPrefix("en") == true
+            return options.map { isEnglish ? $0.en : $0.ru }
+        case .reverse:
+            return options.map { $0.gr }
+        }
+    }
+}
+
+private extension GroupsViewModel {
+    func fetchWords(modelContext: ModelContext, groupID: Int?) throws -> [Word] {
+        if let groupID {
+            return try modelContext.fetch(
+                FetchDescriptor<Word>(
+                    predicate: #Predicate { $0.groupID == groupID },
+                    sortBy: [SortDescriptor(\.localID)]
+                )
+            )
+        } else {
+            return try modelContext.fetch(
+                FetchDescriptor<Word>(
+                    sortBy: [SortDescriptor(\.localID)]
+                )
+            )
+        }
     }
 }

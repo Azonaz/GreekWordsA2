@@ -1,181 +1,168 @@
 import SwiftUI
 
 struct ChooseTypeView: View {
-    @StateObject var groupsViewModel = GroupsViewModel()
-    @StateObject var wordDayViewModel = WordsDayViewModel()
-    @State private var showWord = false
-    @State private var rotation: Double = 0
-    @State private var isLabelVisible = true
-    @State private var isWordAlreadySolvedForToday = false
-    @Environment(\.scenePhase) var scenePhase
+    @StateObject var groupsVM = GroupsViewModel()
+    @EnvironmentObject var trainingAccess: TrainingAccessManager
+    @Environment(\.modelContext) private var modelContext
     @Environment(\.horizontalSizeClass) var sizeClass
+    @Environment(\.verticalSizeClass) var verticalSizeClass
+    @Environment(\.scenePhase) private var scenePhase
+    @State private var goTraining = false
+    @State private var goPaywall = false
 
-    private var circleDiameter: CGFloat {
-        sizeClass == .regular ? 150 * 2.7 : 100 * 2.7
-    }
-
-    private var buttonHeight: CGFloat {
+    private var bHeight: CGFloat {
         sizeClass == .regular ? 80 : 60
-    }
-
-    private var buttonPaddingHorizontal: CGFloat {
-        sizeClass == .regular ? 100 : 60
     }
 
     private var topPadding: CGFloat {
         sizeClass == .regular ? 40 : 20
     }
 
+    private var bFont: Font {
+        sizeClass == .regular ? .title : .title3
+    }
+
     var body: some View {
-        NavigationStack {
+        GeometryReader { proxy in
+            let isLandscape = proxy.size.width > proxy.size.height
+            let isLandscapePhone = (UIDevice.current.userInterfaceIdiom == .phone) && isLandscape
+
             ZStack {
                 Color.grayDN
                     .edgesIgnoringSafeArea(.all)
 
-                VStack(spacing: 20) {
-                    Text("Greek Words Quiz A2")
+                VStack(spacing: 30) {
+                    Text("Greek Words A2")
                         .font(sizeClass == .regular ? .largeTitle : .title2)
                         .fontWeight(.semibold)
                         .foregroundColor(.greenUniversal)
+
+                    if !isLandscapePhone { Spacer() }
+
+                    if isLandscape {
+                        HStack(alignment: .top, spacing: 24) {
+                            VStack(spacing: 16) {
+                                NavigationLink(destination: GroupsView(viewModel: groupsVM)) {
+                                    ChooseButtonLabel(title: Texts.quizGroups, height: bHeight, font: bFont)
+                                }
+
+                                NavigationLink(destination: QuizView(viewModel: groupsVM,
+                                                                     group: nil as GroupMeta?)) {
+                                    ChooseButtonLabel(title: Texts.randomSelection, height: bHeight, font: bFont)
+                                }
+
+                                NavigationLink(destination: GroupsView(viewModel: groupsVM, quizMode: .reverse)) {
+                                    ChooseButtonLabel(title: Texts.reverseQuiz, height: bHeight, font: bFont)
+                                }
+                            }
+                            .frame(maxWidth: .infinity, alignment: .top)
+
+                            VStack(spacing: 16) {
+                                trainingButton
+
+                                NavigationLink(destination: VerbView()) {
+                                    ChooseButtonLabel(title: Texts.checkVerbs, height: bHeight, font: bFont)
+                                }
+
+                                NavigationLink(destination: WordDayGameView()) {
+                                    ChooseButtonLabel(title: Texts.wordDay, height: bHeight, font: bFont)
+                                }
+                            }
+                            .frame(maxWidth: .infinity, alignment: .top)
+                        }
+                        .padding(.horizontal, 20)
+                    } else {
+                        VStack(spacing: 16) {
+                            NavigationLink(destination: GroupsView(viewModel: groupsVM)) {
+                                ChooseButtonLabel(title: Texts.quizGroups, height: bHeight, font: bFont)
+                            }
+
+                            NavigationLink(destination: QuizView(viewModel: groupsVM, group: nil as GroupMeta?)) {
+                                ChooseButtonLabel(title: Texts.randomSelection, height: bHeight, font: bFont)
+                            }
+
+                            NavigationLink(destination: GroupsView(viewModel: groupsVM, quizMode: .reverse)) {
+                                ChooseButtonLabel(title: Texts.reverseQuiz, height: bHeight, font: bFont)
+                            }
+                        }
+                        .padding(.horizontal, 20)
+
+                        VStack(spacing: 16) {
+                            trainingButton
+
+                            NavigationLink(destination: VerbView()) {
+                                ChooseButtonLabel(title: Texts.checkVerbs, height: bHeight, font: bFont)
+                            }
+                        }
+                        .padding(.horizontal, 20)
                         .padding(.top, topPadding)
 
+                        NavigationLink(destination: WordDayGameView()) {
+                            ChooseButtonLabel(title: Texts.wordDay, height: bHeight, font: bFont)
+                        }
+                        .padding(.horizontal, 20)
+                        .padding(.top, topPadding)
+                    }
+
+                    if !isLandscapePhone { Spacer() }
+
                     HStack(spacing: 16) {
-                        NavigationLink(destination: QuizView(viewModel: groupsViewModel, group: nil)) {
-                            Text("Random\nselection")
-                                .multilineTextAlignment(.center)
-                                .lineLimit(2)
-                                .foregroundColor(.blackDN)
-                                .frame(height: buttonHeight + 20)
-                                .frame(maxWidth: .infinity)
-                                .padding(.horizontal, 12)
-                                .background(Color.whiteDN)
-                                .cornerRadius(16)
-                                .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
-                                .font(sizeClass == .regular ? .title : .title3)
+                        NavigationLink(destination: InfoView()) {
+                            ChooseIconButtonLabel(systemName: "info.circle", height: 50)
                         }
 
-                        NavigationLink(destination: GroupsView(viewModel: groupsViewModel)) {
-                            Text("Words by\ngroups")
-                                .multilineTextAlignment(.center)
-                                .lineLimit(2)
-                                .foregroundColor(.blackDN)
-                                .frame(height: buttonHeight + 20)
-                                .frame(maxWidth: .infinity)
-                                .padding(.horizontal, 12)
-                                .background(Color.whiteDN)
-                                .cornerRadius(16)
-                                .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
-                                .font(sizeClass == .regular ? .title : .title3)
+                        NavigationLink(destination: StatisticsView()) {
+                            ChooseIconButtonLabel(systemName: "chart.pie", height: 50)
+                        }
+
+                        NavigationLink(destination: SettingsView()) {
+                            ChooseIconButtonLabel(systemName: "gear", height: 50)
                         }
                     }
                     .padding(.horizontal, 20)
-
-                    Text("Verbs A2")
-                        .font(sizeClass == .regular ? .largeTitle : .title2)
-                        .fontWeight(.semibold)
-                        .foregroundColor(.greenUniversal)
-                        .padding(.top, topPadding)
-
-                    NavigationLink(destination: VerbView()) {
-                        Text("Check verbs")
-                            .foregroundColor(.blackDN)
-                            .frame(height: buttonHeight)
-                            .padding(.horizontal, buttonPaddingHorizontal)
-                            .background(Color.whiteDN)
-                            .cornerRadius(16)
-                            .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
-                            .font(sizeClass == .regular ? .title : .title3)
-                    }
-                    Spacer()
+                    .padding(.bottom, 12)
                 }
                 .padding()
-
-                HStack(spacing: 10) {
-                    Image(systemName: "pencil.and.scribble")
-                        .foregroundColor(.blackDN.opacity(0.4))
-                        .font(.title)
-
-                    Text("Word of the day")
-                        .font(sizeClass == .regular ? .title : .title2)
-                        .foregroundColor(.green)
-                }
-                .padding(.bottom, sizeClass == .regular ? 80 : 40)
-
-                ZStack {
-                    if showWord {
-                        Circle()
-                            .frame(width: circleDiameter, height: circleDiameter)
-                            .foregroundColor(.whiteDN)
-                            .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
-                            .overlay(
-                                Text(wordDayViewModel.enWord)
-                                    .font(.largeTitle)
-                                    .tracking(3)
-                                    .foregroundColor(.blackDN)
-                            )
-                            .transition(.opacity)
-                            .rotation3DEffect(
-                                .degrees(rotation + 180),
-                                axis: (x: 0, y: 1, z: 0)
-                            )
-                            .animation(.spring(response: 0.6, dampingFraction: 0.8,
-                                               blendDuration: 0.5), value: rotation)
-                    }
-                }
-                .padding(.top, sizeClass == .regular ? 470 : 370)
-
-                WordDayView(viewModel: wordDayViewModel, isWordAlreadySolvedForToday: $isWordAlreadySolvedForToday)
-                    .onAppear {
-                        wordDayViewModel.setWordForCurrentDate()
-                    }
-                    .onChange(of: scenePhase) { newPhase in
-                        if newPhase == .active {
-                            let today = wordDayViewModel.getCurrentDate()
-                            wordDayViewModel.setWordForCurrentDate()
-                            if today != UserDefaults.standard.string(forKey: "lastPlayedDate") {
-                                isWordAlreadySolvedForToday = false
-                            }
-                        }
-                    }
-                    .opacity(showWord ? 0 : 1)
-                    .rotation3DEffect(
-                        .degrees(rotation),
-                        axis: (x: 0, y: 1, z: 0)
-                    )
-                    .animation(.spring(response: 0.6, dampingFraction: 0.8, blendDuration: 0.5), value: rotation)
-
-                if !isWordAlreadySolvedForToday && isLabelVisible {
-                    VStack {
-                        Spacer()
-                        HStack {
-                            Spacer()
-                            Label("", systemImage: "questionmark.circle")
-                                .foregroundColor(.blackDN.opacity(0.5))
-                                .font(sizeClass == .regular ? .system(size: 36) : .largeTitle)
-                                .padding(.bottom, sizeClass == .regular ? 100 : 50)
-                                .padding(.trailing, sizeClass == .regular ? 60 : 10)
-                                .onTapGesture {
-                                    withAnimation {
-                                        rotation += 180
-                                        showWord.toggle()
-                                        isLabelVisible = false
-                                    }
-                                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
-                                        isLabelVisible = true
-                                        withAnimation {
-                                            rotation += 180
-                                            showWord.toggle()
-                                        }
-                                    }
-                                }
-                        }
-                    }
-                }
+            }
+        }
+        .navigationDestination(isPresented: $goTraining) {
+            TrainingView()
+        }
+        .navigationDestination(isPresented: $goPaywall) {
+            TrainingPaywallView()
+        }
+        .task { await syncVocabulary() }
+        .onChange(of: scenePhase) {
+            if scenePhase == .active {
+                Task { await syncVocabulary() }
             }
         }
     }
-}
 
-#Preview {
-    ChooseTypeView()
+    @MainActor
+    private func syncVocabulary() async {
+        guard let url = URL(string: WordService().dictionaryUrl) else { return }
+
+        do {
+            let service = VocabularySyncService(context: modelContext, remoteURL: url)
+            try await service.syncVocabulary()
+        } catch {
+            print("Synchronisation error: \(error)")
+        }
+    }
+
+    private var trainingButton: some View {
+        Button {
+            trainingAccess.startTrialIfNeeded()
+            trainingAccess.refreshState()
+
+            if trainingAccess.hasAccess {
+                goTraining = true
+            } else {
+                goPaywall = true
+            }
+        } label: {
+            ChooseButtonLabel(title: Texts.training, height: bHeight, font: bFont)
+        }
+    }
 }

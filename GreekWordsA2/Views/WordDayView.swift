@@ -19,14 +19,12 @@ struct WordDayView: View {
     @State private var isTextVisible = false
     @Binding var isWordAlreadySolvedForToday: Bool
     @Environment(\.horizontalSizeClass) var sizeClass
-    private let userDefaults = UserDefaults.standard
-    private let solvedDateKey = "solvedDate"
     private let feedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
     private var radius: CGFloat {
-        return sizeClass == .regular ? 150 : 100
+        return sizeClass == .regular ? 180 : 110
     }
     private var paddingHorizontal: CGFloat {
-        sizeClass == .regular ? 160 : 80
+        sizeClass == .regular ? 40 : 24
     }
 
     var body: some View {
@@ -38,7 +36,7 @@ struct WordDayView: View {
             let screenWidth = geometry.size.width
             let screenHeight = geometry.size.height
             let diameter = radius * 2.7
-            let verticalPadding: CGFloat = sizeClass == .regular ? 100 : 60
+            let verticalPadding: CGFloat = max((screenHeight - diameter) / 2, 0)
 
             if !isWordAlreadySolvedForToday {
                 ZStack {
@@ -72,10 +70,9 @@ struct WordDayView: View {
                         updateWord(viewModel.grWord)
                     }
                 }
-                .onChange(of: viewModel.grWord) { newValue in
-                    if !isWordAlreadySolvedForToday {
-                        updateWord(newValue)
-                    }
+                .onChange(of: viewModel.grWord) {
+                    guard !isWordAlreadySolvedForToday else { return }
+                    updateWord(viewModel.grWord)
                 }
             } else {
                 createSolvedWordView(screenWidth: screenWidth, screenHeight: screenHeight)
@@ -101,22 +98,35 @@ struct WordDayView: View {
     }
 
     private func createSolvedWordView(screenWidth: CGFloat, screenHeight: CGFloat) -> some View {
-        VStack {
+        let viewWidth = max(screenWidth - paddingHorizontal * 2, CGFloat(240))
+        let verticalPadding: CGFloat = sizeClass == .regular ? 20 : 14
+        let horizontalPadding: CGFloat = sizeClass == .regular ? 20 : 14
+        let minHeight: CGFloat = sizeClass == .regular ? 160 : 130
+
+        return VStack {
             Text(viewModel.grWord)
                 .foregroundColor(.blackDN)
                 .font(sizeClass == .regular ? .largeTitle : .title)
-                .padding(.bottom, sizeClass == .regular ? 20 : 10)
+                .lineLimit(2)
+                .multilineTextAlignment(.center)
+                .minimumScaleFactor(0.6)
+                .padding(.bottom, sizeClass == .regular ? 12 : 8)
 
             Text(viewModel.enWord)
                 .foregroundColor(.blackDN)
                 .font(sizeClass == .regular ? .title2 : .title3)
+                .lineLimit(2)
+                .multilineTextAlignment(.center)
+                .minimumScaleFactor(0.6)
         }
-        .frame(height: 150)
-        .padding(.horizontal, paddingHorizontal)
+        .padding(.vertical, verticalPadding)
+        .padding(.horizontal, horizontalPadding)
+        .frame(width: viewWidth)
+        .frame(minHeight: minHeight)
         .background(Color.whiteDN)
-        .cornerRadius(16)
+        .cornerRadius(sizeClass == .regular ? 20 : 16)
         .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
-        .position(x: screenWidth / 2, y: screenHeight / 1.5)
+        .position(x: screenWidth / 2, y: screenHeight / 2)
     }
 
     private func createDragGesture(screenWidth: CGFloat, screenHeight: CGFloat,
@@ -251,7 +261,7 @@ struct WordDayView: View {
 
     private func saveSolvedDate() {
         let today = viewModel.getCurrentDate()
-        userDefaults.set(today, forKey: solvedDateKey)
+        StatsService.recordWordDayCompletion(dateString: today)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
             isWordAlreadySolvedForToday = true
             isTextVisible = false
@@ -260,19 +270,7 @@ struct WordDayView: View {
 
     private func checkIfWordSolvedToday() {
         let today = viewModel.getCurrentDate()
-        if let savedDate = userDefaults.string(forKey: solvedDateKey) {
-            isWordAlreadySolvedForToday = (savedDate == today)
-        } else {
-            isWordAlreadySolvedForToday = false
-        }
+        isWordAlreadySolvedForToday = StatsService.isWordDayCompleted(dateString: today)
     }
 }
 // swiftlint:enable identifier_name
-
-#Preview {
-    Color.grayDN
-        .ignoresSafeArea()
-        .overlay {
-            WordDayView(viewModel: WordsDayViewModel(), isWordAlreadySolvedForToday: .constant(false))
-        }
-}

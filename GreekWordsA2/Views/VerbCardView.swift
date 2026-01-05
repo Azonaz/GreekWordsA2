@@ -3,14 +3,18 @@ import SwiftUI
 struct VerbCardView: View {
     @Binding var isFlipped: Bool
     @Environment(\.horizontalSizeClass) var sizeClass
+    @Environment(\.verticalSizeClass) var vSizeClass
     let title: String
     let content: String
+    private var cardHeight: CGFloat {
+        return sizeClass == .regular ? 100 : 80
+    }
 
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 16)
                 .fill(Color.whiteDN)
-                .frame(height: sizeClass == .regular ? 150 : 100)
+                .frame(height: cardHeight)
                 .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
                 .overlay(
                     Text(isFlipped ? content : title)
@@ -27,17 +31,5 @@ struct VerbCardView: View {
             isFlipped.toggle()
         }
         .padding(.horizontal)
-    }
-}
-
-#Preview {
-    VerbCardPreview()
-}
-
-private struct VerbCardPreview: View {
-    @State private var flipped = false
-
-    var body: some View {
-        VerbCardView(isFlipped: $flipped, title: "Ενεστώτας", content: "πηγαίνω")
     }
 }
