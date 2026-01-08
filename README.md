@@ -1,18 +1,32 @@
-# Greek Words A2 – iOS app for learning greek words
+# Greek Words A2
 
-A simple app for iPhone and iPad helps people to memorize the main words during their second year study of Greek language.
+Greek Words A2 is an iOS app for learning and memorizing basic Modern Greek vocabulary (CEFR level A2).  
+The app is designed to support beginners during their first year of studying Greek, focusing on frequent words and steady repetition.
 
-Works only in portrait mode. Made with vanilla swift and native SDK.
+## Screencast
 
-# Screencast
+<img width="850" height="308" alt="1" src="https://github.com/user-attachments/assets/d26d0b08-da94-462b-91e6-dd8654405029" />
 
-![a2-1](https://github.com/user-attachments/assets/eaf10559-72d9-4417-bca6-777df0f922e5)
+<img width="850" height="308" alt="2" src="https://github.com/user-attachments/assets/979f4c6b-56f7-421c-bde9-bc94eb16595f" />
 
-![a2-2](https://github.com/user-attachments/assets/5f644b0a-a89e-4239-82d3-8341923dc40d)
+## Features
 
-# Requirements
+- Vocabulary quizzes (direct, reverse, random)
+- Spaced repetition training (FSRS)
+- Verb self-check (present, future, past forms)
+- Word of the Day mini-game
+- Progress and statistics
+- Works offline
+  
+## Requirements
 
-1. The app must support iPhone X and above and be adapted for iPhone SE, the minimum supported operating system version is iOS 16.0;
-2. The application uses the standard iOS font - SF Pro.
+- iOS 17+
+- Portrait and landscape support
+- System font: SF Pro
 
-Stack: SwiftUI, URLSession, swiftlint.
+**Stack:** SwiftUI, SwiftData, StoreKit, FSRS, swiftlint.
+
+## ⚖️ License
+
+This project is source-available.  
+See the [LICENSE](LICENSE) file for details.
