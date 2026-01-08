@@ -1,7 +1,7 @@
 # Greek Words A2
 
 Greek Words A2 is an iOS app for learning and memorizing basic Modern Greek vocabulary (CEFR level A2).  
-The app is designed to support beginners during their first year of studying Greek, focusing on frequent words and steady repetition.
+The app is designed to support beginners during their second year of studying Greek, focusing on frequent words and steady repetition.
 
 ## Screencast
 
