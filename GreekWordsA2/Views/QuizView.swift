@@ -167,12 +167,19 @@ struct QuizView: View {
 private extension QuizView {
     @ViewBuilder
     func questionCard(width: CGFloat) -> some View {
+        let horizontalInset: CGFloat = 20
+        let textWidth = width - (horizontalInset * 2)
+
         VStack {
             ForEach(parsedWords, id: \.self) { word in
                 Text(word)
                     .foregroundColor(.blackDN)
                     .font(sizeClass == .regular ? .largeTitle : .title2)
                     .multilineTextAlignment(.center)
+                    .lineLimit(nil)
+                    .frame(maxWidth: textWidth)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .minimumScaleFactor(0.8)
                     .padding(.bottom, 1)
             }
         }
@@ -181,7 +188,7 @@ private extension QuizView {
             RoundedRectangle(cornerRadius: 16)
                 .fill(Color.whiteDN)
                 .shadow(color: .grayUniversal.opacity(0.5), radius: 5, x: 2, y: 2)
-                .padding(.horizontal, 20)
+                .padding(.horizontal, horizontalInset)
         )
     }
 
