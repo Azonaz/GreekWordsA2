@@ -9,14 +9,11 @@ struct GroupsView: View {
     @Query private var progress: [WordProgress]
     @Query private var words: [Word]
     let quizMode: QuizMode
+    private var isEnglish: Bool { AppLanguage.usesEnglishContent }
 
     init(viewModel: GroupsViewModel, quizMode: QuizMode = .direct) {
         _viewModel = ObservedObject(wrappedValue: viewModel)
         self.quizMode = quizMode
-    }
-
-    private var isEnglish: Bool {
-        Locale.preferredLanguages.first?.hasPrefix("en") == true
     }
 
     var body: some View {

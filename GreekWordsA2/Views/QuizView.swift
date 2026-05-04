@@ -20,8 +20,6 @@ struct QuizView: View {
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.horizontalSizeClass) var sizeClass
     @Environment(\.verticalSizeClass) var vSizeClass
-    @Environment(\.locale) private var locale
-
     let group: GroupMeta?
     let mode: QuizMode
 
@@ -35,9 +33,7 @@ struct QuizView: View {
         sizeClass == .regular ? UIScreen.main.bounds.width - 280 : UIScreen.main.bounds.width - 120
     }
 
-    private var isEnglish: Bool {
-        locale.language.languageCode?.identifier.hasPrefix("en") == true
-    }
+    private var isEnglish: Bool { AppLanguage.usesEnglishContent }
 
     private var isReverse: Bool {
         mode == .reverse
@@ -48,9 +44,9 @@ struct QuizView: View {
             return isEnglish ? group.nameEn : group.nameRu
         } else {
             if isReverse {
-                return isEnglish ? "Reverse quiz" : "Обратный квиз"
+                return Texts.reverseQuiz
             } else {
-                return isEnglish ? "Random words" : "Случайные слова"
+                return Texts.randomSelection
             }
         }
     }
@@ -280,7 +276,7 @@ private extension QuizView {
 
     func updateQuizContent() {
         questionWord = viewModel.nextWord(for: mode, isEnglish: isEnglish)
-        options = viewModel.optionsForCurrentWord(using: locale, mode: mode)
+        options = viewModel.optionsForCurrentWord(isEnglish: isEnglish, mode: mode)
         isBlurActive = isBlurEnabled
     }
 

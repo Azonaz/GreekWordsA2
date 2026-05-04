@@ -1,4 +1,17 @@
 import SwiftUI
+import Foundation
+
+enum AppLanguage {
+    static var code: String {
+        let preferred = Bundle.main.preferredLocalizations.first
+        let fallback = Locale.current.language.languageCode?.identifier
+        return preferred ?? fallback ?? "en"
+    }
+
+    static var usesEnglishContent: Bool {
+        code.hasPrefix("en") || !code.hasPrefix("ru")
+    }
+}
 
 enum Texts {
     static let quiz: LocalizedStringKey = "quiz"

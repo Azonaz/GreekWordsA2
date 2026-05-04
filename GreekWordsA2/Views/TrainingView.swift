@@ -13,7 +13,7 @@ struct TrainingView: View {
     @Environment(\.horizontalSizeClass) var sizeClass
     @Environment(\.verticalSizeClass) var vSizeClass
 
-    @State var isEnglish: Bool = Locale.preferredLanguages.first?.hasPrefix("en") == true
+    @State var isEnglish: Bool = AppLanguage.usesEnglishContent
     @State var dueWords: [Word] = []
     @State var currentIndex = 0
     @State var showTranslation = false

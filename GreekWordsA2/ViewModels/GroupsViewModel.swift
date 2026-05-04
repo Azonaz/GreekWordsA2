@@ -74,7 +74,7 @@ final class GroupsViewModel: ObservableObject {
         }
     }
 
-    func optionsForCurrentWord(using locale: Locale, mode: QuizMode) -> [String] {
+    func optionsForCurrentWord(isEnglish: Bool, mode: QuizMode) -> [String] {
         guard let correct = correctWord else { return [] }
         var options: [Word] = [correct]
 
@@ -87,7 +87,6 @@ final class GroupsViewModel: ObservableObject {
         options.shuffle()
         switch mode {
         case .direct:
-            let isEnglish = locale.language.languageCode?.identifier.hasPrefix("en") == true
             return options.map { isEnglish ? $0.en : $0.ru }
         case .reverse:
             return options.map { $0.gr }

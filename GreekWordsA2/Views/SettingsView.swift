@@ -2,7 +2,7 @@ import SwiftUI
 import StoreKit
 
 struct SettingsView: View {
-    @State private var currentLanguage = Locale.current.language.languageCode?.identifier ?? "en"
+    @State private var currentLanguage = AppLanguage.code
     @Environment(\.horizontalSizeClass) var sizeClass
     @AppStorage("isBlurEnabled") private var isBlurEnabled = false
     @AppStorage("dailyNewWordsLimit") private var dailyNewWordsLimit: Int = 20
@@ -93,13 +93,14 @@ struct SettingsView: View {
     }
 
     private func updateLanguage() {
-        currentLanguage = Locale.current.language.languageCode?.identifier ?? "en"
+        currentLanguage = AppLanguage.code
     }
 
     private func displayName(for code: String) -> String {
         switch code {
         case "ru": return "Русский"
         case "en": return "English"
+        case "el": return "Ελληνικά"
         default: return code.uppercased()
         }
     }
